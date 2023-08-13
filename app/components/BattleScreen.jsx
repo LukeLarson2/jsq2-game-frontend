@@ -137,27 +137,7 @@ const BattleScreen = ({
     fetchEnemy();
   };
 
-  useEffect(() => {
-    setShowDeath(false);
-    setPlayerDeath(false);
-    generateEnemyCard(race, area, level);
-  }, []);
 
-  useEffect(() => {
-    if (currentEnemy.health && enemyHealth <= 0) {
-      setShowVictory(true);
-    }
-  }, [enemyHealth, currentEnemy.health]);
-
-  useEffect(() => {
-    if (showVictory && timeoutId) {
-      clearTimeout(timeoutId);
-    }
-    if (playerDeath) {
-      clearTimeout(timeoutId);
-      setShowDeath(true);
-    }
-  }, [showVictory, playerDeath, timeoutId]);
 
   const handleHit = (user, damageAmount) => {
     if (user === "player") {
@@ -196,9 +176,7 @@ const BattleScreen = ({
     }
   };
 
-  useEffect(() => {
-    getPlayerHealth(currentUser, selectedCharacterId, setPlayerHealth);
-  }, [playerRecoveryDisplayed]);
+
   const handleAttack = (
     user,
     skillDamage,
@@ -406,11 +384,7 @@ const BattleScreen = ({
     }, 3900);
   };
 
-  useEffect(() => {
-    if (playerHealth <= 0) {
-      setShowDeath(true);
-    }
-  }, [playerHealth]);
+
 
   return (
     <div

@@ -506,6 +506,38 @@ const Game = ({
     setIsLoading(false);
   };
 
+  useEffect(() => {
+    setShowDeath(false);
+    setPlayerDeath(false);
+    generateEnemyCard(race, area, level);
+  }, []);
+
+  useEffect(() => {
+    if (currentEnemy.health && enemyHealth <= 0) {
+      setShowVictory(true);
+    }
+  }, [enemyHealth, currentEnemy.health]);
+
+  useEffect(() => {
+    if (showVictory && timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    if (playerDeath) {
+      clearTimeout(timeoutId);
+      setShowDeath(true);
+    }
+  }, [showVictory, playerDeath, timeoutId]);
+
+  useEffect(() => {
+    getPlayerHealth(currentUser, selectedCharacterId, setPlayerHealth);
+  }, [playerRecoveryDisplayed]);
+
+  useEffect(() => {
+    if (playerHealth <= 0) {
+      setShowDeath(true);
+    }
+  }, [playerHealth]);
+
   // Only render BattleScreen when character data is loaded
   if (character) {
     return (
