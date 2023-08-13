@@ -1,0 +1,46 @@
+.dev-portal-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.buttons {
+  top: 30%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 400px;
+  width: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  z-index: 900;
+}
+.buttons button {
+  display: flex;
+  height: 40px;
+  width: 80px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #dfdfdf;
+  box-shadow: 3px 3px 5px #555;
+}
+
+.buttons button:hover {
+  background-color: #f7f7f7;
+}
+.component {
+  width: fit-content;
+  height: fit-content;
+}

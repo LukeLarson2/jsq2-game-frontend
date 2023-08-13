@@ -1,0 +1,387 @@
+@media screen and (min-width: 1200px){
+.site-create-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: fit-content;
+}
+.site-create-account-title {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 600;
+}
+.site-create-account-form {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  height: 450px;
+  width: 400px;
+  padding: 20px;
+  padding-top: 40px;
+  box-shadow: 1px 1px 5px #000000;
+  border-bottom: 5px solid #f0b73e;
+  margin-bottom: 60px;
+}
+.site-create-account-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: fit-content;
+  margin-bottom: 20px;
+}
+.site-create-account-label {
+  font-size: 16px;
+  font-weight: 600;
+}
+.site-create-account-input {
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 3px #000000;
+  height: 30px;
+  width: 300px;
+  padding: 5px;
+}
+.site-create-account-btn-placement {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 300px;
+}
+.site-create-account-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f0b73e;
+  font-size: 19px;
+  font-weight: 600;
+  width: 150px;
+  height: 50px;
+  background: linear-gradient(to top, #570000, #850000);
+  margin-top: 20px;
+  transform: translateX(-50%);
+  box-shadow: 1px 1px 5px #000000;
+}
+.site-create-account-submit:hover {
+  background: linear-gradient(to top, #7e0101, #b10101);
+}
+.site-create-account-error {
+  display: flex;
+  flex-wrap: wrap;
+  color: red;
+  height: fit-content;
+  width: 240px;
+}
+.spinner-create {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.spinner-create .dot-create {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner-create .dot-create::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #850000;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-create .dot-create {
+  animation: spin 2s infinite;
+}
+
+.spinner-create .dot-create:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.spinner-create .dot-create:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.spinner-create .dot-create:nth-child(4) {
+  animation-delay: 300ms;
+}
+
+.spinner-create .dot-create:nth-child(5) {
+  animation-delay: 400ms;
+}
+}
+@media screen and (min-width: 845px) and (max-width: 1199px) {
+  .site-create-account {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+  }
+  .site-create-account-title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .site-create-account-form {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    height: 450px;
+    width: 400px;
+    padding: 20px;
+    padding-top: 40px;
+    box-shadow: 1px 1px 5px #000000;
+    border-bottom: 5px solid #f0b73e;
+    margin-bottom: 60px;
+  }
+  .site-create-account-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: fit-content;
+    margin-bottom: 20px;
+  }
+  .site-create-account-label {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .site-create-account-input {
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 3px #000000;
+    height: 30px;
+    width: 300px;
+    padding: 5px;
+  }
+  .site-create-account-btn-placement {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 300px;
+  }
+  .site-create-account-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0b73e;
+    font-size: 19px;
+    font-weight: 600;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(to top, #570000, #850000);
+    margin-top: 20px;
+    transform: translateX(-50%);
+    box-shadow: 1px 1px 5px #000000;
+  }
+  .site-create-account-submit:hover {
+    background: linear-gradient(to top, #7e0101, #b10101);
+  }
+  .site-create-account-error {
+    display: flex;
+    flex-wrap: wrap;
+    color: red;
+    height: fit-content;
+    width: 240px;
+  }
+  .spinner-create {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+  }
+
+  .spinner-create .dot-create {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .spinner-create .dot-create::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #850000;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .spinner-create .dot-create {
+    animation: spin 2s infinite;
+  }
+
+  .spinner-create .dot-create:nth-child(2) {
+    animation-delay: 100ms;
+  }
+
+  .spinner-create .dot-create:nth-child(3) {
+    animation-delay: 200ms;
+  }
+
+  .spinner-create .dot-create:nth-child(4) {
+    animation-delay: 300ms;
+  }
+
+  .spinner-create .dot-create:nth-child(5) {
+    animation-delay: 400ms;
+  }
+}
+@media screen and (max-width: 844px) {
+.site-create-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 580px;
+}
+.site-create-account-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.site-create-account-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  height: fit-content;
+  width: 350px;
+  padding: 20px;
+  padding-bottom: 50px;
+  padding-top: 30px;
+  box-shadow: 1px 1px 5px #000000;
+  border-bottom: 5px solid #f0b73e;
+}
+.site-create-account-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: fit-content;
+  margin-bottom: 20px;
+}
+.site-create-account-label {
+  font-size: 16px;
+  font-weight: 600;
+}
+.site-create-account-input {
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 3px #000000;
+  height: 30px;
+  width: 300px;
+  padding: 5px;
+}
+.site-create-account-btn-placement {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 300px;
+}
+.site-create-account-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f0b73e;
+  font-size: 19px;
+  font-weight: 600;
+  width: 150px;
+  height: 50px;
+  background: linear-gradient(to top, #570000, #850000);
+  margin-top: 20px;
+  transform: translateX(-50%);
+  box-shadow: 1px 1px 5px #000000;
+}
+.site-create-account-error {
+  display: flex;
+  flex-wrap: wrap;
+  color: red;
+  height: fit-content;
+  width: 240px;
+}
+.spinner-create {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.spinner-create .dot-create {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner-create .dot-create::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #850000;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-create .dot-create {
+  animation: spin 2s infinite;
+}
+
+.spinner-create .dot-create:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.spinner-create .dot-create:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.spinner-create .dot-create:nth-child(4) {
+  animation-delay: 300ms;
+}
+
+.spinner-create .dot-create:nth-child(5) {
+  animation-delay: 400ms;
+}
+}

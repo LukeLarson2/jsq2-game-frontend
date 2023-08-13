@@ -1,0 +1,229 @@
+@media screen and (min-width: 1200px){
+  .site-account-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 550px;
+    margin-top: 60px;
+  }
+  .site-account-login-title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .site-account-login-form {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    height: 375px;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 1px 1px 5px #000000;
+    border-bottom: 5px solid #f0b73e;
+  }
+  .site-account-login-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: fit-content;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .site-account-login-label {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .site-account-login-input {
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 3px #000000;
+    height: 40px;
+    width: 350px;
+    padding: 15px;
+  }
+  .site-account-login-submit {
+    position: absolute;
+    top: 68%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0b73e;
+    font-size: 19px;
+    font-weight: 600;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(to top, #570000, #850000);
+    margin-top: 20px;
+    transform: translateX(-50%);
+    box-shadow: 1px 1px 5px #000000;
+  }
+  .site-account-login-submit:hover {
+    background: linear-gradient(to top, #7e0101, #b10101);
+  }
+  .site-account-login-error {
+    display: flex;
+    flex-wrap: wrap;
+    color: red;
+    height: fit-content;
+    width: 240px;
+  }
+}
+@media screen and (min-width: 845px) and (max-width: 1199px) {
+  .site-account-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 550px;
+    margin-top: 60px;
+  }
+  .site-account-login-title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .site-account-login-form {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    height: 375px;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 1px 1px 5px #000000;
+    border-bottom: 5px solid #f0b73e;
+  }
+  .site-account-login-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: fit-content;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .site-account-login-label {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .site-account-login-input {
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 3px #000000;
+    height: 40px;
+    width: 350px;
+    padding: 15px;
+  }
+  .site-account-login-submit {
+    position: absolute;
+    top: 68%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0b73e;
+    font-size: 19px;
+    font-weight: 600;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(to top, #570000, #850000);
+    margin-top: 20px;
+    transform: translateX(-50%);
+    box-shadow: 1px 1px 5px #000000;
+  }
+  .site-account-login-submit:hover {
+    background: linear-gradient(to top, #7e0101, #b10101);
+  }
+  .site-account-login-error {
+    display: flex;
+    flex-wrap: wrap;
+    color: red;
+    height: fit-content;
+    width: 240px;
+  }
+}
+@media screen and (max-width: 844px) {
+  .site-account-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 420px;
+  }
+  .site-account-login-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .site-account-login-form {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    height: 270px;
+    width: 350px;
+    padding: 20px;
+    box-shadow: 1px 1px 5px #000000;
+    border-bottom: 5px solid #f0b73e;
+  }
+  .site-account-login-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: fit-content;
+    margin-bottom: 20px;
+  }
+  .site-account-login-label {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .site-account-login-input {
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 3px #000000;
+    height: 30px;
+    width: 300px;
+    padding: 5px;
+  }
+  .site-account-login-submit {
+    position: absolute;
+    top: 62%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0b73e;
+    font-size: 19px;
+    font-weight: 600;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(to top, #570000, #850000);
+    margin-top: 20px;
+    transform: translateX(-50%);
+  }
+  .site-account-login-error {
+    display: flex;
+    flex-wrap: wrap;
+    color: red;
+    height: fit-content;
+    width: 240px;
+  }
+}

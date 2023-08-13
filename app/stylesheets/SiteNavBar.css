@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+
+.site-nav-bar-container {
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 125px;
+  width: 100vw;
+  background-color: #011022d3;
+  z-index: 5;
+  font-family: "Play", sans-serif;
+}
+.site-nav-bar-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100vw;
+  height: 38px;
+  background-color: #000000;
+}
+.site-nav-bar-header-link {
+  color: #ffffff;
+  font-size: 14px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.site-nav-bar-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.site-nav-bar-login:hover .site-nav-bar-hover-menu,
+.site-nav-bar-login:hover .site-nav-bar-header-link {
+  color: #f0b73e;
+}
+.site-nav-bar-login:hover .site-nav-bar-hover-menu {
+  transform: rotate(180deg);
+}
+.site-nav-bar-header-link:hover {
+  color: #f0b73e;
+}
+.site-nav-bar-hamburger {
+  display: none;
+}
+.site-nav-bar-main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 87px;
+}
+.site-nav-logo-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+.site-nav-bar-game-logo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70px;
+  width: 70px;
+  border-radius: 100px;
+  margin-left: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 5px black;
+}
+.site-nav-bar-page-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100vw - 70px - 300px);
+  height: 100%;
+}
+.site-nav-bar-link {
+  color: #f0f0f0;
+  margin-left: 40px;
+  cursor: pointer;
+}
+.site-nav-bar-link:hover {
+  color: #f0b73e;
+}
+.site-nav-bar-support {
+  display: flex;
+  align-items: center;
+}
+.site-nav-bar-hover-menu {
+  color: #f0f0f0;
+  margin-top: 3px;
+  margin-left: 2px;
+}
+.site-nav-bar-hover-menu-header {
+  color: #f0f0f0;
+  font-size: 22px;
+  margin-top: 3px;
+  margin-left: 2px;
+}
+.site-nav-bar-support:hover .site-nav-bar-hover-menu,
+.site-nav-bar-support:hover .site-nav-bar-link {
+  color: #f0b73e;
+}
+.site-nav-bar-support:hover .site-nav-bar-hover-menu {
+  transform: rotate(180deg);
+}
+.site-nav-bar-play-game {
+  background: linear-gradient(to top, #c78d0f, #c59b40);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: bold;
+  color: #272727;
+  cursor: pointer;
+}
+.site-nav-bar-play-game-inner-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e9be60;
+}
+.site-nav-bar-play-game:hover {
+  background: linear-gradient(to top, #ffb514, #ffca57);
+  color: #131313;
+}
+.site-nav-bar-play-game:hover .site-nav-bar-play-game-inner-border {
+  border-color: #ffd375;
+}
+
+/* LAPTOPS DESKTOPS */
+@media screen and (min-width: 1200px){
+  .site-nav-bar-container {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 150px;
+    width: 100vw;
+    background-color: #011022d3;
+    z-index: 5;
+    font-family: "Play", sans-serif;
+  }
+  .site-nav-bar-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 30px;
+    background-color: #000000;
+  }
+  .site-nav-bar-header-link {
+    color: #ffffff;
+    font-size: 17px;
+    margin-left: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .site-nav-bar-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+  .site-nav-bar-main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 120px;
+  }
+  .site-nav-bar-game-logo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90px;
+    width: 90px;
+    border-radius: 100px;
+    margin-left: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 5px black;
+  }
+  .site-nav-bar-play-game {
+    width: 280px;
+    font-size: 40px;
+  }
+  .site-nav-bar-play-game-inner-border {
+    height: 110px;
+    width: 270px;
+  }
+  .site-nav-bar-dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 330px;
+    margin-left: 25px;
+    width: 200px;
+    height: 210px;
+    padding: 20px;
+    color: #ffffff;
+    background-color: #011022d3;
+  }
+  .site-nav-bar-support-option {
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .site-nav-bar-support-option:hover {
+    color: #e9be60;
+  }
+  .site-nav-bar-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+    cursor: pointer;
+    font-size: 1.5vw;
+    height: 100%;
+  }
+  .site-nav-bar-support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+    cursor: pointer;
+    font-size: 1.5vw;
+    height: 100%;
+  }
+  .site-nav-bar-hover-menu {
+    font-size: 1.75vw;
+  }
+  .site-nav-bar-header-arrow {
+    font-size: 1.25vw;
+  }
+  .site-nav-logo-links {
+    width: fit-content;
+  }
+  .site-nav-bar-page-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(100vw - 450px);
+    height: 100%;
+  }
+}
+/* TABLETS (LANDSCAPE) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .site-nav-bar-container {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 150px;
+    width: 100vw;
+    background-color: #011022d3;
+    z-index: 5;
+    font-family: "Play", sans-serif;
+  }
+  .site-nav-bar-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 30px;
+    background-color: #000000;
+  }
+  .site-nav-bar-header-link {
+    color: #ffffff;
+    font-size: 17px;
+    margin-left: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .site-nav-bar-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+  .site-nav-bar-main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 120px;
+  }
+  .site-nav-bar-game-logo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    margin-left: 30px;
+    margin-right: -10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 5px black;
+  }
+  .site-nav-bar-play-game {
+    width: 250px;
+    font-size: 40px;
+  }
+  .site-nav-bar-play-game-inner-border {
+    height: 110px;
+    width: 240px;
+  }
+  .site-nav-bar-dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 330px;
+    margin-left: 25px;
+    width: 200px;
+    height: 210px;
+    padding: 20px;
+    color: #ffffff;
+    background-color: #011022d3;
+  }
+  .site-nav-bar-support-option {
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .site-nav-bar-support-option:hover {
+    color: #e9be60;
+  }
+  .site-nav-bar-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+    cursor: pointer;
+    font-size: 1.5vw;
+    height: 100%;
+  }
+  .site-nav-bar-support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+    cursor: pointer;
+    font-size: 1.5vw;
+    height: 100%;
+  }
+  .site-nav-bar-hover-menu {
+    font-size: 1.75vw;
+  }
+  .site-nav-bar-header-arrow {
+    font-size: 1.25vw;
+  }
+  .site-nav-logo-links {
+    width: fit-content;
+  }
+  .site-nav-bar-page-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* MOBILE PORTRAIT */
+@media screen and (max-width: 991px) {
+  .site-nav-bar-main-content {
+    background-color: black;
+  }
+  .site-nav-menu-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #000000;
+    height: fit-content;
+    width: 100vw;
+    top: 17.6%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    border-top: 1px solid #2c2c2c;
+    padding-top: 15px;
+  }
+  .site-nav-bar-game-logo-smallScreen {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 5px black;
+  }
+  .site-nav-bar-logo-links {
+    /* Hide main content */
+    display: none;
+  }
+  .site-nav-bar-hamburger {
+    /* Show hamburger menu */
+    display: flex;
+    color: white;
+    font-size: 40px;
+    margin-right: 20px;
+  }
+  .site-nav-bar-container {
+    height: 150px;
+  }
+  .site-nav-bar-main-content {
+    height: calc(150px - 38px);
+  }
+  .site-nav-logo-links-smallScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    font-size: 23px;
+    margin-left: 20px;
+  }
+  .site-nav-bar-page-nav-smallScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100vw - 70px - 300px);
+    height: 100%;
+  }
+  .site-nav-bar-link-smallScreen {
+    display: flex;
+    color: #f0f0f0;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 130px;
+  }
+  .site-nav-bar-play-game-smallScreen {
+    background: linear-gradient(to top, #c78d0f, #c59b40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    font-weight: bold;
+    color: #272727;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .site-nav-bar-play-game-inner-border-smallScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e9be60;
+    font-size: 27px;
+    width: 96%;
+    height: 50px;
+  }
+  .site-nav-bar-support-smallScreen {
+    display: flex;
+    align-items: center;
+  }
+  .site-nav-bar-hover-menu-smallScreen {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .site-nav-bar-support-drop-down-smallScreen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 15px;
+    width: 100px;
+    height: fit-content;
+    z-index: 8;
+  }
+  .site-nav-bar-support-option-smallScreen {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    width: fit-content;
+    margin-bottom: 10px;
+    height: 20px;
+  }
+  .site-nav-bar-header-link {
+    color: #ffffff;
+    font-size: 15px;
+    margin-left: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .site-nav-bar-header-arrow {
+    font-size: 18px;
+  }
+}
+/*MENU STYLING*/

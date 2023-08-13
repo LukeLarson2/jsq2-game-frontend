@@ -1,0 +1,196 @@
+.player-ingame-map-clickable-area {
+  width: 100%;
+  height: 100%;
+}
+.player-ingame-map-confirm-travel-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #55555588;
+  z-index: 99;
+}
+.player-ingame-map-confirm-travel-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 450px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 20px #ffffff;
+  padding: 3px;
+}
+
+.player-ingame-map-confirm-btn-placement {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.player-ingame-map-confirm-btn {
+  display: flex;
+  background-color: white;
+  color: #03b438;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  width: 70px;
+  height: 40px;
+  margin-right: 10px;
+  box-shadow: 1px 1px 5px #555;
+  transition: background-color 0.4s ease;
+}
+.player-ingame-map-cancel-btn {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  color: #ff4335;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 40px;
+  margin-left: 10px;
+  box-shadow: 1px 1px 5px #555;
+  transition: background-color 0.4s ease;
+}
+.player-ingame-map-cancel-btn:hover {
+  background-color: #ff4335;
+  color: white;
+}
+.player-ingame-map-confirm-btn:hover {
+  background-color: rgb(3, 180, 56);
+  color: white;
+}
+
+.player-ingame-map-traveling {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-ingame-map-confirm-travel-text {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.spinner-container {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.spinner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 5px solid transparent;
+  border-radius: 100px;
+  border-top-color: #007e7e;
+  animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.79) infinite;
+}
+
+.spinner .a {
+  border-top-color: #00bbbb;
+}
+.spinner .b {
+  border-top-color: #00bbbb;
+}
+.spinner .c {
+  border-top-color: #009696;
+}
+.spinner .d {
+  border-top-color: #008a8a;
+}
+.spinner .e {
+  border-top-color: #00cece;
+}
+.spinner .f {
+  border-top-color: #00e4e4;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 390px) and (max-width: 844px) {
+  .player-ingame-map-area-name {
+    position: absolute;
+    text-align: center;
+    position: absolute;
+    width: 25px; /* specify a fixed width */
+    height: 25px; /* specify a fixed height */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    color: transparent;
+    z-index: 4;
+  }
+  .region-info-level {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: -5px;
+    color: transparent;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .player-ingame-map-area-name {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-size: 200% 100%;
+    background-position: right;
+    left: 10%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: background-position 0.5s;
+    transition: width 2s ease;
+    color: transparent;
+    z-index: 0;
+  }
+  .region-info-level {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: -5px;
+  }
+
+  .player-ingame-map-area:hover .player-ingame-map-area-name {
+    background-position: left;
+    color: white; /* change to the color you want on hover */
+    width: 300px;
+  }
+}

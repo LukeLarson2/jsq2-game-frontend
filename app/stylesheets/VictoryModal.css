@@ -1,0 +1,70 @@
+.battle-victory-overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #55555591;
+  z-index: 100;
+}
+.battle-victory-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 400px;
+  border-radius: 15px;
+  background-color: white;
+  padding: 10px;
+}
+.battle-victory-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.battle-victory-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  color: #eede00;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.battle-victory-enemy-name-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+.battle-victory-enemy-xp-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.battle-victory-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  height: 30px;
+  width: 90px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px black;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.2s ease-in-out;
+  font-weight: bold;
+}
+
+.battle-victory-btn:hover {
+  background-color: #d6d6d6;
+}

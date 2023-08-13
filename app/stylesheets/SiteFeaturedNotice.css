@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+
+@media screen and (min-width: 1200px){
+  .site-featured-notice-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 450px;
+    width: 100vw;
+    margin-top: 60px;
+  }
+
+  .site-featured-notice-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: #ffffffd2;
+    height: 350px;
+    width: 500px;
+    text-align: right;
+    padding: 20px;
+    font-family: "Play", sans-serif;
+    margin-right: 250px;
+  }
+
+  .site-featured-title {
+    font-size: 38px;
+    font-weight: bold;
+    color: #850000;
+  }
+  .site-featured-text {
+    font-size: 18px;
+  }
+
+  .site-featured-play-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #850000;
+    height: 50px;
+    width: 200px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 5px #000000;
+    cursor: pointer;
+  }
+  .site-featured-play-btn:hover {
+    background-color: #9e0404;
+  }
+
+  .site-featured-play-btn-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f0b83ee3;
+    height: 40px;
+    width: 190px;
+    color: #f0b83ee3;
+    font-weight: bold;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .site-featured-notice-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 450px;
+    width: 100vw;
+    margin-top: 60px;
+  }
+
+  .site-featured-notice-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: #ffffffd2;
+    height: 350px;
+    width: 500px;
+    text-align: right;
+    padding: 20px;
+    font-family: "Play", sans-serif;
+    margin-right: 60px;
+  }
+
+  .site-featured-title {
+    font-size: 38px;
+    font-weight: bold;
+    color: #850000;
+  }
+  .site-featured-text {
+    font-size: 18px;
+  }
+
+  .site-featured-play-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #850000;
+    height: 50px;
+    width: 200px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 5px #000000;
+    cursor: pointer;
+  }
+  .site-featured-play-btn:hover {
+    background-color: #9e0404;
+  }
+
+  .site-featured-play-btn-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f0b83ee3;
+    height: 40px;
+    width: 190px;
+    color: #f0b83ee3;
+    font-weight: bold;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .site-featured-notice-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 450px;
+    width: 100vw;
+    margin-top: 60px;
+  }
+
+  .site-featured-notice-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: #ffffffd2;
+    height: fit-content;
+    width: 500px;
+    text-align: right;
+    padding: 20px;
+    font-family: "Play", sans-serif;
+    margin-right: 10px;
+    scale: .8;
+  }
+
+  .site-featured-title {
+    font-size: 38px;
+    font-weight: bold;
+    color: #850000;
+  }
+  .site-featured-text {
+    font-size: 18px;
+  }
+
+  .site-featured-play-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #850000;
+    height: 50px;
+    width: 200px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 5px #000000;
+    cursor: pointer;
+  }
+  .site-featured-play-btn:hover {
+    background-color: #9e0404;
+  }
+
+  .site-featured-play-btn-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f0b83ee3;
+    height: 40px;
+    width: 190px;
+    color: #f0b83ee3;
+    font-weight: bold;
+    font-size: 25px;
+  }
+}

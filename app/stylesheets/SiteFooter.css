@@ -1,0 +1,197 @@
+@media screen and (min-width: 1200px){
+  .site-footer-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    width: 100vw;
+    border-top: 30px solid #c78d0fa4;
+    margin-top: 20px;
+  }
+  .site-footer-content {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    width: 100%;
+    background-color: #101022ce;
+  }
+  .site-footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .site-footer-legal {
+    color: #ffffffaf;
+    font-size: 15px;
+    text-align: center;
+  }
+  .site-footer-social-link {
+    color: #ffffffaf;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .site-footer-social-link:hover {
+    color: #ffffffd7;
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .site-footer-to-top-btn {
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    color: #c78d0fe8;
+    margin-top: 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    border: 1px solid #c78d0fa4;
+    cursor: pointer;
+  }
+  .site-footer-to-top-btn:hover {
+    color: #e2a41f;
+  }
+}
+@media screen and (min-width: 845px) and (max-width: 1199px) {
+  .site-footer-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    width: 100vw;
+    border-top: 30px solid #c78d0fa4;
+    margin-top: 20px;
+  }
+  .site-footer-content {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    width: 100%;
+    background-color: #101022ce;
+  }
+  .site-footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .site-footer-legal {
+    color: #ffffffaf;
+    font-size: 13px;
+    text-align: center;
+  }
+  .site-footer-social-link {
+    color: #ffffffaf;
+    height: 45px;
+    width: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .site-footer-to-top-btn {
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    color: #c78d0fe8;
+    margin-top: 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    border: 1px solid #c78d0fa4;
+  }
+}
+@media screen and (max-width: 844px) {
+  .site-footer-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    width: 100vw;
+    border-top: 30px solid #c78d0fa4;
+    margin-top: 20px;
+  }
+  .site-footer-content {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    width: 100%;
+    background-color: #101022ce;
+  }
+  .site-footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .site-footer-legal {
+    color: #ffffffaf;
+    font-size: 13px;
+    text-align: center;
+  }
+  .site-footer-social-link {
+    color: #ffffffaf;
+    height: 45px;
+    width: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .site-footer-to-top-btn {
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    color: #c78d0fe8;
+    margin-top: 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    border: 1px solid #c78d0fa4;
+  }
+}

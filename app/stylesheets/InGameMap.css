@@ -1,0 +1,280 @@
+@media screen and (min-width: 1920px) {
+  .player-ingame-map-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #55555573;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .player-ingame-map-content {
+    margin-top: 300px;
+    width: 80%;
+    height: 80%;
+  }
+  .player-ingame-map {
+    position: relative;
+    display: block;
+    width: 900px; /* specify a fixed width */
+    height: 900px; /* specify a fixed height */
+    background-image: url("/Pan-Strane_map.jpg");
+    background-size: cover; /* cover instead of contain to make sure the image always fills the map */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    box-shadow: 0px 0px 15px 15px #2b9e7c;
+    margin: 0 auto; /* center the map if the screen is larger than the map's size */
+  }
+  .player-ingame-map-area {
+    position: absolute;
+    background-color: #20e9a65e;
+    border: 2px solid #20e9a6ea;
+    box-shadow: 1px 1px 3px #272727ea;
+    border-radius: 12px;
+    width: 50px; /* specify a fixed width */
+    height: 50px; /* specify a fixed height */
+    cursor: pointer;
+  }
+  .player-ingame-map-area:hover {
+    background-color: #20e9a6ce;
+  }
+
+  .region-info-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 50px;
+    margin-left: 5px;
+    font-size: 26px;
+  }
+  #beach {
+    top: 68%; /* specify a position relative to the map */
+    left: 82%; /* specify a position relative to the map */
+  }
+  #southern-gateway {
+    top: 70%; /* specify a position relative to the map */
+    left: 74%; /* specify a position relative to the map */
+  }
+  #traders-crossroads {
+    top: 78%; /* specify a position relative to the map */
+    left: 67%; /* specify a position relative to the map */
+  }
+  #golden-ruins {
+    top: 74%; /* specify a position relative to the map */
+    left: 45%; /* specify a position relative to the map */
+  }
+  #southern-forest {
+    top: 82%; /* specify a position relative to the map */
+    left: 49%; /* specify a position relative to the map */
+  }
+  #eastern-desert {
+    top: 57%; /* specify a position relative to the map */
+    left: 89%; /* specify a position relative to the map */
+  }
+  #bartus-village {
+    top: 57%; /* specify a position relative to the map */
+    left: 70%; /* specify a position relative to the map */
+  }
+  #tellet-lake {
+    top: 54%; /* specify a position relative to the map */
+    left: 32%; /* specify a position relative to the map */
+  }
+  #blackspine-peaks {
+    top: 40%; /* specify a position relative to the map */
+    left: 58%; /* specify a position relative to the map */
+  }
+  #shrouded-hollow {
+    top: 52%; /* specify a position relative to the map */
+    left: 48%; /* specify a position relative to the map */
+  }
+  #dragons-tear-river {
+    top: 35%; /* specify a position relative to the map */
+    left: 73%; /* specify a position relative to the map */
+  }
+  #murkwood-marsh {
+    top: 36%; /* specify a position relative to the map */
+    left: 32%; /* specify a position relative to the map */
+  }
+  #dragons-descent-temple {
+    top: 8%; /* specify a position relative to the map */
+    left: 76%; /* specify a position relative to the map */
+  }
+  #dunes-of-the-damned {
+    top: 14%; /* specify a position relative to the map */
+    left: 48%; /* specify a position relative to the map */
+  }
+  #forgotten-forest {
+    top: 65%; /* specify a position relative to the map */
+    left: 23%; /* specify a position relative to the map */
+  }
+  #verdantis {
+    top: 47%; /* specify a position relative to the map */
+    left: 16.5%; /* specify a position relative to the map */
+  }
+  #anvilorn {
+    top: 22%; /* specify a position relative to the map */
+    left: 72%; /* specify a position relative to the map */
+  }
+  #eldoria {
+    top: 20%; /* specify a position relative to the map */
+    left: 27.5%; /* specify a position relative to the map */
+  }
+  #northrend-ascent {
+    top: 6%; /* specify a position relative to the map */
+    left: 30%; /* specify a position relative to the map */
+  }
+  #pan-strane-arena {
+    top: 28%; /* specify a position relative to the map */
+    left: 40%; /* specify a position relative to the map */
+  }
+}
+
+@media screen and (min-width: 390px) and (max-width: 844px) {
+  .player-ingame-map-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100vw;
+    height: 100vh;
+    background-color: #55555573;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 25px;
+  }
+  .player-ingame-map-content {
+    width: 80%;
+    height: 80%;
+  }
+  .player-ingame-map {
+    position: relative;
+    display: block;
+    width: 410px; /* specify a fixed width */
+    height: 350px; /* specify a fixed height */
+    background-image: url("/Pan-Strane_map.jpg");
+    background-size: 100% 100%; /* cover instead of contain to make sure the image always fills the map */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px 10px #2b9e7c;
+    margin: 0 auto; /* center the map if the screen is larger than the map's size */
+  }
+  .player-ingame-map-area {
+    position: absolute;
+    background-color: #20e9a65e;
+    border: 2px solid #20e9a6ea;
+    box-shadow: 1px 1px 3px #272727ea;
+    border-radius: 9px;
+    width: 30px; /* specify a fixed width */
+    height: 30px; /* specify a fixed height */
+    cursor: pointer;
+  }
+  .player-ingame-map-area:hover {
+    background-color: #20e9a6ce;
+  }
+
+  .region-info-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 70px;
+    margin-left: 5px;
+  }
+  #beach {
+    top: 68%; /* specify a position relative to the map */
+    left: 82%; /* specify a position relative to the map */
+  }
+  #southern-gateway {
+    top: 70%; /* specify a position relative to the map */
+    left: 74%; /* specify a position relative to the map */
+  }
+  #traders-crossroads {
+    top: 78%; /* specify a position relative to the map */
+    left: 67%; /* specify a position relative to the map */
+  }
+  #golden-ruins {
+    top: 74%; /* specify a position relative to the map */
+    left: 45%; /* specify a position relative to the map */
+  }
+  #southern-forest {
+    top: 82%; /* specify a position relative to the map */
+    left: 49%; /* specify a position relative to the map */
+  }
+  #eastern-desert {
+    top: 57%; /* specify a position relative to the map */
+    left: 89%; /* specify a position relative to the map */
+  }
+  #bartus-village {
+    top: 57%; /* specify a position relative to the map */
+    left: 70%; /* specify a position relative to the map */
+  }
+  #tellet-lake {
+    top: 54%; /* specify a position relative to the map */
+    left: 32%; /* specify a position relative to the map */
+  }
+  #blackspine-peaks {
+    top: 40%; /* specify a position relative to the map */
+    left: 58%; /* specify a position relative to the map */
+  }
+  #shrouded-hollow {
+    top: 52%; /* specify a position relative to the map */
+    left: 48%; /* specify a position relative to the map */
+  }
+  #dragons-tear-river {
+    top: 35%; /* specify a position relative to the map */
+    left: 73%; /* specify a position relative to the map */
+  }
+  #murkwood-marsh {
+    top: 36%; /* specify a position relative to the map */
+    left: 32%; /* specify a position relative to the map */
+  }
+  #dragons-descent-temple {
+    top: 8%; /* specify a position relative to the map */
+    left: 76%; /* specify a position relative to the map */
+  }
+  #dunes-of-the-damned {
+    top: 14%; /* specify a position relative to the map */
+    left: 48%; /* specify a position relative to the map */
+  }
+  #forgotten-forest {
+    top: 65%; /* specify a position relative to the map */
+    left: 23%; /* specify a position relative to the map */
+  }
+  #verdantis {
+    top: 47%; /* specify a position relative to the map */
+    left: 16.5%; /* specify a position relative to the map */
+  }
+  #anvilorn {
+    top: 22%; /* specify a position relative to the map */
+    left: 72%; /* specify a position relative to the map */
+  }
+  #eldoria {
+    top: 20%; /* specify a position relative to the map */
+    left: 27.5%; /* specify a position relative to the map */
+  }
+  #northrend-ascent {
+    top: 6%; /* specify a position relative to the map */
+    left: 30%; /* specify a position relative to the map */
+  }
+  #pan-strane-arena {
+    top: 28%; /* specify a position relative to the map */
+    left: 40%; /* specify a position relative to the map */
+  }
+}

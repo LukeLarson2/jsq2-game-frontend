@@ -1,0 +1,2831 @@
+[
+  {
+    "_id": {
+      "$oid": "64ac621ee6f146a6af6cc6b8"
+    },
+    "race": "orc",
+    "area": "grassy",
+    "level": 1,
+    "name": "Small Orc",
+    "group": "Grass Orc Tribe",
+    "health": 30,
+    "xpEarned": 2,
+    "goldEarned": 2,
+    "dodge": 5,
+    "resist": 2,
+    "attacks": [
+      {
+        "attackName": "Brutal Punch",
+        "minDamage": 2,
+        "maxDamage": 3,
+        "accuracy": 60,
+        "description": "A powerful punch that can cause significant damage to an opponent."
+      },
+      {
+        "attackName": "Brutal Kick",
+        "minDamage": 2,
+        "maxDamage": 4,
+        "accuracy": 60,
+        "description": "A strong kick that potentially delivers a high amount of damage."
+      },
+      {
+        "attackName": "Head Bash",
+        "minDamage": 2,
+        "maxDamage": 5,
+        "accuracy": 60,
+        "description": "A headbutt attack which can deal a medium range of damage."
+      }
+    ],
+    "attackQuotes": [
+      "Me gonna crush you into tiny pieces!",
+      "Feel the power of orc fist!",
+      "Me not good with words, but me great with axe!",
+      "Get ready, me bring the pain!",
+      "Me smash, you scream, sound fair?",
+      "You look like you need orc-sized pounding!",
+      "Hope you ready for a world of hurt!",
+      "No run, only fight! Me like fight!",
+      "When me done, you not gonna be pretty!",
+      "Brace yourself, orc thunder coming your way!"
+    ],
+    "missQuotes": [
+      "Ha! You swing like old orc granny!",
+      "Is that all? Me not even feel it!",
+      "Your aim worse than goblin's cooking!",
+      "You miss! Orc laugh at puny attacks!",
+      "Haha! Me think you need more practice!",
+      "Too slow! You not hit orc with that!",
+      "Did you just try to hit me? Me not sure!",
+      "Missed me! Me thought you supposed to be warrior!",
+      "You hit like weak elf, can't even touch orc!",
+      "Try again, maybe this time you not miss orc!"
+    ],
+    "damageQuotes": [
+      "That tickle! Me turn next!",
+      "You hit like goblin! Me show you real hit!",
+      "Good swing, now it's my turn!",
+      "Me face harder than your puny weapon!",
+      "You make me mad, now me smash!",
+      "That hurt! Me like it, more please!",
+      "Haha, that all you got?",
+      "You wake beast! Me thank you!",
+      "Ouch! That make me laugh!",
+      "Your strikes feed my fury, keep 'em coming!"
+    ],
+    "failedQuotes": [
+      "Oops, me just giving you false hope!",
+      "Ha! Me was just testing the air!",
+      "Missed? No, just warming up orc arm!",
+      "Me orc, not elf! Precision not our thing!",
+      "Just making you feel safe, then BAM!",
+      "Me miss on purpose, just to scare you!",
+      "No worry, orc never miss twice!",
+      "That was not miss, me just adjusted aim!",
+      "Miss? Hah! Just wanted to see you flinch!",
+      "Orc give you freebie! Next one gonna hurt!"
+    ],
+    "deathQuotes": [
+      "Me fall today, but me spirit fight forever!",
+      "If this be the end, me face it with roar!",
+      "Me die with honor, what you die with?",
+      "Even in death, me stronger than you!",
+      "Me body break, but me spirit strong!",
+      "You win this one, but me brothers come for you!",
+      "Good hit, me see stars... pretty stars...",
+      "Me fall in battle, just as ancestors did!",
+      "Death in combat... best death!",
+      "Tell them, it was orc who stood last here!"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64ac6284e6f146a6af6cc6ba"
+    },
+    "race": "orc",
+    "area": "grassy",
+    "level": 2,
+    "name": "Grunt Orc",
+    "group": "Grass Orc Tribe",
+    "health": 40,
+    "xpEarned": 2,
+    "goldEarned": 3,
+    "dodge": 8,
+    "resist": 5,
+    "attacks": [
+      {
+        "attackName": "Violent Punch",
+        "minDamage": 3,
+        "maxDamage": 4,
+        "accuracy": 70,
+        "description": "A forceful punch that delivers a medium to high range of damage."
+      },
+      {
+        "attackName": "Violent Kick",
+        "minDamage": 4,
+        "maxDamage": 5,
+        "accuracy": 70,
+        "description": "An aggressive kick with the potential to cause significant damage."
+      },
+      {
+        "attackName": "Violent Head Bash",
+        "minDamage": 4,
+        "maxDamage": 6,
+        "accuracy": 70,
+        "description": "A powerful headbutt that can deal serious damage to the enemy."
+      }
+    ],
+    "attackQuotes": [
+      "Me gonna crush you into tiny pieces!",
+      "Feel the power of orc fist!",
+      "Me not good with words, but me great with axe!",
+      "Get ready, me bring the pain!",
+      "Me smash, you scream, sound fair?",
+      "You look like you need orc-sized pounding!",
+      "Hope you ready for a world of hurt!",
+      "No run, only fight! Me like fight!",
+      "When me done, you not gonna be pretty!",
+      "Brace yourself, orc thunder coming your way!"
+    ],
+    "missQuotes": [
+      "Ha! You swing like old orc granny!",
+      "Is that all? Me not even feel it!",
+      "Your aim worse than goblin's cooking!",
+      "You miss! Orc laugh at puny attacks!",
+      "Haha! Me think you need more practice!",
+      "Too slow! You not hit orc with that!",
+      "Did you just try to hit me? Me not sure!",
+      "Missed me! Me thought you supposed to be warrior!",
+      "You hit like weak elf, can't even touch orc!",
+      "Try again, maybe this time you not miss orc!"
+    ],
+    "damageQuotes": [
+      "That tickle! Me turn next!",
+      "You hit like goblin! Me show you real hit!",
+      "Good swing, now it's my turn!",
+      "Me face harder than your puny weapon!",
+      "You make me mad, now me smash!",
+      "That hurt! Me like it, more please!",
+      "Haha, that all you got?",
+      "You wake beast! Me thank you!",
+      "Ouch! That make me laugh!",
+      "Your strikes feed my fury, keep 'em coming!"
+    ],
+    "failedQuotes": [
+      "Oops, me just giving you false hope!",
+      "Ha! Me was just testing the air!",
+      "Missed? No, just warming up orc arm!",
+      "Me orc, not elf! Precision not our thing!",
+      "Just making you feel safe, then BAM!",
+      "Me miss on purpose, just to scare you!",
+      "No worry, orc never miss twice!",
+      "That was not miss, me just adjusted aim!",
+      "Miss? Hah! Just wanted to see you flinch!",
+      "Orc give you freebie! Next one gonna hurt!"
+    ],
+    "deathQuotes": [
+      "Grunt fall, but orc spirit never die!",
+      "Grunt's end is mighty roar, what's your end?",
+      "Even dead, Grunt stronger than you!",
+      "You win now, but Grunt's brothers come for you!",
+      "Grunt see stars... shiny stars..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64ac62c8e6f146a6af6cc6bc"
+    },
+    "race": "orc",
+    "area": "grassy",
+    "level": 3,
+    "name": "Warrior Orc",
+    "group": "Grass Orc Tribe",
+    "health": 70,
+    "xpEarned": 10,
+    "goldEarned": 3,
+    "dodge": 7,
+    "resist": 10,
+    "attacks": [
+      {
+        "attackName": "Ferocious Punch",
+        "minDamage": 5,
+        "maxDamage": 10,
+        "accuracy": 70,
+        "description": "An intense punch delivering high damage, known for its ferocity."
+      },
+      {
+        "attackName": "Ferocious Kick",
+        "minDamage": 5,
+        "maxDamage": 13,
+        "accuracy": 70,
+        "description": "An exceptionally forceful kick, capable of dealing immense damage."
+      },
+      {
+        "attackName": "Ferocious Head Bash",
+        "minDamage": 5,
+        "maxDamage": 11,
+        "accuracy": 70,
+        "description": "A frightful headbutt, known for its high damage and terrifying impact."
+      }
+    ],
+    "attackQuotes": [
+      "Me gonna crush you into tiny pieces!",
+      "Feel the power of orc fist!",
+      "Me not good with words, but me great with axe!",
+      "Get ready, me bring the pain!",
+      "Me smash, you scream, sound fair?",
+      "You look like you need orc-sized pounding!",
+      "Hope you ready for a world of hurt!",
+      "No run, only fight! Me like fight!",
+      "When me done, you not gonna be pretty!",
+      "Brace yourself, orc thunder coming your way!"
+    ],
+    "missQuotes": [
+      "Ha! You swing like old orc granny!",
+      "Is that all? Me not even feel it!",
+      "Your aim worse than goblin's cooking!",
+      "You miss! Orc laugh at puny attacks!",
+      "Haha! Me think you need more practice!",
+      "Too slow! You not hit orc with that!",
+      "Did you just try to hit me? Me not sure!",
+      "Missed me! Me thought you supposed to be warrior!",
+      "You hit like weak elf, can't even touch orc!",
+      "Try again, maybe this time you not miss orc!"
+    ],
+    "damageQuotes": [
+      "That tickle! Me turn next!",
+      "You hit like goblin! Me show you real hit!",
+      "Good swing, now it's my turn!",
+      "Me face harder than your puny weapon!",
+      "You make me mad, now me smash!",
+      "That hurt! Me like it, more please!",
+      "Haha, that all you got?",
+      "You wake beast! Me thank you!",
+      "Ouch! That make me laugh!",
+      "Your strikes feed my fury, keep 'em coming!"
+    ],
+    "failedQuotes": [
+      "Oops, me just giving you false hope!",
+      "Ha! Me was just testing the air!",
+      "Missed? No, just warming up orc arm!",
+      "Me orc, not elf! Precision not our thing!",
+      "Just making you feel safe, then BAM!",
+      "Me miss on purpose, just to scare you!",
+      "No worry, orc never miss twice!",
+      "That was not miss, me just adjusted aim!",
+      "Miss? Hah! Just wanted to see you flinch!",
+      "Orc give you freebie! Next one gonna hurt!"
+    ],
+    "deathQuotes": [
+      "Warrior fall, but orc fight forever!",
+      "Warrior's end is brave roar!",
+      "Even dead, Warrior stronger than you!",
+      "You win today, Warrior's brothers come for you!",
+      "Warrior see stars... bright stars..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64ac62e7e6f146a6af6cc6be"
+    },
+    "race": "orc",
+    "area": "grassy",
+    "level": 4,
+    "name": "Berserker Orc",
+    "group": "Grass Orc Tribe",
+    "health": 60,
+    "xpEarned": 4,
+    "goldEarned": 20,
+    "dodge": 8,
+    "resist": 20,
+    "attacks": [
+      {
+        "attackName": "Ravaging Punch",
+        "minDamage": 8,
+        "maxDamage": 15,
+        "accuracy": 90,
+        "description": "A ravaging punch that wreaks havoc on opponents, causing substantial damage."
+      },
+      {
+        "attackName": "Catastrophic Kick",
+        "minDamage": 8,
+        "maxDamage": 18,
+        "accuracy": 90,
+        "description": "A catastrophic kick that can lead to severe damage, greatly affecting the enemy's health."
+      },
+      {
+        "attackName": "Devastating Head Bash",
+        "minDamage": 8,
+        "maxDamage": 16,
+        "accuracy": 90,
+        "description": "A devastating headbutt that can critically impair an opponent, causing significant damage."
+      }
+    ],
+    "attackQuotes": [
+      "Me gonna crush you into tiny pieces!",
+      "Feel the power of orc fist!",
+      "Me not good with words, but me great with axe!",
+      "Get ready, me bring the pain!",
+      "Me smash, you scream, sound fair?",
+      "You look like you need orc-sized pounding!",
+      "Hope you ready for a world of hurt!",
+      "No run, only fight! Me like fight!",
+      "When me done, you not gonna be pretty!",
+      "Brace yourself, orc thunder coming your way!"
+    ],
+    "missQuotes": [
+      "Ha! You swing like old orc granny!",
+      "Is that all? Me not even feel it!",
+      "Your aim worse than goblin's cooking!",
+      "You miss! Orc laugh at puny attacks!",
+      "Haha! Me think you need more practice!",
+      "Too slow! You not hit orc with that!",
+      "Did you just try to hit me? Me not sure!",
+      "Missed me! Me thought you supposed to be warrior!",
+      "You hit like weak elf, can't even touch orc!",
+      "Try again, maybe this time you not miss orc!"
+    ],
+    "damageQuotes": [
+      "That tickle! Me turn next!",
+      "You hit like goblin! Me show you real hit!",
+      "Good swing, now it's my turn!",
+      "Me face harder than your puny weapon!",
+      "You make me mad, now me smash!",
+      "That hurt! Me like it, more please!",
+      "Haha, that all you got?",
+      "You wake beast! Me thank you!",
+      "Ouch! That make me laugh!",
+      "Your strikes feed my fury, keep 'em coming!"
+    ],
+    "failedQuotes": [
+      "Oops, me just giving you false hope!",
+      "Ha! Me was just testing the air!",
+      "Missed? No, just warming up orc arm!",
+      "Me orc, not elf! Precision not our thing!",
+      "Just making you feel safe, then BAM!",
+      "Me miss on purpose, just to scare you!",
+      "No worry, orc never miss twice!",
+      "That was not miss, me just adjusted aim!",
+      "Miss? Hah! Just wanted to see you flinch!",
+      "Orc give you freebie! Next one gonna hurt!"
+    ],
+    "deathQuotes": [
+      "Berserker fall, but orc fight forever!",
+      "Berserker's end is proud roar!",
+      "Even dead, Berserker stronger than you!",
+      "You win now, Berserker's brothers come for you!",
+      "Berserker see stars... beautiful stars..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b7599815f08dba97df6b10"
+    },
+    "race": "lizard",
+    "area": "desert",
+    "level": 6,
+    "name": "Fierce Lizard",
+    "group": "Lizards",
+    "health": 30,
+    "xpEarned": 6,
+    "goldEarned": 5,
+    "dodge": 30,
+    "resist": 1,
+    "attacks": [
+      {
+        "attackName": "Spiked Tail Whip",
+        "minDamage": 5,
+        "maxDamage": 7,
+        "accuracy": 70,
+        "description": "A tail whip covered in sharp barbs."
+      },
+      {
+        "attackName": "Claw Swipe",
+        "minDamage": 5,
+        "maxDamage": 8,
+        "accuracy": 60,
+        "description": "Piercing claws rip at the opponent's armor."
+      },
+      {
+        "attackName": "Needle Fang",
+        "minDamage": 6,
+        "maxDamage": 8,
+        "accuracy": 60,
+        "description": "Long needle like fangs bite into the opponents arms."
+      }
+    ],
+    "attackQuotes": [
+      "Hsssssss!",
+      "SSSSSah!",
+      "Hsss SSSah!",
+      "Hsssssss!",
+      "SSSSSah!",
+      "Hsss SSSah!",
+      "Hsssssss!",
+      "SSSSSah!",
+      "Hsss SSSah!",
+      "Hsss SSSah!"
+    ],
+    "missQuotes": [
+      "Sssss",
+      "Hsss",
+      "Sssss",
+      "Hsss",
+      "Sssss",
+      "Hsss",
+      "Sssss",
+      "Hsss",
+      "Sssss",
+      "Hsss"
+    ],
+    "damageQuotes": [
+      "HIISSSSssss!",
+      "HISSssss!",
+      "HIISSSSssss!",
+      "HISSssss!",
+      "HIISSSSssss!",
+      "HISSssss!",
+      "HIISSSSssss!",
+      "HISSssss!",
+      "HIISSSSssss!",
+      "HISSssss!"
+    ],
+    "failedQuotes": [
+      "SSSahhisss",
+      "SSSahhisss",
+      "SSSahhisss",
+      "SSSahhisss",
+      "SSSahhisss",
+      "SSSahhisss",
+      "SSSahhisss",
+      "SSSahhisss",
+      "SSSahhisss",
+      "SSSahhisss",
+      "SSSahhisss"
+    ],
+    "deathQuotes": [
+      "Hisssasssahhhh!",
+      "Hisssasssahhhh!",
+      "Hisssasssahhhh!",
+      "Hisssasssahhhh!",
+      "Hisssasssahhhh!",
+      "Hisssasssahhhh!",
+      "Hisssasssahhhh!",
+      "Hisssasssahhhh!",
+      "Hisssasssahhhh!",
+      "Hisssasssahhhh!",
+      "Hisssasssahhhh!"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b7726215f08dba97df6b1d"
+    },
+    "race": "orc",
+    "area": "forest",
+    "level": 7,
+    "name": "Large Orc",
+    "group": "Forest Region Orc",
+    "health": 70,
+    "xpEarned": 7,
+    "goldEarned": 8,
+    "dodge": 2,
+    "resist": 40,
+    "attacks": [
+      {
+        "attackName": "Thorned Fist",
+        "minDamage": 10,
+        "maxDamage": 15,
+        "accuracy": 70,
+        "description": "Sharp thorns grow from this orcs knuckes."
+      },
+      {
+        "attackName": "Tree Slam",
+        "minDamage": 15,
+        "maxDamage": 20,
+        "accuracy": 60,
+        "description": "Uproots a tree and slams it on the opponent"
+      },
+      {
+        "attackName": "Feral Bite",
+        "minDamage": 18,
+        "maxDamage": 21,
+        "accuracy": 60,
+        "description": "A bite with fangs razor sharp."
+      }
+    ],
+    "attackQuotes": [
+      "Me smash, tree happy!",
+      "Big stick hit hard, you fall down!",
+      "Grrr, forest say you go squish now!",
+      "Me show you tree power!",
+      "Orc smash, birdies laugh!",
+      "You make good plant food!",
+      "Me make tree happy, you not happy!",
+      "Forest want you flat, me do that!",
+      "You be good for soil, me sure!",
+      "Big rock say hello to your head!"
+    ],
+    "missQuotes": [
+      "Me fast like squirrel, you slow like snail!",
+      "Ha! You no hit, me laugh!",
+      "You swing, me dance!",
+      "Forest teach me dodge, you not good!",
+      "Me no there, you hit air!",
+      "Fast Orc, slow you!",
+      "You try hit, me try not be there!",
+      "Your attack go whoosh, me go ha!",
+      "Me no here for your hug, try again!",
+      "Big tree teach me move quick, you learn too!"
+    ],
+    "damageQuotes": [
+      "Ouch! You make orc mad, tree mad too!",
+      "Me hurt, but not down! You see!",
+      "That sting! Now, me smash!",
+      "Hurt orc strong orc, me thank you!",
+      "Blood make soil rich, you make me mad!",
+      "You cut me, now me cut you!",
+      "Me feel pain, forest feel you!",
+      "You poke, me poke back harder!",
+      "Rock harder than you, me still standing!",
+      "Me hurt, but not fall, you see!"
+    ],
+    "failedQuotes": [
+      "Me miss, but tree hit next time!",
+      "You lucky, next time me not miss!",
+      "Me swing, you dance, we try again!",
+      "Orc miss, but forest always hits!",
+      "Big stick no hit, big stick try again!",
+      "You no there, me swing again!",
+      "Me no hit, but me no give up!",
+      "Miss now, smash later!",
+      "You move fast, but not fast forever!",
+      "Tree tell me you there, me try again!"
+    ],
+    "deathQuotes": [
+      "Me fall, but forest remembers...",
+      "Orc down, but spirit in tree now...",
+      "Me sleep now, dream of smashing...",
+      "Ouch, me no more, but tree still there...",
+      "Me go to big forest in sky...",
+      "Blood feed tree, orc spirit happy...",
+      "Orc fall, but tree stand tall...",
+      "You win, me sleep, dream of better fight...",
+      "Me meet ancestors in great forest...",
+      "Me no more, but tree remember me..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b7716315f08dba97df6b1b"
+    },
+    "race": "darkElf",
+    "area": "forest",
+    "level": 8,
+    "name": "Dark Forest Elf",
+    "group": "Dark Elves",
+    "health": 50,
+    "xpEarned": 8,
+    "goldEarned": 8,
+    "dodge": 50,
+    "resist": 1,
+    "attacks": [
+      {
+        "attackName": "Thorned Vine Whip",
+        "minDamage": 10,
+        "maxDamage": 15,
+        "accuracy": 70,
+        "description": "A whip crafted from the thorned vines of the dark forest."
+      },
+      {
+        "attackName": "Briar Claw Strike",
+        "minDamage": 15,
+        "maxDamage": 20,
+        "accuracy": 60,
+        "description": "Sharpened briar claws, it tears opponent's armor in a vicious swipe."
+      },
+      {
+        "attackName": "Feral Spriggan Bite",
+        "minDamage": 18,
+        "maxDamage": 21,
+        "accuracy": 60,
+        "description": "A bite with fangs as sharp as spriggan thorns."
+      }
+    ],
+    "attackQuotes": [
+      "Under the cloak of shadows, your doom unfolds!",
+      "Let the night itself be your last memory!",
+      "Darkness be my guide, oblivion your destination!",
+      "A whisper in the shadows, a blade in the heart!",
+      "In the abyss we are born, and to the abyss you will return!",
+      "Fear the children of the moon's embrace, for we spare none!",
+      "Your end is but a symphony of twilight!",
+      "The cold of the underdark is a merciful end compared to my wrath!",
+      "Let your screams echo in the infinite darkness!",
+      "Before the starless skies, all will succumb to the night!"
+    ],
+    "missQuotes": [
+      "The dance of shadows is not over yet!",
+      "The night misses nothing; your time will come!",
+      "Even the darkness teases its prey!",
+      "A whisper may miss, but the scream of my blade will not!",
+      "Your reprieve is temporary, your oblivion certain!",
+      "A single miss in the moonlight, yet the doom remains!",
+      "My aim was off, but the abyss's hunger is infinite!",
+      "In the underdark, even the shadows play tricks!",
+      "You've dodged the chill, but can you escape the eternal night?",
+      "A single misstep under the starless sky... fear not, the end draws nigh!"
+    ],
+    "damageQuotes": [
+      "Your blade bites, but the night is endless!",
+      "A sting in the shadow, a challenge in the dark!",
+      "In the underdark, pain is but the night's caress!",
+      "The moonlit blood only stirs my wrath!",
+      "My body may falter, but my resolve is as firm as the midnight sky!",
+      "Your strike, a fleeting spark; my vengeance, an eternal night!",
+      "Each wound is a new moon, heralding your impending eclipse!",
+      "Your steel may wound, but the abyss remains undaunted!",
+      "Feel a taste of victory, savor it, for it is as fleeting as dawn!",
+      "Bleeding under the starless sky only fuels the darkness within me!"
+    ],
+    "failedQuotes": [
+      "Even shadows falter, but do not underestimate the dark!",
+      "The starless night may miss, but the dawn of your end has just begun!",
+      "A flicker in the abyss, a prelude to your doom!",
+      "My strike misses not, it's merely dancing in the moonlight!",
+      "Like an echo in the underdark, my attack bides its time!",
+      "Your escape is temporary, the embrace of the shadow is inevitable!",
+      "A mere shadow-play, the real act is yet to come!",
+      "You've avoided the fangs of the night, but can you outrun its cloak?",
+      "I may miss under these starless skies, but fear not, the end draws ever nearer!",
+      "The abyss's aim may falter, but its hunger never wanes!"
+    ],
+    "deathQuotes": [
+      "In death, I become one with the endless night...",
+      "As I fall, the abyss awaits... embrace me, eternal darkness.",
+      "From the shadows I came, to the shadows I return...",
+      "My twilight descends, yet the underdark lives on...",
+      "This is but a pause in the symphony of the night...",
+      "Let my demise be a black star in the endless sky!",
+      "The moon sets on me, but my legend lingers in the dark...",
+      "My spirit joins the starless night, fear me in your dreams...",
+      "I fade into the abyss, but darkness will always remember...",
+      "Beware, for even in death, the shadow's wrath is undying..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b8152513cf5531229ee302"
+    },
+    "race": "wolf",
+    "area": "grassy",
+    "level": 8,
+    "name": "Wolf",
+    "group": "Wolves",
+    "health": 60,
+    "xpEarned": 8,
+    "goldEarned": 20,
+    "dodge": 20,
+    "resist": 30,
+    "attacks": [
+      {
+        "attackName": "Sharp Bite",
+        "minDamage": 5,
+        "maxDamage": 8,
+        "accuracy": 80,
+        "description": "A sharp bite from its powerful jaws."
+      },
+      {
+        "attackName": "Razor Claw",
+        "minDamage": 7,
+        "maxDamage": 10,
+        "accuracy": 70,
+        "description": "Attacks with its sharp claws."
+      },
+      {
+        "attackName": "Feral Pounce",
+        "minDamage": 9,
+        "maxDamage": 12,
+        "accuracy": 60,
+        "description": "Pounces on the enemy with primal ferocity."
+      }
+    ],
+    "attackQuotes": [
+      "The pack sends its regards!",
+      "You tread on our territory!",
+      "Taste the fury of the wild!",
+      "My teeth long for the taste of battle!",
+      "The pack hunts as one!",
+      "Feel the wrath of the wolf!",
+      "The wild does not forgive intruders!",
+      "I am the fury of the forest!",
+      "The pack shall feast tonight!",
+      "You are not welcome in our hunting grounds!"
+    ],
+    "missQuotes": [
+      "You dodge swiftly, but the hunt is not over!",
+      "A miss? The hunt has just begun.",
+      "You evade me now, but not for long!",
+      "Avoided my bite? I won't miss again!",
+      "You dodged my attack? My aim will be true!",
+      "Swift as the wind, but the wind aids the hunter!",
+      "You're quick, but the hunt is relentless!",
+      "Missed? The prey is slippery, for now.",
+      "A whiff? I'm merely testing your reflexes!",
+      "You evade for now, but not for long!"
+    ],
+    "damageQuotes": [
+      "You wound me, but it only makes me stronger!",
+      "Is that all? I've faced greater challenges!",
+      "You strike me, but I will strike back!",
+      "Your attack lands, but the hunt is not over!",
+      "A scrape, but the hunt remains!",
+      "That strike... it fuels my wrath!",
+      "I am no mere beast, your attacks only steel my resolve!",
+      "Your blow lands, but it is but a scratch!",
+      "You hit me, but I'll hit back harder!",
+      "Your attack... it fuels my ferocity!"
+    ],
+    "failedQuotes": [
+      "I do not always connect, but I always persevere!",
+      "Missed? The hunt has its twists and turns.",
+      "Did not land? The prey is elusive, for now.",
+      "I missed? I will not miss again!",
+      "I did not strike? The hunt bides its time!",
+      "Failed to hit? The chase takes its time.",
+      "No mark? The hunt will not end so easily.",
+      "My attack failed? I am merely testing you.",
+      "An empty swipe, a rare sight in the hunt!",
+      "A whiff? The winds must have fooled me!"
+    ],
+    "deathQuotes": [
+      "I... fall... but... the pack... endures...",
+      "In... death... I join... the wild...",
+      "I... become... one... with... the forest...",
+      "In life... I hunted... in death... I find peace...",
+      "I... join... the ancestors... in... eternal... hunt...",
+      "I... fall... but... the pack... remains...",
+      "I... return... to... the wild...",
+      "In defeat... I... return... to nature...",
+      "From the forest... I came... to the forest... I return...",
+      "The pack... will... remember..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b7582215f08dba97df6b0e"
+    },
+    "race": "golem",
+    "area": "desert",
+    "level": 9,
+    "name": "Sand Golem",
+    "group": "Elemenals",
+    "health": 100,
+    "xpEarned": 9,
+    "goldEarned": 8,
+    "dodge": 3,
+    "resist": 8,
+    "attacks": [
+      {
+        "attackName": "Sand Blast",
+        "minDamage": 15,
+        "maxDamage": 20,
+        "accuracy": 70,
+        "description": "A powerful blast of sand piercing the opponents flesh."
+      },
+      {
+        "attackName": "Body Slam",
+        "minDamage": 22,
+        "maxDamage": 25,
+        "accuracy": 60,
+        "description": "Heavy body slam that knocks opponents back."
+      },
+      {
+        "attackName": "Desert Heat",
+        "minDamage": 25,
+        "maxDamage": 30,
+        "accuracy": 50,
+        "description": "The golem amplifies the the extreme desert heat towards its target."
+      }
+    ],
+    "attackQuotes": [
+      "ARRRRRGGGHHH!",
+      "RRAAAAAAAH!",
+      "BRRRRAAAAAHHHHHH!",
+      "ARRRRRGGGHHH!",
+      "RRAAAAAAAH!",
+      "BRRRRAAAAAHHHHHH!",
+      "ARRRRRGGGHHH!",
+      "RRAAAAAAAH!",
+      "BRRRRAAAAAHHHHHH!",
+      "BRRRRAAAAAHHHHHH!"
+    ],
+    "missQuotes": [
+      "AHHHHRUUU!",
+      "GRUUH!",
+      "AHHHHRUUU!",
+      "GRUUH!",
+      "AHHHHRUUU!",
+      "GRUUH!",
+      "AHHHHRUUU!",
+      "GRUUH!",
+      "AHHHHRUUU!",
+      "GRUUH!"
+    ],
+    "damageQuotes": [
+      "GRAAAAAHH!",
+      "GUHH!",
+      "GRAAAAAHH!",
+      "GUHH!",
+      "GRAAAAAHH!",
+      "GUHH!",
+      "GRAAAAAHH!",
+      "GUHH!",
+      "GRAAAAAHH!",
+      "GUHH!"
+    ],
+    "failedQuotes": [
+      "HHUUUH",
+      "HHUUUH",
+      "HHUUUH",
+      "HHUUUH",
+      "HHUUUH",
+      "HHUUUH",
+      "HHUUUH",
+      "HHUUUH",
+      "HHUUUH",
+      "HHUUUH"
+    ],
+    "deathQuotes": [
+      "AAAAAAHHHHHHHHHHH!",
+      "AAAAAAHHHHHHHHHHH!",
+      "AAAAAAHHHHHHHHHHH!",
+      "AAAAAAHHHHHHHHHHH!",
+      "AAAAAAHHHHHHHHHHH!",
+      "AAAAAAHHHHHHHHHHH!",
+      "AAAAAAHHHHHHHHHHH!",
+      "AAAAAAHHHHHHHHHHH!",
+      "AAAAAAHHHHHHHHHHH!",
+      "AAAAAAHHHHHHHHHHH!"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b8266213cf5531229ee31c"
+    },
+    "race": "orc",
+    "area": "mountain",
+    "level": 10,
+    "name": "Large Orc",
+    "group": "Mountain Orcs",
+    "health": 150,
+    "xpEarned": 10,
+    "goldEarned": 40,
+    "dodge": 20,
+    "resist": 45,
+    "attacks": [
+      {
+        "attackName": "Stone Throw",
+        "minDamage": 8,
+        "maxDamage": 10,
+        "accuracy": 75,
+        "description": "Throws a large boulder at the opponent."
+      },
+      {
+        "attackName": "Mountain Punch",
+        "minDamage": 10,
+        "maxDamage": 13,
+        "accuracy": 65,
+        "description": "A strong punch empowered by the toughness of the mountain."
+      },
+      {
+        "attackName": "Orcish War Cry",
+        "minDamage": 9,
+        "maxDamage": 12,
+        "accuracy": 70,
+        "description": "A terrifying war cry that damages the enemy's morale."
+      }
+    ],
+    "attackQuotes": [
+      "Mountain strong, orc stronger!",
+      "Feel the might of the mountain!",
+      "Orc crush, mountain laugh!",
+      "You be good for rock polishing!",
+      "Rock, meet puny enemy!",
+      "Mountain gave me strength, you no match!",
+      "Rock crush you, me laugh!",
+      "You try climb mountain, me push down!",
+      "You no mountain tough, me crush!",
+      "Mountain high, you fall hard!"
+    ],
+    "missQuotes": [
+      "Me fast like mountain cat, you slow like slug!",
+      "You no hit, orc strong!",
+      "Me dance on mountain, you miss!",
+      "Mountain teach me dodge, you no good!",
+      "Fast orc, slow you!",
+      "Mountain teach me quick, you need lesson!",
+      "You try hit, me not there!",
+      "You miss, mountain laugh!",
+      "Orc quick, you slow!",
+      "Mountain wind teach me move fast, you try!"
+    ],
+    "damageQuotes": [
+      "You hurt orc, orc mad now!",
+      "Orc strong, you see!",
+      "Ouch, you hit, now me hit back!",
+      "Pain make orc mad, you see!",
+      "Blood make mountain red, now me angry!",
+      "You hurt me, me crush you now!",
+      "You hit orc, orc hit back harder!",
+      "Orc feel pain, now you feel orc rage!",
+      "You hit hard, orc hit harder!",
+      "You make orc bleed, now orc make you bleed!"
+    ],
+    "failedQuotes": [
+      "Orc miss, but mountain never miss!",
+      "You lucky, orc not miss next time!",
+      "Orc swing, you duck, we try again!",
+      "Orc miss, but rock never miss!",
+      "Me no hit this time, but me hit next time!",
+      "Next time, orc not miss!",
+      "You dodge now, but not dodge forever!",
+      "Me miss, but mountain always hits!",
+      "You move fast, but not fast enough next time!",
+      "You duck now, but not next time!"
+    ],
+    "deathQuotes": [
+      "Orc fall, but mountain remembers...",
+      "Orc down, spirit join mountain...",
+      "Me join ancestors in mountain...",
+      "Orc fall, but mountain stand...",
+      "You win, orc join mountain...",
+      "Blood feed mountain, orc spirit rest...",
+      "Orc fall, but mountain forever...",
+      "You win, me sleep, dream of mountain...",
+      "Orc spirit join mountain...",
+      "Orc gone, but mountain remember orc..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b82f7313cf5531229ee31e"
+    },
+    "race": "bug",
+    "area": "river",
+    "level": 10,
+    "name": "River Bug",
+    "group": "Insects",
+    "health": 120,
+    "xpEarned": 10,
+    "goldEarned": 30,
+    "dodge": 40,
+    "resist": 30,
+    "attacks": [
+      {
+        "attackName": "Water Slash",
+        "minDamage": 7,
+        "maxDamage": 10,
+        "accuracy": 75,
+        "description": "Creates a sharp wave of water to strike the opponent."
+      },
+      {
+        "attackName": "Insect Bite",
+        "minDamage": 8,
+        "maxDamage": 12,
+        "accuracy": 70,
+        "description": "Bites the opponent with its tiny but sharp fangs."
+      },
+      {
+        "attackName": "River Dive",
+        "minDamage": 6,
+        "maxDamage": 9,
+        "accuracy": 80,
+        "description": "Dives into the opponent from above, like diving into a river."
+      }
+    ],
+    "attackQuotes": [
+      "Bug strong, river stronger!",
+      "Feel the flow of the river!",
+      "Bug crush, river laugh!",
+      "You make good water wave!",
+      "Bug jump, you go splash!",
+      "River gave me strength, you no match!",
+      "Bug hit you, you make splash!",
+      "Bug dive, you go under!",
+      "You not river strong, bug crush!",
+      "River deep, you fall hard!"
+    ],
+    "missQuotes": [
+      "Bug fast like fish, you slow like snail!",
+      "You no hit, bug swift!",
+      "Me swim in river, you miss!",
+      "River teach me dodge, you no good!",
+      "Fast bug, slow you!",
+      "River teach me quick, you need lesson!",
+      "You try hit, me not there!",
+      "You miss, river laugh!",
+      "Bug quick, you slow!",
+      "River current teach me move fast, you try!"
+    ],
+    "damageQuotes": [
+      "You hurt bug, bug mad now!",
+      "Bug strong, you see!",
+      "Ouch, you hit, now me hit back!",
+      "Pain make bug mad, you see!",
+      "Blood make river red, now me angry!",
+      "You hurt me, me crush you now!",
+      "You hit bug, bug hit back harder!",
+      "Bug feel pain, now you feel bug anger!",
+      "You hit hard, bug hit harder!",
+      "You make bug bleed, now bug make you bleed!"
+    ],
+    "failedQuotes": [
+      "Bug miss, but river never miss!",
+      "You lucky, bug not miss next time!",
+      "Bug swing, you duck, we try again!",
+      "Bug miss, but water never miss!",
+      "Me no hit this time, but me hit next time!",
+      "Next time, bug not miss!",
+      "You dodge now, but not dodge forever!",
+      "Me miss, but river always hits!",
+      "You move fast, but not fast enough next time!",
+      "You duck now, but not next time!"
+    ],
+    "deathQuotes": [
+      "Bug fall, but river remembers...",
+      "Bug down, spirit join river...",
+      "Me join ancestors in river...",
+      "Bug fall, but river flow...",
+      "You win, bug join river...",
+      "Blood feed river, bug spirit rest...",
+      "Bug fall, but river forever...",
+      "You win, me sleep, dream of river...",
+      "Bug spirit join river...",
+      "Bug gone, but river remember bug..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b8199613cf5531229ee310"
+    },
+    "race": "bug",
+    "area": "desert",
+    "level": 10,
+    "name": "Demonio Volador",
+    "group": "Insects",
+    "health": 125,
+    "xpEarned": 10,
+    "goldEarned": 20,
+    "dodge": 17,
+    "resist": 27,
+    "attacks": [
+      {
+        "attackName": "Desert Sting",
+        "minDamage": 8,
+        "maxDamage": 11,
+        "accuracy": 70,
+        "description": "A painful sting filled with the desert's harsh toxins."
+      },
+      {
+        "attackName": "Sand Swipe",
+        "minDamage": 10,
+        "maxDamage": 13,
+        "accuracy": 60,
+        "description": "A swipe with claws coated in coarse desert sand."
+      },
+      {
+        "attackName": "Dune Biter",
+        "minDamage": 12,
+        "maxDamage": 15,
+        "accuracy": 55,
+        "description": "A quick and unexpected bite, just like the desert's sudden storms."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the desert's fury!",
+      "Taste the sting of the sand!",
+      "The desert's grasp is inescapable!",
+      "You are a feast for the insects!",
+      "The sun's fury courses through me!",
+      "Your life will be drained like water in the desert!",
+      "The desert always takes its due!",
+      "Succumb to the harshness of the sands!",
+      "The desert leaves no survivors!",
+      "In the desert, the strong prey upon the weak!"
+    ],
+    "missQuotes": [
+      "Fast like a desert wind, you cannot touch me!",
+      "You swing at sand, futile and hopeless!",
+      "You miss, just like a mirage!",
+      "Your attacks are as effective as rain in the desert!",
+      "You miss! The desert's heat must be getting to you!",
+      "Missed me! Like water, I slip through your fingers!",
+      "You can't catch the wind, nor can you catch me!",
+      "Like a sandstorm, I'm out of your reach!",
+      "Your swings are as aimless as a lost wanderer!",
+      "Your attacks dissipate like mist in the desert sun!"
+    ],
+    "damageQuotes": [
+      "The desert wind howls in pain!",
+      "You hurt me, but I am as relentless as the desert!",
+      "Pain is temporary, the desert is eternal!",
+      "Your attacks sting, but I am the scorpion!",
+      "You draw blood, but the desert has seen worse!",
+      "Your strikes are as cruel as the desert sun!",
+      "You hurt, but the desert hurts more!",
+      "Even in pain, I am the desert's fury!",
+      "Pain is but a mirage in the desert!",
+      "Your strikes hurt, but the desert's wrath is greater!"
+    ],
+    "failedQuotes": [
+      "A missed strike, but the desert is patient!",
+      "Failed now, but the desert wind always returns!",
+      "A swing and a miss, but the desert's fury remains!",
+      "I miss, but the desert's torment is constant!",
+      "I missed, but the desert storm is unrelenting!",
+      "Failed strike, but the desert never rests!",
+      "My sting missed, but the desert's bite is unending!",
+      "A failure now, but the desert's wrath continues!",
+      "I may miss, but the desert is always ready to strike!",
+      "No connection now, but the desert's patience is eternal!"
+    ],
+    "deathQuotes": [
+      "In the desert... I fall...",
+      "Into the sands... I return...",
+      "The desert... claims... another...",
+      "I... am... dust...",
+      "I return... to the sands...",
+      "In the desert... even we... fall...",
+      "The sands... claim... me...",
+      "To the desert... I return...",
+      "I become... one... with the dunes...",
+      "The desert... reclaims... its own..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b8177d13cf5531229ee30c"
+    },
+    "race": "skeleton",
+    "area": "village",
+    "level": 11,
+    "name": "Skeleton",
+    "group": "Undead",
+    "health": 140,
+    "xpEarned": 15,
+    "goldEarned": 28,
+    "dodge": 19,
+    "resist": 38,
+    "attacks": [
+      {
+        "attackName": "Bone Slice",
+        "minDamage": 9,
+        "maxDamage": 13,
+        "accuracy": 70,
+        "description": "A swift slice with a bone, honed on the cobblestones."
+      },
+      {
+        "attackName": "Skull Charge",
+        "minDamage": 11,
+        "maxDamage": 14,
+        "accuracy": 65,
+        "description": "Charges at the enemy with its hardened skull."
+      },
+      {
+        "attackName": "Grave Chill",
+        "minDamage": 12,
+        "maxDamage": 16,
+        "accuracy": 60,
+        "description": "Casts a deathly chill, sapping the life from its enemies."
+      }
+    ],
+    "attackQuotes": [
+      "Your life force will feed the dead!",
+      "The village is our hunting ground!",
+      "Death awaits you!",
+      "Your demise strengthens us!",
+      "Our ranks swell with each fall!",
+      "Feel the icy grip of the grave!",
+      "We are the inevitable!",
+      "Your soul will fuel our hunger!",
+      "The dead are restless!",
+      "Your end is here!"
+    ],
+    "missQuotes": [
+      "You avoid death, for now!",
+      "Evaded my slice? The grave waits!",
+      "Your quickness is noted, but death is persistent!",
+      "A miss? No matter, the reaper waits!",
+      "You dodge, but the shadow of death is inescapable!",
+      "You're swift, but death is unyielding!",
+      "My strike didn't land? The grave has time.",
+      "A miss? The eternal cold is patient.",
+      "No connection? Your time will come!",
+      "You may evade my attack, but not your fate!"
+    ],
+    "damageQuotes": [
+      "Your strikes chip bone, but not resolve!",
+      "Your attacks echo in my hollow form, igniting fury!",
+      "You wound, but the dead do not falter!",
+      "You strike, but we are already beyond pain!",
+      "Your blows only fan the flames of our vengeance!",
+      "You fracture, but do not vanquish!",
+      "Your attacks are futile against the eternal!",
+      "Your blows land, but the undead march on!",
+      "Pain? A distant memory of life!",
+      "Your attacks, a futile gesture against the inevitable!"
+    ],
+    "failedQuotes": [
+      "My attack didn't find you, but death is patient!",
+      "A miss? The dead are unrelenting.",
+      "Failed to strike, but death never ceases!",
+      "No connection? The reaper always reaps.",
+      "Missed now, but death is a certainty.",
+      "My attack failed? Death has eternity to wait.",
+      "I didn't hit, but the end is inevitable.",
+      "No connection, but death is relentless!",
+      "A miss? The grave is patient.",
+      "My strike failed? Death waits for no one."
+    ],
+    "deathQuotes": [
+      "Death... once... more...",
+      "Back... to... the... crypt...",
+      "To dust... I return...",
+      "I... collapse... once... again...",
+      "My form... shatters...",
+      "To... the... grave... I return...",
+      "Bones... to... dust...",
+      "The crypt... calls... again...",
+      "I... crumble... into... oblivion...",
+      "To rest... once... more..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b8171713cf5531229ee30a"
+    },
+    "race": "skeleton",
+    "area": "cemetery",
+    "level": 12,
+    "name": "Skeleton",
+    "group": "Undead",
+    "health": 150,
+    "xpEarned": 20,
+    "goldEarned": 30,
+    "dodge": 20,
+    "resist": 40,
+    "attacks": [
+      {
+        "attackName": "Bone Strike",
+        "minDamage": 10,
+        "maxDamage": 14,
+        "accuracy": 70,
+        "description": "A swift strike with a bone as hard as steel."
+      },
+      {
+        "attackName": "Skull Bash",
+        "minDamage": 12,
+        "maxDamage": 15,
+        "accuracy": 65,
+        "description": "Bashes the enemy with its tough skull."
+      },
+      {
+        "attackName": "Graveyard Grasp",
+        "minDamage": 13,
+        "maxDamage": 17,
+        "accuracy": 60,
+        "description": "Grabs the enemy with a hand as cold as death."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the cold grip of the grave!",
+      "Your life force will be mine!",
+      "From the crypt, we rise!",
+      "Your death feeds our numbers!",
+      "Death cannot contain us!",
+      "Fear the reaper!",
+      "The grave cannot hold my wrath!",
+      "Your soul will join our ranks!",
+      "The cemetery is our realm!",
+      "In death, we are reborn!"
+    ],
+    "missQuotes": [
+      "Your flesh proves elusive, for now!",
+      "You are quick, but death is patient!",
+      "A miss? The grave is ever patient.",
+      "Evaded my strike? The tombstone waits!",
+      "Flesh and bone, a dance of death.",
+      "Your life force shimmers, but it won't for long!",
+      "Missed? The dead do not rush.",
+      "Escaped my grasp? The crypt is patient.",
+      "You may evade my reach, but not my curse!",
+      "A whisper past your ear, soon it will be a scream!"
+    ],
+    "damageQuotes": [
+      "Your blows crumble bone, but do not quell our spirit!",
+      "Your attacks echo in our hollow frames, fueling our wrath!",
+      "You strike, but the grave holds no fear for us!",
+      "You harm my form, but death is already my companion!",
+      "You wound me, but my purpose remains!",
+      "Your blows fracture, but do not destroy!",
+      "I am the undying, your attacks are futile!",
+      "Pain is a concept lost to the dead!",
+      "You damage my bones, but not my resolve!",
+      "We are not alive to fear the sting of your attacks!"
+    ],
+    "failedQuotes": [
+      "A miss, but the grave is always open!",
+      "The cold touch of the tomb failed, but not for long!",
+      "My attack failed, but death's grip is relentless!",
+      "An unsuccessful strike, but the dead are patient.",
+      "Even death has its off moments!",
+      "I failed to strike, but the crypt gives second chances.",
+      "Missed now, but the grave is eternal.",
+      "I didn't hit, but death has eternity to wait.",
+      "A miss, but the end is inescapable!",
+      "No connection? Death is patient."
+    ],
+    "deathQuotes": [
+      "Death... once... again...",
+      "Into... the... crypt...",
+      "From dust... to dust...",
+      "I... return... to... the... grave...",
+      "My bones... scatter...",
+      "To... the... grave... once... more...",
+      "My... form... crumbles...",
+      "The crypt... calls... again...",
+      "Bones... to... dust...",
+      "Eternal rest... calls..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b816d113cf5531229ee308"
+    },
+    "race": "wolf",
+    "area": "mountain",
+    "level": 13,
+    "name": "Mountain Wolf",
+    "group": "Wolves",
+    "health": 165,
+    "xpEarned": 25,
+    "goldEarned": 35,
+    "dodge": 20,
+    "resist": 35,
+    "attacks": [
+      {
+        "attackName": "Rock Bite",
+        "minDamage": 10,
+        "maxDamage": 13,
+        "accuracy": 75,
+        "description": "A fierce bite, honed by the unyielding mountain rocks."
+      },
+      {
+        "attackName": "Stone Claw",
+        "minDamage": 12,
+        "maxDamage": 16,
+        "accuracy": 70,
+        "description": "A quick claw swipe, as sharp as a stone edge."
+      },
+      {
+        "attackName": "Boulder Pounce",
+        "minDamage": 14,
+        "maxDamage": 18,
+        "accuracy": 65,
+        "description": "Pounces with the might of a tumbling boulder."
+      }
+    ],
+    "attackQuotes": [
+      "The mountain's wrath is my wrath!",
+      "You disturb our rocky realm!",
+      "Taste the fury of the heights!",
+      "My bite is as hard as the rocks!",
+      "The pack hunts with the strength of the mountain!",
+      "Feel the wrath of the mountain wolf!",
+      "The peaks do not forgive intruders!",
+      "I am the echo of the mountain's roar!",
+      "Tonight, the mountain feasts!",
+      "You are a stranger in our highland realm!"
+    ],
+    "missQuotes": [
+      "You dodge swiftly, but the mountain is patient!",
+      "A miss? The hunt is a path with many twists and turns.",
+      "You evade me now, but the peaks offer no shelter!",
+      "Avoided my bite? The mountain gives me resilience!",
+      "You dodged my attack? The crags are my comrades!",
+      "Swift as the wind, but the wind whistles for the hunter!",
+      "You're quick, but the mountain is eternal!",
+      "Missed? The shadows of the rocks may trick the eye, but not for long.",
+      "A whiff? I'm merely playing with you, prey!",
+      "You evade the hunter, but not the mountain!"
+    ],
+    "damageQuotes": [
+      "You strike me, but the mountain hardens me!",
+      "Is that your best? I've faced sharper edges on the peaks!",
+      "Your blow lands, but it feeds my fury!",
+      "Pain is part of the hunt, and I am the hunter!",
+      "A scar in the stone, the mountain stands tall!",
+      "That hit... it fuels my vengeance!",
+      "I am of the mountain, your attacks only strengthen me!",
+      "Your blow lands, but the crags shield me!",
+      "You hit me, I'll hit back harder!",
+      "Your attack... it only awakens my fury!"
+    ],
+    "failedQuotes": [
+      "Even the best hunter does not always catch its prey on the first leap!",
+      "Missed? The mountain tests my patience.",
+      "Did not land? The dance of the hunt has its crests and troughs.",
+      "I missed? The mountain grants me another chance!",
+      "The claws did not connect? The mountain waits.",
+      "Failed to hit? The hunt has its valleys and peaks.",
+      "No mark? But the mountain still watches.",
+      "My attack failed? The stone whispers patience.",
+      "An empty swipe, the wind carries my intent!",
+      "A whiff? The shadows must have fooled my aim!"
+    ],
+    "deathQuotes": [
+      "I... fall... but... the mountain... endures...",
+      "In... death... I join... the eternal peaks...",
+      "I... become... one... with... the stone...",
+      "In life... I was a hunter... in death... I am the hunted...",
+      "I... join... the highland pack... in... the sky...",
+      "I... fall... but... the pack... endures...",
+      "I... return... to... the eternal stone...",
+      "In defeat... I... return... to the peaks...",
+      "From the mountain... I sprang... to the mountain... I return...",
+      "The pack... will... remember..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b8147313cf5531229ee2fe"
+    },
+    "race": "golem",
+    "area": "swamp",
+    "level": 15,
+    "name": "Swamp Golem",
+    "group": "Golem",
+    "health": 200,
+    "xpEarned": 40,
+    "goldEarned": 60,
+    "dodge": 5,
+    "resist": 45,
+    "attacks": [
+      {
+        "attackName": "Mud Slap",
+        "minDamage": 8,
+        "maxDamage": 12,
+        "accuracy": 85,
+        "description": "A powerful slap of compacted swamp mud."
+      },
+      {
+        "attackName": "Bog Toss",
+        "minDamage": 10,
+        "maxDamage": 15,
+        "accuracy": 70,
+        "description": "Hurls a large chunk of the bog at the enemy."
+      },
+      {
+        "attackName": "Swamp Stomp",
+        "minDamage": 12,
+        "maxDamage": 17,
+        "accuracy": 75,
+        "description": "Stomps the ground, causing a wave of muck to engulf its opponents."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the wrath of the swamp!",
+      "You cannot break through the bog!",
+      "I am the swamp's fury!",
+      "My strength is as deep as the mire!",
+      "The swamp itself fights against you!",
+      "Taste the might of the mud!",
+      "You are but pebbles against a marsh!",
+      "Stand before the might of the bog!",
+      "The swamp's wrath is unending!",
+      "I will sink you into the mire!"
+    ],
+    "missQuotes": [
+      "You dodge mud, but mud does not tire!",
+      "A miss? The swamp is patient.",
+      "You escape muck, but not for long!",
+      "Mud missed? A rare sight!",
+      "You avoided my throw? My aim will be true!",
+      "Swift as the wind, but wind stirs the swamp!",
+      "You're quick, but the bog is relentless!",
+      "Missed? The mud is just testing you.",
+      "A whiff? I blame the swamp gas!",
+      "You avoid the swamp, but not the muck!"
+    ],
+    "damageQuotes": [
+      "You splash the mud, but it does not break!",
+      "Is that all? I am made of swamp!",
+      "You strike mud, but mud strikes back!",
+      "Your blow lands, but the swamp does not falter!",
+      "A ripple in the muck, but the muck remains!",
+      "That strike... will be your last!",
+      "Mud is soft, but I am hard!",
+      "Your strike lands, but it is but a ripple in the swamp!",
+      "You hit muck, but muck hits back harder!",
+      "Your attack... it fuels my strength!"
+    ],
+    "failedQuotes": [
+      "Mud does not always hit, but it always endures!",
+      "Missed? The swamp takes its time!",
+      "Did not connect? Mud is patient!",
+      "I missed? The swamp will not miss again!",
+      "Mud did not hit? The swamp bides its time!",
+      "Failed to hit? The mire takes its time!",
+      "No mark? The swamp will not miss twice!",
+      "My blow failed? The mud is just testing you!",
+      "An empty swing, a rare sight for the mire!",
+      "A whiff? The swamp winds must have played a trick!"
+    ],
+    "deathQuotes": [
+      "I... crumble... but... the swamp... endures...",
+      "Mud... returns... to... bog...",
+      "I... become... part... of... the swamp...",
+      "In mud... I found life... in death... I find peace...",
+      "I... join... the swamp... in... sleep...",
+      "I... fall... but... the bog... stands...",
+      "I... return... to... the mire...",
+      "In defeat... I... become... swamp...",
+      "From mud... I came... to mud... I return...",
+      "The swamp... will... remember..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b819c413cf5531229ee314"
+    },
+    "race": "spirit",
+    "area": "village",
+    "level": 15,
+    "name": "Spirit",
+    "group": "Undead",
+    "health": 180,
+    "xpEarned": 40,
+    "goldEarned": 40,
+    "dodge": 23,
+    "resist": 45,
+    "attacks": [
+      {
+        "attackName": "Ethereal Lash",
+        "minDamage": 13,
+        "maxDamage": 16,
+        "accuracy": 75,
+        "description": "A lash of spirit energy that cuts through the living."
+      },
+      {
+        "attackName": "Spectral Scream",
+        "minDamage": 16,
+        "maxDamage": 18,
+        "accuracy": 70,
+        "description": "A haunting scream that sends a chill down the spine of its victims."
+      },
+      {
+        "attackName": "Ghostly Grasp",
+        "minDamage": 17,
+        "maxDamage": 19,
+        "accuracy": 65,
+        "description": "A chilling, ethereal hand that drains life energy."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the cold touch of the beyond!",
+      "Your life is but a flicker before the void!",
+      "From the spectral realm, we reach out!",
+      "Your existence is a mere whisper before eternity!",
+      "Embrace the call of the abyss!",
+      "You can't escape the ghostly grasp!",
+      "Eternity awaits you!",
+      "Your life force will join the spectral echo!",
+      "Our sorrow will be your downfall!",
+      "In death, we find our purpose!"
+    ],
+    "missQuotes": [
+      "Your life force evades us, but the spectral waits!",
+      "You escape our grasp, but the void is patient!",
+      "A miss? The echo of death is ever near.",
+      "Dodged our touch? The crypt waits!",
+      "Life and spirit, a dance with the inevitable.",
+      "You evade us in life, but the end is at hand!",
+      "Missed? The void has patience.",
+      "Escaped our touch? The abyss awaits.",
+      "You evade the spectral, but not your destiny!",
+      "A ghostly whisper missed your ear, next time it won't."
+    ],
+    "damageQuotes": [
+      "Your attacks pass through, but the spectral chill remains!",
+      "You disperse our form, but the void is endless!",
+      "You strike, but the grave knows no fear!",
+      "You harm the ethereal, but our lament goes on!",
+      "You injure us, but our sorrow carries on!",
+      "Your attacks resonate, but cannot destroy!",
+      "We are the eternal, your attacks are meaningless!",
+      "Pain is a mortal concept!",
+      "You harm the ghostly, but not our resolve!",
+      "We exist beyond pain, your attacks are in vain!"
+    ],
+    "failedQuotes": [
+      "A spectral miss, but the grave always awaits!",
+      "Our chilling touch failed, but not for long!",
+      "Our spectral attack failed, but death is relentless!",
+      "A failed strike, but the void is endless.",
+      "Even death has its off days!",
+      "Our strike missed, but the void always has another chance.",
+      "Missed now, but the grave is eternal.",
+      "We failed to connect, but death waits forever.",
+      "No connection? Death is unavoidable!",
+      "The spirit world knows you're there, we'll try again!"
+    ],
+    "deathQuotes": [
+      "Back... into... the... void...",
+      "Into... oblivion...",
+      "From... life... to... shadow...",
+      "We... return... to... the... abyss...",
+      "Our echo... fades...",
+      "To... the... void... we... return...",
+      "Our form... disperses...",
+      "The spectral... retreats... to... the... void...",
+      "We... fade... into... obscurity...",
+      "To rest... in... the... abyss..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b8143713cf5531229ee2fc"
+    },
+    "race": "golem",
+    "area": "mountain",
+    "level": 15,
+    "name": "Stone Golem",
+    "group": "Golem",
+    "health": 200,
+    "xpEarned": 40,
+    "goldEarned": 60,
+    "dodge": 5,
+    "resist": 45,
+    "attacks": [
+      {
+        "attackName": "Stone Fist Punch",
+        "minDamage": 8,
+        "maxDamage": 12,
+        "accuracy": 85,
+        "description": "A powerful punch from its solid stone fist."
+      },
+      {
+        "attackName": "Boulder Toss",
+        "minDamage": 10,
+        "maxDamage": 15,
+        "accuracy": 70,
+        "description": "Hurls a large boulder at the enemy with great force."
+      },
+      {
+        "attackName": "Ground Slam",
+        "minDamage": 12,
+        "maxDamage": 17,
+        "accuracy": 75,
+        "description": "Slams the ground, causing a shockwave to damage its opponents."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the weight of the mountain!",
+      "You cannot break stone!",
+      "I am the mountain's fury!",
+      "My strength is unyielding!",
+      "The earth itself fights against you!",
+      "Taste the might of the stone!",
+      "You are but pebbles against a landslide!",
+      "Stand before the might of the mountain!",
+      "The mountain's wrath is unending!",
+      "I will grind you to dust!"
+    ],
+    "missQuotes": [
+      "You dodge stone, but stone does not tire!",
+      "A miss? The mountain is patient.",
+      "You escape stone, but not for long!",
+      "Stone missed? A rare sight!",
+      "You avoided my swing? My aim will be true!",
+      "Swift as the wind, but wind erodes stone!",
+      "You're quick, but the mountain is relentless!",
+      "Missed? The stone is just testing you.",
+      "A whiff? I blame the mountain wind!",
+      "You avoid the landslide, but not the mountain!"
+    ],
+    "damageQuotes": [
+      "You chip the stone, but it does not break!",
+      "Is that all? I am made of mountain!",
+      "You strike stone, but stone strikes back!",
+      "Your blow lands, but the mountain does not falter!",
+      "A chip off the old block, but the block remains!",
+      "That strike... will be your last!",
+      "Stone is hard, but I am harder!",
+      "Your strike lands, but it is but a scratch to stone!",
+      "You hit rock, but rock hits back harder!",
+      "Your attack... it fuels my strength!"
+    ],
+    "failedQuotes": [
+      "Stone does not always hit, but it always endures!",
+      "Missed? The mountain takes its time!",
+      "Did not connect? Stone is patient!",
+      "I missed? The mountain will not miss again!",
+      "Stone did not hit? The mountain bides its time!",
+      "Failed to hit? The earth takes its time!",
+      "No mark? The mountain will not miss twice!",
+      "My blow failed? The stone is just testing you!",
+      "An empty swing, a rare sight for the stone!",
+      "A whiff? The mountain winds must have played a trick!"
+    ],
+    "deathQuotes": [
+      "I... crumble... but... the mountain... endures...",
+      "Stone... returns... to... earth...",
+      "I... become... part... of... the mountain...",
+      "In stone... I found life... in death... I find peace...",
+      "I... join... the mountain... in... sleep...",
+      "I... fall... but... the mountain... stands...",
+      "I... return... to... the stone...",
+      "In defeat... I... become... mountain...",
+      "From stone... I came... to stone... I return...",
+      "The mountain... will... remember..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b815c613cf5531229ee304"
+    },
+    "race": "wolf",
+    "area": "forest",
+    "level": 15,
+    "name": "Forest Wolf",
+    "group": "Wolves",
+    "health": 180,
+    "xpEarned": 40,
+    "goldEarned": 40,
+    "dodge": 25,
+    "resist": 35,
+    "attacks": [
+      {
+        "attackName": "Bark Bite",
+        "minDamage": 10,
+        "maxDamage": 13,
+        "accuracy": 80,
+        "description": "A ferocious bite that mimics the harshness of the forest bark."
+      },
+      {
+        "attackName": "Leaf Cutter Claw",
+        "minDamage": 12,
+        "maxDamage": 16,
+        "accuracy": 70,
+        "description": "A swift claw attack as sharp as the edges of a serrated leaf."
+      },
+      {
+        "attackName": "Timber Pounce",
+        "minDamage": 14,
+        "maxDamage": 18,
+        "accuracy": 65,
+        "description": "Pounces with the power of a falling timber tree."
+      }
+    ],
+    "attackQuotes": [
+      "The forest's wrath is my wrath!",
+      "You tread on our sacred land!",
+      "Taste the fury of the timberland!",
+      "My bite is as tough as the bark!",
+      "The pack hunts with the might of the forest!",
+      "Feel the wrath of the woodland wolf!",
+      "The wild does not forgive invaders!",
+      "I am the echo of the forest's rage!",
+      "Tonight, the forest feasts!",
+      "You are a stranger in our woodland realm!"
+    ],
+    "missQuotes": [
+      "You dodge swiftly, but the forest sees all!",
+      "A miss? The hunt is ever ongoing.",
+      "You evade me now, but the forest shelters no intruders!",
+      "Avoided my bite? The forest grants me patience!",
+      "You dodged my attack? The trees guide my path!",
+      "Swift as the wind, but the wind is with the hunter!",
+      "You're quick, but the forest is timeless!",
+      "Missed? The shadows of the trees may trick the eye, but not for long.",
+      "A whiff? I'm merely playing with you, prey!",
+      "You evade the hunter, but not the forest!"
+    ],
+    "damageQuotes": [
+      "You strike me, but the forest heals me!",
+      "Is that your best? I've faced sharper thorns!",
+      "Your blow lands, but it feeds my fury!",
+      "Pain is part of the hunt, and I am the hunter!",
+      "A scar in the bark, the tree stands tall!",
+      "That hit... it fuels my vengeance!",
+      "I am of the forest, your attacks only strengthen me!",
+      "Your blow lands, but the forest shields me!",
+      "You hit me, I'll hit back harder!",
+      "Your attack... it only awakens my fury!"
+    ],
+    "failedQuotes": [
+      "Even the best hunter does not always catch its prey on the first leap!",
+      "Missed? The forest tests my patience.",
+      "Did not land? The dance of the hunt is long.",
+      "I missed? The forest grants me another chance!",
+      "The claws did not connect? The forest waits.",
+      "Failed to hit? The hunt has its highs and lows.",
+      "No mark? But the forest still watches.",
+      "My attack failed? The forest whispers patience.",
+      "An empty swipe, the wind carries my intent!",
+      "A whiff? The leaves must have fooled my aim!"
+    ],
+    "deathQuotes": [
+      "I... fall... but... the forest... endures...",
+      "In... death... I join... the eternal forest...",
+      "I... become... one... with... the woodland...",
+      "In life... I was a hunter... in death... I am the hunted...",
+      "I... join... the great pack... in... the forest beyond...",
+      "I... fall... but... the pack... endures...",
+      "I... return... to... the eternal woodland...",
+      "In defeat... I... return... to the forest...",
+      "From the forest... I sprang... to the forest... I return...",
+      "The pack... will... remember..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b8142313cf5531229ee2fa"
+    },
+    "race": "darkDwarf",
+    "area": "mountain",
+    "level": 17,
+    "name": "Dark Dwarf",
+    "group": "Dwarven Legion",
+    "health": 180,
+    "xpEarned": 100,
+    "goldEarned": 40,
+    "dodge": 10,
+    "resist": 25,
+    "attacks": [
+      {
+        "attackName": "Axe Swing",
+        "minDamage": 5,
+        "maxDamage": 10,
+        "accuracy": 80,
+        "description": "A mighty swing of a battle-worn axe."
+      },
+      {
+        "attackName": "Hammer Slam",
+        "minDamage": 6,
+        "maxDamage": 12,
+        "accuracy": 75,
+        "description": "A ground-shaking slam with a heavy hammer."
+      },
+      {
+        "attackName": "Shield Bash",
+        "minDamage": 4,
+        "maxDamage": 8,
+        "accuracy": 85,
+        "description": "A strategic strike with a sturdy shield."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the weight of my axe!",
+      "Taste the power of Dwarven steel!",
+      "My hammer knows no mercy!",
+      "Prepare to be crushed!",
+      "I was born in the mountain, you will fall before me!",
+      "By the ancestors, you will be defeated!",
+      "None can withstand my shield!",
+      "Your end is at the edge of my axe!",
+      "For the Dwarven Legion!",
+      "My strength is as solid as stone!"
+    ],
+    "missQuotes": [
+      "Faster than you look, aren't you?",
+      "Missed? I was just warming up!",
+      "You're quick, but my aim is true!",
+      "Slipped my blow, did you? Not next time!",
+      "Bah, even a stone can miss a strike!",
+      "Swift feet you have there, won't help you for long!",
+      "You dodged? No matter, you won't next time!",
+      "Just testing the wind, you'll feel my steel soon!",
+      "You avoided my swing? Clever... but futile!",
+      "Missed? The mountain wind plays tricks!"
+    ],
+    "damageQuotes": [
+      "A hit! But I'm made of stronger stuff!",
+      "Felt that one, I'll give you that!",
+      "Scratch one dwarf, prepare for a tempest!",
+      "By the forge, I'll make you pay for that!",
+      "Is that your best? I've taken harder hits from goblins!",
+      "That tickled. My turn now!",
+      "I've had worse from a drunken brawl!",
+      "A sting... nothing more!",
+      "Not bad, but now you've angered me!",
+      "Your strike fuels my fury!"
+    ],
+    "failedQuotes": [
+      "An empty swing? I won't miss twice!",
+      "My axe missed its mark? Unlikely!",
+      "Missed? I'm just getting started!",
+      "Didn't connect, eh? Just a feint!",
+      "Slipped my grasp, but not for long!",
+      "Didn't hit? I was just gauging your defense!",
+      "No mark? I'll aim better next time!",
+      "My blow failed? Just wait for the next!",
+      "An empty swing, a rare sight!",
+      "A whiff? I blame the mountain wind!"
+    ],
+    "deathQuotes": [
+      "I fall... but the Dwarven spirit... endures...",
+      "I... return... to the stone...",
+      "For the Legion... I gave my all...",
+      "My axe... falls... my spirit... rises...",
+      "I meet... my ancestors... in the stone hall...",
+      "In defeat... there is... honor...",
+      "The stone... welcomes... me...",
+      "I fall... my tale... echoes in the mountains...",
+      "I join... the great miners... in the sky...",
+      "The mountain... remembers... me..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b8180013cf5531229ee30e"
+    },
+    "race": "spirit",
+    "area": "cemetery",
+    "level": 18,
+    "name": "Spirit",
+    "group": "Undead",
+    "health": 150,
+    "xpEarned": 200,
+    "goldEarned": 50,
+    "dodge": 50,
+    "resist": 20,
+    "attacks": [
+      {
+        "attackName": "Ethereal Slash",
+        "minDamage": 15,
+        "maxDamage": 18,
+        "accuracy": 75,
+        "description": "A slashing attack made of condensed spirit energy."
+      },
+      {
+        "attackName": "Phantom Wail",
+        "minDamage": 18,
+        "maxDamage": 20,
+        "accuracy": 70,
+        "description": "A chilling wail that saps the life force of its victim."
+      },
+      {
+        "attackName": "Spectral Grasp",
+        "minDamage": 20,
+        "maxDamage": 22,
+        "accuracy": 65,
+        "description": "A cold, ghostly hand reaches out to drain the enemy's vitality."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the chill of the grave!",
+      "Your life is a flicker in the endless night!",
+      "From beyond, we touch the living!",
+      "Your existence will be but a whisper!",
+      "Surrender to the call of the abyss!",
+      "You cannot escape the spectral grasp!",
+      "Eternity beckons you!",
+      "Your life force will echo in the void!",
+      "Our lament is your undoing!",
+      "In death, we find purpose!"
+    ],
+    "missQuotes": [
+      "Your life force eludes us, for now!",
+      "You escape our touch, but the grave is patient!",
+      "A miss? Death is but a breath away.",
+      "Evaded our grasp? The tombstone waits!",
+      "Flesh and spirit, a dance of death.",
+      "You shimmer in life, but the end is near!",
+      "Missed? The void is patient.",
+      "Escaped our reach? The abyss waits.",
+      "You may evade our touch, but not your fate!",
+      "A spectral whisper past your ear, soon it will be a wail!"
+    ],
+    "damageQuotes": [
+      "Your blows pass through, but the spectral chill remains!",
+      "You disrupt our form, but the void is eternal!",
+      "You strike, but the grave knows no fear!",
+      "You harm the ethereal, but our purpose is undimmed!",
+      "You wound us, but our lament continues!",
+      "Your blows resonate, but do not destroy!",
+      "We are the undying, your attacks are in vain!",
+      "Pain is a concept lost to the spectral!",
+      "You damage the ethereal, but not our resolve!",
+      "We exist beyond pain, your attacks are futile!"
+    ],
+    "failedQuotes": [
+      "A spectral miss, but the grave is always open!",
+      "The cold touch of the beyond failed, but not for long!",
+      "Our attack failed, but death's grasp is relentless!",
+      "An unsuccessful strike, but the void is eternal.",
+      "Even death has its off moments!",
+      "We failed to strike, but the void gives second chances.",
+      "Missed now, but the grave is eternal.",
+      "We didn't connect, but death has eternity to wait.",
+      "No connection? Death is inescapable!",
+      "The grave tells us you're there, we'll try again!"
+    ],
+    "deathQuotes": [
+      "Back... into... the... void...",
+      "Into... oblivion...",
+      "From... light... to... darkness...",
+      "We... return... to... the... abyss...",
+      "Our echo... fades...",
+      "To... the... void... we... return...",
+      "Our form... disperses...",
+      "The spectral... returns... to... the... void...",
+      "We... fade... into... obscurity...",
+      "To rest... in... the... abyss..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b814c613cf5531229ee300"
+    },
+    "race": "golem",
+    "area": "swamp",
+    "level": 18,
+    "name": "Large Swamp Golem",
+    "group": "Golem",
+    "health": 230,
+    "xpEarned": 200,
+    "goldEarned": 80,
+    "dodge": 5,
+    "resist": 50,
+    "attacks": [
+      {
+        "attackName": "Mud Fists",
+        "minDamage": 10,
+        "maxDamage": 15,
+        "accuracy": 85,
+        "description": "A flurry of powerful slaps from its compacted swamp mud fists."
+      },
+      {
+        "attackName": "Bog Avalanche",
+        "minDamage": 12,
+        "maxDamage": 18,
+        "accuracy": 70,
+        "description": "Hurls an enormous piece of the bog at the enemy."
+      },
+      {
+        "attackName": "Marsh Quake",
+        "minDamage": 14,
+        "maxDamage": 20,
+        "accuracy": 75,
+        "description": "Stomps the ground, causing a wave of muck and swamp water to engulf its opponents."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the weight of the marsh!",
+      "You cannot withstand the swamp!",
+      "I am the anger of the bog!",
+      "My strength is as vast as the marsh!",
+      "The swamp itself rises against you!",
+      "Taste the might of the mire!",
+      "You are but flies in the marsh!",
+      "Stand before the fury of the bog!",
+      "The swamp's vengeance is relentless!",
+      "I will bury you in the muck!"
+    ],
+    "missQuotes": [
+      "You dodge mire, but mire does not tire!",
+      "A miss? The marsh is patient.",
+      "You evade muck, but not for long!",
+      "Mud missed? A surprising sight!",
+      "You evaded my attack? My aim will be true!",
+      "Swift as the wind, but wind stirs the marsh!",
+      "You're quick, but the bog is relentless!",
+      "Missed? The mire is merely testing you.",
+      "A whiff? I blame the swamp mists!",
+      "You avoid the swamp, but not for long!"
+    ],
+    "damageQuotes": [
+      "You strike mud, but it does not yield!",
+      "Is that all? I am built of swamp!",
+      "You strike mire, but mire strikes back!",
+      "Your attack lands, but the marsh does not falter!",
+      "A dent in the mud, but the mud remains!",
+      "That strike... will be your last!",
+      "Mire is forgiving, but I am not!",
+      "Your attack lands, but it is merely a splash in the swamp!",
+      "You hit muck, but muck hits back harder!",
+      "Your attack... it fuels my wrath!"
+    ],
+    "failedQuotes": [
+      "Mud does not always connect, but it always endures!",
+      "Missed? The marsh bides its time!",
+      "Did not land? The mud is patient!",
+      "I missed? The swamp will not miss again!",
+      "Mud did not strike? The swamp bides its time!",
+      "Failed to hit? The mire takes its time!",
+      "No mark? The marsh will not miss twice!",
+      "My attack failed? The mud is merely testing you!",
+      "An empty swing, a rare sight for the mire!",
+      "A whiff? The swamp breezes must have fooled me!"
+    ],
+    "deathQuotes": [
+      "I... crumble... but... the swamp... endures...",
+      "Mud... returns... to... bog...",
+      "I... become... one... with... the swamp...",
+      "In mud... I found life... in death... I find peace...",
+      "I... join... the marsh... in... eternal... sleep...",
+      "I... fall... but... the bog... remains...",
+      "I... return... to... the mire...",
+      "In defeat... I... return... to the swamp...",
+      "From mud... I arose... to mud... I return...",
+      "The swamp... will... remember..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b81cb113cf5531229ee318"
+    },
+    "race": "fish",
+    "area": "lake",
+    "level": 19,
+    "name": "Large Piranha",
+    "group": "Aquatic",
+    "health": 200,
+    "xpEarned": 300,
+    "goldEarned": 50,
+    "dodge": 25,
+    "resist": 50,
+    "attacks": [
+      {
+        "attackName": "Ravenous Bite",
+        "minDamage": 15,
+        "maxDamage": 20,
+        "accuracy": 75,
+        "description": "A vicious bite from a set of razor-sharp teeth."
+      },
+      {
+        "attackName": "Frenzy Swirl",
+        "minDamage": 17,
+        "maxDamage": 22,
+        "accuracy": 65,
+        "description": "A frenzied attack that's hard to evade."
+      },
+      {
+        "attackName": "Undercurrent Drag",
+        "minDamage": 20,
+        "maxDamage": 23,
+        "accuracy": 60,
+        "description": "A sly technique that drags opponents into the water's depths."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the fury of the lake!",
+      "Taste the wrath of the waves!",
+      "No escape from the lake's depths!",
+      "You can't escape my jaws!",
+      "Your blood will stain the water!",
+      "The lake demands your life!",
+      "Prepare to be pulled under!",
+      "You are prey in my waters!",
+      "No mercy in the lake's embrace!",
+      "Water is your grave!"
+    ],
+    "missQuotes": [
+      "I slip through your attacks like water!",
+      "The lake's flow saves me!",
+      "You miss! The currents deceive you!",
+      "Can't hit what the water conceals!",
+      "Your attack misses, lost in the lake!",
+      "Like trying to strike water, you fail!",
+      "Missed! The lake's dance saves me!",
+      "Your strikes find only water!",
+      "I evade! The lake's mercy shelters me!",
+      "Your attacks are as effective as striking water!"
+    ],
+    "damageQuotes": [
+      "You hurt me, but the lake heals!",
+      "Pain! But the lake's fury grows!",
+      "You wound me, but the water's rage is kindled!",
+      "I feel pain, but the lake's strength persists!",
+      "Your strike lands, but the water's resilience supports me!",
+      "You cause pain, but the lake's depths soothe me!",
+      "You strike true, but the water's wrath is relentless!",
+      "The wound hurts, but the lake's protection remains!",
+      "Your attack finds me, but the water's fury returns!",
+      "Pain is felt, but the lake's power is unyielding!"
+    ],
+    "failedQuotes": [
+      "The lake's wrath missed, but it will return!",
+      "A miss now, but the water's vengeance is near!",
+      "Missed! But the lake's fury is undeterred!",
+      "I missed, but the water's wrath is unyielding!",
+      "Failed now, but the lake's retribution is imminent!",
+      "My attack failed, but the water's fury is infinite!",
+      "Now I miss, but the lake's fury is relentless!",
+      "My attack misses, but the water's justice is inevitable!",
+      "The lake's wrath missed, but it will find you!",
+      "I missed, but the water's vengeance is persistent!"
+    ],
+    "deathQuotes": [
+      "The lake... claims... me...",
+      "To the depths... I return...",
+      "In death... I join... the water...",
+      "The lake's embrace... is my end...",
+      "The water... my final... sanctuary...",
+      "I fall... into the lake's... depths...",
+      "To the water... I give... my last...",
+      "Into the lake... I dissolve...",
+      "The water's song... is my... farewell...",
+      "I am claimed... by the lake's... depths..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b81cbd13cf5531229ee31a"
+    },
+    "race": "lakeCreature",
+    "area": "lake",
+    "level": 20,
+    "name": "Large Lake Creature",
+    "group": "Aquatic",
+    "health": 230,
+    "xpEarned": 400,
+    "goldEarned": 100,
+    "dodge": 27,
+    "resist": 52,
+    "attacks": [
+      {
+        "attackName": "Debris Barrage",
+        "minDamage": 18,
+        "maxDamage": 23,
+        "accuracy": 73,
+        "description": "Launches a barrage of underwater debris at the opponent."
+      },
+      {
+        "attackName": "Crushing Grip",
+        "minDamage": 20,
+        "maxDamage": 25,
+        "accuracy": 65,
+        "description": "A powerful grip that can crush bones."
+      },
+      {
+        "attackName": "Submerge Pull",
+        "minDamage": 23,
+        "maxDamage": 26,
+        "accuracy": 62,
+        "description": "Pulls the opponent beneath the water's surface."
+      }
+    ],
+    "attackQuotes": [
+      "The lake gives me strength!",
+      "Feel the power of the water!",
+      "No escape from the lake's grasp!",
+      "Your fate is sealed in the depths!",
+      "Prepare to be submerged!",
+      "The lake is your doom!",
+      "You'll be swallowed by the water!",
+      "Your life ends in the lake!",
+      "The lake will claim you!",
+      "Prepare for the watery grave!"
+    ],
+    "missQuotes": [
+      "I evade like a creature of the water!",
+      "The lake protects me!",
+      "Your attack meets only water!",
+      "You cannot strike what the lake conceals!",
+      "You miss, deceived by the lake!",
+      "Your attack finds only water!",
+      "I am shielded by the lake!",
+      "Your attack is absorbed by the water!",
+      "You miss, lost in the lake!",
+      "The lake's protection saves me!"
+    ],
+    "damageQuotes": [
+      "The lake will heal my wounds!",
+      "You hurt me, but the water restores!",
+      "I feel pain, but the lake's power endures!",
+      "Your strike lands, but the water renews me!",
+      "The wound hurts, but the lake's strength is eternal!",
+      "Your attack finds me, but the water revives!",
+      "I am wounded, but the lake's life is unending!",
+      "The lake's resilience is my shield!",
+      "The water's strength revives me!",
+      "I am hurt, but the lake's power is invincible!"
+    ],
+    "failedQuotes": [
+      "The water's wrath missed, but it will not be denied!",
+      "A miss now, but the lake's vengeance will come!",
+      "Missed! But the lake's fury will find you!",
+      "The water's justice is delayed, but not denied!",
+      "I missed, but the lake's rage will strike!",
+      "I fail now, but the water's fury is inevitable!",
+      "My attack misses, but the lake's retribution is certain!",
+      "Now I miss, but the water's wrath is unceasing!",
+      "The lake's justice misses, but it will strike!",
+      "Failed this time, but the lake's fury is relentless!"
+    ],
+    "deathQuotes": [
+      "I return... to the lake's depths...",
+      "The water... claims... me...",
+      "In the lake... I find... my end...",
+      "I dissolve... into the lake...",
+      "The water's embrace... is my final rest...",
+      "I fall... to the lake's... bed...",
+      "To the depths... I return...",
+      "In death... I join... the water...",
+      "The lake... my final... sanctuary...",
+      "The water... is my... final journey..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b82f9e13cf5531229ee320"
+    },
+    "race": "riverCreature",
+    "area": "river",
+    "level": 20,
+    "name": "River Creature",
+    "group": "Aquatic",
+    "health": 250,
+    "xpEarned": 400,
+    "goldEarned": 100,
+    "dodge": 35,
+    "resist": 55,
+    "attacks": [
+      {
+        "attackName": "Torrential Strike",
+        "minDamage": 18,
+        "maxDamage": 22,
+        "accuracy": 80,
+        "description": "Unleashes a powerful strike fueled by the force of the river."
+      },
+      {
+        "attackName": "Aqua Whirl",
+        "minDamage": 20,
+        "maxDamage": 25,
+        "accuracy": 70,
+        "description": "Creates a swirling vortex of water to strike the opponent."
+      },
+      {
+        "attackName": "River's Embrace",
+        "minDamage": 22,
+        "maxDamage": 27,
+        "accuracy": 65,
+        "description": "Engulfs the opponent in a relentless current of water."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the power of the river's fury!",
+      "The river's strength will overwhelm you!",
+      "You cannot escape the grasp of the river!",
+      "Prepare to be swept away by the currents!",
+      "The river's rage is unstoppable!",
+      "The water demands your submission!",
+      "Your fate is sealed in the river's depths!",
+      "The river will consume you!",
+      "No mercy in the river's embrace!",
+      "Prepare for a watery grave!"
+    ],
+    "missQuotes": [
+      "I evade like a creature of the water!",
+      "The river protects me!",
+      "Your attack meets only water!",
+      "You cannot strike what the river conceals!",
+      "You miss, deceived by the river's currents!",
+      "Your attack finds only water!",
+      "I am shielded by the river's embrace!",
+      "Your attack is absorbed by the water!",
+      "You miss, lost in the river's flow!",
+      "The river's protection saves me!"
+    ],
+    "damageQuotes": [
+      "You hurt me, but the river's power endures!",
+      "I feel pain, but the water's strength sustains me!",
+      "Your strike lands, but the river's resilience prevails!",
+      "The wound hurts, but the river's embrace heals!",
+      "Your attack finds me, but the water's fury returns!",
+      "I am wounded, but the river's strength is unyielding!",
+      "The river's resilience is my shield!",
+      "The water's strength revives me!",
+      "I am hurt, but the river's power is invincible!",
+      "You cause pain, but the river's embrace soothes!"
+    ],
+    "failedQuotes": [
+      "The river's wrath missed, but it will return!",
+      "A miss now, but the water's vengeance is near!",
+      "Missed! But the river's fury will find you!",
+      "The water's justice is delayed, but not denied!",
+      "I missed, but the river's rage will strike!",
+      "I fail now, but the water's fury is inevitable!",
+      "My attack misses, but the river's retribution is certain!",
+      "Now I miss, but the water's wrath is unceasing!",
+      "The river's justice misses, but it will strike!",
+      "Failed this time, but the river's fury is relentless!"
+    ],
+    "deathQuotes": [
+      "I return... to the river's depths...",
+      "The water... claims... me...",
+      "In the river... I find... my end...",
+      "I dissolve... into the water...",
+      "The water's embrace... is my final rest...",
+      "I fall... to the river's... bed...",
+      "To the depths... I return...",
+      "In death... I join... the water...",
+      "The river... my final... sanctuary...",
+      "The water... is my... final journey..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b8166c13cf5531229ee306"
+    },
+    "race": "wolf",
+    "area": "forest",
+    "level": 20,
+    "name": "Dark Wolf",
+    "group": "Dark Wolves",
+    "health": 220,
+    "xpEarned": 400,
+    "goldEarned": 60,
+    "dodge": 30,
+    "resist": 40,
+    "attacks": [
+      {
+        "attackName": "Shadow Bite",
+        "minDamage": 15,
+        "maxDamage": 18,
+        "accuracy": 80,
+        "description": "A bite imbued with the essence of the shadows."
+      },
+      {
+        "attackName": "Moonlit Claw",
+        "minDamage": 18,
+        "maxDamage": 22,
+        "accuracy": 70,
+        "description": "A claw attack as sharp and cold as the moonlight."
+      },
+      {
+        "attackName": "Night Pounce",
+        "minDamage": 20,
+        "maxDamage": 25,
+        "accuracy": 65,
+        "description": "A sudden leap from the darkness."
+      }
+    ],
+    "attackQuotes": [
+      "The dark forest's wrath is my wrath!",
+      "You dare invade our shadowed sanctuary!",
+      "Taste the fury of the night!",
+      "My bite is as cold as the moon!",
+      "We hunt under the cover of darkness!",
+      "Feel the wrath of the night wolf!",
+      "The shadows do not forgive trespassers!",
+      "I am the embodiment of the forest's darkness!",
+      "Tonight, the dark forest feasts!",
+      "You are an intruder in our shadowy domain!"
+    ],
+    "missQuotes": [
+      "You dodge swiftly, but the darkness is endless!",
+      "A miss? The hunt is an eternal shadow dance.",
+      "You evade me now, but the night is long!",
+      "Avoided my bite? The darkness offers many opportunities!",
+      "You dodged my attack? The shadows are my allies!",
+      "Swift as the wind, but the wind whispers in the night!",
+      "You're quick, but the night is timeless!",
+      "Missed? The shadows can be deceptive, but not for long.",
+      "A whiff? I'm merely stalking in the dark, prey!",
+      "You escape the hunter, but not the darkness!"
+    ],
+    "damageQuotes": [
+      "You strike me, but the darkness heals me!",
+      "Is that your best? I've faced sharper edges in the shadows!",
+      "Your blow lands, but it feeds my fury!",
+      "Pain is part of the hunt, and I am the hunter!",
+      "A scar in the darkness, the night endures!",
+      "That hit... it fuels my vengeance!",
+      "I am of the night, your attacks only strengthen me!",
+      "Your blow lands, but the shadows protect me!",
+      "You hit me, I'll hit back harder!",
+      "Your attack... it only awakens my fury!"
+    ],
+    "failedQuotes": [
+      "Even the best hunter does not always catch its prey on the first leap!",
+      "Missed? The darkness tests my patience.",
+      "Did not land? The dance of the hunt is long.",
+      "I missed? The night grants me another chance!",
+      "The claws did not connect? The night waits.",
+      "Failed to hit? The hunt has its highs and lows.",
+      "No mark? But the night still watches.",
+      "My attack failed? The darkness whispers patience.",
+      "An empty swipe, the wind carries my intent!",
+      "A whiff? The shadows must have fooled my aim!"
+    ],
+    "deathQuotes": [
+      "I... fall... but... the night... endures...",
+      "In... death... I join... the eternal night...",
+      "I... become... one... with... the darkness...",
+      "In life... I was a hunter... in death... I am the hunted...",
+      "I... join... the dark pack... in... the shadowy beyond...",
+      "I... fall... but... the pack... endures...",
+      "I... return... to... the eternal darkness...",
+      "In defeat... I... return... to the shadows...",
+      "From the night... I sprang... to the night... I return...",
+      "The pack... will... remember..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b812f013cf5531229ee2f8"
+    },
+    "race": "dragon",
+    "area": "temple",
+    "level": 30,
+    "name": "Green Dragon",
+    "group": "Anchients",
+    "health": 550,
+    "xpEarned": 3000,
+    "goldEarned": 3000,
+    "dodge": 30,
+    "resist": 60,
+    "attacks": [
+      {
+        "attackName": "Emerald Flame Breath",
+        "minDamage": 25,
+        "maxDamage": 35,
+        "accuracy": 80,
+        "description": "A jet of green flame that engulfs its enemies."
+      },
+      {
+        "attackName": "Tail Swipe",
+        "minDamage": 20,
+        "maxDamage": 30,
+        "accuracy": 70,
+        "description": "A powerful swing of its tail that can knock opponents off their feet."
+      },
+      {
+        "attackName": "Claw Slash",
+        "minDamage": 30,
+        "maxDamage": 40,
+        "accuracy": 75,
+        "description": "Rapid slashes with its razor-sharp claws."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the heat of my breath!",
+      "My tail is mightier than your sword!",
+      "Fear the strength of my claws!",
+      "My flames will engulf you!",
+      "You are no match for my power!",
+      "Taste my fire!",
+      "You dare challenge me?",
+      "Your courage will be your downfall!",
+      "My claws will rip you apart!",
+      "Feel the wrath of the ancient dragon!"
+    ],
+    "missQuotes": [
+      "You're quicker than I thought!",
+      "Impressive dodge, but you won't avoid the next!",
+      "How did you evade that?",
+      "My flames missed? Impossible!",
+      "Next time, you won't be so lucky!",
+      "You won't dodge forever!",
+      "You evade like a rabbit, but you can't hide!",
+      "How... you're fast, but not fast enough!",
+      "You escaped this time, but not for long!",
+      "The wind aided you... won't happen again!"
+    ],
+    "damageQuotes": [
+      "Your attack was but a scratch!",
+      "Such a futile attempt!",
+      "Is that all the strength you possess?",
+      "You'll need more than that to bring me down!",
+      "I've endured stronger attacks!",
+      "A sting... nothing more!",
+      "Feel the wrath of a wounded dragon!",
+      "Your blade is no match for my scales!",
+      "So you've drawn blood, the real fight begins now!",
+      "Pain... merely fuels my fury!"
+    ],
+    "failedQuotes": [
+      "My flames... failed?",
+      "My swipe didn't connect?",
+      "No mark? I'll aim better next time!",
+      "I must focus... next attack won't miss!",
+      "You slipped my grasp, it won't happen again!",
+      "You escaped my claws, next time you won't!",
+      "Failed strike? No, just a warning!",
+      "You're slippery, but not for long!",
+      "Even dragons can miss, but not twice!",
+      "My aim was off, won't happen again!"
+    ],
+    "deathQuotes": [
+      "My fire... fades...",
+      "The dragon falls, but never forgets...",
+      "I return to the earth...",
+      "My flames extinguish, my reign ends...",
+      "I take my rest now, in the ancient hall of dragons...",
+      "You are... the true dragon slayer...",
+      "In death, I am... reborn...",
+      "The temple... will remember...",
+      "To the stars... my spirit rises...",
+      "May my fire... light your way..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64b81c7813cf5531229ee316"
+    },
+    "race": "serpent",
+    "area": "desert",
+    "level": 30,
+    "name": "Beso de Muerte",
+    "group": "Ancients",
+    "health": 500,
+    "xpEarned": 3000,
+    "goldEarned": 3000,
+    "dodge": 32,
+    "resist": 62,
+    "attacks": [
+      {
+        "attackName": "Venomous Kiss",
+        "minDamage": 20,
+        "maxDamage": 25,
+        "accuracy": 75,
+        "description": "A deadly attack using potent venom stored within its fangs."
+      },
+      {
+        "attackName": "Sandslash",
+        "minDamage": 25,
+        "maxDamage": 30,
+        "accuracy": 70,
+        "description": "A quick and vicious attack using sand-coated scales."
+      },
+      {
+        "attackName": "Desert Constrict",
+        "minDamage": 28,
+        "maxDamage": 33,
+        "accuracy": 65,
+        "description": "A powerful constriction, made even deadlier with the harsh desert sand."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the desert's deadly kiss!",
+      "The sands will be your grave!",
+      "None escape the grasp of the desert!",
+      "Suffer under the desert sun!",
+      "Feel the bite of the desert's wrath!",
+      "The desert's curse is upon you!",
+      "Your doom is in the desert winds!",
+      "The desert consumes all!",
+      "The desert's embrace is your end!",
+      "The sands thirst for your life!"
+    ],
+    "missQuotes": [
+      "Like a sandstorm, I am untouchable!",
+      "Missed! The desert sun must have blinded you!",
+      "Too slow! The desert wind carries me away!",
+      "You can't hit what the desert winds guard!",
+      "You swing at shadows! The desert's mirage protects me!",
+      "You aim at the sands and find nothing!",
+      "The desert's shroud conceals me!",
+      "Your attacks are lost in the desert winds!",
+      "Your blows are as empty as the desert itself!",
+      "Your strikes miss, consumed by the sands!"
+    ],
+    "damageQuotes": [
+      "You sting, but the desert's pain is greater!",
+      "You wound me, but the desert heals all!",
+      "Your attacks bite, but the desert's fury is deeper!",
+      "You injure me, but the desert's vengeance is coming!",
+      "Pain... but the desert's strength sustains me!",
+      "You strike, the desert strikes back!",
+      "Your attacks hurt, but the desert's wrath is endless!",
+      "Pain is fleeting, the desert is eternal!",
+      "You cause pain, but the desert's resilience is infinite!",
+      "Your blows sting, but the desert's embrace soothes!"
+    ],
+    "failedQuotes": [
+      "A miss now, but the desert's retribution is coming!",
+      "The desert storm misses, but will return!",
+      "Missed now, but the desert's torment is relentless!",
+      "The sands miss their mark, but they will consume you!",
+      "A failed strike, but the desert's justice is inevitable!",
+      "Now I miss, but the desert's vengeance is patient!",
+      "I missed, but the desert's fury is inescapable!",
+      "Failed now, but the desert's wrath always finds its target!",
+      "The desert's retribution missed, but it is unyielding!",
+      "My attack failed, but the desert's bite is inescapable!"
+    ],
+    "deathQuotes": [
+      "The desert... claims... me...",
+      "Into the sands... I dissolve...",
+      "As the desert takes... I give...",
+      "In death... I join... the sands...",
+      "The desert... it calls... me...",
+      "To the sands... I return...",
+      "Even I... succumb... to the desert...",
+      "The desert... my final... rest...",
+      "In the desert's arms... I fall...",
+      "The desert... my end... and beginning..."
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "64bed3ddb5f3e4170fc6f33f"
+    },
+    "race": "dragon",
+    "area": "ruins",
+    "level": 30,
+    "name": "Gold Dragon",
+    "group": "Anchients",
+    "health": 550,
+    "xpEarned": 3000,
+    "goldEarned": 3000,
+    "dodge": 30,
+    "resist": 60,
+    "attacks": [
+      {
+        "attackName": "Golden Flame Breath",
+        "minDamage": 25,
+        "maxDamage": 35,
+        "accuracy": 80,
+        "description": "A jet of golden flames that engulf its enemies."
+      },
+      {
+        "attackName": "Tail Swipe",
+        "minDamage": 20,
+        "maxDamage": 30,
+        "accuracy": 70,
+        "description": "A powerful swing of its tail that can knock opponents off their feet."
+      },
+      {
+        "attackName": "Claw Slash",
+        "minDamage": 30,
+        "maxDamage": 40,
+        "accuracy": 75,
+        "description": "Rapid slashes with its razor-sharp claws."
+      }
+    ],
+    "attackQuotes": [
+      "Feel the heat of my breath!",
+      "My tail is mightier than your sword!",
+      "Fear the strength of my claws!",
+      "My flames will engulf you!",
+      "You are no match for my power!",
+      "Taste my fire!",
+      "You dare challenge me?",
+      "Your courage will be your downfall!",
+      "My claws will rip you apart!",
+      "Feel the wrath of the ancient dragon!"
+    ],
+    "missQuotes": [
+      "You're quicker than I thought!",
+      "Impressive dodge, but you won't avoid the next!",
+      "How did you evade that?",
+      "My flames missed? Impossible!",
+      "Next time, you won't be so lucky!",
+      "You won't dodge forever!",
+      "You evade like a rabbit, but you can't hide!",
+      "How... you're fast, but not fast enough!",
+      "You escaped this time, but not for long!",
+      "The wind aided you... won't happen again!"
+    ],
+    "damageQuotes": [
+      "Your attack was but a scratch!",
+      "Such a futile attempt!",
+      "Is that all the strength you possess?",
+      "You'll need more than that to bring me down!",
+      "I've endured stronger attacks!",
+      "A sting... nothing more!",
+      "Feel the wrath of a wounded dragon!",
+      "Your blade is no match for my scales!",
+      "So you've drawn blood, the real fight begins now!",
+      "Pain... merely fuels my fury!"
+    ],
+    "failedQuotes": [
+      "My flames... failed?",
+      "My swipe didn't connect?",
+      "No mark? I'll aim better next time!",
+      "I must focus... next attack won't miss!",
+      "You slipped my grasp, it won't happen again!",
+      "You escaped my claws, next time you won't!",
+      "Failed strike? No, just a warning!",
+      "You're slippery, but not for long!",
+      "Even dragons can miss, but not twice!",
+      "My aim was off, won't happen again!"
+    ],
+    "deathQuotes": [
+      "My fire... fades...",
+      "The dragon falls, but never forgets...",
+      "I return to the earth...",
+      "My flames extinguish, my reign ends...",
+      "I take my rest now, in the ancient hall of dragons...",
+      "You are... the true dragon slayer...",
+      "In death, I am... reborn...",
+      "The temple... will remember...",
+      "To the stars... my spirit rises...",
+      "May my fire... light your way..."
+    ]
+  }
+]

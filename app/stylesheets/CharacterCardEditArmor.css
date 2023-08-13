@@ -1,0 +1,363 @@
+.character-card-edit-content::-webkit-scrollbar {
+  width: 6px;
+}
+.character-card-edit-content::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Style the scrollbar thumb */
+.character-card-edit-content::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 50px;
+}
+
+/* Optionally, add hover and active styles for the thumb */
+.character-card-edit-content::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff;
+}
+.character-card-edit-content::-webkit-scrollbar-thumb:active {
+  background-color: #ffffff;
+}
+
+@media screen and (min-width: 1920px) {
+  .character-card-edit-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #55555573;
+    z-index: 5;
+  }
+
+  .character-card-edit-modal {
+    height: 500px;
+    width: 400px;
+    border-radius: 15px;
+    background-color: #272727;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .character-card-edit-content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    overflow-y: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  .character-card-edit-slot-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  .character-card-edit-slot-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 330px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .character-card-edit-slot-item:not(.equipped):hover {
+    background-color: #494949 !important;
+  }
+
+  .character-card-edit-slot-item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border: 4px solid;
+  }
+  .character-card-edit-slot-item-name-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100px;
+  }
+  .character-card-edit-slot-item-name {
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-size: 17px;
+    height: 100%;
+    width: 150px;
+    margin-left: 15px;
+    color: white;
+  }
+  #equipped-text {
+    font-size: 13px;
+    font-style: italic;
+  }
+  .character-card-edit-slot-item-stats-container {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .character-card-edit-slot-item-shielding {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-shielding-icon {
+    margin-right: 5px;
+  }
+
+  .character-card-edit-slot-item-damage {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-damage-icon {
+    margin-right: 5px;
+  }
+  .character-card-edit-slot-item-accuracy {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-accuracy-icon {
+    margin-right: 5px;
+  }
+  .character-card-edit-slot-item-itemValue {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-itemValue-icon {
+    margin-right: 5px;
+    color: #dbbd0f;
+  }
+  .character-card-edit-close-modal-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 80px;
+    background-color: #353535;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 3px 3px 5px #111111;
+  }
+
+  .character-card-edit-close-modal-btn:hover {
+    background-color: #494949;
+  }
+}
+@media screen and (min-width: 390px) and (max-width: 844px) {
+  .character-card-edit-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #55555573;
+    z-index: 5;
+  }
+
+  .character-card-edit-modal {
+    height: 500px;
+    width: 400px;
+    border-radius: 15px;
+    background-color: #272727;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 10px;
+    scale: 0.75;
+    box-shadow: 1px 1px 5px #000000;
+  }
+
+  .character-card-edit-content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    overflow-y: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  .character-card-edit-slot-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  .character-card-edit-slot-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 330px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .character-card-edit-slot-item:not(.equipped):hover {
+    background-color: #494949 !important;
+  }
+
+  .character-card-edit-slot-item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border: 4px solid;
+  }
+  .character-card-edit-slot-item-name-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100px;
+  }
+  .character-card-edit-slot-item-name {
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-size: 17px;
+    height: 100%;
+    width: 150px;
+    margin-left: 15px;
+    color: white;
+  }
+  #equipped-text {
+    font-size: 13px;
+    font-style: italic;
+  }
+  .character-card-edit-slot-item-stats-container {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .character-card-edit-slot-item-shielding {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-shielding-icon {
+    margin-right: 5px;
+  }
+
+  .character-card-edit-slot-item-damage {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-damage-icon {
+    margin-right: 5px;
+  }
+  .character-card-edit-slot-item-accuracy {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-accuracy-icon {
+    margin-right: 5px;
+  }
+  .character-card-edit-slot-item-itemValue {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-itemValue-icon {
+    margin-right: 5px;
+    color: #dbbd0f;
+  }
+  .character-card-edit-close-modal-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 80px;
+    background-color: #353535;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 3px 3px 5px #111111;
+  }
+
+  .character-card-edit-close-modal-btn:hover {
+    background-color: #494949;
+  }
+}

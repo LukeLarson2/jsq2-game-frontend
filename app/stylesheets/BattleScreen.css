@@ -1,0 +1,151 @@
+@media screen and (min-width: 1920px) {
+  .battle-screen-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .battle-screen-vrs-logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 420px;
+    height: 420px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    margin-top: 70px;
+  }
+
+  .battle-screen-backglow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.548);
+    box-shadow: 0 0 100px 100px #000000f3;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin-top: 30px;
+  }
+
+  .battle-screen-enemy-area,
+  .battle-screen-player-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    height: 500px;
+    margin-top: 70px;
+  }
+
+  .battle-screen-arena-level {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000056;
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 3px 3px #ffffff8a;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+  }
+}
+@media screen and (min-width: 391px) and (max-width: 844px) {
+  .battle-screen-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+  }
+
+  .battle-screen-vrs-logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .battle-screen-backglow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.548);
+    box-shadow: 0 0 100px 100px #000000f3;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    scale: 0.5;
+  }
+
+  .battle-screen-player-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    padding-bottom: 30px;
+    scale: 0.5;
+  }
+  .battle-screen-enemy-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    padding-bottom: 30px;
+    scale: 0.5;
+  }
+
+  .battle-screen-arena-level {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000056;
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 3px 3px #ffffff8a;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    scale: 0.5;
+  }
+}

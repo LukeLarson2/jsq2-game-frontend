@@ -1,0 +1,1262 @@
+[
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2368"
+    },
+    "itemName": "Transcendent Mithril Armor",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Mythical",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 50,
+    "dodge": 1,
+    "itemValue": 2000,
+    "usedByRoles": ["Warrior"],
+    "description": "The Transcendent Mithril Armor offers an unparalleled damage resistance of 50 and 1% dodge, making Warriors almost impervious to harm."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2366"
+    },
+    "itemName": "Decorated Steel Armor",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Epic",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 40,
+    "dodge": 1,
+    "itemValue": 500,
+    "usedByRoles": ["Warrior"],
+    "description": "The Decorated Steel Armor provides a strong damage resistance of 40 and 1% dodge, allowing the Warrior to weather significant hits."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2369"
+    },
+    "itemName": "Worn Leather Armor",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 5,
+    "dodge": 5,
+    "itemValue": 10,
+    "usedByRoles": ["Assassin"],
+    "description": "The Worn Leather Armor, despite its common status, still offers 5% dodge ability and 5 damage resistance, suitable for the nimble Assassins."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa236b"
+    },
+    "itemName": "Polished Leather Armor",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Rare",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 15,
+    "dodge": 15,
+    "itemValue": 50,
+    "usedByRoles": ["Assassin"],
+    "description": "The Polished Leather Armor, with its sleek design, provides Assassins with 15% dodge and 15 damage resistance, enabling quick reactions to incoming attacks."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa235d"
+    },
+    "itemName": "Tattered Magic Robes",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 10,
+    "quality": "Common",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 5,
+    "dodge": 1,
+    "itemValue": 10,
+    "usedByRoles": ["Mage"],
+    "description": "The Tattered Magic Robes may look worn out, but they provide a damage resistance value of 5 and a 1% dodge chance."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2363"
+    },
+    "itemName": "Rusty Iron Armor",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 10,
+    "dodge": 1,
+    "itemValue": 10,
+    "usedByRoles": ["Warrior"],
+    "description": "The Rusty Iron Armor, despite its condition, offers a damage resistance of 10 and 1% dodge, providing basic protection to Warriors."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa235f"
+    },
+    "itemName": "Styled Magic Robes",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 30,
+    "quality": "Rare",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 15,
+    "dodge": 5,
+    "itemValue": 100,
+    "usedByRoles": ["Mage"],
+    "description": "The Styled Magic Robes provide the wearer with a significant damage resistance value of 15 and a 5% dodge chance, blending defense and style."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2362"
+    },
+    "itemName": "Transcendent Magic Robes",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 60,
+    "quality": "Mythical",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 30,
+    "dodge": 15,
+    "itemValue": 2000,
+    "usedByRoles": ["Mage"],
+    "description": "The Transcendent Magic Robes offer an unparalleled damage resistance of 30 and 15% dodge chance, providing mythical levels of protection."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa236c"
+    },
+    "itemName": "Studded Leather Armor",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Epic",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 20,
+    "dodge": 20,
+    "itemValue": 200,
+    "usedByRoles": ["Assassin"],
+    "description": "The Studded Leather Armor gives Assassins an impressive 20% dodge and 20 damage resistance, enhancing their agility and survivability."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa235e"
+    },
+    "itemName": "Cloth Magic Robes",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 20,
+    "quality": "Uncommon",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 10,
+    "dodge": 3,
+    "itemValue": 50,
+    "usedByRoles": ["Mage"],
+    "description": "The Cloth Magic Robes are more resilient, offering a damage resistance of 10 and 3% dodge chance, increasing the wearer's survivability."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2360"
+    },
+    "itemName": "Decorated Magic Robes",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 40,
+    "quality": "Epic",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 20,
+    "dodge": 8,
+    "itemValue": 200,
+    "usedByRoles": ["Mage"],
+    "description": "The Decorated Magic Robes offer a strong damage resistance of 20 and 8% dodge chance, providing substantial protection."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2361"
+    },
+    "itemName": "Enchanted Magic Robes",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 50,
+    "quality": "Legendary",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 25,
+    "dodge": 10,
+    "itemValue": 1000,
+    "usedByRoles": ["Mage"],
+    "description": "The Enchanted Magic Robes, with a damage resistance of 25 and 10% dodge chance, provide legendary defense to the wearer."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2367"
+    },
+    "itemName": "Mithril Armor",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Legendary",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 45,
+    "dodge": 1,
+    "itemValue": 1000,
+    "usedByRoles": ["Warrior"],
+    "description": "The Mithril Armor, a legendary set, offers an incredible damage resistance of 45 and 1% dodge, making Warriors near invulnerable."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa236d"
+    },
+    "itemName": "Enchanted Studded Leather Armor",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Legendary",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 25,
+    "dodge": 30,
+    "itemValue": 1000,
+    "usedByRoles": ["Assassin"],
+    "description": "The Enchanted Studded Leather Armor offers an unparalleled 30% dodge and 25 damage resistance, making Assassins nearly untouchable in combat."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa236e"
+    },
+    "itemName": "Transcendent Studded Leather Armor",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Mythical",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 30,
+    "dodge": 40,
+    "itemValue": 2000,
+    "usedByRoles": ["Assassin"],
+    "description": "The Transcendent Studded Leather Armor, with an astonishing 40% dodge and 30 damage resistance, turns Assassins into elusive shadows on the battlefield."
+  },
+
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa236a"
+    },
+    "itemName": "Leather Armor",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Uncommon",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 10,
+    "dodge": 10,
+    "itemValue": 50,
+    "usedByRoles": ["Assassin"],
+    "description": "The Leather Armor is a decent protection for Assassins, offering 10% dodge and 10 damage resistance, allowing them to evade threats effectively."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2364"
+    },
+    "itemName": "Iron Armor",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Uncommon",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 20,
+    "dodge": 1,
+    "itemValue": 50,
+    "usedByRoles": ["Warrior"],
+    "description": "The Iron Armor, sturdy and reliable, provides a damage resistance of 20 and 1% dodge, fortifying the Warrior's defense."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2365"
+    },
+    "itemName": "Steel Armor",
+    "type": "Armor",
+    "slot": "Armor",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Rare",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 30,
+    "dodge": 1,
+    "itemValue": 100,
+    "usedByRoles": ["Warrior"],
+    "description": "The Steel Armor, robust and resilient, provides a damage resistance of 30 and 1% dodge, reinforcing the Warrior's endurance."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2333"
+    },
+    "itemName": "Apple",
+    "type": "Food",
+    "slot": "None",
+    "healAmount": 10,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 10,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "An Apple a day keeps the health bar at bay by healing 10 points!"
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa232e"
+    },
+    "itemName": "Large Energy Potion",
+    "type": "Potion",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 75,
+    "quality": "Rare",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 150,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "The Large Energy Potion replenishes the user's energy by 75 points."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa232c"
+    },
+    "itemName": "Small Energy Potion",
+    "type": "Potion",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 25,
+    "quality": "Common",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 50,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "The Small Energy Potion recovers 25 energy points for the user."
+  },
+
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa232b"
+    },
+    "itemName": "Full Health Potion",
+    "type": "Potion",
+    "slot": "None",
+    "healAmount": 100,
+    "recoverAmount": 0,
+    "quality": "Epic",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 200,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "The Full Health Potion completely revitalizes the user by healing 100 health points."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2334"
+    },
+    "itemName": "Banana",
+    "type": "Food",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 10,
+    "quality": "Common",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 10,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "Peel back a Banana and restore 10 points of energy in a tasty way!"
+  },
+
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa232a"
+    },
+    "itemName": "Large Health Potion",
+    "type": "Potion",
+    "slot": "None",
+    "healAmount": 75,
+    "recoverAmount": 0,
+    "quality": "Rare",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 150,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "The Large Health Potion replenishes the user's health by 75 points."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa232d"
+    },
+    "itemName": "Medium Energy Potion",
+    "type": "Potion",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 50,
+    "quality": "Uncommon",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 100,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "The Medium Energy Potion restores 50 energy points to the user."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2328"
+    },
+    "itemName": "Small Health Potion",
+    "type": "Potion",
+    "slot": "None",
+    "healAmount": 25,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 50,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "The Small Health Potion heals the user for 25 health points."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2329"
+    },
+    "itemName": "Medium Health Potion",
+    "type": "Potion",
+    "slot": "None",
+    "healAmount": 50,
+    "recoverAmount": 0,
+    "quality": "Uncommon",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 100,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "The Medium Health Potion restores 50 health points to the user."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa232f"
+    },
+    "itemName": "Full Energy Potion",
+    "type": "Potion",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 100,
+    "quality": "Epic",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 200,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "The Full Energy Potion completely revitalizes the user by recovering 100 energy points."
+  },
+
+  {
+    "_id": {
+      "$oid": "64becf2ab5f3e4170fc6f32e"
+    },
+    "itemName": "Small Restore Potion",
+    "type": "Potion",
+    "slot": "None",
+    "healAmount": 25,
+    "recoverAmount": 25,
+    "quality": "Rare",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 300,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "The Small Restore Potion replenishes the user's energy and health by 25 points."
+  },
+  {
+    "_id": {
+      "$oid": "64becf52b5f3e4170fc6f330"
+    },
+    "itemName": "Medium Restore Potion",
+    "type": "Potion",
+    "slot": "None",
+    "healAmount": 50,
+    "recoverAmount": 50,
+    "quality": "Epic",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 600,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "The Medium Restore Potion replenishes the user's energy and health by 50 points."
+  },
+  {
+    "_id": {
+      "$oid": "64becf7ab5f3e4170fc6f332"
+    },
+    "itemName": "Large Restore Potion",
+    "type": "Potion",
+    "slot": "None",
+    "healAmount": 75,
+    "recoverAmount": 75,
+    "quality": "Legendary",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 1200,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "The Large Restore Potion replenishes the user's energy and health by 75 points."
+  },
+  {
+    "_id": {
+      "$oid": "64becf9eb5f3e4170fc6f334"
+    },
+    "itemName": "Full Restore Potion",
+    "type": "Potion",
+    "slot": "None",
+    "healAmount": 25,
+    "recoverAmount": 25,
+    "quality": "Mythic",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 2400,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "The Full Restore Potion replenishes the user's energy and health to full."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2336"
+    },
+    "itemName": "Small Rock",
+    "type": "Misc",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 5,
+    "accuracy": 40,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 1,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "They say a rolling stone gathers no moss, but this Small Rock seems to be an exception."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2332"
+    },
+    "itemName": "Rusty Fork",
+    "type": "Misc",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 2,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "Be careful not to poke yourself..."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2335"
+    },
+    "itemName": "Dragon Toy",
+    "type": "Misc",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Rare",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 100,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "This Dragon Toy holds an ancient secret, whispering of a time long past."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2330"
+    },
+    "itemName": "Small Boot",
+    "type": "Misc",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 2,
+    "dodge": 0,
+    "itemValue": 2,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "A Small Boot, not very useful from what you can tell, maybe someone would wan tto buy it?"
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2331"
+    },
+    "itemName": "Dirty Underwear",
+    "type": "Misc",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 1,
+    "dodge": 0,
+    "itemValue": 2,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "Dirty Underwear, perfect for those 'laundry day' vibes during epic battles!"
+  },
+  {
+    "_id": {
+      "$oid": "64bed06bb5f3e4170fc6f336"
+    },
+    "itemName": "Carved Cube",
+    "type": "Misc",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Epic",
+    "damage": 5,
+    "accuracy": 50,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 500,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "A strage cube shaped metal object. Its engravings are a mystery..."
+  },
+  {
+    "_id": {
+      "$oid": "64bed2efb5f3e4170fc6f338"
+    },
+    "itemName": "Rusty Spoon",
+    "type": "Misc",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 2,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "Not sure you'd want to use this..."
+  },
+  {
+    "_id": {
+      "$oid": "64bed336b5f3e4170fc6f33a"
+    },
+    "itemName": "Iron Key",
+    "type": "Misc",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Rare",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 50,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "An iron key, curious what it may open..."
+  },
+  {
+    "_id": {
+      "$oid": "64bed367b5f3e4170fc6f33c"
+    },
+    "itemName": "Mithril Key",
+    "type": "Misc",
+    "slot": "None",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Epic",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 100,
+    "usedByRoles": ["Mage", "Warrior", "Assassin"],
+    "description": "What mysterious object does this wonderous key unlock?"
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2346"
+    },
+    "itemName": "Magic Notes",
+    "type": "Book",
+    "slot": "Off Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 1,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 5,
+    "usedByRoles": ["Mage"],
+    "description": "Magic Notes enhance your attacks with 1 additional damage."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2347"
+    },
+    "itemName": "Magic Book",
+    "type": "Book",
+    "slot": "Off Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Uncommon",
+    "damage": 5,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 20,
+    "usedByRoles": ["Mage"],
+    "description": "The Magic Book provides a boost of 5 damage to your attacks."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2348"
+    },
+    "itemName": "Decorated Magic Book",
+    "type": "Book",
+    "slot": "Off Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Rare",
+    "damage": 8,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 50,
+    "usedByRoles": ["Mage"],
+    "description": "The Decorated Magic Book significantly enhances your attacks with 8 extra damage."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2349"
+    },
+    "itemName": "Scratched Magic Orb",
+    "type": "Orb",
+    "slot": "Off Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Epic",
+    "damage": 10,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 100,
+    "usedByRoles": ["Mage"],
+    "description": "Despite its appearance, the Scratched Magic Orb adds 10 damage to your attacks."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa234a"
+    },
+    "itemName": "Magic Orb",
+    "type": "Orb",
+    "slot": "Off Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Legendary",
+    "damage": 20,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 500,
+    "usedByRoles": ["Mage"],
+    "description": "The Magic Orb greatly empowers your attacks with 20 extra damage."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa234b"
+    },
+    "itemName": "Transcendent Magic Orb",
+    "type": "Orb",
+    "slot": "Off Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Mythical",
+    "damage": 30,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 1000,
+    "usedByRoles": ["Mage"],
+    "description": "The Transcendent Magic Orb supremely amplifies your attacks, inflicting an additional 30 damage."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2340"
+    },
+    "itemName": "Old Wood Magic Staff",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 10,
+    "accuracy": 70,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 10,
+    "usedByRoles": ["Mage"],
+    "description": "The Old Wood Magic Staff may look simple, but it can cause 10 points of damage with a 70% accuracy."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2341"
+    },
+    "itemName": "Uncommon Wood Magic Staff",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Uncommon",
+    "damage": 20,
+    "accuracy": 75,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 50,
+    "usedByRoles": [
+      "Mage"
+    ],
+    "description": "A reliable choice for any mage, the Uncommon Wood Magic Staff deals 20 points of damage with a 75% accuracy."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2342"
+    },
+    "itemName": "Carved Wood Magic Staff",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Rare",
+    "damage": 30,
+    "accuracy": 80,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 200,
+    "usedByRoles": ["Mage"],
+    "description": "With intricate carvings, this magical staff can deal 30 points of damage with an 80% accuracy."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2343"
+    },
+    "itemName": "Decorated Wood Magic Staff",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Epic",
+    "damage": 40,
+    "accuracy": 85,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 500,
+    "usedByRoles": ["Mage"],
+    "description": "Exquisitely decorated, this magic staff inflicts 40 points of damage with a striking accuracy of 85%."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2344"
+    },
+    "itemName": "Enchanted Wood Magic Staff",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Legendary",
+    "damage": 50,
+    "accuracy": 90,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 1000,
+    "usedByRoles": ["Mage"],
+    "description": "The legendary Enchanted Wood Magic Staff carries the power to deliver 50 points of damage with a 90% accuracy."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2345"
+    },
+    "itemName": "Transcendent Wood Magic Staff",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Mythical",
+    "damage": 60,
+    "accuracy": 95,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 2000,
+    "usedByRoles": ["Mage"],
+    "description": "The mythical Transcendent Wood Magic Staff can cause a colossal 60 points of damage with a near-perfect accuracy of 95%."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2351"
+    },
+    "itemName": "Rusty Iron Shield",
+    "type": "Shield",
+    "slot": "Off Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 10,
+    "dodge": 0,
+    "itemValue": 5,
+    "usedByRoles": ["Warrior"],
+    "description": "The Rusty Iron Shield offers basic protection, providing an additional 10 points of shielding."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2352"
+    },
+    "itemName": "Iron Shield",
+    "type": "Shield",
+    "slot": "Off Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Uncommon",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 15,
+    "dodge": 0,
+    "itemValue": 20,
+    "usedByRoles": ["Warrior"],
+    "description": "The Iron Shield adds a solid defense to your arsenal, granting an additional 15 points of shielding."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2353"
+    },
+    "itemName": "Steel Shield",
+    "type": "Shield",
+    "slot": "Off Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Rare",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 20,
+    "dodge": 0,
+    "itemValue": 50,
+    "usedByRoles": ["Warrior"],
+    "description": "The Steel Shield provides substantial protection, adding an impressive 20 points of shielding."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2354"
+    },
+    "itemName": "Decorated Steel Shield",
+    "type": "Shield",
+    "slot": "Off Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Epic",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 25,
+    "dodge": 0,
+    "itemValue": 100,
+    "usedByRoles": ["Warrior"],
+    "description": "The Decorated Steel Shield excels in defense, providing a strong 25 points of additional shielding."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2355"
+    },
+    "itemName": "Mithril Shield",
+    "type": "Shield",
+    "slot": "Off Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Legendary",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 30,
+    "dodge": 0,
+    "itemValue": 500,
+    "usedByRoles": ["Warrior"],
+    "description": "The Mithril Shield is legendary for its robust defense, adding a staggering 30 points of shielding."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2356"
+    },
+    "itemName": "Transcendent Mithril Shield",
+    "type": "Shield",
+    "slot": "Off Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Mythical",
+    "damage": 0,
+    "accuracy": 0,
+    "shielding": 40,
+    "dodge": 0,
+    "itemValue": 1000,
+    "usedByRoles": ["Warrior"],
+    "description": "The Transcendent Mithril Shield provides mythic protection, offering a massive addition of 40 shielding points."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa234c"
+    },
+    "itemName": "Rusty Iron Sword",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 20,
+    "accuracy": 60,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 10,
+    "usedByRoles": ["Warrior", "Assassin"],
+    "description": "The Rusty Iron Sword, while not the most reliable with 60% accuracy, can still deliver a considerable 20 damage points."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa234d"
+    },
+    "itemName": "Steel Sword",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Uncommon",
+    "damage": 30,
+    "accuracy": 90,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 100,
+    "usedByRoles": ["Warrior", "Assassin"],
+    "description": "The Steel Sword is a trusty weapon, boasting a 90% accuracy rate and a potential for 30 damage points."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa234e"
+    },
+    "itemName": "Decorated Steel Sword",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Rare",
+    "damage": 35,
+    "accuracy": 92,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 500,
+    "usedByRoles": ["Warrior", "Assassin"],
+    "description": "The Decorated Steel Sword offers an impressive 92% accuracy rate and can inflict up to 35 damage points."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa234f"
+    },
+    "itemName": "Mithril Sword",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Epic",
+    "damage": 45,
+    "accuracy": 95,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 1000,
+    "usedByRoles": ["Warrior", "Assassin"],
+    "description": "The Mithril Sword stands out with its 95% accuracy rate, capable of causing 45 damage points."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2350"
+    },
+    "itemName": "Transcendent Mithril Sword",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Mythical",
+    "damage": 60,
+    "accuracy": 100,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 2000,
+    "usedByRoles": ["Warrior", "Assassin"],
+    "description": "The Transcendent Mithril Sword is unmatched, with flawless accuracy and a devastating potential of 60 damage points."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2357"
+    },
+    "itemName": "Rusty Iron Main Hand Dagger",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Common",
+    "damage": 10,
+    "accuracy": 75,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 10,
+    "usedByRoles": ["Assassin"],
+    "description": "The Rusty Iron Dagger, despite it's weathered condition, offer a damage output of 10 with a 75% accuracy."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2358"
+    },
+    "itemName": "Iron Main Hand Dagger",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Uncommon",
+    "damage": 15,
+    "accuracy": 80,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 50,
+    "usedByRoles": ["Assassin"],
+    "description": "The Iron Dagger grants a higher damage output of 15 with an improved accuracy of 80%."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa2359"
+    },
+    "itemName": "Steel Main Hand Dagger",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Rare",
+    "damage": 25,
+    "accuracy": 85,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 200,
+    "usedByRoles": ["Assassin"],
+    "description": "The Steel Dagger provides significant damage of 25 points and an accuracy rate of 85%."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa235a"
+    },
+    "itemName": "Decorated Steel Main Hand Dagger",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Epic",
+    "damage": 30,
+    "accuracy": 90,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 500,
+    "usedByRoles": ["Assassin"],
+    "description": "The Decorated Steel Dagger deal a formidable 30 points of damage and have a high accuracy of 90%."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa235b"
+    },
+    "itemName": "Mithril Main Hand Dagger",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Legendary",
+    "damage": 35,
+    "accuracy": 92,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 1000,
+    "usedByRoles": ["Assassin"],
+    "description": "The Mithril Dagger, legendary in it's potency, deal 35 points of damage with an impressive 92% accuracy."
+  },
+  {
+    "_id": {
+      "$oid": "64a3231b0ba20a2315aa235c"
+    },
+    "itemName": "Transcendent Mithril Main Hand Dagger",
+    "type": "Weapon",
+    "slot": "Main Hand",
+    "healAmount": 0,
+    "recoverAmount": 0,
+    "quality": "Mythical",
+    "damage": 50,
+    "accuracy": 100,
+    "shielding": 0,
+    "dodge": 0,
+    "itemValue": 2000,
+    "usedByRoles": ["Assassin"],
+    "description": "The Transcendent Mithril Dagger offer the highest damage output of 50 with an unerring accuracy of 100%."
+  }
+]

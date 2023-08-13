@@ -1,0 +1,527 @@
+@media screen and (min-width: 1200px){
+  .site-manage-character-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+  }
+  .site-manage-character-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 60px;
+  }
+  .site-manage-character-slots {
+    font-size: 20px;
+    margin-top: -5px;
+    margin-bottom: 40px;
+  }
+  .site-manage-character-header-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 50px;
+    background: linear-gradient(to top, #570000, #850000);
+    color: #f0b73e;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 22px;
+    box-shadow: 1px 1px 5px #000000;
+  }
+  .site-manage-character-header-btns:hover {
+    background: linear-gradient(to top, #7e0101, #b10101);
+  }
+  .site-manage-character-divide {
+    width: 80vw;
+    border: 1px solid #0000003b;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .site-manage-character-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+    width: 80vw;
+    margin-bottom: 60px;
+  }
+  .site-manage-character-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 450px;
+    height: 400px;
+    box-shadow: 1px 1px 5px #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .site-manage-character-blur {
+    width: 100%;
+    height: 100%;
+    background-color: #000000a1;
+    padding: 20px;
+  }
+  .site-manage-character-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+  }
+  .site-manage-character-role {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    margin-left: 20px;
+  }
+  .site-manage-character-race {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    margin-right: 20px;
+  }
+  .site-manage-character-name-role-race {
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+  .site-manage-character-characterName {
+    font-size: 32px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .site-manage-character-race-role {
+    font-size: 17px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .site-manage-character-level-arena {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  .site-manage-character-level {
+    font-style: italic;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  .site-manage-character-arena-level {
+    font-style: italic;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .site-manage-character-wallet {
+    display: flex;
+    font-style: italic;
+    margin-left: 20px;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  .site-manage-character-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, #570000, #850000);
+    color: #f0b73e;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    box-shadow: 1px 1px 5px #000000;
+  }
+  .site-manage-character-btns:hover {
+    background: linear-gradient(to top, #7e0101, #b10101);
+  }
+  .site-manage-character-btns-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, #da9e1e, #f0b73e);
+    color: #850000;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    box-shadow: 1px 1px 5px #000000;
+  }
+  .site-manage-character-btns-delete:hover {
+    background: linear-gradient(to top, #f7b831, #f8c556);
+  }
+}
+@media screen and (min-width: 845px) and (max-width: 1199px) {
+  .site-manage-character-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+  }
+  .site-manage-character-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 60px;
+  }
+  .site-manage-character-slots {
+    font-size: 20px;
+    margin-top: -5px;
+    margin-bottom: 40px;
+  }
+  .site-manage-character-header-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 50px;
+    background: linear-gradient(to top, #570000, #850000);
+    color: #f0b73e;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 22px;
+    box-shadow: 1px 1px 5px #000000;
+  }
+  .site-manage-character-header-btns:hover {
+    background: linear-gradient(to top, #7e0101, #b10101);
+  }
+  .site-manage-character-divide {
+    width: 80vw;
+    border: 1px solid #0000003b;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .site-manage-character-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .site-manage-character-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 450px;
+    height: 400px;
+    box-shadow: 1px 1px 5px #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .site-manage-character-blur {
+    width: 100%;
+    height: 100%;
+    background-color: #000000a1;
+    padding: 20px;
+  }
+  .site-manage-character-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+  }
+  .site-manage-character-role {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    margin-left: 20px;
+  }
+  .site-manage-character-race {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    margin-right: 20px;
+  }
+  .site-manage-character-name-role-race {
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+  .site-manage-character-characterName {
+    font-size: 32px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .site-manage-character-race-role {
+    font-size: 17px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .site-manage-character-level-arena {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  .site-manage-character-level {
+    font-style: italic;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  .site-manage-character-arena-level {
+    font-style: italic;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .site-manage-character-wallet {
+    display: flex;
+    font-style: italic;
+    margin-left: 20px;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  .site-manage-character-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, #570000, #850000);
+    color: #f0b73e;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    box-shadow: 1px 1px 5px #000000;
+  }
+  .site-manage-character-btns:hover {
+    background: linear-gradient(to top, #7e0101, #b10101);
+  }
+  .site-manage-character-btns-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, #da9e1e, #f0b73e);
+    color: #850000;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    box-shadow: 1px 1px 5px #000000;
+  }
+  .site-manage-character-btns-delete:hover {
+    background: linear-gradient(to top, #f7b831, #f8c556);
+  }
+}
+@media screen and (max-width: 844px) {
+  .site-manage-character-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+  }
+  .site-manage-character-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  .site-manage-character-slots {
+    font-size: 15px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+  }
+  .site-manage-character-header-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 40px;
+    background: linear-gradient(to top, #570000, #850000);
+    color: #f0b73e;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .site-manage-character-divide {
+    width: 350px;
+    border: 1px solid #0000003b;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .site-manage-character-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 350px;
+    height: 300px;
+    box-shadow: 1px 1px 5px #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .site-manage-character-blur {
+    width: 100%;
+    height: 100%;
+    background-color: #000000a1;
+    padding: 20px;
+  }
+  .site-manage-character-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+  }
+  .site-manage-character-role {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    margin-left: 20px;
+  }
+  .site-manage-character-race {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    margin-right: 20px;
+  }
+  .site-manage-character-name-role-race {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+  .site-manage-character-characterName {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .site-manage-character-race-role {
+    font-size: 13px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .site-manage-character-level-arena {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  .site-manage-character-level {
+    font-style: italic;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  .site-manage-character-arena-level {
+    font-style: italic;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .site-manage-character-wallet {
+    display: flex;
+    font-style: italic;
+    margin-left: 20px;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  .site-manage-character-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to top, #570000, #850000);
+    color: #f0b73e;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .site-manage-character-btns-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to top, #da9e1e, #f0b73e);
+    color: #850000;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

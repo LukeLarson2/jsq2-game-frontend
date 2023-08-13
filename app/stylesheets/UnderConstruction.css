@@ -1,0 +1,107 @@
+@media screen and (min-width: 1200px){
+  .page-is-under-construction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    width: 100vw;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+  }
+  .under-construction-btn-placement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+  }
+  .under-construction-go-back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 50px;
+    background: linear-gradient(to top, #570000, #850000);
+    color: #f0b73e;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    box-shadow: 1px 1px 5px #000000;
+  }
+  .under-construction-go-back-btn:hover {
+    background: linear-gradient(to top, #7e0101, #b10101);
+  }
+}
+@media screen and (min-width: 845px) and (max-width: 1199px) {
+  .page-is-under-construction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    width: 100vw;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+  }
+  .under-construction-btn-placement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+  }
+  .under-construction-go-back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 50px;
+    background: linear-gradient(to top, #570000, #850000);
+    color: #f0b73e;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    box-shadow: 1px 1px 5px #000000;
+  }
+  .under-construction-go-back-btn:hover {
+    background: linear-gradient(to top, #7e0101, #b10101);
+  }
+}
+@media screen and (max-width: 844px) {
+  .page-is-under-construction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    width: 100vw;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+  }
+  .under-construction-btn-placement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+  }
+  .under-construction-go-back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 40px;
+    background: linear-gradient(to top, #570000, #850000);
+    color: #f0b73e;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+}

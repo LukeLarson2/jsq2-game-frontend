@@ -1,0 +1,379 @@
+@media screen and (min-width: 1200px){
+  .how-to-play-main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: fit-content;
+  }
+  .how-to-play-title {
+    margin-top: 60px;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .how-to-play-jump-to-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    font-size: 14px;
+    font-weight: 600;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .how-to-play-link-to-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    background-color: #ffffff;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 1px 1px 5px #000000;
+    margin: 10px;
+    cursor: pointer;
+    transition: scale 0.3s ease-in-out;
+  }
+  .how-to-play-link-to-part:hover {
+    scale: 1.1;
+  }
+  .how-to-play-instruction-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    height: fit-content;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px #000000;
+    padding: 25px;
+    margin-bottom: 60px;
+  }
+  .how-to-play-instruction-image-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 5px 5px #000000;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #000000;
+  }
+  .how-to-play-instruction-image {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+  .how-to-play-instruction-description-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 1px 1px 5px #000000;
+    border-radius: 10px;
+  }
+  .how-to-play-btn-placement {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .hot-to-play-next-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(to top, #570000, #850000);
+    color: #f0b73e;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    box-shadow: 1px 1px 5px #000000;
+    cursor: pointer;
+  }
+  .hot-to-play-next-btn:hover {
+    background: linear-gradient(to top, #7e0101, #b10101);
+  }
+  .hot-to-play-back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(to top, #da9e1e, #f0b73e);
+    color: #850000;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    box-shadow: 1px 1px 5px #000000;
+    cursor: pointer;
+  }
+  .hot-to-play-back-btn:hover {
+    background: linear-gradient(to top, #f7b831, #f8c556);
+  }
+}
+@media screen and (min-width: 845px) and (max-width: 1199px) {
+  .how-to-play-main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: fit-content;
+  }
+  .how-to-play-title {
+    margin-top: 60px;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .how-to-play-jump-to-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    font-size: 14px;
+    font-weight: 600;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .how-to-play-link-to-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    background-color: #ffffff;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 1px 1px 5px #000000;
+    margin: 10px;
+    cursor: pointer;
+    transition: scale 0.3s ease-in-out;
+  }
+  .how-to-play-link-to-part:hover {
+    scale: 1.1;
+  }
+  .how-to-play-instruction-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    height: fit-content;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px #000000;
+    padding: 25px;
+    margin-bottom: 60px;
+  }
+  .how-to-play-instruction-image-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 5px 5px #000000;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #000000;
+  }
+  .how-to-play-instruction-image {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+  .how-to-play-instruction-description-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 1px 1px 5px #000000;
+    border-radius: 10px;
+  }
+  .how-to-play-btn-placement {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .hot-to-play-next-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(to top, #570000, #850000);
+    color: #f0b73e;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    box-shadow: 1px 1px 5px #000000;
+    cursor: pointer;
+  }
+  .hot-to-play-next-btn:hover {
+    background: linear-gradient(to top, #7e0101, #b10101);
+  }
+  .hot-to-play-back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(to top, #da9e1e, #f0b73e);
+    color: #850000;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    box-shadow: 1px 1px 5px #000000;
+    cursor: pointer;
+  }
+  .hot-to-play-back-btn:hover {
+    background: linear-gradient(to top, #f7b831, #f8c556);
+  }
+}
+@media screen and (max-width: 844px) {
+  .how-to-play-main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: fit-content;
+  }
+  .how-to-play-title {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .how-to-play-jump-to-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    font-size: 14px;
+    font-weight: 600;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .how-to-play-link-to-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    background-color: #ffffff;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 1px 1px 5px #000000;
+    margin: 5px;
+  }
+  .how-to-play-instruction-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height: fit-content;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px #000000;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .how-to-play-instruction-image-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 5px 5px #000000;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #000000;
+  }
+  .how-to-play-instruction-image {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+  .how-to-play-instruction-description-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 1px 1px 5px #000000;
+    border-radius: 10px;
+  }
+  .how-to-play-btn-placement {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .hot-to-play-next-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(to top, #570000, #850000);
+    color: #f0b73e;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    box-shadow: 1px 1px 5px #000000;
+    cursor: pointer;
+  }
+  .hot-to-play-next-btn {
+    background: linear-gradient(to top, #7e0101, #b10101);
+  }
+  .hot-to-play-back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(to top, #da9e1e, #f0b73e);
+    color: #850000;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    box-shadow: 1px 1px 5px #000000;
+    cursor: pointer;
+  }
+  .hot-to-play-back-btn:hover {
+    background: linear-gradient(to top, #f7b831, #f8c556);
+  }
+}

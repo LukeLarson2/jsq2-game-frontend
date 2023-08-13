@@ -1,0 +1,120 @@
+.death-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #00000086;
+  z-index: 99999;
+}
+.death-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 550px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 20px #070707;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.death-modal-header {
+  height: fit-content;
+  font-size: 40px;
+  font-weight: bold;
+  color: #850000;
+  margin-bottom: 20px;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.death-modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 450px;
+  background-color: #00000085;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 5px #ffffffbb;
+}
+.death-modal-message-1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 100%;
+  height: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.death-modal-message-2 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+  height: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.death-modal-message-3 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  width: 100%;
+  height: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.death-modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #850000;
+  background-color: #ffffff;
+  height: 35px;
+  width: 80px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px black;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.2s ease-in-out;
+  font-weight: bold;
+}
+
+.death-modal-btn:hover {
+  background-color: #850000;
+  color: white;
+}
+.death-gold-loss-value-icon {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+  color: #eec12c;
+}
