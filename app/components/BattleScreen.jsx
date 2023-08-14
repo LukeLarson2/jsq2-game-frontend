@@ -83,7 +83,7 @@ const BattleScreen = ({
   const [showAlert, setShowAlert] = useState(false);
   const [message, setMessage] = useState("");
   const [displayedRecovery, setDisplayedRecovery] = useState(0);
-  const [playerRecoveryDisplayed, setPlayerRecoveryDisplyed] = useState(false);
+
   const [isHealingDone, setIsHealingDone] = useState(false);
 
   // True is player, False is enemy
