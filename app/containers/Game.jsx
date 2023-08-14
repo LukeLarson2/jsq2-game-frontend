@@ -679,8 +679,6 @@ const Game = ({
             dbURI={dbURI}
             setSelectedRegion={setSelectedRegion}
             addStoryDelete={addStoryDelete}
-            currentUser={currentUser}
-            selectedCharacterId={selectedCharacterId}
           />
         )}
         {showStory && !showMap && (
