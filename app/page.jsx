@@ -35,18 +35,18 @@ export default function Page() {
 },[])
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      if (currentUser) {
-        localStorage.setItem("userData", JSON.stringify(currentUser))
-      } else {
-        const validUser = localStorage.getItem("userData") ? JSON.parse(localStorage.getItem("userData"))
-        : '';
-        if (validUser) {
-          setCurrentUser(validUser)
-        }
-      }
+    function getCookie(name) {
+      const value = "; " + document.cookie;
+      const parts = value.split("; " + name + "=");
+      if (parts.length === 2) return parts.pop().split(";").shift();
     }
-  }, [currentUser]);
+
+    const pulledUser = getCookie('currentUser');
+    const pulledCharacter = getCookie('selectedCharacterId');
+
+    setCurrentUser(pulledUser)
+    setSelectedCharacterId(pulledCharacter)
+  }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
