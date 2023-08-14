@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import storyGPTPrompt from "../lib/storyGPTPrompt";
+import AlertModal from "../components/AlertModal";
 import "../stylesheets/ClickableRegion.css";
 
 const ClickableRegion = ({
@@ -13,10 +14,13 @@ const ClickableRegion = ({
   name,
   characterLevel,
   regionLevel,
+  setSelectedRegion,
+  addStoryDelete,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newStory, setNewStory] = useState(true);
   const [loadingMessageIndex, setLoadingMessageIndex] = useState(0);
+  const [showConfirmDelete, setShowConfirmDelete] = useState(false);
   const loadingMessages = [
     "Initializing the arcane sequence",
     "Channeling the mystical energies",
@@ -27,8 +31,14 @@ const ClickableRegion = ({
     "Finalizing the ethereal journey",
   ];
 
+  const handleForgetStory = () => {
+    setShowConfirmDelete(true);
+    setIsModalOpen(false);
+  };
+
   useEffect(() => {
     setStoryPromptResult(storyGPTPrompt(name, regionId));
+    setSelectedRegion(regionId);
   }, [isModalOpen, newStory]);
 
   useEffect(() => {
@@ -58,6 +68,17 @@ const ClickableRegion = ({
   };
   return (
     <div>
+      {showConfirmDelete && (
+        <AlertModal
+          message={`Are you sure you want to forget the story for ${region}? It will cost you 10 Mythstones.`}
+          setShowAlert={setConfirmedDelete}
+          title="Forget Story"
+          forgetStory={true}
+          currentUser={currentUser}
+          selectedCharacterId={selectedCharacterId}
+          selectedRegion={regionId}
+        />
+      )}
       {isModalOpen && (
         <div className="player-ingame-map-confirm-travel-overlay">
           <div className="player-ingame-map-confirm-travel-modal">
@@ -65,6 +86,9 @@ const ClickableRegion = ({
               <div>
                 <p className="player-ingame-map-confirm-travel-text">
                   Would you like to travel to {region}?
+                </p>
+                <p className="player-ingame-map-confirm-travel-text">
+                  {`(Recommended level ${regionLevel})`}
                 </p>
                 <div className="player-ingame-map-confirm-btn-placement">
                   <button
@@ -81,6 +105,14 @@ const ClickableRegion = ({
                   >
                     No
                   </button>
+                  {addStoryDelete && (
+                    <button
+                      className="player-ingame-map-cancel-btn"
+                      onClick={() => handleForgetStory()}
+                    >
+                      Forget Story
+                    </button>
+                  )}
                 </div>
               </div>
             ) : (
@@ -90,18 +122,18 @@ const ClickableRegion = ({
                 </p>
                 {isLoading && (
                   <div className="spinner-container">
-                  <div className="spinner a">
-                   <div className="spinner b">
-                    <div className="spinner c">
-                      <div className="spinner d">
-                        <div className="spinner e">
-                            <div className="spinner f"></div>
+                    <div className="spinner a">
+                      <div className="spinner b">
+                        <div className="spinner c">
+                          <div className="spinner d">
+                            <div className="spinner e">
+                              <div className="spinner f"></div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
                 )}
               </div>
             )}

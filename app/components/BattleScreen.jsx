@@ -190,6 +190,7 @@ const BattleScreen = ({
     const isRecovery = recoveryToNum > 0;
     const isLifeSteal = damageToNum > 0 && healingToNum > 0;
 
+
     if (user === "player") {
       /* -- RECOVERY SKILL -- */
       if (isRecovery) {
@@ -228,7 +229,8 @@ const BattleScreen = ({
           getPlayerHealth,
           setPlayerRecoveryDisplayed,
           currentUser,
-          selectedCharacterId
+          selectedCharacterId,
+          isLifeSteal
         );
         setIsHealingDone(true);
 
@@ -255,7 +257,8 @@ const BattleScreen = ({
           triggerQuote,
           setCurrentEnergy,
           currentUser,
-          selectedCharacterId
+          selectedCharacterId,
+          isLifeSteal
         );
 
         /* -- STANDARD LIFE STEAL SKILL -- */
@@ -277,7 +280,8 @@ const BattleScreen = ({
           getPlayerHealth,
           setPlayerRecoveryDisplayed,
           currentUser,
-          selectedCharacterId
+          selectedCharacterId,
+          isLifeSteal
         );
         setIsHealingDone(true);
         handleStandardDamage(
@@ -301,7 +305,8 @@ const BattleScreen = ({
           triggerQuote,
           setCurrentEnergy,
           currentUser,
-          selectedCharacterId
+          selectedCharacterId,
+          isLifeSteal
         );
       }
 

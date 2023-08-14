@@ -2,7 +2,7 @@
 import React from "react";
 import "../stylesheets/AlertModal.css";
 import axios from "axios";
-import dbURI from '../lib/dbURI'
+import dbURI from "../lib/dbURI";
 const AlertModal = ({
   pageUrl,
   title,
@@ -23,11 +23,13 @@ const AlertModal = ({
   currentUser,
   needMoreStones,
   setNeedMoreStones,
-  setSelectedCharacterId
+  setSelectedCharacterId,
+  selectedRegion,
+  forgetStory,
 }) => {
   const handleCloseAlert = () => {
-    if(needMoreStones){
-      setNeedMoreStones(false)
+    if (needMoreStones) {
+      setNeedMoreStones(false);
     }
     if (mapFizzle === true) {
       setMapFizzle(false);
@@ -39,11 +41,10 @@ const AlertModal = ({
     }
   };
 
-
   const handleGoHome = () => {
     setShowAlert(false);
-    setSelectedCharacterId('')
-    localStorage.removeItem('characterData');
+    setSelectedCharacterId("");
+    localStorage.removeItem("characterData");
     window.close();
   };
 
@@ -72,13 +73,38 @@ const AlertModal = ({
   };
 
   const handleGetStones = () => {
-    setCurrentPage('Mythstones')
-  }
+    setCurrentPage("Mythstones");
+  };
 
   const formatContentDetails = () => {
     const formattedContent = message.replace(/\.\s+/g, ".<br><br>");
     return { __html: formattedContent };
   };
+
+  const handleForgetRegion = async () => {
+    setIsLoading(true); // Assuming you want to manage loading state
+
+    try {
+      const response = await axios.put(`${dbURI}/users/characters/forget-region`, {
+        selectedCharacterId,
+        selectedRegion,
+        currentUser,
+      });
+
+      if (response.status !== 200) {
+        console.error("An error occurred", response.data.message);
+        return;
+      }
+
+      setShowAlert(false); // Close the alert modal
+    } catch (err) {
+      console.error("An error occurred", err);
+    }
+    setShowAlert(false)
+    setIsLoading(false);
+  };
+
+
 
   return (
     <div className="alert-modal-overlay">
@@ -86,9 +112,9 @@ const AlertModal = ({
         <div className="alert-modal-content">
           <div className="alert-modal-header">{title ? title : "Alert!"}</div>
           <div
-          className="alert-modal-message"
-          dangerouslySetInnerHTML={formatContentDetails()}
-        />
+            className="alert-modal-message"
+            dangerouslySetInnerHTML={formatContentDetails()}
+          />
           {travelHome || confirmDelete || needMoreStones ? (
             <div className="alert-modal-confirm-travel">
               {confirmDelete && (
@@ -114,6 +140,15 @@ const AlertModal = ({
                   type="button"
                   className="alert-modal-btn-yes"
                   onClick={() => handleGetStones()}
+                >
+                  Yes
+                </button>
+              )}
+              {forgetStory && (
+                <button
+                  type="button"
+                  className="alert-modal-btn-yes"
+                  onClick={() => handleForgetRegion()}
                 >
                   Yes
                 </button>

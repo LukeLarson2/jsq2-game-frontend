@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useState } from "react";
 import ClickableRegion from "./ClickableRegion";
 
@@ -10,6 +10,8 @@ const InGameMap = ({
   setStoryPromptResult,
   name,
   characterLevel,
+  setSelectedRegion,
+  addStoryDelete,
 }) => {
   return (
     <div
@@ -28,6 +30,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={1}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="southern-gateway"
@@ -39,6 +43,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={1}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="traders-crossroads"
@@ -50,6 +56,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={1}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="golden-ruins"
@@ -61,6 +69,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={1}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="southern-forest"
@@ -72,6 +82,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={5}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="eastern-desert"
@@ -83,6 +95,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={5}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="bartus-village"
@@ -94,6 +108,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={12}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="tellet-lake"
@@ -105,6 +121,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={13}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="blackspine-peaks"
@@ -116,6 +134,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={15}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="shrouded-hollow"
@@ -127,6 +147,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={13}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="dragons-tear-river"
@@ -138,6 +160,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={17}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="murkwood-marsh"
@@ -149,6 +173,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={17}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="dragons-descent-temple"
@@ -160,6 +186,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={1}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="dunes-of-the-damned"
@@ -171,6 +199,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={20}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="forgotten-forest"
@@ -182,6 +212,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={18}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="verdantis"
@@ -193,6 +225,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={1}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="anvilorn"
@@ -204,6 +238,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={1}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="eldoria"
@@ -215,6 +251,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={25}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="northrend-ascent"
@@ -226,6 +264,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={15}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
           <ClickableRegion
             value="pan-strane-arena"
@@ -237,6 +277,8 @@ const InGameMap = ({
             name={name}
             characterLevel={characterLevel}
             regionLevel={1}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
           />
         </div>
       </div>

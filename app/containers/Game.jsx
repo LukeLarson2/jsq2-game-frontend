@@ -94,6 +94,8 @@ const Game = ({
   const [enemyMaxHealth, setEnemyMaxHealth] = useState(0);
   const [timeoutId, setTimeoutId] = useState(null);
   const [playerRecoveryDisplayed, setPlayerRecoveryDisplayed] = useState(false);
+  const [addStoryDelete, setAddStoryDelete] = useState(false)
+  const [selectedRegion, setSelectedRegion] = useState('')
 
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
@@ -357,6 +359,22 @@ const Game = ({
     };
     getEnemies();
   }, [inArena]);
+
+  useEffect(() => {
+    const existingStory = character.characterStory.flatMap((story) => {
+      if (story.region === selectedRegion) {
+        // story.story is a serialized array, so we parse it back into an array
+        return true;
+      }
+      // If the region doesn't match, we return an empty array so flatMap removes it
+      return false;
+    });
+    if(existingStory){
+      setAddStoryDelete(true)
+    } else {
+      setAddStoryDelete(false)
+    }
+  },[selectedRegion])
 
   const xpPercentage = Math.floor((currentXp / xpNeeded) * 100);
 
@@ -657,6 +675,9 @@ const Game = ({
             currentUser={currentUser}
             selectedCharacterId={selectedCharacterId}
             dbURI={dbURI}
+            setSelectedRegion={setSelectedRegion}
+            addStoryDelete={addStoryDelete}
+
           />
         )}
         {showStory && !showMap && (

@@ -100,13 +100,10 @@ const StoryModal = ({
     try {
       const newArenaLevel = currentArenaLevel + 1; // Increment the arena level separately
       await axios.put(`${dbURI}/users/characters/arenaLevel`, {
-        headers: {
-          "Authorization": `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
-        },
-        data: {
+
           selectedCharacterId, // Using selectedCharacterId instead of characterId
           arenaCount: newArenaLevel,
-        },
+          currentUser
       });
       // If the request is successful, do something here, e.g., update the state
       setCurrentArenaLevel(newArenaLevel);
