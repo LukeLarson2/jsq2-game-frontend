@@ -81,7 +81,6 @@ const AlertModal = ({
   };
 
   const handleForgetRegion = async () => {
-    setIsLoading(true); // Assuming you want to manage loading state
 
     try {
       const response = await axios.put(`${dbURI}/users/characters/forget-region`, {
@@ -100,7 +99,6 @@ const AlertModal = ({
       console.error("An error occurred", err);
     }
     setShowAlert(false)
-    setIsLoading(false);
   };
 
 

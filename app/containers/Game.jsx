@@ -96,6 +96,8 @@ const Game = ({
   const [playerRecoveryDisplayed, setPlayerRecoveryDisplayed] = useState(false);
   const [addStoryDelete, setAddStoryDelete] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState("");
+  const [loadingTimeout, setLoadingTimeout] = useState(false);
+
 
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
@@ -378,6 +380,20 @@ const Game = ({
     }
   }, [selectedRegion]);
 
+  useEffect(() => {
+    // Set loadingTimeout to true to trigger the loading screen
+    setLoadingTimeout(true);
+
+    // Create a timeout that will clear the loadingTimeout state after 4 seconds
+    const timer = setTimeout(() => {
+      setLoadingTimeout(false);
+    }, 4000);
+
+    // Clear the timer when the component unmounts
+    return () => clearTimeout(timer);
+  }, []); // Empty dependency array means this will run only once on mount
+
+
   const xpPercentage = Math.floor((currentXp / xpNeeded) * 100);
 
   const confirmTravel = async (regionId) => {
@@ -595,6 +611,23 @@ const Game = ({
       setShowDeath(true);
     }
   }, [playerHealth]);
+
+  if (loading) {
+    return (
+      <div className="map-loader">
+        <div className="map-cubes">
+          {Array.from({ length: 64 }).map((_, cubeIndex) => (
+            <div className="map-cube" key={cubeIndex}>
+              {Array.from({ length: 6 }).map((_, sideIndex) => (
+                <div className="map-side" key={sideIndex}></div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
 
   // Only render BattleScreen when character data is loaded
   if (character) {
