@@ -101,6 +101,7 @@ const Game = ({
 
   const characterInfoFetch = async () => {
     const data = await getCharacterInfo(currentUser, selectedCharacterId);
+    console.log(data)
     setCharacter(data);
     setCurrentLevel(data.level);
     setCurrentXp(data.exp);
