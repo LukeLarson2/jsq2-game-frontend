@@ -94,14 +94,14 @@ const Game = ({
   const [enemyMaxHealth, setEnemyMaxHealth] = useState(0);
   const [timeoutId, setTimeoutId] = useState(null);
   const [playerRecoveryDisplayed, setPlayerRecoveryDisplayed] = useState(false);
-  const [addStoryDelete, setAddStoryDelete] = useState(false)
-  const [selectedRegion, setSelectedRegion] = useState('')
+  const [addStoryDelete, setAddStoryDelete] = useState(false);
+  const [selectedRegion, setSelectedRegion] = useState("");
 
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
   const characterInfoFetch = async () => {
     const data = await getCharacterInfo(currentUser, selectedCharacterId);
-    console.log(data)
+    console.log(data);
     setCharacter(data);
     setCurrentLevel(data.level);
     setCurrentXp(data.exp);
@@ -332,7 +332,7 @@ const Game = ({
   ]);
 
   useEffect(() => {
-    if (showBattle === false){
+    if (showBattle === false) {
       setShowDeath(false);
     }
   }, [showMap, showBattle]);
@@ -362,20 +362,22 @@ const Game = ({
   }, [inArena]);
 
   useEffect(() => {
-    const existingStory = character.characterStory.flatMap((story) => {
-      if (story.region === selectedRegion) {
-        // story.story is a serialized array, so we parse it back into an array
-        return true;
+    if (character) {
+      const existingStory = character.characterStory.flatMap((story) => {
+        if (story.region === selectedRegion) {
+          // story.story is a serialized array, so we parse it back into an array
+          return true;
+        }
+        // If the region doesn't match, we return an empty array so flatMap removes it
+        return false;
+      });
+      if (existingStory) {
+        setAddStoryDelete(true);
+      } else {
+        setAddStoryDelete(false);
       }
-      // If the region doesn't match, we return an empty array so flatMap removes it
-      return false;
-    });
-    if(existingStory){
-      setAddStoryDelete(true)
-    } else {
-      setAddStoryDelete(false)
     }
-  },[selectedRegion])
+  }, [selectedRegion]);
 
   const xpPercentage = Math.floor((currentXp / xpNeeded) * 100);
 
@@ -562,7 +564,7 @@ const Game = ({
   };
 
   useEffect(() => {
-    if(showBattle){
+    if (showBattle) {
       setShowDeath(false);
       setPlayerDeath(false);
       generateEnemyCard();
@@ -678,7 +680,6 @@ const Game = ({
             dbURI={dbURI}
             setSelectedRegion={setSelectedRegion}
             addStoryDelete={addStoryDelete}
-
           />
         )}
         {showStory && !showMap && (
