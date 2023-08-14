@@ -6,27 +6,29 @@ export default function Page() {
   const [currentUser, setCurrentUser] = useState("");
   const [selectedCharacterId, setSelectedCharacterId] = useState('')
 
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    // Check for fullscreen support and request fullscreen
-    if (document.documentElement.requestFullscreen) {
-      await document.documentElement.requestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) {
-      await document.documentElement.mozRequestFullScreen(); // Firefox
-    } else if (document.documentElement.webkitRequestFullscreen) {
-      await document.documentElement.webkitRequestFullscreen(); // Chrome, Safari and Opera
-    } else if (document.documentElement.msRequestFullscreen) {
-      await document.documentElement.msRequestFullscreen(); // IE/Edge
-    }
+  useEffect(() => {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      // Check for fullscreen support and request fullscreen
+      if (document.documentElement.requestFullscreen) {
+        await document.documentElement.requestFullscreen();
+      } else if (document.documentElement.mozRequestFullScreen) {
+        await document.documentElement.mozRequestFullScreen(); // Firefox
+      } else if (document.documentElement.webkitRequestFullscreen) {
+        await document.documentElement.webkitRequestFullscreen(); // Chrome, Safari and Opera
+      } else if (document.documentElement.msRequestFullscreen) {
+        await document.documentElement.msRequestFullscreen(); // IE/Edge
+      }
 
-    // Change orientation to landscape if available
-    if (screen.orientation && screen.orientation.lock) {
-      try {
-        await screen.orientation.lock('landscape');
-      } catch (err) {
+      // Change orientation to landscape if available
+      if (screen.orientation && screen.orientation.lock) {
+        try {
+          await screen.orientation.lock('landscape');
+        } catch (err) {
         return
       }
     }
   }
+},[])
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
