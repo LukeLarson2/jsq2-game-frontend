@@ -1,38 +1,42 @@
-'use client';
+"use client";
 import React, { useRef, useState, useEffect } from "react";
 import Game from "./containers/Game";
 
 export default function Page() {
   const [currentUser, setCurrentUser] = useState("");
-  const [selectedCharacterId, setSelectedCharacterId] = useState('')
+  const [selectedCharacterId, setSelectedCharacterId] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-
     const setWindow = async () => {
-      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+      ) {
         // Check for fullscreen support and request fullscreen
-      if (document.documentElement.requestFullscreen) {
-        await document.documentElement.requestFullscreen();
-      } else if (document.documentElement.mozRequestFullScreen) {
-        await document.documentElement.mozRequestFullScreen(); // Firefox
-      } else if (document.documentElement.webkitRequestFullscreen) {
-        await document.documentElement.webkitRequestFullscreen(); // Chrome, Safari and Opera
-      } else if (document.documentElement.msRequestFullscreen) {
-        await document.documentElement.msRequestFullscreen(); // IE/Edge
-      }
+        if (document.documentElement.requestFullscreen) {
+          await document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+          await document.documentElement.mozRequestFullScreen(); // Firefox
+        } else if (document.documentElement.webkitRequestFullscreen) {
+          await document.documentElement.webkitRequestFullscreen(); // Chrome, Safari and Opera
+        } else if (document.documentElement.msRequestFullscreen) {
+          await document.documentElement.msRequestFullscreen(); // IE/Edge
+        }
 
-      // Change orientation to landscape if available
-      if (screen.orientation && screen.orientation.lock) {
-        try {
-          await screen.orientation.lock('landscape');
-        } catch (err) {
-          return
+        // Change orientation to landscape if available
+        if (screen.orientation && screen.orientation.lock) {
+          try {
+            await screen.orientation.lock("landscape");
+          } catch (err) {
+            return;
+          }
         }
       }
-    }
-  }
-  setWindow()
-},[])
+    };
+    setWindow();
+  }, []);
 
   useEffect(() => {
     function getCookie(name) {
@@ -41,31 +45,45 @@ export default function Page() {
       if (parts.length === 2) return parts.pop().split(";").shift();
     }
 
-    const pulledUser = getCookie('currentUser');
-    const pulledCharacter = getCookie('selectedCharacterId');
+    const pulledUser = getCookie("currentUser");
+    const pulledCharacter = getCookie("selectedCharacterId");
 
-    setCurrentUser(pulledUser)
-    setSelectedCharacterId(pulledCharacter)
+    setCurrentUser(pulledUser);
+    setSelectedCharacterId(pulledCharacter);
+    setIsLoading(false);
   }, []);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       if (selectedCharacterId) {
-        localStorage.setItem("characterData", JSON.stringify(selectedCharacterId))
+        localStorage.setItem(
+          "characterData",
+          JSON.stringify(selectedCharacterId)
+        );
       } else {
-        const validCharacter = localStorage.getItem("characterData") ? JSON.parse(localStorage.getItem("characterData"))
-        : '';
+        const validCharacter = localStorage.getItem("characterData")
+          ? JSON.parse(localStorage.getItem("characterData"))
+          : "";
         if (validCharacter) {
-          setSelectedCharacterId(validCharacter)
+          setSelectedCharacterId(validCharacter);
         }
       }
     }
   }, [selectedCharacterId]);
 
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="flex h-screen w-screen items-center justify-center">
       <div className="">
-        <Game currentUser={currentUser} setCurrentUser={setCurrentUser} selectedCharacterId={selectedCharacterId} setSelectedCharacterId={setSelectedCharacterId}/>
+        <Game
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+          selectedCharacterId={selectedCharacterId}
+          setSelectedCharacterId={setSelectedCharacterId}
+        />
       </div>
     </div>
   );
