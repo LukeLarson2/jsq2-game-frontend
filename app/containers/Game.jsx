@@ -612,7 +612,7 @@ const Game = ({
     }
   }, [playerHealth]);
 
-  if (loading) {
+  if (loadingTimeout) {
     return (
       <div className="map-loader">
         <div className="map-cubes">
