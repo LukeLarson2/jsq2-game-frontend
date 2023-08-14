@@ -240,7 +240,7 @@ const SkillTree = ({
           >
             Close
           </button>
-          <div className="skill-tree-title">{characterName}'s Skill Tree</div>
+          <div className="skill-tree-title">{`{characterName}'s Skill Tree`}</div>
           <div className="skill-tree-current-skill-points">
             {skillPoints} Skill Points
           </div>
