@@ -16,6 +16,8 @@ const ClickableRegion = ({
   regionLevel,
   setSelectedRegion,
   addStoryDelete,
+  currentUser,
+  selectedCharacterId
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newStory, setNewStory] = useState(true);
