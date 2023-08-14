@@ -329,7 +329,9 @@ const Game = ({
   ]);
 
   useEffect(() => {
-    setShowDeath(false);
+    if (showBattle === false){
+      setShowDeath(false);
+    }
   }, [showMap, showBattle]);
 
   useEffect(() => {
@@ -514,7 +516,7 @@ const Game = ({
     setIsLoading(false);
   };
 
-  const generateEnemyCard = (race, area, level) => {
+  const generateEnemyCard = () => {
     const fetchEnemy = async () => {
       const allEnemyInfo = await getEnemyInfo();
       if (allEnemyInfo) {
@@ -541,10 +543,12 @@ const Game = ({
   };
 
   useEffect(() => {
-    setShowDeath(false);
-    setPlayerDeath(false);
-    generateEnemyCard(race, area, level);
-  }, []);
+    if(showBattle){
+      setShowDeath(false);
+      setPlayerDeath(false);
+      generateEnemyCard();
+    }
+  }, [showBattle]);
 
   useEffect(() => {
     if (currentEnemy.health && enemyHealth <= 0) {
@@ -556,7 +560,7 @@ const Game = ({
     if (showVictory && timeoutId) {
       clearTimeout(timeoutId);
     }
-    if (playerDeath) {
+    if (playerDeath && showBattle) {
       clearTimeout(timeoutId);
       setShowDeath(true);
     }
@@ -567,7 +571,7 @@ const Game = ({
   }, [playerRecoveryDisplayed]);
 
   useEffect(() => {
-    if (playerHealth <= 0) {
+    if (playerHealth <= 0 && showBattle) {
       setShowDeath(true);
     }
   }, [playerHealth]);
