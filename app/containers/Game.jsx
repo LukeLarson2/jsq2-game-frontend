@@ -23,7 +23,6 @@ import EndGameModal from "../components/EndGameModal";
 import Credits from "../components/Credits";
 import dbURI from "../lib/dbURI";
 import getPlayerHealth from "../utils/getPlayerHealth";
-import getEnemyInfo from "../utils/getEnemyInfo";
 
 const Game = ({
   currentUser,
