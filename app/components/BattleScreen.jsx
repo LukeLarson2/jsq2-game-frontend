@@ -67,9 +67,6 @@ const BattleScreen = ({
   setEnemyMaxHealth,
   setTimeoutId,
 }) => {
-  const [currentEnemy, setCurrentEnemy] = useState({});
-  const [enemyHealth, setEnemyHealth] = useState(0);
-  const [enemyMaxHealth, setEnemyMaxHealth] = useState(0);
   const [playerDamageTaken, setPlayerDamageTaken] = useState(0);
   const [enemyDamageTaken, setEnemyDamageTaken] = useState(0);
   const [isAttacking, setIsAttacking] = useState(false);
@@ -85,8 +82,6 @@ const BattleScreen = ({
   const [randomQuote, setRandomQuote] = useState("");
   const [showAlert, setShowAlert] = useState(false);
   const [message, setMessage] = useState("");
-  const [timeoutId, setTimeoutId] = useState(null);
-  const [regionColor, setRegionColor] = useState("");
   const [displayedRecovery, setDisplayedRecovery] = useState(0);
   const [playerRecoveryDisplayed, setPlayerRecoveryDisplyed] = useState(false);
   const [isHealingDone, setIsHealingDone] = useState(false);
