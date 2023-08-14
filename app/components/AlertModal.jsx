@@ -114,7 +114,7 @@ const AlertModal = ({
             className="alert-modal-message"
             dangerouslySetInnerHTML={formatContentDetails()}
           />
-          {travelHome || confirmDelete || needMoreStones ? (
+          {travelHome || confirmDelete || needMoreStones || forgetStory ? (
             <div className="alert-modal-confirm-travel">
               {confirmDelete && (
                 <button
