@@ -71,8 +71,16 @@ export default function Page() {
     }
   }, [selectedCharacterId]);
 
+64
+
   if (isLoading) {
-    return <div>Loading...</div>;
+    let divCounter = 0
+    for (let i = 0; i < 64; i++){
+
+    }
+    return <>
+<div>Loading...</div>
+    </>
   }
 
   return (
