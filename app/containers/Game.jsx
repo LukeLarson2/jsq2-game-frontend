@@ -93,7 +93,7 @@ const Game = ({
   const [enemyHealth, setEnemyHealth] = useState(0);
   const [enemyMaxHealth, setEnemyMaxHealth] = useState(0);
   const [timeoutId, setTimeoutId] = useState(null);
-  const [playerRecoveryDisplayed, setPlayerRecoveryDisplyed] = useState(false);
+  const [playerRecoveryDisplayed, setPlayerRecoveryDisplayed] = useState(false);
 
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
@@ -761,7 +761,7 @@ const Game = ({
             setEnemyMaxHealth={setEnemyMaxHealth}
             setTimeoutId={setTimeoutId}
             playerRecoveryDisplayed={playerRecoveryDisplayed}
-            setPlayerRecoveryDisplyed={setPlayerRecoveryDisplyed}
+            setPlayerRecoveryDisplayed={setPlayerRecoveryDisplayed}
           />
         )}
         {showEdit && (

@@ -15,7 +15,7 @@ const handleHealing = async (
   setCurrentEnergy,
   setPlayerHealth,
   getPlayerHealth,
-  setPlayerRecoveryDisplyed,
+  setPlayerRecoveryDisplayed,
   currentUser,
   selectedCharacterId
 ) => {
@@ -38,7 +38,7 @@ const handleHealing = async (
       throw new Error("Network response was not ok");
     }
     setDisplayedRecovery(healingToNum);
-    setTimeout(() => setPlayerRecoveryDisplyed(true), 600);
+    setTimeout(() => setPlayerRecoveryDisplayed(true), 600);
     setTimeout(() => setPlayerHealth(newHealth), 1000);
     getPlayerHealth(character, setPlayerHealth)
     return response.json();
@@ -79,7 +79,7 @@ const handleHealing = async (
       setIsRecovering(false);
       setIsAttacking(false);
     }, 2100);
-    setTimeout(() => setPlayerRecoveryDisplyed(false), 1800);
+    setTimeout(() => setPlayerRecoveryDisplayed(false), 1800);
 };
 
 export default handleHealing;

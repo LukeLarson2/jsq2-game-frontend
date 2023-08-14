@@ -8,7 +8,7 @@ const handleRecovery = async (
   battleRecovery,
   setIsRecovering,
   setTurn,
-  setPlayerRecoveryDisplyed,
+  setPlayerRecoveryDisplayed,
   setDisplayedRecovery,
   setCurrentEnergy,
   setIsAttacking,
@@ -38,7 +38,7 @@ const handleRecovery = async (
       setDisplayedRecovery(recoveryToNum);
 
       setTimeout(() => {
-        setPlayerRecoveryDisplyed(true);
+        setPlayerRecoveryDisplayed(true);
       }, 300);
 
       setTimeout(() => {
@@ -57,7 +57,7 @@ const handleRecovery = async (
   setBattleRecovery(!battleRecovery);
   setIsRecovering(true);
   setTurn(false);
-  setTimeout(() => setPlayerRecoveryDisplyed(false), 1800);
+  setTimeout(() => setPlayerRecoveryDisplayed(false), 1800);
 };
 
 export default handleRecovery;
