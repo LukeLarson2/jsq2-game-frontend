@@ -7,8 +7,10 @@ export default function Page() {
   const [selectedCharacterId, setSelectedCharacterId] = useState('')
 
   useEffect(() => {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      // Check for fullscreen support and request fullscreen
+
+    const setWindow = async () => {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // Check for fullscreen support and request fullscreen
       if (document.documentElement.requestFullscreen) {
         await document.documentElement.requestFullscreen();
       } else if (document.documentElement.mozRequestFullScreen) {
@@ -24,10 +26,12 @@ export default function Page() {
         try {
           await screen.orientation.lock('landscape');
         } catch (err) {
-        return
+          return
+        }
       }
     }
   }
+  setWindow()
 },[])
 
   useEffect(() => {
