@@ -23,6 +23,7 @@ import EndGameModal from "../components/EndGameModal";
 import Credits from "../components/Credits";
 import dbURI from "../lib/dbURI";
 import getPlayerHealth from "../utils/getPlayerHealth";
+import regionColorCheck from "../utils/regionColorCheck";
 
 const Game = ({
   currentUser,
@@ -97,6 +98,8 @@ const Game = ({
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
   const characterInfoFetch = async () => {
+    console.log("currentUser", currentUser)
+    console.log("selectedCharacterId", selectedCharacterId)
     const data = await getCharacterInfo(currentUser, selectedCharacterId);
     setCharacter(data);
     setCurrentLevel(data.level);
