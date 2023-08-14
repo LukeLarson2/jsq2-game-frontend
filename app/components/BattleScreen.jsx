@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import CharacterCard from "./CharacterCard";
 import EnemyNPCCard from "./EnemyNPCCard";
 import getEnemyInfo from "../utils/getEnemyInfo";
@@ -11,7 +11,7 @@ import handleHealing from "../utils/handleHealing";
 import handleStandardDamage from "../utils/handleStandardDamage";
 import handleEnemyAttack from "../utils/handleEnemyAttack";
 import getPlayerHealth from "../utils/getPlayerHealth";
-import dbURI from '../lib/dbURI'
+import dbURI from "../lib/dbURI";
 
 import regionColorCheck from "../utils/regionColorCheck";
 
@@ -56,6 +56,16 @@ const BattleScreen = ({
   arenaTracker,
   currentUser,
   selectedCharacterId,
+  regionColor,
+  currentEnemy,
+  enemyHealth,
+  enemyMaxHealth,
+  timeoutId,
+  setRegionColor,
+  setCurrentEnemy,
+  setEnemyHealth,
+  setEnemyMaxHealth,
+  setTimeoutId,
 }) => {
   const [currentEnemy, setCurrentEnemy] = useState({});
   const [enemyHealth, setEnemyHealth] = useState(0);
@@ -86,7 +96,6 @@ const BattleScreen = ({
 
   if (!character) return <div>Loading...</div>;
 
-
   const updateCharacter = (characterId, updates) => {
     fetch(`${dbURI}/users/characters`, {
       method: "PUT",
@@ -111,33 +120,6 @@ const BattleScreen = ({
   };
 
   const { armor, mainHand, offHand } = equippedGear;
-  const generateEnemyCard = (race, area, level) => {
-    const fetchEnemy = async () => {
-      const allEnemyInfo = await getEnemyInfo();
-      if (allEnemyInfo) {
-        const possibleEnemies = [];
-        allEnemyInfo.map((enemy) => {
-          if (
-            enemy.race === race &&
-            enemy.level === level &&
-            enemy.area === area
-          ) {
-            possibleEnemies.push(enemy);
-          }
-        });
-        const randomIndex = Math.floor(Math.random() * possibleEnemies.length);
-        const selectedEnemy = possibleEnemies[randomIndex];
-        setRegionColor(regionColorCheck(selectedEnemy.area.toLowerCase()));
-        setCurrentEnemy(selectedEnemy);
-        setCurrentEnemyName(selectedEnemy.name);
-        setEnemyHealth(selectedEnemy.health);
-        setEnemyMaxHealth(selectedEnemy.health);
-      }
-    };
-    fetchEnemy();
-  };
-
-
 
   const handleHit = (user, damageAmount) => {
     if (user === "player") {
@@ -175,7 +157,6 @@ const BattleScreen = ({
       }, 1500);
     }
   };
-
 
   const handleAttack = (
     user,
@@ -383,8 +364,6 @@ const BattleScreen = ({
       setCurrentEnemyAttack("");
     }, 3900);
   };
-
-
 
   return (
     <div

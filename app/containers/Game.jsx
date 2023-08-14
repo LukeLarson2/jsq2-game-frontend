@@ -22,6 +22,8 @@ import getEnemyInfo from "../utils/getEnemyInfo";
 import EndGameModal from "../components/EndGameModal";
 import Credits from "../components/Credits";
 import dbURI from "../lib/dbURI";
+import getPlayerHealth from "../utils/getPlayerHealth";
+import getEnemyInfo from "../utils/getEnemyInfo";
 
 const Game = ({
   currentUser,
@@ -86,6 +88,11 @@ const Game = ({
   const [finalStory, setFinalStory] = useState(false);
   const [displayEndGameModal, setDisplayEndGameModal] = useState(false);
   const [showCredits, setShowCredits] = useState(false);
+  const [regionColor, setRegionColor] = useState("");
+  const [currentEnemy, setCurrentEnemy] = useState({});
+  const [enemyHealth, setEnemyHealth] = useState(0);
+  const [enemyMaxHealth, setEnemyMaxHealth] = useState(0);
+  const [timeoutId, setTimeoutId] = useState(null);
 
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
@@ -506,6 +513,32 @@ const Game = ({
     setIsLoading(false);
   };
 
+  const generateEnemyCard = (race, area, level) => {
+    const fetchEnemy = async () => {
+      const allEnemyInfo = await getEnemyInfo();
+      if (allEnemyInfo) {
+        const possibleEnemies = [];
+        allEnemyInfo.map((enemy) => {
+          if (
+            enemy.race === race &&
+            enemy.level === level &&
+            enemy.area === area
+          ) {
+            possibleEnemies.push(enemy);
+          }
+        });
+        const randomIndex = Math.floor(Math.random() * possibleEnemies.length);
+        const selectedEnemy = possibleEnemies[randomIndex];
+        setRegionColor(regionColorCheck(selectedEnemy.area.toLowerCase()));
+        setCurrentEnemy(selectedEnemy);
+        setCurrentEnemyName(selectedEnemy.name);
+        setEnemyHealth(selectedEnemy.health);
+        setEnemyMaxHealth(selectedEnemy.health);
+      }
+    };
+    fetchEnemy();
+  };
+
   useEffect(() => {
     setShowDeath(false);
     setPlayerDeath(false);
@@ -712,6 +745,16 @@ const Game = ({
             currentUser={currentUser}
             selectedCharacterId={selectedCharacterId}
             dbURI={dbURI}
+            regionColor={regionColor}
+            currentEnemy={currentEnemy}
+            enemyHealth={enemyHealth}
+            enemyMaxHealth={enemyMaxHealth}
+            timeoutId={timeoutId}
+            setRegionColor={setRegionColor}
+            setCurrentEnemy={setCurrentEnemy}
+            setEnemyHealth={setEnemyHealth}
+            setEnemyMaxHealth={setEnemyMaxHealth}
+            setTimeoutId={setTimeoutId}
           />
         )}
         {showEdit && (
