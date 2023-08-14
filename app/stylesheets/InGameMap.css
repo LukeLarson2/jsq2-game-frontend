@@ -14,6 +14,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-y: hidden;
   }
   .player-ingame-map-content {
     margin-top: 300px;
@@ -23,8 +24,8 @@
   .player-ingame-map {
     position: relative;
     display: block;
-    width: 900px; /* specify a fixed width */
-    height: 900px; /* specify a fixed height */
+    width:650px; /* specify a fixed width */
+    height:650px; /* specify a fixed height */
     background-image: url("/Pan-Strane_map.jpg");
     background-size: cover; /* cover instead of contain to make sure the image always fills the map */
     background-position: center;

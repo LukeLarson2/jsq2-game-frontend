@@ -98,8 +98,6 @@ const Game = ({
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
   const characterInfoFetch = async () => {
-    console.log("currentUser", currentUser)
-    console.log("selectedCharacterId", selectedCharacterId)
     const data = await getCharacterInfo(currentUser, selectedCharacterId);
     setCharacter(data);
     setCurrentLevel(data.level);
@@ -758,6 +756,8 @@ const Game = ({
             setEnemyHealth={setEnemyHealth}
             setEnemyMaxHealth={setEnemyMaxHealth}
             setTimeoutId={setTimeoutId}
+            playerRecoveryDisplayed={playerRecoveryDisplayed}
+            setPlayerRecoveryDisplayed={setPlayerRecoveryDisplayed}
           />
         )}
         {showEdit && (
