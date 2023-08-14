@@ -71,7 +71,7 @@ const ClickableRegion = ({
       {showConfirmDelete && (
         <AlertModal
           message={`Are you sure you want to forget the story for ${region}? It will cost you 10 Mythstones.`}
-          setShowAlert={setConfirmedDelete}
+          setShowAlert={setShowConfirmDelete}
           title="Forget Story"
           forgetStory={true}
           currentUser={currentUser}
@@ -107,7 +107,7 @@ const ClickableRegion = ({
                   </button>
                   {addStoryDelete && (
                     <button
-                      className="player-ingame-map-cancel-btn"
+                      className="player-ingame-map-forget-btn"
                       onClick={() => handleForgetStory()}
                     >
                       Forget Story

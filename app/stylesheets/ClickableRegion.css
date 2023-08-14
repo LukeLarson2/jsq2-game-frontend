@@ -23,12 +23,12 @@
   align-items: center;
   justify-content: center;
   height: fit-content;
-  width: 500px;
+  width: 550px;
   background-color: #ffffff;
   color: #000000;
   border-radius: 8px;
   box-shadow: 0 0 20px 20px #ffffff;
-  padding: 3px;
+  padding: 5px;
 }
 
 .player-ingame-map-confirm-btn-placement {
@@ -45,7 +45,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  width: 110px;
+  width: 120px;
   height: 40px;
   margin-right: 10px;
   box-shadow: 1px 1px 5px #555;
@@ -59,13 +59,32 @@
   font-weight: bold;
   justify-content: center;
   align-items: center;
-  width: 110px;
+  width: 120px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 1px 1px 5px #555;
+  transition: background-color 0.4s ease;
+}
+.player-ingame-map-cancel-btn:hover {
+  background-color: #ff4335;
+  color: white;
+}
+.player-ingame-map-forget-btn {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  color: #ff4335;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
   height: 40px;
   margin-left: 10px;
   box-shadow: 1px 1px 5px #555;
   transition: background-color 0.4s ease;
 }
-.player-ingame-map-cancel-btn:hover {
+.player-ingame-map-forget-btn:hover {
   background-color: #ff4335;
   color: white;
 }
