@@ -12,7 +12,6 @@ const AlertModal = ({
   setMapFizzle,
   travelHome,
   setCurrentPage,
-  setConfirmedDelete,
   confirmDelete,
   character,
   setIsLoading,
