@@ -1,5 +1,5 @@
 "use client";
-import React, { useState} from "react";
+import React, { useState } from "react";
 import CharacterCard from "./CharacterCard";
 import EnemyNPCCard from "./EnemyNPCCard";
 import getEnemyInfo from "../utils/getEnemyInfo";
@@ -67,7 +67,7 @@ const BattleScreen = ({
   setEnemyMaxHealth,
   setTimeoutId,
   playerRecoveryDisplayed,
-  setPlayerRecoveryDisplayed
+  setPlayerRecoveryDisplayed,
 }) => {
   const [playerDamageTaken, setPlayerDamageTaken] = useState(0);
   const [enemyDamageTaken, setEnemyDamageTaken] = useState(0);
@@ -190,7 +190,6 @@ const BattleScreen = ({
     const isRecovery = recoveryToNum > 0;
     const isLifeSteal = damageToNum > 0 && healingToNum > 0;
 
-
     if (user === "player") {
       /* -- RECOVERY SKILL -- */
       if (isRecovery) {
@@ -263,27 +262,6 @@ const BattleScreen = ({
 
         /* -- STANDARD LIFE STEAL SKILL -- */
       } else if (isLifeSteal) {
-        handleHealing(
-          healingToNum,
-          character,
-          playerHealth,
-          currentEnergy,
-          skillEnergy,
-          setBattleRecovery,
-          battleRecovery,
-          setIsRecovering,
-          setTurn,
-          setIsAttacking,
-          setDisplayedRecovery,
-          setCurrentEnergy,
-          setPlayerHealth,
-          getPlayerHealth,
-          setPlayerRecoveryDisplayed,
-          currentUser,
-          selectedCharacterId,
-          isLifeSteal
-        );
-        setIsHealingDone(true);
         handleStandardDamage(
           "player",
           damageToNum,
@@ -308,6 +286,29 @@ const BattleScreen = ({
           selectedCharacterId,
           isLifeSteal
         );
+        if (enemyDamageTaken > 0) {
+          handleHealing(
+            healingToNum,
+            character,
+            playerHealth,
+            currentEnergy,
+            skillEnergy,
+            setBattleRecovery,
+            battleRecovery,
+            setIsRecovering,
+            setTurn,
+            setIsAttacking,
+            setDisplayedRecovery,
+            setCurrentEnergy,
+            setPlayerHealth,
+            getPlayerHealth,
+            setPlayerRecoveryDisplayed,
+            currentUser,
+            selectedCharacterId,
+            isLifeSteal
+          );
+          setIsHealingDone(true);
+        }
       }
 
       /* --ENEMY ATTACKING SEQUENCE -- */
