@@ -1,5 +1,6 @@
 import damageCalc from "../utils/damageCalc";
 import dbURI from "../lib/dbURI";
+import axios from 'axios'
 
 const handleLifeSteal = async (
   user,
@@ -33,6 +34,8 @@ const handleLifeSteal = async (
   getPlayerHealth,
   setPlayerRecoveryDisplayed
 ) => {
+  console.log("selectedCharacterId", selectedCharacterId)
+  console.log("currentUser", currentUser)
   const outgoingDamage = damageCalc(
     user,
     damageToNum,
@@ -90,34 +93,32 @@ const handleLifeSteal = async (
   }, 300);
   setTimeout(() => setIsAttacking(false), 2200);
 
-  if (damageToEnemy > 0) {
+  if (outgoingDamage > 0) {
     const maxHealthCheck = playerHealth + healingToNum > 100 ? 100 : healingToNum;
     const newHealth = maxHealthCheck === 100 ? 100 : playerHealth + healingToNum;
-      await fetch(`${dbURI}/users/characters/health`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
-        },
-        body: JSON.stringify({
-          selectedCharacterId, // Use selectedCharacterId instead of _id
-          health: newHealth,
-          currentUser,
-        }),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-        setDisplayedRecovery(healingToNum);
-        setTimeout(() => setPlayerRecoveryDisplayed(true), 600);
-        setTimeout(() => setPlayerHealth(newHealth), 1000);
-        getPlayerHealth(character, setPlayerHealth);
-        return response.json();
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    await axios.put(`${dbURI}/users/characters/health`, {
+      selectedCharacterId,
+      health: newHealth,
+      currentUser,
+    })
+    .then((response) => {
+      // With axios, the response data is located in response.data
+      setDisplayedRecovery(healingToNum);
+      setTimeout(() => setPlayerRecoveryDisplayed(true), 600);
+      setTimeout(() => setPlayerHealth(newHealth), 1000);
+      getPlayerHealth(character, setPlayerHealth);
+      return response.data; // Return the data from the response
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      // You can access more details with error.response
+      if (error.response) {
+        console.error("Data:", error.response.data);
+        console.error("Status:", error.response.status);
+        console.error("Headers:", error.response.headers);
+      }
+    });
+
 
     setBattleRecovery(!battleRecovery);
     setIsRecovering(true);
