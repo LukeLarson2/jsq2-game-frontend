@@ -10,6 +10,7 @@ import handleRecovery from "../utils/handleRecovery";
 import handleHealing from "../utils/handleHealing";
 import handleStandardDamage from "../utils/handleStandardDamage";
 import handleEnemyAttack from "../utils/handleEnemyAttack";
+import handleLifeSteal from '../utils/handleLifeSteal'
 import getPlayerHealth from "../utils/getPlayerHealth";
 import dbURI from "../lib/dbURI";
 
