@@ -262,7 +262,7 @@ const BattleScreen = ({
 
         /* -- STANDARD LIFE STEAL SKILL -- */
       } else if (isLifeSteal) {
-        handleStandardDamage(
+        handleLifeSteal(
           "player",
           damageToNum,
           mainHand,
@@ -284,28 +284,19 @@ const BattleScreen = ({
           setCurrentEnergy,
           currentUser,
           selectedCharacterId,
-          isLifeSteal
+          healingToNum,
+          playerHealth,
+          setBattleRecovery,
+          battleRecovery,
+          setIsRecovering,
+          setDisplayedRecovery,
+          setPlayerHealth,
+          getPlayerHealth,
+          setPlayerRecoveryDisplayed,
         );
         if (enemyDamageTaken > 0) {
           handleHealing(
-            healingToNum,
-            character,
-            playerHealth,
-            currentEnergy,
-            skillEnergy,
-            setBattleRecovery,
-            battleRecovery,
-            setIsRecovering,
-            setTurn,
-            setIsAttacking,
-            setDisplayedRecovery,
-            setCurrentEnergy,
-            setPlayerHealth,
-            getPlayerHealth,
-            setPlayerRecoveryDisplayed,
-            currentUser,
-            selectedCharacterId,
-            isLifeSteal
+
           );
           setIsHealingDone(true);
         }

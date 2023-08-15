@@ -329,6 +329,7 @@ const Game = ({
     getReward,
     selectedCharacterId,
     currentLevel,
+    currentArenaLevel
   ]);
 
   useEffect(() => {

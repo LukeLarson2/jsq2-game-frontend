@@ -107,7 +107,7 @@ const StoryModal = ({
       });
       console.log("newArenaLevel", newArenaLevel)
       // If the request is successful, do something here, e.g., update the state
-      setCurrentArenaLevel(response.data.arenaCount);
+      setCurrentArenaLevel(newArenaLevel);
     } catch (error) {
       console.error(
         "An error occurred while updating the arena level: ",
