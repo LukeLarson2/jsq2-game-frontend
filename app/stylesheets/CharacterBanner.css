@@ -272,7 +272,7 @@
   }
 }
 
-@media screen and (min-width: 390px) and (max-width: 844px) {
+@media screen and (min-width: 391px) and (max-width: 844px) {
   .character-banner-main-container {
     width: 70px;
     height: 100vh;
@@ -433,5 +433,166 @@
     height: 12px;
     margin-left: 62px;
     margin-top: 95px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .character-banner-main-container {
+    width: 0px;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .character-banner-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .character-details-container {
+    display: flex;
+  }
+  .character-banner-role-icon-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    margin-left: 28px;
+    margin-top: 78px;
+    z-index: 5;
+  }
+  .character-banner-role-icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60%;
+    width: 60%;
+    border-radius: 100px;
+  }
+  .character-banner-name-race-role-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 90vw;
+    padding: 20px;
+    margin-left: 15px;
+    margin-top: 80px;
+    background-color: #0000008a;
+    box-shadow: inset 0px 0px 4px 4px #000000;
+  }
+  .character-banner-level {
+    color: white;
+    font-style: italic;
+    font-size: 9px;
+  }
+  .character-banner-name {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+  }
+  .character-banner-role-race-container {
+    font-size: 9px;
+    color: white;
+  }
+  .character-banner-current-exp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    position: relative;
+  }
+
+  .xp-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1a1a1a;
+    height: 10px;
+    width: 100%; /* A darker color for the background of the progress bar */
+  }
+  .xp-bar {
+    height: 100%;
+    background-color: #00eeff; /* A lighter color for the progress itself */
+    border-radius: 0px 4px 4px 0px;
+  }
+  .xp-bar-text {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 23px;
+    font-size: 10px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+
+  .character-banner-inventory-container {
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 400px;
+    height: 35px;
+    margin-top: 10px;
+    transform: translateX(-50%);
+  }
+  .character-banner-inventory-icon {
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+    transition: scale 0.3s ease-in-out;
+    box-shadow: 0px 0px 2px 2px #000000;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .tree {
+    transform: rotate(90deg);
+  }
+  .character-banner-inventory-icon:hover {
+    scale: 1.2;
+  }
+  .character-banner-wallet {
+    position: fixed;
+    top: 0;
+    left: 72%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    height: 12px;
+    margin-top: 115px;
   }
 }
