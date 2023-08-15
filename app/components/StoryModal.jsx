@@ -98,15 +98,26 @@ const StoryModal = ({
 
   const updateArenaLevel = async () => {
     try {
-      const newArenaLevel = currentArenaLevel + 1; // Increment the arena level separately
-        const response = await axios.put(`${dbURI}/users/characters/arenaLevel`, {
-
-          selectedCharacterId, // Using selectedCharacterId instead of characterId
-          arenaCount: newArenaLevel,
-          currentUser
+      // Fetch the current arena level
+      const responseArenaLevel = await axios.post(`${dbURI}/users/characters/arenaLevel`, {
+        selectedCharacterId,
+        currentUser,
       });
-      console.log("newArenaLevel", newArenaLevel)
-      // If the request is successful, do something here, e.g., update the state
+
+      if (!responseArenaLevel.data || typeof responseArenaLevel.data.arenaLevel !== 'number') {
+        console.error("Invalid response for arena level");
+        return;
+      }
+
+      const pulledArenaLevel = responseArenaLevel.data.arenaLevel;
+      const newArenaLevel = pulledArenaLevel + 1; // Increment the arena level
+
+      // Now update the arena level on the server
+      const responseUpdate = await axios.put(`${dbURI}/users/characters/arenaLevel`, {
+        selectedCharacterId,
+        arenaCount: newArenaLevel,
+        currentUser,
+      });
       setCurrentArenaLevel(newArenaLevel);
     } catch (error) {
       console.error(
@@ -115,6 +126,7 @@ const StoryModal = ({
       );
     }
   };
+
 
 
   const arenaReward = async () => {
