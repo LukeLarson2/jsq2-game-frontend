@@ -67,7 +67,7 @@
     color: white;
   }
 }
-@media screen and (min-width: 391px) and (max-width: 844px) {
+@media screen and (min-width:: 416px) and (max-width: 844px) {
   .battle-screen-main-container {
     display: flex;
     justify-content: center;
