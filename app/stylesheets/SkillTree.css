@@ -515,7 +515,7 @@
     z-index: 9999;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 415px) {
   .skill-tree-overlay {
     position: fixed;
     display: flex;

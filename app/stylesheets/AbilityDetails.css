@@ -308,7 +308,7 @@
     background-color: #ffffffa2;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 415px) {
   .skill-tree-ability-details-overlay {
     display: flex;
     justify-content: center;

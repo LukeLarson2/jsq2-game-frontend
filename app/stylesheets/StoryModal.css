@@ -139,7 +139,7 @@
     background-color: #ffffffa6;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 415px) {
   .area-story-modal-overlay {
     display: flex;
     justify-content: center;

@@ -279,7 +279,7 @@
     left: 40%; /* specify a position relative to the map */
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 415px) {
   .player-ingame-map-overlay {
     position: absolute;
     top: 0;

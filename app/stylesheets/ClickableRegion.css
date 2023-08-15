@@ -178,7 +178,7 @@
     color: transparent;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 415px) {
   .player-ingame-map-area-name {
     position: absolute;
     text-align: center;

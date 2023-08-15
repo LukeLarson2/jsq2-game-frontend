@@ -149,7 +149,7 @@
     scale: 0.7;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 415px) {
   .battle-screen-main-container {
     display: flex;
     justify-content: center;
