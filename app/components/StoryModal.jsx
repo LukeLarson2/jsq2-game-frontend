@@ -101,24 +101,21 @@ const StoryModal = ({
       // Fetch the current arena level
       const responseArenaLevel = await axios.post(`${dbURI}/users/characters/arenaLevel`, {
         selectedCharacterId,
-        currentUser,
+        currentUser
       });
-
-      if (!responseArenaLevel.data || typeof responseArenaLevel.data.arenaLevel !== 'number') {
+      if (!responseArenaLevel.data) {
         console.error("Invalid response for arena level");
         return;
       }
 
-      const pulledArenaLevel = responseArenaLevel.data.arenaLevel;
-      const newArenaLevel = pulledArenaLevel + 1; // Increment the arena level
+      const pulledArenaLevel = responseArenaLevel.data.arenaCount;
 
-      // Now update the arena level on the server
-      const responseUpdate = await axios.put(`${dbURI}/users/characters/arenaLevel`, {
+      await axios.put(`${dbURI}/users/characters/arenaLevel`, {
         selectedCharacterId,
-        arenaCount: newArenaLevel,
+        pulledArenaLevel, // Send current value without incrementing
         currentUser,
       });
-      setCurrentArenaLevel(newArenaLevel);
+      setCurrentArenaLevel(pulledArenaLevel + 1);
     } catch (error) {
       console.error(
         "An error occurred while updating the arena level: ",

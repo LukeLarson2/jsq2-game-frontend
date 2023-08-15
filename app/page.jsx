@@ -8,37 +8,6 @@ export default function Page() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const setWindow = async () => {
-      if (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        )
-      ) {
-        // Check for fullscreen support and request fullscreen
-        if (document.documentElement.requestFullscreen) {
-          await document.documentElement.requestFullscreen();
-        } else if (document.documentElement.mozRequestFullScreen) {
-          await document.documentElement.mozRequestFullScreen(); // Firefox
-        } else if (document.documentElement.webkitRequestFullscreen) {
-          await document.documentElement.webkitRequestFullscreen(); // Chrome, Safari and Opera
-        } else if (document.documentElement.msRequestFullscreen) {
-          await document.documentElement.msRequestFullscreen(); // IE/Edge
-        }
-
-        // Change orientation to landscape if available
-        if (screen.orientation && screen.orientation.lock) {
-          try {
-            await screen.orientation.lock("landscape");
-          } catch (err) {
-            return;
-          }
-        }
-      }
-    };
-    setWindow();
-  }, []);
-
-  useEffect(() => {
     function getCookie(name) {
       const value = "; " + document.cookie;
       const parts = value.split("; " + name + "=");
