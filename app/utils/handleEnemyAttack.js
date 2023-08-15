@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import damageCalc from "../utils/damageCalc";
 import axios from "axios";
-import dbURI from '../lib/dbURI'
+import dbURI from "../lib/dbURI";
 
 const handleEnemyAttack = async (
   user,
@@ -33,19 +33,12 @@ const handleEnemyAttack = async (
   setPlayerDeath
 ) => {
   // define the fetch request to get current hp of player
-  const getPlayerHealth = async (
-    currentUser,
-    selectedCharacterId,
-    setPlayerHealth
-  ) => {
+  const getPlayerHealth = async () => {
     try {
-      const response = await axios.post(
-        `${dbURI}/users/characters/health`,
-        {
-          selectedCharacterId,
-          currentUser,
-        }
-      );
+      const response = await axios.post(`${dbURI}/users/characters/health`, {
+        selectedCharacterId,
+        currentUser,
+      });
       const playerHealth = response.data;
 
       if (!playerHealth) {
@@ -62,11 +55,7 @@ const handleEnemyAttack = async (
   };
 
   // await the current hp of player and assign it to current value
-  const currentHP = await getPlayerHealth(
-    currentUser,
-    selectedCharacterId,
-    setPlayerHealth
-  );
+  const currentHP = await getPlayerHealth();
   // generate random enemy attack index value
   const randomEnemyAttack = Math.floor(
     Math.random() * currentEnemy.attacks.length
