@@ -29,7 +29,7 @@ const handleHealing = async (
       Authorization: `Bearer ${currentUser}`, // Assuming you use a Bearer token for authentication
     },
     body: JSON.stringify({
-      selectedCharacterId: character._id, // Using character's ID
+      selectedCharacterId, // Using character's ID
       health: newHealth,
       currentUser: currentUser,
     }),
@@ -62,7 +62,7 @@ const handleHealing = async (
       Authorization: `Bearer ${currentUser}`, // Assuming you use a Bearer token for authentication
     },
     body: JSON.stringify({
-      selectedCharacterId: character._id, // Using character's ID
+      selectedCharacterId, // Using character's ID
       energy: newEnergy,
       currentUser: currentUser,
     }),

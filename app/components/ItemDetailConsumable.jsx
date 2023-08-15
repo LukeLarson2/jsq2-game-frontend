@@ -5,7 +5,7 @@ import itemQualityCheck from "../utils/itemQualityCheck";
 import itemImageCheck from "../utils/itemImageCheck";
 import NotEnoughGoldModal from "../components/NotEnoughGoldModal";
 import { GiTwoCoins } from "react-icons/gi";
-import dbURI from '../lib/dbURI'
+import dbURI from "../lib/dbURI";
 
 const ItemDetailConsumable = ({
   itemDetails,
@@ -32,7 +32,7 @@ const ItemDetailConsumable = ({
 }) => {
   const [hasEnough, setHasEnough] = useState(true);
   const [checkHasEnough, setCheckHasEnough] = useState(true);
-  const [disabled, setDisabled] = useState(false)
+  const [disabled, setDisabled] = useState(false);
   const {
     itemName,
     type,
@@ -49,51 +49,50 @@ const ItemDetailConsumable = ({
     setShowModal(false);
   };
 
-
   const handleUseItem = async (
     playerHealth,
     currentEnergy,
     healAmount,
     recoverAmount
   ) => {
-    setDisabled(true)
+    setDisabled(true);
     setItemHealAmount(healAmount);
     setIsLoading(true);
 
-      /* --HEALTH POTION-- */
+    /* --HEALTH POTION-- */
     if (healAmount && !recoverAmount) {
       const maxHealthCheck = playerHealth + healAmount > 100 ? 100 : healAmount;
-      const newHealth =
-        maxHealthCheck === 100 ? 100 : playerHealth + healAmount;
-        await fetch(`${dbURI}/users/characters/health`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
-          },
-          body: JSON.stringify({
-            selectedCharacterId, // Use selectedCharacterId instead of _id
-            health: newHealth,
-            currentUser
-          }),
+      const newHealth = maxHealthCheck === 100 ? 100 : playerHealth + healAmount;
+      await fetch(`${dbURI}/users/characters/health`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
+        },
+        body: JSON.stringify({
+          selectedCharacterId, // Use selectedCharacterId instead of _id
+          health: newHealth,
+          currentUser,
+        }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          setPlayerHealth(newHealth);
+          return response.json();
         })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            setPlayerHealth(newHealth);
-            return response.json();
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
+        .catch((error) => {
+          console.error("Error:", error);
+        });
 
-        try {
-          await axios.delete(`${dbURI}/users/characters/inventory?selectedCharacterId=${selectedCharacterId}&key=${key}&currentUser=${currentUser}`);
-
-        } catch (err) {
-          console.error(err);
-        }
+      try {
+        await axios.delete(
+          `${dbURI}/users/characters/inventory?selectedCharacterId=${selectedCharacterId}&key=${key}&currentUser=${currentUser}`
+        );
+      } catch (err) {
+        console.error(err);
+      }
 
       setUseItem(!useItem);
 
@@ -103,35 +102,36 @@ const ItemDetailConsumable = ({
         currentEnergy + recoverAmount > 100 ? 100 : recoverAmount;
       const newEnergy =
         maxEnergyCheck === 100 ? 100 : currentEnergy + recoverAmount;
-        await fetch(`${dbURI}/users/characters/energy`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
-          },
-          body: JSON.stringify({
-            selectedCharacterId, // Use selectedCharacterId instead of _id
-            energy: newEnergy,
-            currentUser
-          }),
+      await fetch(`${dbURI}/users/characters/energy`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
+        },
+        body: JSON.stringify({
+          selectedCharacterId, // Use selectedCharacterId instead of _id
+          energy: newEnergy,
+          currentUser,
+        }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          setCurrentEnergy(newEnergy);
+          return response.json();
         })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            setCurrentEnergy(newEnergy);
-            return response.json();
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
+        .catch((error) => {
+          console.error("Error:", error);
+        });
 
-        try {
-          await axios.delete(`${dbURI}/users/characters/inventory?selectedCharacterId=${selectedCharacterId}&key=${key}&currentUser=${currentUser}`);
-
-        } catch (err) {
-          console.error(err);
-        }
+      try {
+        await axios.delete(
+          `${dbURI}/users/characters/inventory?selectedCharacterId=${selectedCharacterId}&key=${key}&currentUser=${currentUser}`
+        );
+      } catch (err) {
+        console.error(err);
+      }
       setUseItem(!useItem);
 
       /* --RESTORE POTION-- */
@@ -140,65 +140,67 @@ const ItemDetailConsumable = ({
         currentEnergy + recoverAmount > 100 ? 100 : recoverAmount;
       const newEnergy =
         maxEnergyCheck === 100 ? 100 : currentEnergy + recoverAmount;
-        await fetch(`${dbURI}/users/characters/energy`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
-          },
-          body: JSON.stringify({
-            selectedCharacterId, // Use selectedCharacterId instead of _id
-            energy: newEnergy,
-            currentUser
-          }),
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            setCurrentEnergy(newEnergy);
-            return response.json();
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
-          try {
-            await axios.delete(`${dbURI}/users/characters/inventory?selectedCharacterId=${selectedCharacterId}&key=${key}&currentUser=${currentUser}`);
-
-          } catch (err) {
-            console.error(err);
+      await fetch(`${dbURI}/users/characters/energy`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
+        },
+        body: JSON.stringify({
+          selectedCharacterId, // Use selectedCharacterId instead of _id
+          energy: newEnergy,
+          currentUser,
+        }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
           }
+          setCurrentEnergy(newEnergy);
+          return response.json();
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+      try {
+        await axios.delete(
+          `${dbURI}/users/characters/inventory?selectedCharacterId=${selectedCharacterId}&key=${key}&currentUser=${currentUser}`
+        );
+      } catch (err) {
+        console.error(err);
+      }
       const maxHealthCheck = playerHealth + healAmount > 100 ? 100 : healAmount;
       const newHealth =
         maxHealthCheck === 100 ? 100 : playerHealth + healAmount;
-        await fetch(`${dbURI}/users/characters/health`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
-          },
-          body: JSON.stringify({
-            selectedCharacterId, // Use selectedCharacterId instead of _id
-            health: newHealth,
-            currentUser
-          }),
+      await fetch(`${dbURI}/users/characters/health`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
+        },
+        body: JSON.stringify({
+          selectedCharacterId, // Use selectedCharacterId instead of _id
+          health: newHealth,
+          currentUser,
+        }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          setPlayerHealth(newHealth);
+          return response.json();
         })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            setPlayerHealth(newHealth);
-            return response.json();
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
-        try {
-          await axios.delete(`${dbURI}/users/characters/inventory?selectedCharacterId=${selectedCharacterId}&key=${key}&currentUser=${currentUser}`);
-
-        } catch (err) {
-          console.error(err);
-        }
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+      try {
+        await axios.delete(
+          `${dbURI}/users/characters/inventory?selectedCharacterId=${selectedCharacterId}&key=${key}&currentUser=${currentUser}`
+        );
+      } catch (err) {
+        console.error(err);
+      }
       setUseItem(!useItem);
     }
     setIsLoading(false);
