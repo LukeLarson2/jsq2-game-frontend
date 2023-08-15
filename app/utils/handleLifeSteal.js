@@ -52,12 +52,12 @@ const handleLifeSteal = async (
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${currentUser}`, // Assuming you use a Bearer token for authentication
+      Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
     },
     body: JSON.stringify({
-      selectedCharacterId: selectedCharacterId, // Using character's ID
+      selectedCharacterId, // Use selectedCharacterId instead of _id
       energy: newEnergy,
-      currentUser: currentUser,
+      currentUser,
     }),
   })
     .then((response) => {
@@ -91,26 +91,24 @@ const handleLifeSteal = async (
   setTimeout(() => setIsAttacking(false), 2200);
 
   if (damageToEnemy > 0) {
-    const maxHealthCheck =
-      playerHealth + healingToNum > 100 ? 100 : healingToNum;
-    const newHealth =
-      maxHealthCheck === 100 ? 100 : playerHealth + healingToNum;
-    await fetch(`${dbURI}/users/characters/health`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${currentUser}`, // Assuming you use a Bearer token for authentication
-      },
-      body: JSON.stringify({
-        selectedCharacterId, // Using character's ID
-        health: newHealth,
-        currentUser: currentUser,
-      }),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
+    const maxHealthCheck = playerHealth + healingToNum > 100 ? 100 : healingToNum;
+    const newHealth = maxHealthCheck === 100 ? 100 : playerHealth + healingToNum;
+      await fetch(`${dbURI}/users/characters/health`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
+        },
+        body: JSON.stringify({
+          selectedCharacterId, // Use selectedCharacterId instead of _id
+          health: newHealth,
+          currentUser,
+        }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
         setDisplayedRecovery(healingToNum);
         setTimeout(() => setPlayerRecoveryDisplayed(true), 600);
         setTimeout(() => setPlayerHealth(newHealth), 1000);
