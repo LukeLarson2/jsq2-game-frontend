@@ -140,7 +140,7 @@
   }
 }
 
-@media screen and (min-width:: 416px) and (max-width: 844px) {
+@media screen and (min-width: 416px) and (max-width: 844px) {
   .player-ingame-map-overlay {
     position: absolute;
     top: 0;

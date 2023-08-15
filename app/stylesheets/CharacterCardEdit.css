@@ -310,7 +310,7 @@
     background-color: #bebebe;
   }
 }
-@media screen and (min-width:: 416px) and (max-width: 844px) {
+@media screen and (min-width: 416px) and (max-width: 844px) {
   .character-card-edit-container {
     position: absolute;
     width: 100vw;

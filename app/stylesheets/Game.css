@@ -1,5 +1,5 @@
 /* MOBILE LANDSCAPE */
-@media screen and (min-width:: 416px) and (max-width: 844px) {
+@media screen and (min-width: 416px) and (max-width: 844px) {
   .game-container-place-holder {
     display: flex;
     justify-content: flex-start;
