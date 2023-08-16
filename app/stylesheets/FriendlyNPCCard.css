@@ -68,7 +68,77 @@
     margin-left: 10px;
   }
 }
-@media screen and (min-width: 416px) and (max-width: 844px) {
+@media screen and (min-width: 845px) and (max-width: 1919px) {
+  .friendly-card-container {
+    display: flex;
+    width: 100vw;
+    height: 600px;
+    justify-content: center;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-50%);
+  }
+
+  .friendly-card-image {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background-size: cover; /* add this line to scale the background image */
+    background-repeat: no-repeat; /* add this line to prevent repeating image */
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px 15px #000000;
+  }
+
+  .friendly-card-name-role-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+  }
+  .friendly-name {
+    font-weight: bold;
+    font-size: 28px;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  }
+
+  .friendly-role-icon {
+    border-radius: 100px;
+    margin-right: 10px;
+    margin-top: 12px;
+    height: 40px;
+    width: 40px;
+    background-size: cover; /* add this line to scale the background image */
+    background-repeat: no-repeat; /* add this line to prevent repeating image */
+  }
+  .friendly-image-footer-container {
+    font-weight: bold;
+    font-style: italic;
+    width: fit-content;
+    font-size: 15px;
+    margin-left: 20px;
+    padding-left: 5px;
+    padding-right: 15px;
+    border-radius: 8px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.425);
+    box-shadow: 3px 3px 20px white;
+  }
+
+  .friendly-level {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 391px) and (max-width: 844px) {
   .friendly-card-container {
     position: fixed;
     top: 37%;
@@ -135,7 +205,7 @@
     margin-left: 10px;
   }
 }
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 390px) {
   .friendly-card-container {
     position: fixed;
     top: 50%;

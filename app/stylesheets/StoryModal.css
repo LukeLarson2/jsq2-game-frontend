@@ -68,7 +68,77 @@
     background-color: #ffffffa6;
   }
 }
-@media screen and (min-width: 416px) and (max-width: 844px) {
+@media screen and (min-width: 845px) and (max-width: 1919px) {
+  .area-story-modal-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5555557a;
+  }
+  .area-story-modal {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .area-story-modal-content {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #ffffffb7;
+    box-shadow: 3px 3px 15px black;
+  }
+  .area-story-story-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .area-story-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    height: 50px;
+    width: 100%;
+  }
+  .area-story-next-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px black;
+    font-size: 18px;
+  }
+  .area-story-next-button:hover {
+    background-color: #ffffffa6;
+  }
+}
+@media screen and (min-width: 391px) and (max-width: 844px) {
   .area-story-modal-overlay {
     display: flex;
     justify-content: center;
@@ -139,7 +209,7 @@
     background-color: #ffffffa6;
   }
 }
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 390px) {
   .area-story-modal-overlay {
     display: flex;
     justify-content: center;

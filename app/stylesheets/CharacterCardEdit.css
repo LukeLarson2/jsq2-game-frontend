@@ -310,7 +310,298 @@
     background-color: #bebebe;
   }
 }
-@media screen and (min-width: 416px) and (max-width: 844px) {
+@media screen and (min-width: 845px) and (max-width: 1919px) {
+  .character-card-edit-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    background-color: #0000006c;
+  }
+  .character-card-current {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 500px;
+    z-index: 4;
+  }
+  .character-card-edit-abilities-placement {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-lr;
+    z-index: 2;
+    transition: margin-left 0.5s ease-in-out;
+  }
+
+  .character-card-edit-equipment-placement {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-lr;
+    z-index: 2;
+    margin-top: 100px;
+    transition: margin-left 0.5s ease-in-out;
+  }
+  .character-card-edit-abilities {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    writing-mode: vertical-lr;
+    border-radius: 0px 15px 15px 0px;
+    padding: 10px;
+    width: 400px;
+    height: 475px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #1b1b1b;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    cursor: pointer;
+  }
+  .character-card-edit-abilities-content-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    writing-mode: horizontal-tb;
+    height: 95%;
+    width: 80%;
+    overflow-y: auto;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .character-card-edit-ability {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
+  }
+  .character-card-edit-ability-name-damage-energy {
+    height: fit-content;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  .character-card-edit-ability-name {
+    font-size: 25px;
+    width: 150px;
+    font-weight: bold;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  }
+  .character-card-edit-ability-damage-energy-container {
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    margin-left: 15px;
+    width: 60px;
+  }
+  .character-card-edit-ability-damage,
+  .character-card-edit-ability-energy {
+    display: flex;
+    align-items: baseline;
+    height: 40px;
+
+    color: white;
+  }
+  .character-card-edit-ability-damage-icon,
+  .character-card-edit-ability-energy-icon {
+    margin-right: 4px;
+    color: white;
+  }
+  .character-card-edit-ability-level {
+    color: white;
+    font-style: italic;
+    margin-top: -5px;
+    margin-bottom: 10px;
+  }
+  .character-card-edit-ability-detailedDescription {
+    color: white;
+  }
+  .character-card-edit-ability-basic-btn {
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  }
+  .character-card-edit-pri-sec-placement {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .character-card-edit-ability-pri-btn {
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  }
+  .character-card-edit-ability-sec-btn {
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  }
+  .character-card-edit-ability-basic-btn:hover,
+  .character-card-edit-ability-pri-btn:hover,
+  .character-card-edit-ability-sec-btn:hover {
+    color: #006315;
+  }
+
+  .character-card-edit-ability-equipped {
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  .character-card-edit-equipment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    writing-mode: vertical-lr;
+    border-radius: 0px 15px 15px 0px;
+    padding: 10px;
+    width: 400px;
+    height: 380px;
+
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(53, 53, 53);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    cursor: pointer;
+  }
+  .current-card-container {
+    z-index: 999;
+    margin: 0px;
+    width: 400px;
+  }
+  .character-card-edit-equipment-current-gear {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-right: 20px;
+  }
+
+  .character-card-edit-equipment-armor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 210px;
+    width: 210px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: 5px solid;
+    cursor: pointer;
+    box-shadow: 5px 5px 6px #000000;
+    background-color: black;
+  }
+
+  .character-card-edit-equipment-armor-text {
+    font-weight: bold;
+    font-size: 28px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    transition: scale 0.2s ease-in-out;
+  }
+
+  .character-card-edit-equipment-armor:hover
+    .character-card-edit-equipment-armor-text {
+    scale: 1.3;
+  }
+
+  .character-card-edit-equipment-main-off-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .character-card-edit-equipment-mainhand,
+  .character-card-edit-equipment-offhand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    border: 5px solid;
+    cursor: pointer;
+    box-shadow: 5px 5px 6px #000000;
+    background-color: black;
+  }
+
+  .character-card-edit-equipment-mainhand-text,
+  .character-card-edit-equipment-offhand-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    transition: scale 0.2s ease-in-out;
+  }
+
+  .character-card-edit-equipment-mainhand:hover
+    .character-card-edit-equipment-mainhand-text {
+    scale: 1.2;
+  }
+
+  .character-card-edit-equipment-offhand:hover
+    .character-card-edit-equipment-offhand-text {
+    scale: 1.2;
+  }
+  .character-card-edit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    color: black;
+    margin-top: 550px;
+    background-color: white;
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px black;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .character-card-edit-btn:hover {
+    background-color: #bebebe;
+  }
+}
+@media screen and (min-width: 391px) and (max-width: 844px) {
   .character-card-edit-container {
     position: absolute;
     width: 100vw;
@@ -605,7 +896,7 @@
     background-color: #bebebe;
   }
 }
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 390px) {
   .character-card-edit-container {
     position: absolute;
     width: 100vw;

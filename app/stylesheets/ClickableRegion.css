@@ -16,19 +16,18 @@
   background-color: #55555588;
   z-index: 99;
 }
-
 .player-ingame-map-confirm-travel-modal {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: fit-content;
-  width: 550px;
+  width: 450px;
   background-color: #ffffff;
   color: #000000;
   border-radius: 8px;
   box-shadow: 0 0 20px 20px #ffffff;
-  padding: 5px;
+  padding: 3px;
 }
 
 .player-ingame-map-confirm-btn-placement {
@@ -45,7 +44,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  width: 120px;
+  width: 70px;
   height: 40px;
   margin-right: 10px;
   box-shadow: 1px 1px 5px #555;
@@ -59,32 +58,13 @@
   font-weight: bold;
   justify-content: center;
   align-items: center;
-  width: 120px;
+  width: 70px;
   height: 40px;
   margin-left: 10px;
-  margin-right: 10px;
   box-shadow: 1px 1px 5px #555;
   transition: background-color 0.4s ease;
 }
 .player-ingame-map-cancel-btn:hover {
-  background-color: #ff4335;
-  color: white;
-}
-.player-ingame-map-forget-btn {
-  display: flex;
-  background-color: white;
-  border-radius: 8px;
-  color: #ff4335;
-  font-weight: bold;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
-  height: 40px;
-  margin-left: 10px;
-  box-shadow: 1px 1px 5px #555;
-  transition: background-color 0.4s ease;
-}
-.player-ingame-map-forget-btn:hover {
   background-color: #ff4335;
   color: white;
 }
@@ -104,7 +84,7 @@
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 20px;
 }
 
@@ -155,66 +135,6 @@
   }
 }
 
-@media screen and (min-width: 416px) and (max-width: 844px) {
-  .player-ingame-map-area-name {
-    position: absolute;
-    text-align: center;
-    position: absolute;
-    width: 25px; /* specify a fixed width */
-    height: 25px; /* specify a fixed height */
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
-    color: transparent;
-    z-index: 4;
-  }
-  .region-info-level {
-    font-size: 15px;
-    font-style: italic;
-    font-weight: normal;
-    margin-top: -5px;
-    color: transparent;
-  }
-}
-@media screen and (max-width: 415px) {
-  .player-ingame-map-area-name {
-    position: absolute;
-    text-align: center;
-    position: absolute;
-    width: 25px; /* specify a fixed width */
-    height: 25px; /* specify a fixed height */
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
-    color: transparent;
-    z-index: 4;
-  }
-  .region-info-level {
-    font-size: 15px;
-    font-style: italic;
-    font-weight: normal;
-    margin-top: -5px;
-    color: transparent;
-  }
-  .player-ingame-map-confirm-travel-modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    width: 80vw;
-    background-color: #ffffff;
-    color: #000000;
-    border-radius: 8px;
-    box-shadow: 0 0 20px 20px #ffffff;
-    padding: 3px;
-  }
-}
-
 @media screen and (min-width: 1920px) {
   .player-ingame-map-area-name {
     position: absolute;
@@ -248,5 +168,88 @@
     background-position: left;
     color: white; /* change to the color you want on hover */
     width: 300px;
+  }
+}
+
+@media screen and (min-width: 845px) and (max-width: 1919px) {
+  .player-ingame-map-area-name {
+    position: absolute;
+    text-align: center;
+    position: absolute;
+    width: 40px; /* specify a fixed width */
+    height: 40px; /* specify a fixed height */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    color: transparent;
+    z-index: 4;
+  }
+  .region-info-level {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: -5px;
+    color: transparent;
+  }
+}
+@media screen and (min-width: 391px) and (max-width: 844px) {
+  .player-ingame-map-area-name {
+    position: absolute;
+    text-align: center;
+    position: absolute;
+    width: 25px; /* specify a fixed width */
+    height: 25px; /* specify a fixed height */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    color: transparent;
+    z-index: 4;
+  }
+  .region-info-level {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: -5px;
+    color: transparent;
+  }
+}
+@media screen and (max-width: 390px) {
+  .player-ingame-map-area-name {
+    position: absolute;
+    text-align: center;
+    position: absolute;
+    width: 25px; /* specify a fixed width */
+    height: 25px; /* specify a fixed height */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    color: transparent;
+    z-index: 4;
+  }
+  .region-info-level {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: -5px;
+    color: transparent;
+  }
+  .player-ingame-map-confirm-travel-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 80vw;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 20px #ffffff;
+    padding: 3px;
   }
 }
