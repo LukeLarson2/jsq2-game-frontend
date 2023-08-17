@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import storyGPTPrompt from "../lib/storyGPTPrompt";
-import AlertModal from "../components/AlertModal";
 import "../stylesheets/ClickableRegion.css";
 
 const ClickableRegion = ({
@@ -14,15 +13,10 @@ const ClickableRegion = ({
   name,
   characterLevel,
   regionLevel,
-  setSelectedRegion,
-  addStoryDelete,
-  currentUser,
-  selectedCharacterId
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newStory, setNewStory] = useState(true);
   const [loadingMessageIndex, setLoadingMessageIndex] = useState(0);
-  const [showConfirmDelete, setShowConfirmDelete] = useState(false);
   const loadingMessages = [
     "Initializing the arcane sequence",
     "Channeling the mystical energies",
@@ -33,14 +27,8 @@ const ClickableRegion = ({
     "Finalizing the ethereal journey",
   ];
 
-  const handleForgetStory = () => {
-    setShowConfirmDelete(true);
-    setIsModalOpen(false);
-  };
-
   useEffect(() => {
     setStoryPromptResult(storyGPTPrompt(name, regionId));
-    setSelectedRegion(regionId);
   }, [isModalOpen, newStory]);
 
   useEffect(() => {
@@ -68,19 +56,21 @@ const ClickableRegion = ({
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  let backgroundColor, borderColor;
+
+  if (characterLevel >= regionLevel) {
+    backgroundColor = "#20e9a65e";
+    borderColor = "2px solid #20e9a6ea";
+  } else if (characterLevel >= regionLevel - 5) {
+    backgroundColor = "#fffc685e"; // Yellow tint
+    borderColor = "2px solid #fffc68ea"; // Yellow tint
+  } else {
+    backgroundColor = "#e94f205e";
+    borderColor = "2px solid #e94f20ea";
+  }
   return (
     <div>
-      {showConfirmDelete && (
-        <AlertModal
-          message={`Are you sure you want to forget the story for ${region}? It will cost you 10 Mythstones.`}
-          setShowAlert={setShowConfirmDelete}
-          title="Forget Story"
-          forgetStory={true}
-          currentUser={currentUser}
-          selectedCharacterId={selectedCharacterId}
-          selectedRegion={regionId}
-        />
-      )}
       {isModalOpen && (
         <div className="player-ingame-map-confirm-travel-overlay">
           <div className="player-ingame-map-confirm-travel-modal">
@@ -88,9 +78,6 @@ const ClickableRegion = ({
               <div>
                 <p className="player-ingame-map-confirm-travel-text">
                   Would you like to travel to {region}?
-                </p>
-                <p className="player-ingame-map-confirm-travel-text">
-                  {`(Recommended level ${regionLevel})`}
                 </p>
                 <div className="player-ingame-map-confirm-btn-placement">
                   <button
@@ -107,14 +94,6 @@ const ClickableRegion = ({
                   >
                     No
                   </button>
-                  {addStoryDelete && (
-                    <button
-                      className="player-ingame-map-forget-btn"
-                      onClick={() => handleForgetStory()}
-                    >
-                      Forget Story
-                    </button>
-                  )}
                 </div>
               </div>
             ) : (
@@ -144,21 +123,15 @@ const ClickableRegion = ({
       )}
       <div
         className="player-ingame-map-area"
+        onClick={() => handleClick()}
         id={value}
         style={{
-          backgroundColor:
-            characterLevel >= regionLevel ? "#20e9a65e" : "#e94f205e",
-          border:
-            characterLevel >= regionLevel
-              ? "2px solid #20e9a6ea"
-              : "2px solid #e94f20ea",
+          backgroundColor: backgroundColor,
+          border: borderColor,
         }}
       >
         <div className="player-ingame-map-clickable-area" />
-        <div
-          className="player-ingame-map-area-name"
-          onClick={() => handleClick()}
-        >
+        <div className="player-ingame-map-area-name">
           <div className="region-info-text">
             <div className="region-info-name">{region}</div>
             <div className="region-info-level">Level {regionLevel}</div>
