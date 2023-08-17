@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
-import axios from 'axios'
+import axios from "axios";
 import "../stylesheets/CharacterCardEditArmor.css";
 import itemQualityCheck from "../utils/itemQualityCheck";
 import itemImageCheck from "../utils/itemImageCheck";
-import { GiTwoCoins, GiMineExplosion } from "react-icons/gi";
+import { GiTwoCoins, GiMineExplosion, GiShield } from "react-icons/gi";
+import { GoTriangleDown } from "react-icons/go";
 import { SiTarget } from "react-icons/si";
-import dbURI from '../lib/dbURI'
+import dbURI from "../lib/dbURI";
 
 const CharacterCardEditOffHand = ({
   setShowOffHand,
@@ -19,8 +20,6 @@ const CharacterCardEditOffHand = ({
   currentUser,
   selectedCharacterId,
 }) => {
-
-
   const handleCloseModal = () => {
     setShowOffHand(false);
   };
@@ -28,9 +27,9 @@ const CharacterCardEditOffHand = ({
   const handleChangeOffHand = async (item) => {
     try {
       const response = await axios.put(`${dbURI}/users/characters/offHand`, {
-          selectedCharacterId,
-          item,
-          currentUser
+        selectedCharacterId,
+        item,
+        currentUser,
       });
 
       if (response.status !== 200) {
@@ -42,7 +41,6 @@ const CharacterCardEditOffHand = ({
       console.error("error", error);
     }
   };
-
 
   return (
     <div className="character-card-edit-overlay">
@@ -65,12 +63,22 @@ const CharacterCardEditOffHand = ({
                 quality,
                 slot,
                 usedByRoles,
+                shielding,
               } = item;
               const color = itemQualityCheck(quality);
               const imageUrl = itemImageCheck(itemName);
               const itemEquipped =
                 currentOffHand.itemName === itemName ? true : false;
               const canUse = usedByRoles.includes(role);
+              let arrowColor = "#b11717";
+              let arrowDirection = "0";
+              const differenceValue = damage
+                ? damage - currentOffHand.damage
+                : shielding - currentOffHand.shielding;
+              if (currentOffHand.damage < damage) {
+                arrowColor = "#03b438";
+                arrowDirection = "180";
+              }
               if (slot === "Off Hand" && canUse) {
                 return (
                   <div
@@ -102,12 +110,35 @@ const CharacterCardEditOffHand = ({
                     </div>
                     <div className="character-card-edit-slot-item-stats-container">
                       <div className="character-card-edit-slot-item-damage">
-                        <GiMineExplosion className="character-card-edit-slot-item-damage-icon" />{" "}
-                        {damage}
+                        {!itemEquipped && (
+                          <div
+                            className="character-card-edit-slot-difference"
+                            style={{ color: arrowColor }}
+                          >
+                            {differenceValue !== 0 && (
+                              <GoTriangleDown
+                                style={{
+                                  transform: `rotate(${arrowDirection}deg)`,
+                                }}
+                              />
+                            )}
+                          </div>
+                        )}
+                        {damage ? (
+                          <>
+                            {damage}
+                            <GiMineExplosion className="character-card-edit-slot-item-damage-icon" />{" "}
+                          </>
+                        ) : (
+                          <>
+                            {shielding}
+                            <GiShield className="character-card-edit-slot-item-damage-icon" />{" "}
+                          </>
+                        )}
                       </div>
                       <div className="character-card-edit-slot-item-itemValue">
-                        <GiTwoCoins className="character-card-edit-slot-item-itemValue-icon" />{" "}
                         {itemValue}
+                        <GiTwoCoins className="character-card-edit-slot-item-itemValue-icon" />{" "}
                       </div>
                     </div>
                   </div>

@@ -75,7 +75,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
+    height: 90px;
     width: 330px;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -83,6 +83,7 @@
     margin-top: 10px;
     cursor: pointer;
   }
+
   .character-card-edit-slot-item:not(.equipped):hover {
     background-color: #494949 !important;
   }
@@ -114,7 +115,7 @@
     font-weight: bold;
     font-size: 17px;
     height: 100%;
-    width: 150px;
+    width: 140px;
     margin-left: 15px;
     color: white;
   }
@@ -123,12 +124,25 @@
     font-style: italic;
   }
   .character-card-edit-slot-item-stats-container {
-    width: 60px;
+    width: 70px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    text-align: end;
+    padding-right: 5px;
+  }
+  .character-card-edit-slot-difference{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    width: 20px;
+    height: fit-content;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 1px;
   }
   .character-card-edit-slot-item-shielding {
     color: white;
@@ -138,7 +152,7 @@
     align-items: center;
   }
   .character-card-edit-slot-item-shielding-icon {
-    margin-right: 5px;
+    margin-left: 5px;
   }
 
   .character-card-edit-slot-item-damage {
@@ -149,7 +163,7 @@
     align-items: center;
   }
   .character-card-edit-slot-item-damage-icon {
-    margin-right: 5px;
+    margin-left: 5px;
   }
   .character-card-edit-slot-item-accuracy {
     color: white;
@@ -159,7 +173,7 @@
     align-items: center;
   }
   .character-card-edit-slot-item-accuracy-icon {
-    margin-right: 5px;
+    margin-left: 5px;
   }
   .character-card-edit-slot-item-itemValue {
     color: white;
@@ -169,7 +183,7 @@
     align-items: center;
   }
   .character-card-edit-slot-item-itemValue-icon {
-    margin-right: 5px;
+    margin-left: 5px;
     color: #dbbd0f;
   }
   .character-card-edit-close-modal-btn {
@@ -252,6 +266,69 @@
     padding: 5px;
     margin-top: 10px;
     cursor: pointer;
+  }
+  .character-card-edit-slot-item-stats-container {
+    width: 70px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: end;
+    padding-right: 5px;
+  }
+  .character-card-edit-slot-difference{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    width: 20px;
+    height: fit-content;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 1px;
+  }
+  .character-card-edit-slot-item-shielding {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-shielding-icon {
+    margin-left: 5px;
+  }
+
+  .character-card-edit-slot-item-damage {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-damage-icon {
+    margin-left: 5px;
+  }
+  .character-card-edit-slot-item-accuracy {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-accuracy-icon {
+    margin-left: 5px;
+  }
+  .character-card-edit-slot-item-itemValue {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-itemValue-icon {
+    margin-left: 5px;
+    color: #dbbd0f;
   }
   .character-card-edit-slot-item:not(.equipped):hover {
     background-color: #494949 !important;
@@ -424,6 +501,69 @@
     padding: 5px;
     margin-top: 10px;
     cursor: pointer;
+  }
+  .character-card-edit-slot-item-stats-container {
+    width: 70px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: end;
+    padding-right: 5px;
+  }
+  .character-card-edit-slot-difference{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    width: 20px;
+    height: fit-content;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 1px;
+  }
+  .character-card-edit-slot-item-shielding {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-shielding-icon {
+    margin-left: 5px;
+  }
+
+  .character-card-edit-slot-item-damage {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-damage-icon {
+    margin-left: 5px;
+  }
+  .character-card-edit-slot-item-accuracy {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-accuracy-icon {
+    margin-left: 5px;
+  }
+  .character-card-edit-slot-item-itemValue {
+    color: white;
+    font-style: italic;
+    display: flex;
+    height: 30px;
+    align-items: center;
+  }
+  .character-card-edit-slot-item-itemValue-icon {
+    margin-left: 5px;
+    color: #dbbd0f;
   }
   .character-card-edit-slot-item:not(.equipped):hover {
     background-color: #494949 !important;

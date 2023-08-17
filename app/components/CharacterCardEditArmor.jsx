@@ -3,9 +3,15 @@ import React from "react";
 import "../stylesheets/CharacterCardEditArmor.css";
 import itemQualityCheck from "../utils/itemQualityCheck";
 import itemImageCheck from "../utils/itemImageCheck";
-import axios from 'axios'
-import { GiShield, GiTwoCoins } from "react-icons/gi";
-import dbURI from '../lib/dbURI'
+import axios from "axios";
+import {
+  GiShield,
+  GiTwoCoins,
+  GiOverhead,
+  GiShieldReflect,
+} from "react-icons/gi";
+import { GoTriangleDown } from "react-icons/go";
+import dbURI from "../lib/dbURI";
 
 const CharacterCardEditArmor = ({
   setShowArmor,
@@ -18,7 +24,6 @@ const CharacterCardEditArmor = ({
   currentUser,
   selectedCharacterId,
 }) => {
-
   const handleCloseModal = () => {
     setShowArmor(false);
   };
@@ -26,9 +31,9 @@ const CharacterCardEditArmor = ({
   const handleChangeArmor = async (item) => {
     try {
       const response = await axios.put(`${dbURI}/users/characters/armor`, {
-          selectedCharacterId,
-          item,
-          currentUser
+        selectedCharacterId,
+        item,
+        currentUser,
       });
 
       if (response.status !== 200) {
@@ -40,8 +45,6 @@ const CharacterCardEditArmor = ({
       console.error("error", error);
     }
   };
-
-
 
   return (
     <div className="character-card-edit-overlay">
@@ -64,12 +67,24 @@ const CharacterCardEditArmor = ({
                 quality,
                 slot,
                 usedByRoles,
+                dodge,
               } = item;
               const color = itemQualityCheck(quality);
               const imageUrl = itemImageCheck(itemName);
               const itemEquipped =
                 currentArmor.itemName === itemName ? true : false;
               const canUse = usedByRoles.includes(role);
+              let arrowColor = "#b11717";
+              let arrowDirection = "0";
+              const differenceValueShield = shielding - currentArmor.shielding
+              const differenceValueDodge = dodge - currentArmor.dodge
+              if (currentArmor.shielding < shielding) {
+                arrowColor = "#03b438";
+                arrowDirection = "180";
+              } else if (currentArmor.dodge < dodge) {
+                arrowColor = "#03b438";
+                arrowDirection = "180";
+              }
               if (slot === "Armor" && canUse) {
                 return (
                   <div
@@ -101,12 +116,44 @@ const CharacterCardEditArmor = ({
                     </div>
                     <div className="character-card-edit-slot-item-stats-container">
                       <div className="character-card-edit-slot-item-shielding">
-                        <GiShield className="character-card-edit-slot-item-shielding-icon" />{" "}
+                        {!itemEquipped && (
+                          <div
+                            className="character-card-edit-slot-difference"
+                            style={{ color: arrowColor }}
+                          >
+                            {differenceValueShield !== 0 && (
+                              <GoTriangleDown
+                                style={{
+                                  transform: `rotate(${arrowDirection}deg)`,
+                                }}
+                              />
+                            )}
+                          </div>
+                        )}
                         {shielding}
+                        <GiShield className="character-card-edit-slot-item-shielding-icon" />
+                      </div>
+                      <div className="character-card-edit-slot-item-shielding">
+                      {!itemEquipped && (
+                          <div
+                            className="character-card-edit-slot-difference"
+                            style={{ color: arrowColor }}
+                          >
+                            {differenceValueDodge !== 0 && (
+                              <GoTriangleDown
+                                style={{
+                                  transform: `rotate(${arrowDirection}deg)`,
+                                }}
+                              />
+                            )}
+                          </div>
+                        )}
+                        {dodge}
+                        <GiOverhead className="character-card-edit-slot-item-shielding-icon" />
                       </div>
                       <div className="character-card-edit-slot-item-itemValue">
-                        <GiTwoCoins className="character-card-edit-slot-item-itemValue-icon" />{" "}
                         {itemValue}
+                        <GiTwoCoins className="character-card-edit-slot-item-itemValue-icon" />
                       </div>
                     </div>
                   </div>

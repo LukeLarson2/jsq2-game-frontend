@@ -4,6 +4,7 @@ import "../stylesheets/CharacterCardEditArmor.css";
 import itemQualityCheck from "../utils/itemQualityCheck";
 import itemImageCheck from "../utils/itemImageCheck";
 import { GiTwoCoins, GiMineExplosion } from "react-icons/gi";
+import { GoTriangleDown } from "react-icons/go";
 import { SiTarget } from "react-icons/si";
 import axios from 'axios'
 import dbURI from '../lib/dbURI'
@@ -71,6 +72,17 @@ const CharacterCardEditMainHand = ({
               const itemEquipped =
                 currentMainHand.itemName === itemName ? true : false;
               const canUse = usedByRoles.includes(role);
+              let arrowColor = "#b11717";
+              let arrowDirection = "0";
+              const differenceValueAcc = accuracy - currentMainHand.accuracy
+              const differenceValueDamage = damage - currentMainHand.damage
+              if (currentMainHand.accuracy < accuracy) {
+                arrowColor = "#03b438";
+                arrowDirection = "180";
+              } else if (currentMainHand.damage < damage) {
+                arrowColor = "#03b438";
+                arrowDirection = "180";
+              }
               if (slot === "Main Hand" && canUse) {
                 return (
                   <div
@@ -102,16 +114,44 @@ const CharacterCardEditMainHand = ({
                     </div>
                     <div className="character-card-edit-slot-item-stats-container">
                       <div className="character-card-edit-slot-item-damage">
-                        <GiMineExplosion className="character-card-edit-slot-item-damage-icon" />{" "}
+                      {!itemEquipped && (
+                          <div
+                            className="character-card-edit-slot-difference"
+                            style={{ color: arrowColor }}
+                          >
+                            {differenceValueDamage !== 0 && (
+                              <GoTriangleDown
+                                style={{
+                                  transform: `rotate(${arrowDirection}deg)`,
+                                }}
+                              />
+                            )}
+                          </div>
+                        )}
                         {damage}
+                        <GiMineExplosion className="character-card-edit-slot-item-damage-icon" />{" "}
                       </div>
                       <div className="character-card-edit-slot-item-accuracy">
-                        <SiTarget className="character-card-edit-slot-item-accuracy-icon" />{" "}
+                      {!itemEquipped && (
+                          <div
+                            className="character-card-edit-slot-difference"
+                            style={{ color: arrowColor }}
+                          >
+                            {differenceValueAcc !== 0 && (
+                              <GoTriangleDown
+                                style={{
+                                  transform: `rotate(${arrowDirection}deg)`,
+                                }}
+                              />
+                            )}
+                          </div>
+                        )}
                         {accuracy}
+                        <SiTarget className="character-card-edit-slot-item-accuracy-icon" />{" "}
                       </div>
                       <div className="character-card-edit-slot-item-itemValue">
-                        <GiTwoCoins className="character-card-edit-slot-item-itemValue-icon" />{" "}
                         {itemValue}
+                        <GiTwoCoins className="character-card-edit-slot-item-itemValue-icon" />{" "}
                       </div>
                     </div>
                   </div>

@@ -75,7 +75,7 @@ const itemQualityCheck = (itemName) => {
       return "./rusty_iron_shield.png";
     }
     case "Iron Shield": {
-      return "./iron_Shield.png";
+      return "./iron_shield.png";
     }
     case "Steel Shield": {
       return "./steel_shield.png";
