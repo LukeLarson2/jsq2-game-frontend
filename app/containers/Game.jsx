@@ -149,65 +149,65 @@ const Game = ({
     const itemCollection = await getBagItems(dbURI);
     setShopItems([]);
     const qualityTypes = ["Common", "Uncommon", "Rare"];
+    const canUseItem = (item) => item.usedByRoles.includes(character.role);
 
     if (shopType === "General Goods") {
       let newShopItems = itemCollection
         .filter(
           (item) =>
             (item.type === "Potion" || item.type === "Food") &&
-            qualityTypes.includes(item.quality)
+            qualityTypes.includes(item.quality) &&
+            canUseItem(item)
         )
         .map((item) => ({
           ...item,
           itemValue: item.itemValue * 2,
         }));
 
-      // Remove duplicates based on itemName
-      newShopItems = newShopItems.reduce((unique, item) => {
-        return unique.some((uni) => uni.itemName === item.itemName)
-          ? unique
-          : [...unique, item];
-      }, []);
+        newShopItems = filterDuplicates(newShopItems);
 
       setShopItems((prevItems) => [...prevItems, ...newShopItems]);
     } else if (shopType === "Weapon") {
       let newShopItems = itemCollection
         .filter(
           (item) =>
-            item.type === "Weapon" && qualityTypes.includes(item.quality)
+            item.type === "Weapon" &&
+            qualityTypes.includes(item.quality) &&
+            canUseItem(item)
         )
         .map((item) => ({
           ...item,
           itemValue: item.itemValue * 2,
         }));
 
-      // Remove duplicates based on itemName
-      newShopItems = newShopItems.reduce((unique, item) => {
-        return unique.some((uni) => uni.itemName === item.itemName)
-          ? unique
-          : [...unique, item];
-      }, []);
+        newShopItems = filterDuplicates(newShopItems);
 
       setShopItems((prevItems) => [...prevItems, ...newShopItems]);
     } else if (shopType === "Armor") {
       let newShopItems = itemCollection
         .filter(
-          (item) => item.type === "Armor" && qualityTypes.includes(item.quality)
+          (item) =>
+            item.type === "Armor" &&
+            qualityTypes.includes(item.quality) &&
+            canUseItem(item)
         )
         .map((item) => ({
           ...item,
           itemValue: item.itemValue * 2,
         }));
 
-      // Remove duplicates based on itemName
-      newShopItems = newShopItems.reduce((unique, item) => {
-        return unique.some((uni) => uni.itemName === item.itemName)
-          ? unique
-          : [...unique, item];
-      }, []);
+        newShopItems = filterDuplicates(newShopItems);
 
       setShopItems((prevItems) => [...prevItems, ...newShopItems]);
     }
+  };
+
+  const filterDuplicates = (items) => {
+    return items.reduce((unique, item) => {
+      return unique.some((uni) => uni.itemName === item.itemName)
+        ? unique
+        : [...unique, item];
+    }, []);
   };
 
   const fullEnergy = async (currentUser, selectedCharacterId) => {
