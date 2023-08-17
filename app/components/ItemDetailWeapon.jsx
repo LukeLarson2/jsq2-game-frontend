@@ -3,7 +3,14 @@ import React, { useState, useEffect } from "react";
 import itemQualityCheck from "../utils/itemQualityCheck";
 import itemImageCheck from "../utils/itemImageCheck";
 import NotEnoughGoldModal from "../components/NotEnoughGoldModal";
-import { GiTwoCoins } from "react-icons/gi";
+import {
+  GiShield,
+  GiTwoCoins,
+  GiOverhead,
+  GiShieldReflect,
+  GiMineExplosion,
+} from "react-icons/gi";
+import { SiTarget } from "react-icons/si";
 
 const ItemDetailWeapon = ({
   itemDetails,
@@ -19,7 +26,20 @@ const ItemDetailWeapon = ({
 }) => {
   const [hasEnough, setHasEnough] = useState(true);
   const [checkHasEnough, setCheckHasEnough] = useState(true);
-  const { itemName, type, description, itemValue, quality, key } = itemDetails;
+  const {
+    itemName,
+    type,
+    description,
+    itemValue,
+    quality,
+    key,
+    usedByRoles,
+    damage,
+    accuracy,
+    slot,
+    shielding,
+  } = itemDetails;
+  const usedBy = usedByRoles[0];
   const imageUrl = itemImageCheck(itemName);
   const color = itemQualityCheck(quality);
   const handleClose = () => {
@@ -59,7 +79,7 @@ const ItemDetailWeapon = ({
     equippedGear.mainHand.key !== key && equippedGear.offHand.key !== key;
   return (
     <div className="item-detail-overlay">
-      {(!enoughGold && isShop) && (
+      {!enoughGold && isShop && (
         <NotEnoughGoldModal
           message={"Not enough gold"}
           setEnoughGold={setEnoughGold}
@@ -70,7 +90,7 @@ const ItemDetailWeapon = ({
           <div className="item-detail-type-icon-container">
             <div className="item-detail-type">
               {type}
-              <span>{`(${quality})`}</span>
+              <span>{`(${usedBy})`}</span>
             </div>
             <div className="item-detail-value">
               <div className="item-detail-value-icon-info-container">
@@ -87,6 +107,27 @@ const ItemDetailWeapon = ({
           className="item-detail-content"
           style={{ backgroundImage: `url(${imageUrl})` }}
         >
+          <div className="item-detail-stats-container">
+            {damage ? (
+              <>
+                <div className="item-detail-stats-armor">
+                  {damage}
+                  <GiMineExplosion className="item-detail-stats-icon"/>
+                </div>
+                {slot !== "Off Hand" && (
+                  <div className="item-detail-stats-dodge">
+                    {accuracy}
+                    <SiTarget className="item-detail-stats-icon"/>
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="item-detail-stats-armor">
+                {shielding}
+                <GiShield />
+              </div>
+            )}
+          </div>
           <div className="item-detail-text-container">
             <div className="item-detail-info-container">
               <div className="item-detail-heal-amount">{description}</div>

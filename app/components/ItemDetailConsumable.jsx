@@ -5,6 +5,8 @@ import itemQualityCheck from "../utils/itemQualityCheck";
 import itemImageCheck from "../utils/itemImageCheck";
 import NotEnoughGoldModal from "../components/NotEnoughGoldModal";
 import { GiTwoCoins } from "react-icons/gi";
+import { FaHeart } from "react-icons/fa";
+import { BsLightning } from "react-icons/bs";
 import dbURI from "../lib/dbURI";
 
 const ItemDetailConsumable = ({
@@ -62,7 +64,8 @@ const ItemDetailConsumable = ({
     /* --HEALTH POTION-- */
     if (healAmount && !recoverAmount) {
       const maxHealthCheck = playerHealth + healAmount > 100 ? 100 : healAmount;
-      const newHealth = maxHealthCheck === 100 ? 100 : playerHealth + healAmount;
+      const newHealth =
+        maxHealthCheck === 100 ? 100 : playerHealth + healAmount;
       await fetch(`${dbURI}/users/characters/health`, {
         method: "PUT",
         headers: {
@@ -266,6 +269,20 @@ const ItemDetailConsumable = ({
           className="item-detail-content"
           style={{ backgroundImage: `url(${imageUrl})` }}
         >
+          <div className="item-detail-stats-container">
+            {healAmount > 0 && (
+              <div className="item-detail-stats-armor">
+                {healAmount}
+                <FaHeart className="item-detail-stats-icon" />
+              </div>
+            )}
+            {recoverAmount > 0 && (
+              <div className="item-detail-stats-dodge">
+                {recoverAmount}
+                <BsLightning className="item-detail-stats-icon" />
+              </div>
+            )}
+          </div>
           <div className="item-detail-text-container">
             <div className="item-detail-info-container">
               <div className="item-detail-heal-amount">{description}</div>

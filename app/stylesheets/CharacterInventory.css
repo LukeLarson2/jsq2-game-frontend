@@ -1,5 +1,5 @@
 .player-bag-content::-webkit-scrollbar {
-  width: 6px;
+  display: none;
 }
 .player-bag-content::-webkit-scrollbar-track {
   background-color: transparent;

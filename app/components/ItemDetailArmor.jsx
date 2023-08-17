@@ -3,7 +3,12 @@ import React, { useState, useEffect } from "react";
 import itemQualityCheck from "../utils/itemQualityCheck";
 import itemImageCheck from "../utils/itemImageCheck";
 import NotEnoughGoldModal from "../components/NotEnoughGoldModal";
-import { GiTwoCoins } from "react-icons/gi";
+import {
+  GiShield,
+  GiTwoCoins,
+  GiOverhead,
+  GiShieldReflect,
+} from "react-icons/gi";
 
 const ItemDetailWeapon = ({
   itemDetails,
@@ -19,7 +24,18 @@ const ItemDetailWeapon = ({
 }) => {
   const [hasEnough, setHasEnough] = useState(true);
   const [checkHasEnough, setCheckHasEnough] = useState(true);
-  const { itemName, type, description, itemValue, quality, key } = itemDetails;
+  const {
+    itemName,
+    type,
+    description,
+    itemValue,
+    quality,
+    key,
+    shielding,
+    dodge,
+    usedByRoles,
+  } = itemDetails;
+  const usedBy = usedByRoles[0];
   const imageUrl = itemImageCheck(itemName);
   const color = itemQualityCheck(quality);
   const handleClose = () => {
@@ -58,7 +74,7 @@ const ItemDetailWeapon = ({
 
   return (
     <div className="item-detail-overlay">
-      {(!enoughGold && isShop) && (
+      {!enoughGold && isShop && (
         <NotEnoughGoldModal
           message={"Not enough gold"}
           setEnoughGold={setEnoughGold}
@@ -69,7 +85,7 @@ const ItemDetailWeapon = ({
           <div className="item-detail-type-icon-container">
             <div className="item-detail-type">
               {type}
-              <span>{`(${quality})`}</span>
+              <span>{`(${usedBy})`}</span>
             </div>
             <div className="item-detail-value">
               <div className="item-detail-value-icon-info-container">
@@ -86,6 +102,18 @@ const ItemDetailWeapon = ({
           className="item-detail-content"
           style={{ backgroundImage: `url(${imageUrl})` }}
         >
+          <div className="item-detail-stats-container">
+            <div className="item-detail-stats-armor">
+              {shielding}
+              <GiShield className="item-detail-stats-icon"/>
+            </div>
+            {dodge > 0 && (
+              <div className="item-detail-stats-dodge">
+                {dodge}
+                <GiOverhead className="item-detail-stats-icon"/>
+              </div>
+            )}
+          </div>
           <div className="item-detail-text-container">
             <div className="item-detail-info-container">
               <div className="item-detail-heal-amount">{description}</div>
