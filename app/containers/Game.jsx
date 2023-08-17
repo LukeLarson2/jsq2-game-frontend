@@ -42,6 +42,7 @@ const Game = ({
   const [isSkillTreeOpen, setIsSkillTreeOpen] = useState();
   const [showEdit, setShowEdit] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [componentIsLoading, setComponentIsLoading] = useState(false);
   const [showBattle, setShowBattle] = useState(false);
   const [earnedXp, setEarnedXp] = useState(false);
   const [area, setArea] = useState("");
@@ -100,6 +101,7 @@ const Game = ({
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
   const characterInfoFetch = async () => {
+    setComponentIsLoading(true);
     const data = await getCharacterInfo(currentUser, selectedCharacterId);
     setCharacter(data);
     setCurrentLevel(data.level);
@@ -140,6 +142,7 @@ const Game = ({
       setHighRank(false);
       setMasterRank(false);
     }
+    setComponentIsLoading(false);
   };
 
   const populateStore = async () => {
@@ -603,6 +606,23 @@ const Game = ({
   if (character) {
     return (
       <div className="game-container-place-holder">
+                {componentIsLoading && (
+          <div className="main-spinner-container-position">
+            <div className="main-spinner-container">
+              <div className="main-spinner a">
+                <div className="main-spinner b">
+                  <div className="main-spinner c">
+                    <div className="main-spinner d">
+                      <div className="main-spinner e">
+                        <div className="main-spinner f"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
         <CharacterBanner
           character={character}
           xpNeeded={xpNeeded}
