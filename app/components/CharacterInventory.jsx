@@ -28,7 +28,7 @@ const CharacterInventory = ({
   setUseItem,
   equippedGear,
   currentUser,
-  selectedCharacterId
+  selectedCharacterId,
 }) => {
   const [showModal, setShowModal] = useState(false);
   const [itemDetails, setItemDetails] = useState({});
@@ -56,6 +56,59 @@ const CharacterInventory = ({
   const handleFilter = (value) => {
     setFilterValue(value);
   };
+
+  const equippedItems = inventory.filter((item) =>
+    [
+      equippedGear.armor.key,
+      equippedGear.mainHand.key,
+      equippedGear.offHand.key,
+    ].includes(item.key)
+  );
+
+  const otherItems = inventory.filter(
+    (item) =>
+      ![
+        equippedGear.armor.key,
+        equippedGear.mainHand.key,
+        equippedGear.offHand.key,
+      ].includes(item.key)
+  );
+
+  const allItems = [...equippedItems, ...otherItems];
+
+  const displayItems = allItems.map((item) => {
+    const { itemName, quality, key, type } = item;
+    const icon = itemIconCheck(type);
+    const color = itemQualityCheck(quality);
+    const image = itemImageCheck(itemName);
+    if (filterValue.includes(type)) {
+      return (
+        <div
+          key={key}
+          className="player-bag-item-info"
+          onClick={() => handleClick(item)}
+          style={{ backgroundColor: color }}
+        >
+          <div
+            className="player-bag-item-image"
+            style={{ backgroundImage: `url(${image})` }}
+          >
+            <span className="player-bag-item-icon">{icon}</span>
+            {equippedGear.armor.key === key && (
+              <div className="player-bag-item-equipped">Equipped</div>
+            )}
+            {equippedGear.mainHand.key === key && (
+              <div className="player-bag-item-equipped">Equipped</div>
+            )}
+            {equippedGear.offHand.key === key && (
+              <div className="player-bag-item-equipped">Equipped</div>
+            )}
+          </div>
+        </div>
+      );
+    }
+    return null;
+  });
 
   return (
     <div className="player-bag-overlay">
@@ -127,54 +180,7 @@ const CharacterInventory = ({
             }}
           >
             {!isLoading ? (
-              <div className="player-bag-content">
-                {Array.isArray(inventory) &&
-                inventory.some((item) => filterValue.includes(item.type)) ? (
-                  inventory.map((item) => {
-                    const { itemName, quality, key, type } = item;
-                    const icon = itemIconCheck(type);
-                    const color = itemQualityCheck(quality);
-                    const image = itemImageCheck(itemName);
-                    if (filterValue.includes(type)) {
-                      return (
-                        <div
-                          key={key}
-                          className="player-bag-item-info"
-                          onClick={() => handleClick(item)}
-                          style={{ backgroundColor: color }}
-                        >
-                          <div
-                            className="player-bag-item-image"
-                            style={{ backgroundImage: `url(${image})` }}
-                          >
-                            <span className="player-bag-item-icon">{icon}</span>
-                            {equippedGear.armor.key === key && (
-                              <div className="player-bag-item-equipped">
-                                Equipped
-                              </div>
-                            )}
-                            {equippedGear.mainHand.key === key && (
-                              <div className="player-bag-item-equipped">
-                                Equipped
-                              </div>
-                            )}
-                            {equippedGear.offHand.key === key && (
-                              <div className="player-bag-item-equipped">
-                                Equipped
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      );
-                    }
-                    return null;
-                  })
-                ) : (
-                  <div className="character-inventory-no-items">
-                    No items to display
-                  </div>
-                )}
-              </div>
+              <div className="player-bag-content">{displayItems}</div>
             ) : (
               <div>
                 {itemHealAmount > 0 ? (

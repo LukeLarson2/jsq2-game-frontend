@@ -97,7 +97,6 @@ const Game = ({
   const [addStoryDelete, setAddStoryDelete] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState("");
 
-
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
   const characterInfoFetch = async () => {
@@ -329,7 +328,9 @@ const Game = ({
     getReward,
     selectedCharacterId,
     currentLevel,
-    currentArenaLevel
+    currentArenaLevel,
+    showInventory,
+    showEdit,
   ]);
 
   useEffect(() => {
@@ -379,7 +380,6 @@ const Game = ({
       }
     }
   }, [selectedRegion]);
-
 
   const xpPercentage = Math.floor((currentXp / xpNeeded) * 100);
 
@@ -598,7 +598,6 @@ const Game = ({
       setShowDeath(true);
     }
   }, [playerHealth]);
-
 
   // Only render BattleScreen when character data is loaded
   if (character) {

@@ -241,6 +241,7 @@
     background-repeat: no-repeat;
     box-sizing: border-box;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-energy::after {
     content: "";
@@ -255,6 +256,7 @@
     width: 15px;
     height: 15px;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-energy::before {
     content: "";
@@ -268,6 +270,7 @@
     height: 6px;
     z-index: 10;
     animation: bubbles-energy 6s linear infinite;
+    z-index: 10;
   }
   @keyframes bubbles-energy {
     0% {
@@ -309,6 +312,7 @@
     background-repeat: no-repeat;
     box-sizing: border-box;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-health::after {
     content: "";
@@ -323,6 +327,7 @@
     width: 15px;
     height: 15px;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-health::before {
     content: "";
@@ -336,6 +341,7 @@
     height: 6px;
     z-index: 10;
     animation: bubbles-health 6s linear infinite;
+    z-index: 10;
   }
   @keyframes bubbles-health {
     0% {
@@ -393,7 +399,7 @@
     box-shadow: 0px 0px 10px 10px black;
     padding: 30px;
     margin-top: 30px;
-    scale: .8;
+    scale: 0.8;
   }
   .player-inventory-title {
     display: flex;
@@ -460,7 +466,6 @@
     border-radius: 15px;
     background-position: center;
     background-size: contain;
-
   }
   .player-bag-item-icon-name-container {
     display: flex;
@@ -589,6 +594,7 @@
     background-repeat: no-repeat;
     box-sizing: border-box;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-energy::after {
     content: "";
@@ -603,6 +609,7 @@
     width: 15px;
     height: 15px;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-energy::before {
     content: "";
@@ -616,6 +623,7 @@
     height: 6px;
     z-index: 10;
     animation: bubbles-energy 6s linear infinite;
+    z-index: 10;
   }
   @keyframes bubbles-energy {
     0% {
@@ -657,6 +665,7 @@
     background-repeat: no-repeat;
     box-sizing: border-box;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-health::after {
     content: "";
@@ -671,6 +680,7 @@
     width: 15px;
     height: 15px;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-health::before {
     content: "";
@@ -684,6 +694,7 @@
     height: 6px;
     z-index: 10;
     animation: bubbles-health 6s linear infinite;
+    z-index: 10;
   }
   @keyframes bubbles-health {
     0% {
@@ -936,6 +947,7 @@
     background-repeat: no-repeat;
     box-sizing: border-box;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-energy::after {
     content: "";
@@ -950,6 +962,7 @@
     width: 15px;
     height: 15px;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-energy::before {
     content: "";
@@ -963,6 +976,7 @@
     height: 6px;
     z-index: 10;
     animation: bubbles-energy 6s linear infinite;
+    z-index: 10;
   }
   @keyframes bubbles-energy {
     0% {
@@ -1004,6 +1018,7 @@
     background-repeat: no-repeat;
     box-sizing: border-box;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-health::after {
     content: "";
@@ -1017,6 +1032,7 @@
     background: #fff;
     width: 15px;
     height: 15px;
+    z-index: 10;
     box-shadow: 0px 0px 15px white;
   }
   .using-item-loader-health::before {
@@ -1031,6 +1047,7 @@
     height: 6px;
     z-index: 10;
     animation: bubbles-health 6s linear infinite;
+    z-index: 10;
   }
   @keyframes bubbles-health {
     0% {
@@ -1283,6 +1300,7 @@
     background-repeat: no-repeat;
     box-sizing: border-box;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-energy::after {
     content: "";
@@ -1297,6 +1315,7 @@
     width: 15px;
     height: 15px;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-energy::before {
     content: "";
@@ -1310,6 +1329,7 @@
     height: 6px;
     z-index: 10;
     animation: bubbles-energy 6s linear infinite;
+    z-index: 10;
   }
   @keyframes bubbles-energy {
     0% {
@@ -1351,6 +1371,7 @@
     background-repeat: no-repeat;
     box-sizing: border-box;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-health::after {
     content: "";
@@ -1365,6 +1386,7 @@
     width: 15px;
     height: 15px;
     box-shadow: 0px 0px 15px white;
+    z-index: 10;
   }
   .using-item-loader-health::before {
     content: "";
@@ -1378,6 +1400,7 @@
     height: 6px;
     z-index: 10;
     animation: bubbles-health 6s linear infinite;
+    z-index: 10;
   }
   @keyframes bubbles-health {
     0% {
