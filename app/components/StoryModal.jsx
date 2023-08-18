@@ -82,13 +82,9 @@ const StoryModal = ({
     try {
       // Removing the item from the inventory
       await axios.delete(`${dbURI}/users/characters/inventory`, {
-        headers: {
-          Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
-        },
-        data: {
           selectedCharacterId, // Using selectedCharacterId instead of characterId
-          key: key,
-        },
+          key,
+          currentUser
       });
       // If the request is successful, do something here, e.g., close the modal
     } catch (error) {
