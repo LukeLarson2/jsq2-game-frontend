@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CharacterCard from "./CharacterCard";
 import EnemyNPCCard from "./EnemyNPCCard";
 import getEnemyInfo from "../utils/getEnemyInfo";
@@ -10,7 +10,6 @@ import handleRecovery from "../utils/handleRecovery";
 import handleHealing from "../utils/handleHealing";
 import handleStandardDamage from "../utils/handleStandardDamage";
 import handleEnemyAttack from "../utils/handleEnemyAttack";
-import handleLifeSteal from '../utils/handleLifeSteal'
 import getPlayerHealth from "../utils/getPlayerHealth";
 import dbURI from "../lib/dbURI";
 
@@ -57,19 +56,10 @@ const BattleScreen = ({
   arenaTracker,
   currentUser,
   selectedCharacterId,
-  regionColor,
-  currentEnemy,
-  enemyHealth,
-  enemyMaxHealth,
-  timeoutId,
-  setRegionColor,
-  setCurrentEnemy,
-  setEnemyHealth,
-  setEnemyMaxHealth,
-  setTimeoutId,
-  playerRecoveryDisplayed,
-  setPlayerRecoveryDisplayed,
 }) => {
+  const [currentEnemy, setCurrentEnemy] = useState({});
+  const [enemyHealth, setEnemyHealth] = useState(0);
+  const [enemyMaxHealth, setEnemyMaxHealth] = useState(0);
   const [playerDamageTaken, setPlayerDamageTaken] = useState(0);
   const [enemyDamageTaken, setEnemyDamageTaken] = useState(0);
   const [isAttacking, setIsAttacking] = useState(false);
@@ -85,8 +75,10 @@ const BattleScreen = ({
   const [randomQuote, setRandomQuote] = useState("");
   const [showAlert, setShowAlert] = useState(false);
   const [message, setMessage] = useState("");
+  const [timeoutId, setTimeoutId] = useState(null);
+  const [regionColor, setRegionColor] = useState("");
   const [displayedRecovery, setDisplayedRecovery] = useState(0);
-
+  const [playerRecoveryDisplayed, setPlayerRecoveryDisplyed] = useState(false);
   const [isHealingDone, setIsHealingDone] = useState(false);
 
   // True is player, False is enemy
@@ -118,6 +110,57 @@ const BattleScreen = ({
   };
 
   const { armor, mainHand, offHand } = equippedGear;
+  const generateEnemyCard = (race, area, level) => {
+    const fetchEnemy = async () => {
+      const allEnemyInfo = await getEnemyInfo();
+      if (allEnemyInfo) {
+        const possibleEnemies = allEnemyInfo.filter((enemy) =>
+          enemy.race === race &&
+          enemy.level === level &&
+          enemy.area === area &&
+          enemy.health > 0 // Ensure that the health is positive
+        );
+
+        if (possibleEnemies.length > 0) {
+          const randomIndex = Math.floor(Math.random() * possibleEnemies.length);
+          const selectedEnemy = possibleEnemies[randomIndex];
+
+          // Additional check to ensure health is positive
+          const enemyHealth = Math.max(0, selectedEnemy.health);
+
+          setRegionColor(regionColorCheck(selectedEnemy.area.toLowerCase()));
+          setCurrentEnemy(selectedEnemy);
+          setCurrentEnemyName(selectedEnemy.name);
+          setEnemyHealth(enemyHealth);
+          setEnemyMaxHealth(enemyHealth);
+        }
+      }
+    };
+    fetchEnemy();
+  };
+
+
+  useEffect(() => {
+    setShowDeath(false);
+    setPlayerDeath(false);
+    generateEnemyCard(race, area, level);
+  }, []);
+
+  useEffect(() => {
+    if (currentEnemy.health && enemyHealth <= 0) {
+      setShowVictory(true);
+    }
+  }, [enemyHealth, currentEnemy.health]);
+
+  useEffect(() => {
+    if (showVictory && timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    if (playerDeath) {
+      clearTimeout(timeoutId);
+      setShowDeath(true);
+    }
+  }, [showVictory, playerDeath, timeoutId]);
 
   const handleHit = (user, damageAmount) => {
     if (user === "player") {
@@ -153,6 +196,9 @@ const BattleScreen = ({
     }
   };
 
+  useEffect(() => {
+    getPlayerHealth(currentUser, selectedCharacterId, setPlayerHealth);
+  }, [playerRecoveryDisplayed]);
   const handleAttack = (
     user,
     skillDamage,
@@ -197,7 +243,7 @@ const BattleScreen = ({
           battleRecovery,
           setIsRecovering,
           setTurn,
-          setPlayerRecoveryDisplayed,
+          setPlayerRecoveryDisplyed,
           setDisplayedRecovery,
           setCurrentEnergy,
           setIsAttacking,
@@ -222,10 +268,9 @@ const BattleScreen = ({
           setCurrentEnergy,
           setPlayerHealth,
           getPlayerHealth,
-          setPlayerRecoveryDisplayed,
+          setPlayerRecoveryDisplyed,
           currentUser,
-          selectedCharacterId,
-          isLifeSteal
+          selectedCharacterId
         );
         setIsHealingDone(true);
 
@@ -252,13 +297,32 @@ const BattleScreen = ({
           triggerQuote,
           setCurrentEnergy,
           currentUser,
-          selectedCharacterId,
-          isLifeSteal
+          selectedCharacterId
         );
 
         /* -- STANDARD LIFE STEAL SKILL -- */
       } else if (isLifeSteal) {
-        handleLifeSteal(
+        handleHealing(
+          healingToNum,
+          character,
+          playerHealth,
+          currentEnergy,
+          skillEnergy,
+          setBattleRecovery,
+          battleRecovery,
+          setIsRecovering,
+          setTurn,
+          setIsAttacking,
+          setDisplayedRecovery,
+          setCurrentEnergy,
+          setPlayerHealth,
+          getPlayerHealth,
+          setPlayerRecoveryDisplyed,
+          currentUser,
+          selectedCharacterId
+        );
+        setIsHealingDone(true);
+        handleStandardDamage(
           "player",
           damageToNum,
           mainHand,
@@ -279,23 +343,8 @@ const BattleScreen = ({
           triggerQuote,
           setCurrentEnergy,
           currentUser,
-          selectedCharacterId,
-          healingToNum,
-          playerHealth,
-          setBattleRecovery,
-          battleRecovery,
-          setIsRecovering,
-          setDisplayedRecovery,
-          setPlayerHealth,
-          getPlayerHealth,
-          setPlayerRecoveryDisplayed,
+          selectedCharacterId
         );
-        if (enemyDamageTaken > 0) {
-          handleHealing(
-
-          );
-          setIsHealingDone(true);
-        }
       }
 
       /* --ENEMY ATTACKING SEQUENCE -- */
@@ -355,6 +404,12 @@ const BattleScreen = ({
       setCurrentEnemyAttack("");
     }, 3000);
   };
+
+  useEffect(() => {
+    if (playerHealth <= 0) {
+      setShowDeath(true);
+    }
+  }, [playerHealth]);
 
   return (
     <div
@@ -441,21 +496,23 @@ const BattleScreen = ({
             enemyMaxHealth={enemyMaxHealth}
             regionColor={regionColor}
           />
-        ) :           <div className="main-spinner-container-position">
-        <div className="main-spinner-container">
-          <div className="main-spinner a">
-            <div className="main-spinner b">
-              <div className="main-spinner c">
-                <div className="main-spinner d">
-                  <div className="main-spinner e">
-                    <div className="main-spinner f"></div>
+        ) : (
+          <div className="main-spinner-container-position">
+            <div className="main-spinner-container">
+              <div className="main-spinner a">
+                <div className="main-spinner b">
+                  <div className="main-spinner c">
+                    <div className="main-spinner d">
+                      <div className="main-spinner e">
+                        <div className="main-spinner f"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>}
+        )}
       </div>
     </div>
   );
