@@ -55,7 +55,7 @@ const CharacterCardEdit = ({ setShowEdit, showEdit, currentUser, selectedCharact
       setCurrentOffHand(characterInfo.equippedGear.offHand);
     };
     fetchItems();
-  }, [currentMainHand, currentOffHand, currentArmor]);
+  }, [showEdit]);
 
   useEffect(() => {
     const handleResize = () => {

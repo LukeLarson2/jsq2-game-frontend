@@ -71,7 +71,8 @@ const CharacterCardEditMainHand = ({
             if (currentMainHand.damage < damage) {
               arrowColorUpper = "#03b438";
               arrowDirectionUpper = "180";
-            } else if (currentMainHand.accuracy < accuracy) {
+            }
+            if (currentMainHand.accuracy < accuracy) {
               arrowColorLower = "#03b438";
               arrowDirectionLower = "180";
             }

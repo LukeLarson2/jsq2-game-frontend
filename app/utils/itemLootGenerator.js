@@ -8,7 +8,7 @@ const qualities = [
   { quality: "Rare", probability: 0.12 },
   { quality: "Epic", probability: 0.08 },
   { quality: "Legendary", probability: 0.04 },
-  { quality: "Mythic", probability: 0.01 },
+  { quality: "Mythical", probability: 0.01 },
 ];
 
 // Define container types.
@@ -66,11 +66,13 @@ const itemLootGenerator = async (container) => {
 
   // Fetch items from the database.
   const itemsPool = await getBagItems();
+  console.log("Items fetched from the database:", itemsPool);
 
   for (let i = 0; i < 5; i++) {
     let item = null;
     while (item === null) {
       let quality = randomQuality();
+      console.log(`Selected quality: ${quality}`);
       let qualityIndex = qualities.findIndex((q) => q.quality === quality);
 
       if (
@@ -89,18 +91,23 @@ const itemLootGenerator = async (container) => {
 
       if (qualityIndex <= maxQualityIndex) {
         item = getRandomItem(itemsPool, quality);
+        console.log(`Selected item:`, item);
       }
     }
 
     // Randomize the shielding, dodge, damage, and accuracy values within a range of +/- 2% of the original value.
     let totalPercentageChange = 0;
     ["shielding", "dodge", "damage", "accuracy"].forEach((key) => {
+      console.log(key)
       const originalValue = item[key];
-      const randomFactor = 1 + (Math.random() * 0.04 - 0.02); // Random factor between 98% to 102%
-      const newValue = Math.ceil(originalValue * randomFactor)
-      totalPercentageChange += (newValue - originalValue) / originalValue;
+      if (originalValue === 0) return; // Skip if the value is zero
+
+      const randomFactor = 1 + (Math.random() * 0.2 - 0.1); // Random factor between 98% to 102%
+      const newValue = Math.ceil(originalValue * randomFactor);
+      totalPercentageChange += originalValue !== 0 ? (newValue - originalValue) / originalValue : 0; // Prevent division by zero
       item[key] = newValue;
     });
+
 
     // Adjust the value of the item based on the total percentage change from the base stats.
     item.value = item.value * (1 + totalPercentageChange);

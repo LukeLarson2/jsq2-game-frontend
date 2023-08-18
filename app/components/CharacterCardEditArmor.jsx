@@ -68,16 +68,24 @@ const CharacterCardEditArmor = ({
               const itemEquipped =
                 currentArmor.key === key ? true : false;
               const canUse = usedByRoles.includes(role);
+
               let arrowColorUpper = "#b11717";
               let arrowDirectionUpper = "0";
               let arrowColorLower = "#b11717";
               let arrowDirectionLower = "0";
+
               const differenceValueShield = shielding - currentArmor.shielding
               const differenceValueDodge = dodge - currentArmor.dodge
-              if (currentArmor.shielding < shielding) {
+
+              console.log("itemName", itemName)
+              console.log("currentArmor.dodge", currentArmor.dodge)
+              console.log("dodge", dodge)
+
+              if (shielding > currentArmor.shielding) {
                 arrowColorUpper = "#03b438";
                 arrowDirectionUpper = "180";
-              } else if (currentArmor.dodge < dodge) {
+              }
+              if (dodge > currentArmor.dodge) {
                 arrowColorLower = "#03b438";
                 arrowDirectionLower = "180";
               }
