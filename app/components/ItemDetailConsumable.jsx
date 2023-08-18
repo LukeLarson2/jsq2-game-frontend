@@ -301,10 +301,7 @@ const ItemDetailConsumable = ({
             <div className="item-detail-info-container">
               <div className="item-detail-heal-amount">{description}</div>
             </div>
-            <div
-              className="item-detail-btn-placement"
-              style={{ flexDirection: isSelling ? "flex" : "column" }}
-            >
+            <div className="item-detail-btn-placement" style={{flexDirection: isSelling ? 'flex' : 'column'}}>
               {!isSelling && (
                 <div className="item-detail-quantity-container">
                   <GoTriangleDown
@@ -355,28 +352,28 @@ const ItemDetailConsumable = ({
                 </div>
               ) : (
                 <>
-                  <button
-                    className="item-detail-use-item"
-                    type="button"
-                    disabled={disabled}
-                    onClick={() =>
-                      handleUseItem(
-                        playerHealth,
-                        currentEnergy,
-                        healAmount,
-                        recoverAmount
-                      )
-                    }
-                  >
-                    Use
-                  </button>
-                  <button
-                    className="item-detail-close-modal"
-                    type="button"
-                    onClick={() => handleClose()}
-                  >
-                    Close
-                  </button>
+                <button
+                  className="item-detail-use-item"
+                  type="button"
+                  disabled={disabled}
+                  onClick={() =>
+                    handleUseItem(
+                      playerHealth,
+                      currentEnergy,
+                      healAmount,
+                      recoverAmount
+                    )
+                  }
+                >
+                  Use
+                </button>
+                <button
+                  className="item-detail-close-modal"
+                  type="button"
+                  onClick={() => handleClose()}
+                >
+                  Close
+                </button>
                 </>
               )}
             </div>
