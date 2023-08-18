@@ -1,6 +1,6 @@
 function calculateExpForLevel(level) {
-  if (level < 1 || level > 30) {
-    throw new Error("Level should be between 1 and 30");
+  if (level < 1) {
+    throw new Error("Level should be greater than 1");
   }
 
   // This is our base experience needed to go from level 1 to 2.
@@ -8,7 +8,7 @@ function calculateExpForLevel(level) {
 
   // exp = baseExp * (rate ^ (level - 2))
   // For levels 1 to 5, we'll use a smaller rate to make leveling easier.
-  let rate = level <= 5 ? 1.05 : 1.75;
+  let rate = level <= 5 ? 1.2 : 1.4;
 
   if (level === 1) {
     return 6;

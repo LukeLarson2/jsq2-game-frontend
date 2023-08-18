@@ -130,13 +130,9 @@ const StoryModal = ({
     try {
       // Increasing character's gold
       await axios.put(`${dbURI}/users/characters/gold`, {
-        headers: {
-          Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
-        },
-        data: {
-          selectedCharacterId, // Using selectedCharacterId
-          gold: 30000,
-        },
+        selectedCharacterId, // Using selectedCharacterId
+        gold: 30000,
+        currentUser,
       });
       // If successful, you might want to update the character's gold in the client's state
     } catch (error) {

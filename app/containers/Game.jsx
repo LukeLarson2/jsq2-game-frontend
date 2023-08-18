@@ -130,13 +130,13 @@ const Game = ({
       setMasterRank(false);
       setChampionRank(false);
     }
-    if (data.arenaCount >= 30 && data.arenaCount < 33) {
+    if (data.arenaCount >= 30 && data.arenaCount < 35) {
       setMasterRank(true);
       setLowRank(false);
       setHighRank(false);
       setChampionRank(false);
     }
-    if (data.arenaCount === 33) {
+    if (data.arenaCount === 35) {
       setChampionRank(true);
       setLowRank(false);
       setHighRank(false);
