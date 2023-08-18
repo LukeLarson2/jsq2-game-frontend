@@ -48,13 +48,6 @@ const CharacterCardEditOffHand = ({
         <div className="character-card-edit-slot-title">Off Hand</div>
         <div className="character-card-edit-content">
           {inventory
-            .filter(
-              (item, index, self) =>
-                index ===
-                self.findIndex(
-                  (t) => t.itemName === item.itemName && t.slot === item.slot
-                )
-            )
             .map((item, index) => {
               const {
                 itemName,
@@ -63,21 +56,22 @@ const CharacterCardEditOffHand = ({
                 quality,
                 slot,
                 usedByRoles,
-                shielding,
+                shielding, key
               } = item;
               const color = itemQualityCheck(quality);
               const imageUrl = itemImageCheck(itemName);
-              const itemEquipped =
-                currentOffHand.itemName === itemName ? true : false;
+              const itemEquipped = currentOffHand.key === key ? true : false;
               const canUse = usedByRoles.includes(role);
-              let arrowColor = "#b11717";
-              let arrowDirection = "0";
+              let arrowColorUpper = "#b11717";
+              let arrowDirectionUpper = "0";
+              let arrowColorLower = "#b11717";
+              let arrowDirectionLower = "0";
               const differenceValue = damage
                 ? damage - currentOffHand.damage
                 : shielding - currentOffHand.shielding;
               if (currentOffHand.damage < damage) {
-                arrowColor = "#03b438";
-                arrowDirection = "180";
+                arrowColorUpper = "#03b438";
+                arrowDirectionUpper = "180";
               }
               if (slot === "Off Hand" && canUse) {
                 return (
@@ -113,12 +107,12 @@ const CharacterCardEditOffHand = ({
                         {!itemEquipped && (
                           <div
                             className="character-card-edit-slot-difference"
-                            style={{ color: arrowColor }}
+                            style={{ color: arrowColorUpper }}
                           >
                             {differenceValue !== 0 && (
                               <GoTriangleDown
                                 style={{
-                                  transform: `rotate(${arrowDirection}deg)`,
+                                  transform: `rotate(${arrowDirectionUpper}deg)`,
                                 }}
                               />
                             )}

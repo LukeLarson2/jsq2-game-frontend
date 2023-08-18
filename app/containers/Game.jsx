@@ -606,7 +606,7 @@ const Game = ({
   if (character) {
     return (
       <div className="game-container-place-holder">
-                {componentIsLoading && (
+                {/* {componentIsLoading && (
           <div className="main-spinner-container-position">
             <div className="main-spinner-container">
               <div className="main-spinner a">
@@ -622,7 +622,7 @@ const Game = ({
               </div>
             </div>
           </div>
-        )}
+        )} */}
         <CharacterBanner
           character={character}
           xpNeeded={xpNeeded}

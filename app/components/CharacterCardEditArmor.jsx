@@ -52,13 +52,6 @@ const CharacterCardEditArmor = ({
         <div className="character-card-edit-slot-title">Armor</div>
         <div className="character-card-edit-content">
           {inventory
-            .filter(
-              (item, index, self) =>
-                index ===
-                self.findIndex(
-                  (t) => t.itemName === item.itemName && t.slot === item.slot
-                )
-            )
             .map((item, index) => {
               const {
                 itemName,
@@ -68,22 +61,25 @@ const CharacterCardEditArmor = ({
                 slot,
                 usedByRoles,
                 dodge,
+                key
               } = item;
               const color = itemQualityCheck(quality);
               const imageUrl = itemImageCheck(itemName);
               const itemEquipped =
-                currentArmor.itemName === itemName ? true : false;
+                currentArmor.key === key ? true : false;
               const canUse = usedByRoles.includes(role);
-              let arrowColor = "#b11717";
-              let arrowDirection = "0";
+              let arrowColorUpper = "#b11717";
+              let arrowDirectionUpper = "0";
+              let arrowColorLower = "#b11717";
+              let arrowDirectionLower = "0";
               const differenceValueShield = shielding - currentArmor.shielding
               const differenceValueDodge = dodge - currentArmor.dodge
               if (currentArmor.shielding < shielding) {
-                arrowColor = "#03b438";
-                arrowDirection = "180";
+                arrowColorUpper = "#03b438";
+                arrowDirectionUpper = "180";
               } else if (currentArmor.dodge < dodge) {
-                arrowColor = "#03b438";
-                arrowDirection = "180";
+                arrowColorLower = "#03b438";
+                arrowDirectionLower = "180";
               }
               if (slot === "Armor" && canUse) {
                 return (
@@ -119,12 +115,12 @@ const CharacterCardEditArmor = ({
                         {!itemEquipped && (
                           <div
                             className="character-card-edit-slot-difference"
-                            style={{ color: arrowColor }}
+                            style={{ color: arrowColorUpper }}
                           >
                             {differenceValueShield !== 0 && (
                               <GoTriangleDown
                                 style={{
-                                  transform: `rotate(${arrowDirection}deg)`,
+                                  transform: `rotate(${arrowDirectionUpper}deg)`,
                                 }}
                               />
                             )}
@@ -137,12 +133,12 @@ const CharacterCardEditArmor = ({
                       {!itemEquipped && (
                           <div
                             className="character-card-edit-slot-difference"
-                            style={{ color: arrowColor }}
+                            style={{ color: arrowColorLower }}
                           >
                             {differenceValueDodge !== 0 && (
                               <GoTriangleDown
                                 style={{
-                                  transform: `rotate(${arrowDirection}deg)`,
+                                  transform: `rotate(${arrowDirectionLower}deg)`,
                                 }}
                               />
                             )}

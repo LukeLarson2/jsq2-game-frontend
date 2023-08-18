@@ -139,13 +139,10 @@ const BattleScreen = ({
       }, 1500);
     } else {
       if (damageAmount < 1 && currentEnemy.health > 0) {
-        setTimeout(() => setPlayerDamageDisplayed(true), 1000);
+        setTimeout(() => setPlayerDamageDisplayed(true), 100);
         return;
       }
-      setTimeout(() => {
-        setPlayerIsHit(true);
-      }, 100);
-      setTimeout(() => setPlayerDamageDisplayed(true), 1000);
+      setTimeout(() => setPlayerDamageDisplayed(true), 100);
 
       setTimeout(() => {
         setPlayerIsHit(false);
@@ -174,13 +171,11 @@ const BattleScreen = ({
       return;
     }
     const triggerQuote = (quoteType) => {
-      const randomIndex = Math.floor(Math.random() * 10);
+      const quoteLengths = quoteType.length;
+      const randomIndex = Math.floor(Math.random() * quoteLengths);
       setRandomQuote(currentEnemy[quoteType][randomIndex]);
       setIsQuoteVisible(true);
       // delay the start of the fading effect
-      setTimeout(() => {
-        setIsQuoteVisible(false);
-      }, 1600);
     };
     const damageToNum = Number.parseInt(skillDamage);
     const healingToNum = Number.parseInt(skillHealing);
@@ -345,7 +340,8 @@ const BattleScreen = ({
           currentGold,
           currentUser,
           selectedCharacterId,
-          setPlayerDeath
+          setPlayerDeath,
+          setPlayerIsHit
         );
         setIsHealingDone(false); // Reset the flag for the next turn
       };
@@ -357,7 +353,7 @@ const BattleScreen = ({
       if (enemyHealth <= 0) return;
       setTurn(true);
       setCurrentEnemyAttack("");
-    }, 3900);
+    }, 3000);
   };
 
   return (
@@ -445,7 +441,21 @@ const BattleScreen = ({
             enemyMaxHealth={enemyMaxHealth}
             regionColor={regionColor}
           />
-        ) : null}
+        ) :           <div className="main-spinner-container-position">
+        <div className="main-spinner-container">
+          <div className="main-spinner a">
+            <div className="main-spinner b">
+              <div className="main-spinner c">
+                <div className="main-spinner d">
+                  <div className="main-spinner e">
+                    <div className="main-spinner f"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>}
       </div>
     </div>
   );

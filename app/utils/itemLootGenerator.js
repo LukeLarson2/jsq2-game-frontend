@@ -73,7 +73,6 @@ const itemLootGenerator = async (container) => {
       let quality = randomQuality();
       let qualityIndex = qualities.findIndex((q) => q.quality === quality);
 
-      // If the container is 'mithril-chest' or 'enchanted-mithril-chest', don't drop common or uncommon items
       if (
         ["mithril-chest", "enchanted-mithril-chest"].includes(container) &&
         ["Common", "Uncommon"].includes(quality)
@@ -81,7 +80,6 @@ const itemLootGenerator = async (container) => {
         continue;
       }
 
-      // If the container is 'transcendent-mithril-chest', don't drop common, uncommon, or rare items
       if (
         container === "transcendent-mithril-chest" &&
         ["Common", "Uncommon", "Rare"].includes(quality)
@@ -94,10 +92,24 @@ const itemLootGenerator = async (container) => {
       }
     }
 
+    // Randomize the shielding, dodge, damage, and accuracy values within a range of +/- 2% of the original value.
+    let totalPercentageChange = 0;
+    ["shielding", "dodge", "damage", "accuracy"].forEach((key) => {
+      const originalValue = item[key];
+      const randomFactor = 1 + (Math.random() * 0.04 - 0.02); // Random factor between 98% to 102%
+      const newValue = Math.ceil(originalValue * randomFactor)
+      totalPercentageChange += (newValue - originalValue) / originalValue;
+      item[key] = newValue;
+    });
+
+    // Adjust the value of the item based on the total percentage change from the base stats.
+    item.value = item.value * (1 + totalPercentageChange);
+
     items.push(item);
   }
 
   return items;
 };
+
 
 export default itemLootGenerator;
