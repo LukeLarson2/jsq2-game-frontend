@@ -189,25 +189,53 @@
 
 @media screen and (min-width: 845px) and (max-width: 1919px) {
   .player-ingame-map-area-name {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
     position: absolute;
-    text-align: center;
-    position: absolute;
-    width: 40px; /* specify a fixed width */
-    height: 40px; /* specify a fixed height */
-    left: 0;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    width: 0px;
+    height: fit-content;
+    left: 10%;
     top: 0;
     bottom: 0;
     right: 0;
-    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .region-info-text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 0px;
+    height: 50px;
     color: transparent;
-    z-index: 4;
+    pointer-events: none;
+  }
+  .region-info-name {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
   }
   .region-info-level {
     font-size: 15px;
     font-style: italic;
     font-weight: normal;
     margin-top: -5px;
-    color: transparent;
+    width: 100px;
+    height: 25px;
+    pointer-events: none;
+  }
+
+  .player-ingame-map-area:hover .region-info-text {
+    color: white;
+    width: 500px;
   }
 }
 @media screen and (min-width: 391px) and (max-width: 844px) {
