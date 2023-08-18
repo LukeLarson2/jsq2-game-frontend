@@ -227,7 +227,7 @@ const BattleScreen = ({
           battleRecovery,
           setIsRecovering,
           setTurn,
-          setPlayerRecoveryDisplyed,
+          setPlayerRecoveryDisplayed,
           setDisplayedRecovery,
           setCurrentEnergy,
           setIsAttacking,
@@ -252,7 +252,7 @@ const BattleScreen = ({
           setCurrentEnergy,
           setPlayerHealth,
           getPlayerHealth,
-          setPlayerRecoveryDisplyed,
+          setPlayerRecoveryDisplayed,
           currentUser,
           selectedCharacterId
         );
@@ -301,7 +301,7 @@ const BattleScreen = ({
           setCurrentEnergy,
           setPlayerHealth,
           getPlayerHealth,
-          setPlayerRecoveryDisplyed,
+          setPlayerRecoveryDisplayed,
           currentUser,
           selectedCharacterId
         );

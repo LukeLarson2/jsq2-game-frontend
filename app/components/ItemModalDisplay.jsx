@@ -29,7 +29,9 @@ const ItemModalDisplay = ({
   setEnoughGold,
   currentGold,
   currentUser,
-  selectedCharacterId
+  selectedCharacterId,
+  itemQuantity,
+  setItemQuantity,
 }) => {
   const { type } = itemDetails;
   const itemIcon = itemIconCheck(type);
@@ -59,6 +61,8 @@ const ItemModalDisplay = ({
           currentGold={currentGold}
           currentUser={currentUser}
           selectedCharacterId={selectedCharacterId}
+          itemQuantity={itemQuantity}
+          setItemQuantity={setItemQuantity}
         />
       );
     }
@@ -87,6 +91,8 @@ const ItemModalDisplay = ({
           currentGold={currentGold}
           currentUser={currentUser}
           selectedCharacterId={selectedCharacterId}
+          itemQuantity={itemQuantity}
+          setItemQuantity={setItemQuantity}
         />
       );
     }

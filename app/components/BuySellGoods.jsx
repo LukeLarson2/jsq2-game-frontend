@@ -43,6 +43,8 @@ const BuySellGoods = ({
   currentUser,
   selectedCharacterId,
   sellAllItemsOfQuality,
+  itemQuantity,
+  setItemQuantity,
 }) => {
   const handleCloseShop = () => {
     setShowShopGoods(false);
@@ -168,16 +170,32 @@ const BuySellGoods = ({
           </div>
           {isSelling && (
             <div className="player-inventory-sell-all-container">
-              <button className='player-inventory-sell-all-btn' style={{backgroundColor: '#bebebe'}} onClick={() => sellAllItemsOfQuality("Common")}>
+              <button
+                className="player-inventory-sell-all-btn"
+                style={{ backgroundColor: "#bebebe" }}
+                onClick={() => sellAllItemsOfQuality("Common")}
+              >
                 Sell All
               </button>
-              <button className='player-inventory-sell-all-btn' style={{backgroundColor: '#18a705'}} onClick={() => sellAllItemsOfQuality("Uncommon")}>
+              <button
+                className="player-inventory-sell-all-btn"
+                style={{ backgroundColor: "#18a705" }}
+                onClick={() => sellAllItemsOfQuality("Uncommon")}
+              >
                 Sell All
               </button>
-              <button className='player-inventory-sell-all-btn' style={{backgroundColor: '#3099fc'}} onClick={() => sellAllItemsOfQuality("Rare")}>
+              <button
+                className="player-inventory-sell-all-btn"
+                style={{ backgroundColor: "#3099fc" }}
+                onClick={() => sellAllItemsOfQuality("Rare")}
+              >
                 Sell All
               </button>
-              <button className='player-inventory-sell-all-btn' style={{backgroundColor: '#995aff'}} onClick={() => sellAllItemsOfQuality("Epic")}>
+              <button
+                className="player-inventory-sell-all-btn"
+                style={{ backgroundColor: "#995aff" }}
+                onClick={() => sellAllItemsOfQuality("Epic")}
+              >
                 Sell All
               </button>
             </div>
@@ -311,6 +329,8 @@ const BuySellGoods = ({
           currentGold={currentGold}
           currentUser={currentUser}
           selectedCharacterId={selectedCharacterId}
+          itemQuantity={itemQuantity}
+          setItemQuantity={setItemQuantity}
         />
       )}
     </div>

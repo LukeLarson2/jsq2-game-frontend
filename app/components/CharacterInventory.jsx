@@ -29,6 +29,8 @@ const CharacterInventory = ({
   equippedGear,
   currentUser,
   selectedCharacterId,
+  itemQuantity,
+  setItemQuantity,
 }) => {
   const [showModal, setShowModal] = useState(false);
   const [itemDetails, setItemDetails] = useState({});
@@ -239,6 +241,8 @@ const CharacterInventory = ({
           equippedGear={equippedGear}
           currentUser={currentUser}
           selectedCharacterId={selectedCharacterId}
+          itemQuantity={itemQuantity}
+          setItemQuantity={setItemQuantity}
         />
       )}
     </div>

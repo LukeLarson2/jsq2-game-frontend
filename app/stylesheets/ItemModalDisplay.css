@@ -103,7 +103,7 @@
     border-bottom: 8px solid white;
     border-right: 8px solid white;
   }
-  .item-detail-stats-container{
+  .item-detail-stats-container {
     position: absolute;
     display: flex;
     justify-content: flex-end;
@@ -114,7 +114,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    color:black;
+    color: black;
     font-size: 20px;
     font-weight: bold;
     padding: 10px;
@@ -123,7 +123,7 @@
     background-color: #ffffffad;
     box-shadow: 0px 0px 5px 5px #ffffffad;
   }
-  .item-detail-stats-armor{
+  .item-detail-stats-armor {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,7 +132,7 @@
     margin-right: 10px;
     margin-left: 10px;
   }
-  .item-detail-stats-dodge{
+  .item-detail-stats-dodge {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,7 +141,7 @@
     margin-right: 10px;
     margin-left: 10px;
   }
-  .item-detail-stats-icon{
+  .item-detail-stats-icon {
     margin-left: 5px;
   }
   .item-detail-text-container {
@@ -198,6 +198,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
   }
   .item-detail-close-modal {
@@ -241,6 +242,49 @@
   .item-detail-sell-modal:hover {
     background-color: #009c22;
     color: white;
+  }
+  .item-detail-buy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+  }
+  .item-detail-quantity-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background-color: #ffffffad;
+    box-shadow: 0px 0px 5px 5px #ffffffad;
+    border-radius: 5px;
+  }
+  .item-detail-current-quanitity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: fit-content;
+    color: #000000;
+    padding: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  .item-detail-quantity-up-btn {
+    cursor: pointer;
+    font-size: 40px;
+    color: #000000;
+  }
+  .item-detail-buy-sell-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
   }
 }
 @media screen and (min-width: 845px) and (max-width: 1919px) {
@@ -332,7 +376,7 @@
     box-shadow: inset 0px 0px 3px 4px #bebebe;
     z-index: 2;
   }
-  .item-detail-stats-container{
+  .item-detail-stats-container {
     position: absolute;
     display: flex;
     justify-content: flex-end;
@@ -343,7 +387,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    color:black;
+    color: black;
     font-size: 20px;
     font-weight: bold;
     padding: 10px;
@@ -352,7 +396,7 @@
     background-color: #ffffffad;
     box-shadow: 0px 0px 5px 5px #ffffffad;
   }
-  .item-detail-stats-armor{
+  .item-detail-stats-armor {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -361,7 +405,7 @@
     margin-right: 10px;
     margin-left: 10px;
   }
-  .item-detail-stats-dodge{
+  .item-detail-stats-dodge {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -370,7 +414,7 @@
     margin-right: 10px;
     margin-left: 10px;
   }
-  .item-detail-stats-icon{
+  .item-detail-stats-icon {
     margin-left: 5px;
   }
   .item-detail-content {
@@ -486,6 +530,42 @@
   .item-detail-sell-modal:hover {
     background-color: #009c22;
     color: white;
+  }
+  .item-detail-quantity-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background-color: #ffffffad;
+    box-shadow: 0px 0px 5px 5px #ffffffad;
+    border-radius: 5px;
+  }
+  .item-detail-current-quanitity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: fit-content;
+    color: #000000;
+    padding: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  .item-detail-quantity-up-btn {
+    cursor: pointer;
+    font-size: 40px;
+    color: #000000;
+  }
+  .item-detail-buy-sell-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
   }
 }
 @media screen and (min-width: 390px) and (max-width: 844px) {
@@ -578,7 +658,7 @@
     box-shadow: inset 0px 0px 3px 4px #bebebe;
     z-index: 2;
   }
-  .item-detail-stats-container{
+  .item-detail-stats-container {
     position: absolute;
     display: flex;
     justify-content: flex-end;
@@ -589,7 +669,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    color:black;
+    color: black;
     font-size: 20px;
     font-weight: bold;
     padding: 10px;
@@ -598,7 +678,7 @@
     background-color: #ffffffad;
     box-shadow: 0px 0px 5px 5px #ffffffad;
   }
-  .item-detail-stats-armor{
+  .item-detail-stats-armor {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -607,7 +687,7 @@
     margin-right: 10px;
     margin-left: 10px;
   }
-  .item-detail-stats-dodge{
+  .item-detail-stats-dodge {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -616,7 +696,7 @@
     margin-right: 10px;
     margin-left: 10px;
   }
-  .item-detail-stats-icon{
+  .item-detail-stats-icon {
     margin-left: 5px;
   }
   .item-detail-content {
@@ -733,5 +813,41 @@
   .item-detail-sell-modal:hover {
     background-color: #009c22;
     color: white;
+  }
+  .item-detail-quantity-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background-color: #ffffffad;
+    box-shadow: 0px 0px 5px 5px #ffffffad;
+    border-radius: 5px;
+  }
+  .item-detail-current-quanitity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: fit-content;
+    color: #000000;
+    padding: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  .item-detail-quantity-up-btn {
+    cursor: pointer;
+    font-size: 40px;
+    color: #000000;
+  }
+  .item-detail-buy-sell-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
   }
 }

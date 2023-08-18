@@ -8,6 +8,7 @@ import { GiTwoCoins } from "react-icons/gi";
 import { FaHeart } from "react-icons/fa";
 import { BsLightning } from "react-icons/bs";
 import dbURI from "../lib/dbURI";
+import { GoTriangleDown } from "react-icons/go";
 
 const ItemDetailConsumable = ({
   itemDetails,
@@ -31,10 +32,13 @@ const ItemDetailConsumable = ({
   currentGold,
   currentUser,
   selectedCharacterId,
+  itemQuantity,
+  setItemQuantity,
 }) => {
   const [hasEnough, setHasEnough] = useState(true);
   const [checkHasEnough, setCheckHasEnough] = useState(true);
   const [disabled, setDisabled] = useState(false);
+
   const {
     itemName,
     type,
@@ -211,7 +215,7 @@ const ItemDetailConsumable = ({
   };
 
   const checkGold = () => {
-    if (currentGold < itemDetails.itemValue) {
+    if (currentGold < itemDetails.itemValue * quality) {
       setHasEnough(false);
     } else {
       setHasEnough(true);
@@ -221,6 +225,10 @@ const ItemDetailConsumable = ({
   useEffect(() => {
     checkGold();
   }, [checkHasEnough]);
+
+  useEffect(() => {
+    setItemQuantity(1);
+  }, []);
 
   const handleBuyItem = () => {
     setCheckHasEnough(!checkHasEnough);
@@ -237,6 +245,12 @@ const ItemDetailConsumable = ({
   const handleSellItem = () => {
     sellItem(itemDetails);
     setShowModal(false);
+  };
+
+  const handleAdjustQuanity = (value) => {
+    if (itemQuantity + value > 0) {
+      setItemQuantity(itemQuantity + value);
+    }
   };
 
   return (
@@ -257,7 +271,7 @@ const ItemDetailConsumable = ({
             <div className="item-detail-value">
               <div className="item-detail-value-icon-info-container">
                 <GiTwoCoins className="item-detail-value-icon" />
-                {itemValue}
+                {`${itemValue * itemQuantity}`}
               </div>
             </div>
           </div>
@@ -287,9 +301,29 @@ const ItemDetailConsumable = ({
             <div className="item-detail-info-container">
               <div className="item-detail-heal-amount">{description}</div>
             </div>
-            <div className="item-detail-btn-placement">
+            <div
+              className="item-detail-btn-placement"
+              style={{ flexDirection: isSelling ? "flex" : "column" }}
+            >
+              {!isSelling && (
+                <div className="item-detail-quantity-container">
+                  <GoTriangleDown
+                    className="item-detail-quantity-up-btn"
+                    style={{ transform: `rotate(90deg)` }}
+                    onMouseDown={() => handleAdjustQuanity(-1)}
+                  />
+                  <div className="item-detail-current-quanitity">
+                    {itemQuantity}
+                  </div>
+                  <GoTriangleDown
+                    className="item-detail-quantity-up-btn"
+                    style={{ transform: `rotate(-90deg)` }}
+                    onMouseDown={() => handleAdjustQuanity(1)}
+                  />
+                </div>
+              )}
               {isShop ? (
-                <div>
+                <div className="item-detail-buy-sell-main-container">
                   {isSelling ? (
                     <div>
                       <button
@@ -301,7 +335,7 @@ const ItemDetailConsumable = ({
                       </button>
                     </div>
                   ) : (
-                    <div>
+                    <div className="item-detail-buy-container">
                       <button
                         className="item-detail-buy-modal"
                         type="button"
@@ -311,31 +345,40 @@ const ItemDetailConsumable = ({
                       </button>
                     </div>
                   )}
+                  <button
+                    className="item-detail-close-modal"
+                    type="button"
+                    onClick={() => handleClose()}
+                  >
+                    Close
+                  </button>
                 </div>
               ) : (
-                <button
-                  className="item-detail-use-item"
-                  type="button"
-                  disabled={disabled}
-                  onClick={() =>
-                    handleUseItem(
-                      playerHealth,
-                      currentEnergy,
-                      healAmount,
-                      recoverAmount
-                    )
-                  }
-                >
-                  Use
-                </button>
+                <>
+                  <button
+                    className="item-detail-use-item"
+                    type="button"
+                    disabled={disabled}
+                    onClick={() =>
+                      handleUseItem(
+                        playerHealth,
+                        currentEnergy,
+                        healAmount,
+                        recoverAmount
+                      )
+                    }
+                  >
+                    Use
+                  </button>
+                  <button
+                    className="item-detail-close-modal"
+                    type="button"
+                    onClick={() => handleClose()}
+                  >
+                    Close
+                  </button>
+                </>
               )}
-              <button
-                className="item-detail-close-modal"
-                type="button"
-                onClick={() => handleClose()}
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>

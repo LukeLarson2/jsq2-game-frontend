@@ -97,6 +97,7 @@ const Game = ({
   const [playerRecoveryDisplayed, setPlayerRecoveryDisplayed] = useState(false);
   const [addStoryDelete, setAddStoryDelete] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState("");
+  const [itemQuantity, setItemQuantity] = useState(1);
 
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
@@ -501,24 +502,28 @@ const Game = ({
     setIsLoading(false);
   };
 
-  const buyItem = async (item) => {
+  const buyItem = async (item) => { // Accepting quantity as a parameter
     setIsLoading(true);
     try {
-      // Assigning a unique key to the item
-      item.key = uuidv4();
+      const newItems = [];
+      const totalCost = item.itemValue * itemQuantity; // Total cost based on itemQuantity
 
-      // Create a new object based on the item with value halved
-      const newItem = {
-        ...item,
-        itemValue: item.itemValue / 2,
-      };
+      for (let i = 0; i < itemQuantity; i++) {
+        // Assigning a unique key to each item and halving its value
+        const newItem = {
+          ...item,
+          key: uuidv4(),
+          itemValue: item.itemValue / 2,
+        };
+        newItems.push(newItem);
+      }
 
-      // Adding the item to the inventory
+      // Adding the items to the inventory
       await axios.put(
         `${dbURI}/users/characters/inventory`,
         {
-          selectedCharacterId, // Using selectedCharacterId instead of characterId
-          newItems: [newItem], // use the new item with halved value
+          selectedCharacterId,
+          newItems, // Using the array of new items
           currentUser,
         },
         { headers: { Authorization: `Bearer ${currentUser}` } }
@@ -528,8 +533,8 @@ const Game = ({
       await axios.put(
         `${dbURI}/users/characters/gold`,
         {
-          selectedCharacterId, // Using selectedCharacterId instead of characterId
-          gold: -item.itemValue, // use negative value to decrease gold
+          selectedCharacterId,
+          gold: -totalCost, // Using total cost to decrease gold
           currentUser,
         },
         { headers: { Authorization: `Bearer ${currentUser}` } }
@@ -786,7 +791,8 @@ const Game = ({
             currentUser={currentUser}
             selectedCharacterId={selectedCharacterId}
             dbURI={dbURI}
-            sellAllItemsOfQuality={sellAllItemsOfQuality}
+            sellAllItemsOfQuality={sellAllItemsOfQuality}              itemQuantity={itemQuantity}
+            setItemQuantity={setItemQuantity}
           />
         )}
 
@@ -869,7 +875,8 @@ const Game = ({
             equippedGear={equippedGear}
             currentUser={currentUser}
             selectedCharacterId={selectedCharacterId}
-            dbURI={dbURI}
+            dbURI={dbURI}              itemQuantity={itemQuantity}
+            setItemQuantity={setItemQuantity}
           />
         )}
         {isSkillTreeOpen && (

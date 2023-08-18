@@ -60,6 +60,8 @@ const StoryModal = ({
   currentUser,
   selectedCharacterId,
   sellAllItemsOfQuality,
+  itemQuantity,
+  setItemQuantity,
 }) => {
   const [isContainer, setIsContainer] = useState(false);
   const [choices, setChoices] = useState({});
@@ -82,9 +84,9 @@ const StoryModal = ({
     try {
       // Removing the item from the inventory
       await axios.delete(`${dbURI}/users/characters/inventory`, {
-          selectedCharacterId, // Using selectedCharacterId instead of characterId
-          key,
-          currentUser
+        selectedCharacterId, // Using selectedCharacterId instead of characterId
+        key,
+        currentUser,
       });
       // If the request is successful, do something here, e.g., close the modal
     } catch (error) {
@@ -412,6 +414,8 @@ const StoryModal = ({
           currentUser={currentUser}
           selectedCharacterId={selectedCharacterId}
           sellAllItemsOfQuality={sellAllItemsOfQuality}
+          itemQuantity={itemQuantity}
+          setItemQuantity={setItemQuantity}
         />
       )}
       {!isShop ? (
