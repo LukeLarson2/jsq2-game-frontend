@@ -67,7 +67,7 @@ const itemQualityCheck = (itemName) => {
       return "./mithril_sword.png";
     }
     case "Transcendent Mithril Sword": {
-      return "./transcendant_mithril.png";
+      return "./transcendent_mithril.png";
     }
 
     // Warrior Off Hand
@@ -75,7 +75,7 @@ const itemQualityCheck = (itemName) => {
       return "./rusty_iron_shield.png";
     }
     case "Iron Shield": {
-      return "./iron_shield.png";
+      return "./iron_Shield.png";
     }
     case "Steel Shield": {
       return "./steel_shield.png";

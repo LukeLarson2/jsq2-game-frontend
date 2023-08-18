@@ -11,7 +11,7 @@ import goldenRuinsStory from "../utils/goldenRuinsStory";
 import keyStory from "../utils/keyStory";
 import axios from "axios";
 import "../stylesheets/StoryModal.css";
-import dbURI from '../lib/dbURI'
+import dbURI from "../lib/dbURI";
 
 const StoryModal = ({
   userStory,
@@ -58,7 +58,7 @@ const StoryModal = ({
   finalStory,
   setDisplayEndGameModal,
   currentUser,
-  selectedCharacterId
+  selectedCharacterId,
 }) => {
   const [isContainer, setIsContainer] = useState(false);
   const [choices, setChoices] = useState({});
@@ -82,7 +82,7 @@ const StoryModal = ({
       // Removing the item from the inventory
       await axios.delete(`${dbURI}/users/characters/inventory`, {
         headers: {
-          "Authorization": `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
+          Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
         },
         data: {
           selectedCharacterId, // Using selectedCharacterId instead of characterId
@@ -95,14 +95,16 @@ const StoryModal = ({
     }
   };
 
-
   const updateArenaLevel = async () => {
     try {
       // Fetch the current arena level
-      const responseArenaLevel = await axios.post(`${dbURI}/users/characters/arenaLevel`, {
-        selectedCharacterId,
-        currentUser
-      });
+      const responseArenaLevel = await axios.post(
+        `${dbURI}/users/characters/arenaLevel`,
+        {
+          selectedCharacterId,
+          currentUser,
+        }
+      );
       if (!responseArenaLevel.data) {
         console.error("Invalid response for arena level");
         return;
@@ -124,13 +126,12 @@ const StoryModal = ({
     }
   };
 
-
   const arenaReward = async () => {
     try {
       // Increasing character's gold
       await axios.put(`${dbURI}/users/characters/gold`, {
         headers: {
-          "Authorization": `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
+          Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
         },
         data: {
           selectedCharacterId, // Using selectedCharacterId
@@ -139,10 +140,12 @@ const StoryModal = ({
       });
       // If successful, you might want to update the character's gold in the client's state
     } catch (error) {
-      console.error("An error occurred while awarding the arena reward: ", error);
+      console.error(
+        "An error occurred while awarding the arena reward: ",
+        error
+      );
     }
   };
-
 
   useEffect(() => {
     const fetchShopStory = async () => {
@@ -252,8 +255,8 @@ const StoryModal = ({
       } else if (nextItem === "trash-mithril-key") {
         setCurrentIndex(currentIndex + 2);
       }
-    }
-    fetchShopStory()
+    };
+    fetchShopStory();
   }, [nextItem, characterRace]);
 
   useEffect(() => {
@@ -262,42 +265,46 @@ const StoryModal = ({
       "Around you, hundreds of gladiators roam the shadowy halls, their eyes reflecting stories of battles won and lost."
     ) {
       setRegionBackground("./pan_strane_arena_interior.png");
-
     } else if (userStory[currentIndex] === "arena-level-up") {
-      setArenaTracker(arenaTracker + 1)
-      if (currentArenaLevel < arenaTracker){
+      setArenaTracker(arenaTracker + 1);
+      if (currentArenaLevel < arenaTracker) {
         updateArenaLevel();
         setCurrentIndex(currentIndex + 2);
       } else {
         setCurrentIndex(currentIndex + 2);
       }
-    } else if (userStory[currentIndex] === "As the oversear leaves, you pull out your map and choose your next destination as the 'Champion of Pan Strane'!") {
-      arenaReward()
-      setCurrentGold(currentGold + 3000)
-      setGetReward(!getReward)
+    } else if (
+      userStory[currentIndex] ===
+      "As the oversear leaves, you pull out your map and choose your next destination as the 'Champion of Pan Strane'!"
+    ) {
+      arenaReward();
+      setCurrentGold(currentGold + 3000);
+      setGetReward(!getReward);
     }
   }, [nextItem]);
 
   useEffect(() => {
-    if (
-      nextItem ===
-      "enter-eldoria"
-    ) {
-      setFinalStory(true)
+    if (nextItem === "enter-eldoria") {
+      setFinalStory(true);
       setRegionBackground("./eldoria_city_inside_walls.png");
       setCurrentIndex(currentIndex + 2);
-    } else if (nextItem ==="enter-eldoria-throne") {
+    } else if (nextItem === "enter-eldoria-throne") {
       setRegionBackground("./orc_leader_image_1.png");
       setCurrentIndex(currentIndex + 2);
-    } else if ((nextItem === 'end' || nextItem === 'end.' || nextItem === 'End' || nextItem === 'End.') && finalStory) {
-      setDisplayEndGameModal(true)
-      setShowMap(true)
-      setShowStory(false)
-      setShowBattle(false)
-      setCurrentIndex(0)
+    } else if (
+      (nextItem === "end" ||
+        nextItem === "end." ||
+        nextItem === "End" ||
+        nextItem === "End.") &&
+      finalStory
+    ) {
+      setDisplayEndGameModal(true);
+      setShowMap(true);
+      setShowStory(false);
+      setShowBattle(false);
+      setCurrentIndex(0);
     }
   }, [nextItem]);
-
 
   useEffect(() => {
     if (shopStory[shopIndex + 1] === "open-general-shop") {
@@ -417,19 +424,16 @@ const StoryModal = ({
         <div
           className="area-story-modal"
           style={{
-            backgroundImage: `url(${regionBackground})`
-          }}                onClick={handleNext}
+            backgroundImage: `url(${regionBackground})`,
+          }}
+          onClick={handleNext}
         >
           <div className="area-story-modal-content">
             <div className="area-story-story-box">
               {userStory[currentIndex]}
             </div>
             <div className="area-story-buttons">
-              <button
-                type="button"
-                className="area-story-next-button"
-
-              >
+              <button type="button" className="area-story-next-button">
                 Next
               </button>
             </div>
@@ -438,7 +442,8 @@ const StoryModal = ({
       ) : (
         <div
           className="area-story-modal"
-          style={{ backgroundImage: `url(${shopImage})` }}                onClick={handleNext}
+          style={{ backgroundImage: `url(${shopImage})` }}
+          onClick={handleNext}
         >
           {shopIndex > 1 && (
             <FriendlyNPCCard
@@ -450,10 +455,7 @@ const StoryModal = ({
           <div className="area-story-modal-content">
             <div className="area-story-story-box">{shopStory[shopIndex]}</div>
             <div className="area-story-buttons">
-              <button
-                type="button"
-                className="area-story-next-button"
-              >
+              <button type="button" className="area-story-next-button">
                 Next
               </button>
             </div>
