@@ -119,7 +119,7 @@ const enemyImageCheck = (type, area, level) => {
     },
     lakeCreature: {
       lake: {
-        22: [
+        20: [
           "./lake_creature_medium_lake_1.png",
           "./lake_creature_medium_lake_1.png",
         ],
