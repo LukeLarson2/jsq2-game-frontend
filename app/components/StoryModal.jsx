@@ -59,6 +59,7 @@ const StoryModal = ({
   setDisplayEndGameModal,
   currentUser,
   selectedCharacterId,
+  sellAllItemsOfQuality,
 }) => {
   const [isContainer, setIsContainer] = useState(false);
   const [choices, setChoices] = useState({});
@@ -414,6 +415,7 @@ const StoryModal = ({
           shopKeeper={shopKeeper}
           currentUser={currentUser}
           selectedCharacterId={selectedCharacterId}
+          sellAllItemsOfQuality={sellAllItemsOfQuality}
         />
       )}
       {!isShop ? (

@@ -602,6 +602,41 @@ const Game = ({
     }
   }, [playerHealth]);
 
+  const sellAllItemsOfQuality = async (quality) => {
+    setIsLoading(true);
+    const itemsToSell = inventory.filter((item) => {
+      const isEquipped =
+        item.key === equippedGear.armor.key ||
+        item.key === equippedGear.mainHand.key ||
+        item.key === equippedGear.offHand.key;
+
+      return item.quality === quality && !isEquipped;
+    });
+
+    try {
+      for (const item of itemsToSell) {
+        const { key, itemValue } = item;
+
+        // Removing the item from the inventory
+        await axios.delete(
+          `${dbURI}/users/characters/inventory?selectedCharacterId=${selectedCharacterId}&key=${key}&currentUser=${currentUser}`
+        );
+
+        // Increasing character's gold
+        await axios.put(`${dbURI}/users/characters/gold`, {
+          selectedCharacterId,
+          gold: itemValue,
+          currentUser,
+        });
+        // Note: You may want to update the state or perform other actions after each item sale
+      }
+      setSoldItem(!soldItem);
+    } catch (error) {
+      console.error("An error occurred while selling the items: ", error);
+    }
+    setIsLoading(false);
+  };
+
   // Only render BattleScreen when character data is loaded
   if (character) {
     return (
@@ -751,6 +786,7 @@ const Game = ({
             currentUser={currentUser}
             selectedCharacterId={selectedCharacterId}
             dbURI={dbURI}
+            sellAllItemsOfQuality={sellAllItemsOfQuality}
           />
         )}
 

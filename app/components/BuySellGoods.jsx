@@ -41,7 +41,8 @@ const BuySellGoods = ({
   currentGold,
   shopType,
   currentUser,
-  selectedCharacterId
+  selectedCharacterId,
+  sellAllItemsOfQuality,
 }) => {
   const handleCloseShop = () => {
     setShowShopGoods(false);
@@ -165,6 +166,22 @@ const BuySellGoods = ({
               <GiSwapBag />
             </button>
           </div>
+          {isSelling && (
+            <div className="player-inventory-sell-all-container">
+              <button className='player-inventory-sell-all-btn' style={{backgroundColor: '#bebebe'}} onClick={() => sellAllItemsOfQuality("Common")}>
+                Sell All
+              </button>
+              <button className='player-inventory-sell-all-btn' style={{backgroundColor: '#18a705'}} onClick={() => sellAllItemsOfQuality("Uncommon")}>
+                Sell All
+              </button>
+              <button className='player-inventory-sell-all-btn' style={{backgroundColor: '#3099fc'}} onClick={() => sellAllItemsOfQuality("Rare")}>
+                Sell All
+              </button>
+              <button className='player-inventory-sell-all-btn' style={{backgroundColor: '#995aff'}} onClick={() => sellAllItemsOfQuality("Epic")}>
+                Sell All
+              </button>
+            </div>
+          )}
           {isSelling ? (
             <div className="player-bag-content-window-shop">
               {!isLoading ? (
