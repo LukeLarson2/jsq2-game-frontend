@@ -77,10 +77,6 @@ const CharacterCardEditArmor = ({
               const differenceValueShield = shielding - currentArmor.shielding
               const differenceValueDodge = dodge - currentArmor.dodge
 
-              console.log("itemName", itemName)
-              console.log("currentArmor.dodge", currentArmor.dodge)
-              console.log("dodge", dodge)
-
               if (shielding > currentArmor.shielding) {
                 arrowColorUpper = "#03b438";
                 arrowDirectionUpper = "180";
