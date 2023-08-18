@@ -18,48 +18,58 @@ import regionColorCheck from "../utils/regionColorCheck";
 import "../stylesheets/BattleScreen.css";
 
 const BattleScreen = ({
-  race,
-  area,
-  level,
-  setRace,
-  setArea,
-  setLevel,
-  character,
-  setCurrentIndex,
-  currentIndex,
-  setShowBattle,
-  setShowStory,
-  earnedXp,
-  setEarnedXp,
-  setShowVictory,
-  showVictory,
-  takeHit,
-  setTakeHit,
-  playerHealth,
-  setPlayerHealth,
-  currentEnergy,
-  setCurrentEnergy,
-  setPlayerDeath,
-  playerDeath,
-  currentGold,
-  equippedGear,
-  mainHandColor,
-  offHandColor,
-  setShowDeath,
-  setCurrentEnemyName,
-  setGoldLoss,
-  fullHealth,
-  fullEnergy,
-  battleRecovery,
-  setBattleRecovery,
-  inArena,
-  arenaTracker,
-  currentUser,
-  selectedCharacterId,
+  race
+  area
+  level
+  setArea
+  setRace
+  setLevel
+  character
+  setCurrentIndex
+  currentIndex
+  setShowBattle
+  setShowStory
+  earnedXp
+  setEarnedXp
+  showVictory
+  setShowVictory
+  takeHit
+  setTakeHit
+  playerHealth
+  setPlayerHealth
+  currentEnergy
+  setCurrentEnergy
+  setPlayerDeath
+  setCurrentGold
+  playerDeath
+  setShowMap
+  currentGold
+  equippedGear
+  mainHandColor
+  offHandColor
+  setShowDeath
+  setCurrentEnemyName
+  setGoldLoss
+  battleRecovery
+  setBattleRecovery
+  inArena
+  arenaTracker
+  currentUser
+  selectedCharacterId
+  dbURI
+  regionColor
+  currentEnemy
+  enemyHealth
+  enemyMaxHealth
+  timeoutId
+  setRegionColor
+  setCurrentEnemy
+  setEnemyHealth
+  setEnemyMaxHealth
+  setTimeoutId
+  playerRecoveryDisplayed
+  setPlayerRecoveryDisplayed
 }) => {
-  const [currentEnemy, setCurrentEnemy] = useState({});
-  const [enemyHealth, setEnemyHealth] = useState(0);
-  const [enemyMaxHealth, setEnemyMaxHealth] = useState(0);
   const [playerDamageTaken, setPlayerDamageTaken] = useState(0);
   const [enemyDamageTaken, setEnemyDamageTaken] = useState(0);
   const [isAttacking, setIsAttacking] = useState(false);
@@ -75,10 +85,7 @@ const BattleScreen = ({
   const [randomQuote, setRandomQuote] = useState("");
   const [showAlert, setShowAlert] = useState(false);
   const [message, setMessage] = useState("");
-  const [timeoutId, setTimeoutId] = useState(null);
-  const [regionColor, setRegionColor] = useState("");
   const [displayedRecovery, setDisplayedRecovery] = useState(0);
-  const [playerRecoveryDisplayed, setPlayerRecoveryDisplyed] = useState(false);
   const [isHealingDone, setIsHealingDone] = useState(false);
 
   // True is player, False is enemy
@@ -139,29 +146,6 @@ const BattleScreen = ({
     fetchEnemy();
   };
 
-
-  useEffect(() => {
-    setShowDeath(false);
-    setPlayerDeath(false);
-    generateEnemyCard(race, area, level);
-  }, []);
-
-  useEffect(() => {
-    if (currentEnemy.health && enemyHealth <= 0) {
-      setShowVictory(true);
-    }
-  }, [enemyHealth, currentEnemy.health]);
-
-  useEffect(() => {
-    if (showVictory && timeoutId) {
-      clearTimeout(timeoutId);
-    }
-    if (playerDeath) {
-      clearTimeout(timeoutId);
-      setShowDeath(true);
-    }
-  }, [showVictory, playerDeath, timeoutId]);
-
   const handleHit = (user, damageAmount) => {
     if (user === "player") {
       if (damageAmount < 1) {
@@ -196,9 +180,6 @@ const BattleScreen = ({
     }
   };
 
-  useEffect(() => {
-    getPlayerHealth(currentUser, selectedCharacterId, setPlayerHealth);
-  }, [playerRecoveryDisplayed]);
   const handleAttack = (
     user,
     skillDamage,
@@ -404,12 +385,6 @@ const BattleScreen = ({
       setCurrentEnemyAttack("");
     }, 3000);
   };
-
-  useEffect(() => {
-    if (playerHealth <= 0) {
-      setShowDeath(true);
-    }
-  }, [playerHealth]);
 
   return (
     <div
