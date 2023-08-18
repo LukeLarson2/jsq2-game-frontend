@@ -615,7 +615,14 @@ const Game = ({
         item.key === equippedGear.mainHand.key ||
         item.key === equippedGear.offHand.key;
 
-      return item.quality === quality && !isEquipped;
+      const isUnsellableType = item.type === 'Potion' || item.type === 'Food';
+      const isUnsellableName =
+        item.itemName === 'Dragon Toy' ||
+        item.itemName === 'Iron Key' ||
+        item.itemName === 'Mithril Key' ||
+        item.itemName === 'Carved Cube';
+
+      return item.quality === quality && !isEquipped && !isUnsellableType && !isUnsellableName;
     });
 
     try {
