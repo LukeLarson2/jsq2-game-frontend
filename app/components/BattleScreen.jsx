@@ -18,57 +18,57 @@ import regionColorCheck from "../utils/regionColorCheck";
 import "../stylesheets/BattleScreen.css";
 
 const BattleScreen = ({
-  race
-  area
-  level
-  setArea
-  setRace
-  setLevel
-  character
-  setCurrentIndex
-  currentIndex
-  setShowBattle
-  setShowStory
-  earnedXp
-  setEarnedXp
-  showVictory
-  setShowVictory
-  takeHit
-  setTakeHit
-  playerHealth
-  setPlayerHealth
-  currentEnergy
-  setCurrentEnergy
-  setPlayerDeath
-  setCurrentGold
-  playerDeath
-  setShowMap
-  currentGold
-  equippedGear
-  mainHandColor
-  offHandColor
-  setShowDeath
-  setCurrentEnemyName
-  setGoldLoss
-  battleRecovery
-  setBattleRecovery
-  inArena
-  arenaTracker
-  currentUser
-  selectedCharacterId
-  dbURI
-  regionColor
-  currentEnemy
-  enemyHealth
-  enemyMaxHealth
-  timeoutId
-  setRegionColor
-  setCurrentEnemy
-  setEnemyHealth
-  setEnemyMaxHealth
-  setTimeoutId
-  playerRecoveryDisplayed
-  setPlayerRecoveryDisplayed
+  race,
+  area,
+  level,
+  setArea,
+  setRace,
+  setLevel,
+  character,
+  setCurrentIndex,
+  currentIndex,
+  setShowBattle,
+  setShowStory,
+  earnedXp,
+  setEarnedXp,
+  showVictory,
+  setShowVictory,
+  takeHit,
+  setTakeHit,
+  playerHealth,
+  setPlayerHealth,
+  currentEnergy,
+  setCurrentEnergy,
+  setPlayerDeath,
+  setCurrentGold,
+  playerDeath,
+  setShowMap,
+  currentGold,
+  equippedGear,
+  mainHandColor,
+  offHandColor,
+  setShowDeath,
+  setCurrentEnemyName,
+  setGoldLoss,
+  battleRecovery,
+  setBattleRecovery,
+  inArena,
+  arenaTracker,
+  currentUser,
+  selectedCharacterId,
+  dbURI,
+  regionColor,
+  currentEnemy,
+  enemyHealth,
+  enemyMaxHealth,
+  timeoutId,
+  setRegionColor,
+  setCurrentEnemy,
+  setEnemyHealth,
+  setEnemyMaxHealth,
+  setTimeoutId,
+  playerRecoveryDisplayed,
+  setPlayerRecoveryDisplayed,
 }) => {
   const [playerDamageTaken, setPlayerDamageTaken] = useState(0);
   const [enemyDamageTaken, setEnemyDamageTaken] = useState(0);
@@ -121,15 +121,18 @@ const BattleScreen = ({
     const fetchEnemy = async () => {
       const allEnemyInfo = await getEnemyInfo();
       if (allEnemyInfo) {
-        const possibleEnemies = allEnemyInfo.filter((enemy) =>
-          enemy.race === race &&
-          enemy.level === level &&
-          enemy.area === area &&
-          enemy.health > 0 // Ensure that the health is positive
+        const possibleEnemies = allEnemyInfo.filter(
+          (enemy) =>
+            enemy.race === race &&
+            enemy.level === level &&
+            enemy.area === area &&
+            enemy.health > 0 // Ensure that the health is positive
         );
 
         if (possibleEnemies.length > 0) {
-          const randomIndex = Math.floor(Math.random() * possibleEnemies.length);
+          const randomIndex = Math.floor(
+            Math.random() * possibleEnemies.length
+          );
           const selectedEnemy = possibleEnemies[randomIndex];
 
           // Additional check to ensure health is positive
