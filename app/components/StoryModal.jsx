@@ -418,8 +418,7 @@ const StoryModal = ({
           className="area-story-modal"
           style={{
             backgroundImage: `url(${regionBackground})`
-          }}
-          onClick={handleNext}
+          }}                onClick={handleNext}
         >
           <div className="area-story-modal-content">
             <div className="area-story-story-box">
@@ -429,7 +428,7 @@ const StoryModal = ({
               <button
                 type="button"
                 className="area-story-next-button"
-                onClick={handleNext}
+
               >
                 Next
               </button>
@@ -439,7 +438,7 @@ const StoryModal = ({
       ) : (
         <div
           className="area-story-modal"
-          style={{ backgroundImage: `url(${shopImage})` }}
+          style={{ backgroundImage: `url(${shopImage})` }}                onClick={handleNext}
         >
           {shopIndex > 1 && (
             <FriendlyNPCCard
