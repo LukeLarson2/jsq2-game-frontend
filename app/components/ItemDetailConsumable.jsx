@@ -302,7 +302,7 @@ const ItemDetailConsumable = ({
               <div className="item-detail-heal-amount">{description}</div>
             </div>
             <div className="item-detail-btn-placement" style={{flexDirection: isSelling ? 'flex' : 'column'}}>
-              {!isSelling && (
+              {isShop && !isSelling && (
                 <div className="item-detail-quantity-container">
                   <GoTriangleDown
                     className="item-detail-quantity-up-btn"
