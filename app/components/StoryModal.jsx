@@ -125,7 +125,6 @@ const StoryModal = ({
   };
 
 
-
   const arenaReward = async () => {
     try {
       // Increasing character's gold
@@ -420,6 +419,7 @@ const StoryModal = ({
           style={{
             backgroundImage: `url(${regionBackground})`
           }}
+          onClick={handleNext}
         >
           <div className="area-story-modal-content">
             <div className="area-story-story-box">
@@ -454,7 +454,6 @@ const StoryModal = ({
               <button
                 type="button"
                 className="area-story-next-button"
-                onClick={handleNext}
               >
                 Next
               </button>
