@@ -72,7 +72,6 @@ const BattleScreen = ({
   setUseItem,
   useItem,
   inventory,
-  dbURI,
   healthPotionColor,
   healthPotionImage,
   totalHealthPotions,
