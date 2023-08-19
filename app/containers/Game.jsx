@@ -575,7 +575,7 @@ const Game = ({
         });
         const randomIndex = Math.floor(Math.random() * possibleEnemies.length);
         const selectedEnemy = possibleEnemies[randomIndex];
-        console.log(selectedEnemy)
+        console.log(selectedEnemy);
         setRegionColor(regionColorCheck(selectedEnemy.area.toLowerCase()));
         setCurrentEnemy(selectedEnemy);
         setCurrentEnemyName(selectedEnemy.name);
@@ -818,6 +818,15 @@ const Game = ({
           setSelectedCharacterId={setSelectedCharacterId}
           dbURI={dbURI}
         />
+        {confirmSellAll && (
+          <AlertModal
+            message={`Are you sure you want to sell all ${sellAllQuality}? This cannot be undone`}
+            title={`Sell all ${sellAllQuality}`}
+            setShowAlert={setConfirmSellAll}
+            confirmedSellAll={confirmedSellAll}
+            sellAllQuality={sellAllQuality}
+          />
+        )}
         {displayEndGameModal && (
           <EndGameModal
             character={character}
