@@ -174,7 +174,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 450px;
+    height: 500px;
     width: 400px;
     background-color: white;
     border-radius: 15px;
@@ -182,7 +182,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 150px;
+    margin-top: 50px;
   }
   .skill-tree-ability-details-content {
     display: flex;
@@ -329,7 +329,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 400px;
+    height: 450px;
     width: 400px;
     background-color: white;
     border-radius: 15px;
@@ -337,7 +337,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    scale: 0.8;
+    scale: 0.6;
   }
   .skill-tree-ability-details-content {
     display: flex;

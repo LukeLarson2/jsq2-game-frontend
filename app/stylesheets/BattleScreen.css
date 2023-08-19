@@ -21,7 +21,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 2;
-    margin-top: 70px;
+    margin-top: 160px;
+    pointer-events: none;
   }
 
   .battle-screen-backglow {
@@ -36,6 +37,7 @@
     transform: translate(-50%, -50%);
     z-index: 1;
     margin-top: 30px;
+    pointer-events: none;
   }
 
   .battle-screen-enemy-area,
@@ -46,7 +48,7 @@
     flex-direction: column;
     width: 600px;
     height: 500px;
-    margin-top: 70px;
+    margin-top: 180px;
   }
 
   .battle-screen-arena-level {
@@ -67,7 +69,7 @@
     color: white;
   }
 }
-@media screen and (min-width: 845px) and (max-width: 1919px) {
+@media screen and (min-width: 1290px) and (max-width: 1919px) {
   .battle-screen-main-container {
     display: flex;
     justify-content: center;
@@ -77,20 +79,23 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 20px;
   }
 
   .battle-screen-vrs-logo {
     position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
-    width: 420px;
-    height: 420px;
+    width: 170px;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 2;
-    margin-top: 70px;
+    margin-left: 150px;
+    margin-right: 150px;
+    pointer-events: none;
+    scale: 1.6;
   }
 
   .battle-screen-backglow {
@@ -100,22 +105,32 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.548);
     box-shadow: 0 0 100px 100px #000000f3;
     transform: translate(-50%, -50%);
     z-index: 1;
-    margin-top: 30px;
+    scale: 0.7;
+    pointer-events: none;
   }
 
-  .battle-screen-enemy-area,
   .battle-screen-player-area {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 600px;
-    height: 500px;
-    margin-top: 70px;
+    width: 200px;
+    height: 100vh;
+    padding-bottom: 30px;
+    scale: 0.8;
+  }
+  .battle-screen-enemy-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    padding-bottom: 30px;
+    scale: 0.8;
   }
 
   .battle-screen-arena-level {
@@ -128,15 +143,98 @@
     padding-left: 15px;
     border-radius: 10px;
     box-shadow: inset 0px 0px 3px 3px #ffffff8a;
-    left: 50%;
-    top: 20%;
+    left: 47.5%;
+    top: 5%;
     transform: translateX(-50%);
     font-weight: bold;
     font-size: 20px;
     color: white;
+    scale: 0.7;
   }
 }
-@media screen and (min-width: 391px) and (max-width: 844px) {
+@media screen and (min-width: 922px) and (max-width: 1289px) {
+  .battle-screen-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+  }
+
+  .battle-screen-vrs-logo {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    margin-left: 50px;
+    margin-right: 50px;
+    pointer-events: none;
+  }
+
+  .battle-screen-backglow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 100px #000000f3;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    scale: 0.5;
+    pointer-events: none;
+  }
+
+  .battle-screen-player-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    padding-bottom: 30px;
+    scale: 0.60;
+  }
+  .battle-screen-enemy-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    padding-bottom: 30px;
+    scale: 0.60;
+  }
+
+  .battle-screen-arena-level {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000056;
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 3px 3px #ffffff8a;
+    left: 47.5%;
+    top: 5%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    scale: 0.7;
+  }
+}
+@media screen and (min-width: 670px) and (max-width: 921px) {
   .battle-screen-main-container {
     display: flex;
     justify-content: center;
@@ -156,12 +254,10 @@
     align-items: center;
     width: 100px;
     height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
     z-index: 2;
     margin-left: 10px;
     margin-right: 10px;
+    pointer-events: none;
   }
 
   .battle-screen-backglow {
@@ -176,6 +272,8 @@
     transform: translate(-50%, -50%);
     z-index: 1;
     scale: 0.5;
+    pointer-events: none;
+    display: none;
   }
 
   .battle-screen-player-area {
@@ -218,12 +316,12 @@
     scale: 0.7;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (min-width: 340px) and (max-width: 669px) {
   .battle-screen-main-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction:column;
+    flex-direction:column-reverse;
     width: 100vw;
     height: 100vh;
     background-position: center;
@@ -243,7 +341,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 2;
-    margin-top: 30px;
+    margin-top: 30px;    pointer-events: none;
   }
 
   .battle-screen-backglow {
@@ -258,7 +356,7 @@
     box-shadow: 0 0 100px 100px #000000f3;
     transform: translate(-50%, -50%);
     z-index: 0;
-    scale: 0.5;
+    scale: 0.5;    pointer-events: none;
   }
 
   .battle-screen-player-area {
@@ -267,7 +365,7 @@
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    height: 380px;
+    height: 250px;
     scale: 0.5;
   }
   .battle-screen-enemy-area {

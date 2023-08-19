@@ -310,7 +310,7 @@
     background-color: #bebebe;
   }
 }
-@media screen and (min-width: 845px) and (max-width: 1919px) {
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
   .character-card-edit-container {
     position: absolute;
     width: 100vw;
@@ -601,7 +601,7 @@
     background-color: #bebebe;
   }
 }
-@media screen and (min-width: 391px) and (max-width: 844px) {
+@media screen and (min-width: 691px) and (max-width: 1199px) {
   .character-card-edit-container {
     position: absolute;
     width: 100vw;
@@ -896,7 +896,7 @@
     background-color: #bebebe;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (min-width: 340px) and (max-width: 690px) {
   .character-card-edit-container {
     position: absolute;
     width: 100vw;
@@ -1177,15 +1177,15 @@
     position: absolute;
     z-index: 10;
     color: black;
-    margin-bottom: 100px;
-    margin-right: 420px;
     background-color: white;
     border-radius: 10px;
-    width: 80px;
-    height: 30px;
+    width: 60px;
+    height: 25px;
+    margin-top: 300px;
     font-weight: bold;
     box-shadow: 3px 3px 5px black;
     transition: background-color 0.2s ease-in-out;
+    font-size: 12px;
   }
   .character-card-edit-btn:hover {
     background-color: #bebebe;

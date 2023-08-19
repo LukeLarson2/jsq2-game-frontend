@@ -266,7 +266,7 @@
     z-index: 9999;
   }
 }
-@media screen and (min-width: 845px) and (max-width: 1919px) {
+@media screen and (min-width: 1617px) and (max-width: 1919px) {
   .skill-tree-overlay {
     position: fixed;
     display: flex;
@@ -514,7 +514,7 @@
     z-index: 9999;
   }
 }
-@media screen and (min-width: 391px) and (max-width: 844px) {
+@media screen and (min-width: 795px) and (max-width: 1616px) {
   .skill-tree-overlay {
     position: fixed;
     display: flex;
@@ -763,7 +763,7 @@
     z-index: 9999;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 794px) {
   .skill-tree-overlay {
     position: fixed;
     display: flex;
