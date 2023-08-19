@@ -566,7 +566,7 @@ const Game = ({
           (enemy) =>
             enemy.race === race &&
             enemy.level === level &&
-            enemy.area === area &&
+            enemy.area === area
         );
 
         if (possibleEnemies.length > 0) {
