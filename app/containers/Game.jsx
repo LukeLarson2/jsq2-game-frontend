@@ -567,7 +567,6 @@ const Game = ({
             enemy.race === race &&
             enemy.level === level &&
             enemy.area === area &&
-            enemy.health > 0 // Ensure that the health is positive
         );
 
         if (possibleEnemies.length > 0) {
@@ -576,8 +575,6 @@ const Game = ({
           );
           const selectedEnemy = possibleEnemies[randomIndex];
 console.log(selectedEnemy)
-          // Additional check to ensure health is positive
-          const enemyHealth = Math.max(0, selectedEnemy.health);
 
           setRegionColor(regionColorCheck(selectedEnemy.area.toLowerCase()));
           setCurrentEnemy(selectedEnemy);
