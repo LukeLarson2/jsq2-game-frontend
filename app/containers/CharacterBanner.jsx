@@ -107,22 +107,6 @@ const CharacterBanner = ({
     }
   };
   const handleGoHome = () => {
-    // Exit fullscreen
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen(); // Firefox
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen(); // Chrome, Safari, and Opera
-    } else if (document.msExitFullscreen) {
-      document.msExitFullscreen(); // IE/Edge
-    }
-
-    // Unlock the orientation
-    if (screen.orientation && screen.orientation.unlock) {
-      screen.orientation.unlock();
-    }
-
     setShowAlert(true);
     setTravelHome(true);
   };
