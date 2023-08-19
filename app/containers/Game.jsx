@@ -977,6 +977,8 @@ const Game = ({
             currentEnemy={currentEnemy}
             setCurrentEnemy={setCurrentEnemy}
             playerRecoveryDisplayed={playerRecoveryDisplayed}
+            regionColor={regionColor}
+            setRegionColor={setRegionColor}
           />
         )}
         {showEdit && (
