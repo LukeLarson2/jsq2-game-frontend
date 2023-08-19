@@ -12,6 +12,7 @@ const AlertModal = ({
   setMapFizzle,
   travelHome,
   setCurrentPage,
+  setConfirmedDelete,
   confirmDelete,
   character,
   setIsLoading,
@@ -22,9 +23,8 @@ const AlertModal = ({
   currentUser,
   needMoreStones,
   setNeedMoreStones,
-  setSelectedCharacterId,
-  selectedRegion,
-  forgetStory,
+  confirmedSellAll,
+  sellAllQuality,
 }) => {
   const handleCloseAlert = () => {
     if (needMoreStones) {
@@ -42,9 +42,7 @@ const AlertModal = ({
 
   const handleGoHome = () => {
     setShowAlert(false);
-    setSelectedCharacterId("");
-    localStorage.removeItem("characterData");
-    window.close();
+    setCurrentPage("Home");
   };
 
   const handleDeleteCharacter = async (character) => {
@@ -80,28 +78,10 @@ const AlertModal = ({
     return { __html: formattedContent };
   };
 
-  const handleForgetRegion = async () => {
-
-    try {
-      const response = await axios.put(`${dbURI}/users/characters/forget-region`, {
-        selectedCharacterId,
-        selectedRegion,
-        currentUser,
-      });
-
-      if (response.status !== 200) {
-        console.error("An error occurred", response.data.message);
-        return;
-      }
-
-      setShowAlert(false); // Close the alert modal
-    } catch (err) {
-      console.error("An error occurred", err);
-    }
+  const handleConfirmedSellAll = () => {
     setShowAlert(false)
-  };
-
-
+    confirmedSellAll(sellAllQuality)
+  }
 
   return (
     <div className="alert-modal-overlay">
@@ -112,8 +92,17 @@ const AlertModal = ({
             className="alert-modal-message"
             dangerouslySetInnerHTML={formatContentDetails()}
           />
-          {travelHome || confirmDelete || needMoreStones || forgetStory ? (
+          {travelHome || confirmDelete || needMoreStones || sellAllQuality ? (
             <div className="alert-modal-confirm-travel">
+              {sellAllQuality && (
+                <button
+                  type="button"
+                  className="alert-modal-btn-yes"
+                  onClick={() => handleConfirmedSellAll()}
+                >
+                  Yes
+                </button>
+              )}
               {confirmDelete && (
                 <button
                   type="button"
@@ -137,15 +126,6 @@ const AlertModal = ({
                   type="button"
                   className="alert-modal-btn-yes"
                   onClick={() => handleGetStones()}
-                >
-                  Yes
-                </button>
-              )}
-              {forgetStory && (
-                <button
-                  type="button"
-                  className="alert-modal-btn-yes"
-                  onClick={() => handleForgetRegion()}
                 >
                   Yes
                 </button>

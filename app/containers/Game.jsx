@@ -98,6 +98,8 @@ const Game = ({
   const [addStoryDelete, setAddStoryDelete] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState("");
   const [itemQuantity, setItemQuantity] = useState(1);
+  const [confirmSellAll, setConfirmSellAll] = useState(false);
+  const [sellAllQuality, setSellAllQuality] = useState("");
 
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
@@ -607,7 +609,12 @@ const Game = ({
     }
   }, [playerHealth]);
 
-  const sellAllItemsOfQuality = async (quality) => {
+  const sellAllItemsOfQuality = (quality) => {
+    setConfirmSellAll(true);
+    setSellAllQuality(quality);
+  };
+
+  const confirmedSellAll = async (quality) => {
     setIsLoading(true);
     const itemsToSell = inventory.filter((item) => {
       const isEquipped =
@@ -615,14 +622,19 @@ const Game = ({
         item.key === equippedGear.mainHand.key ||
         item.key === equippedGear.offHand.key;
 
-      const isUnsellableType = item.type === 'Potion' || item.type === 'Food';
+      const isUnsellableType = item.type === "Potion" || item.type === "Food";
       const isUnsellableName =
-        item.itemName === 'Dragon Toy' ||
-        item.itemName === 'Iron Key' ||
-        item.itemName === 'Mithril Key' ||
-        item.itemName === 'Carved Cube';
+        item.itemName === "Dragon Toy" ||
+        item.itemName === "Iron Key" ||
+        item.itemName === "Mithril Key" ||
+        item.itemName === "Carved Cube";
 
-      return item.quality === quality && !isEquipped && !isUnsellableType && !isUnsellableName;
+      return (
+        item.quality === quality &&
+        !isEquipped &&
+        !isUnsellableType &&
+        !isUnsellableName
+      );
     });
 
     try {
@@ -646,6 +658,7 @@ const Game = ({
     } catch (error) {
       console.error("An error occurred while selling the items: ", error);
     }
+    setSellAllQuality('')
     setIsLoading(false);
   };
 
