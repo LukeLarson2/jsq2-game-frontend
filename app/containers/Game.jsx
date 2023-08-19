@@ -5,6 +5,7 @@ import BattleScreen from "../components/BattleScreen";
 import CharacterBanner from "./CharacterBanner";
 import getCharacterInfo from "../utils/getCharacterInfo";
 import itemQualityCheck from "../utils/itemQualityCheck";
+import itemImageCheck from '../utils/itemImageCheck'
 import "../stylesheets/Game.css";
 import InGameMap from "../components/InGameMap";
 import StoryModal from "../components/StoryModal";
@@ -100,6 +101,14 @@ const Game = ({
   const [itemQuantity, setItemQuantity] = useState(1);
   const [confirmSellAll, setConfirmSellAll] = useState(false);
   const [sellAllQuality, setSellAllQuality] = useState("");
+  const [healthPotionImage, setHealthPotionImage] = useState("");
+  const [healthPotionColor, setHealthPotionColor] = useState("");
+  const [energyPotionImage, setEnergyPotionImage] = useState("");
+  const [energyPotionColor, setEnergyPotionColor] = useState("");
+  const [totalEnergyPotions, setTotalEnergyPotions] = useState(0);
+  const [totalHealthPotions, setTotalHealthPotions] = useState(0);
+  const [battlePotionHealAmount, setBattlePotionHealAmount] = useState(0)
+  const [battlePotionRecoverAmount, setBattlePotionRecoverAmount] = useState(0)
 
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
@@ -609,6 +618,101 @@ const Game = ({
     }
   }, [playerHealth]);
 
+  useEffect(() => {
+    const potionQualities = [
+      "Common",
+      "Uncommon",
+      "Rare",
+      "Epic",
+      "Legendary",
+      "Mythical",
+    ];
+
+    // Locate all the potions of the lowest quality
+    let lowestQualityPotions = [];
+    for (const quality of potionQualities) {
+      const potions = inventory.filter(
+        (item) =>
+          item.type === "Potion" &&
+          item.healAmount > 0 &&
+          item.recoverAmount <= 0 &&
+          item.quality === quality
+      );
+      if (potions.length > 0) {
+        lowestQualityPotions = potions;
+        break;
+      }
+    }
+
+    // Set the count of the lowest quality potions
+    const numberOfLowestQualityPotions = lowestQualityPotions.length;
+    setTotalHealthPotions(numberOfLowestQualityPotions);
+
+    if (numberOfLowestQualityPotions > 0) {
+      const lowestQualityPotion = lowestQualityPotions[0]; // Grabbing the first one for the image and color
+      const grabbedPotionUrl = itemImageCheck(lowestQualityPotion.itemName);
+      setHealthPotionImage(grabbedPotionUrl);
+      const grabbedPotionQuality = itemQualityCheck(
+        lowestQualityPotion.quality
+      );
+      setHealthPotionColor(grabbedPotionQuality);
+      setBattlePotionHealAmount(lowestQualityPotion.healAmount)
+    } else {
+      setHealthPotionColor("#000000");
+      setHealthPotionImage("");
+      setBattlePotionHealAmount(0)
+    }
+
+    // You can now use the variable `numberOfLowestQualityPotions` wherever needed
+  }, [useItem, totalHealthPotions, inventory]);
+
+  useEffect(() => {
+    const potionQualities = [
+      "Common",
+      "Uncommon",
+      "Rare",
+      "Epic",
+      "Legendary",
+      "Mythical",
+    ];
+
+    // Locate all the potions of the lowest quality
+    let lowestQualityPotions = [];
+    for (const quality of potionQualities) {
+      const potions = inventory.filter(
+        (item) =>
+          item.type === "Potion" &&
+          item.healAmount <= 0 &&
+          item.recoverAmount > 0 &&
+          item.quality === quality
+      );
+      if (potions.length > 0) {
+        lowestQualityPotions = potions;
+        break;
+      }
+    }
+
+    // Set the count of the lowest quality potions
+    const numberOfLowestQualityPotions = lowestQualityPotions.length;
+    setTotalEnergyPotions(numberOfLowestQualityPotions);
+
+    if (numberOfLowestQualityPotions > 0) {
+      const lowestQualityPotion = lowestQualityPotions[0]; // Grabbing the first one for the image and color
+      const grabbedPotionUrl = itemImageCheck(lowestQualityPotion.itemName);
+      setEnergyPotionImage(grabbedPotionUrl);
+      const grabbedPotionQuality = itemQualityCheck(
+        lowestQualityPotion.quality
+      );
+      setEnergyPotionColor(grabbedPotionQuality);
+      setBattlePotionRecoverAmount(lowestQualityPotion.recoverAmount)
+    } else {
+      setEnergyPotionColor("#000000");
+      setEnergyPotionImage("");
+      setBattlePotionRecoverAmount(0)
+    }
+    // You can now use the variable `numberOfLowestQualityPotions` wherever needed
+  }, [useItem, totalEnergyPotions, inventory]);
+
   const sellAllItemsOfQuality = (quality) => {
     setConfirmSellAll(true);
     setSellAllQuality(quality);
@@ -818,57 +922,57 @@ const Game = ({
 
         {showBattle && (
           <BattleScreen
-            race={race}
-            area={area}
-            level={level}
-            setArea={setArea}
-            setRace={setRace}
-            setLevel={setLevel}
-            character={character}
-            setCurrentIndex={setCurrentIndex}
-            currentIndex={currentIndex}
-            setShowBattle={setShowBattle}
-            setShowStory={setShowStory}
-            earnedXp={earnedXp}
-            setEarnedXp={setEarnedXp}
-            showVictory={showVictory}
-            setShowVictory={setShowVictory}
-            takeHit={takeHit}
-            setTakeHit={setTakeHit}
-            playerHealth={playerHealth}
-            setPlayerHealth={setPlayerHealth}
-            currentEnergy={currentEnergy}
-            setCurrentEnergy={setCurrentEnergy}
-            setPlayerDeath={setPlayerDeath}
-            setCurrentGold={setCurrentGold}
-            playerDeath={playerDeath}
-            setShowMap={setShowMap}
-            currentGold={currentGold}
-            equippedGear={equippedGear}
-            mainHandColor={mainHandColor}
-            offHandColor={offHandColor}
-            setShowDeath={setShowDeath}
-            setCurrentEnemyName={setCurrentEnemyName}
-            setGoldLoss={setGoldLoss}
-            battleRecovery={battleRecovery}
-            setBattleRecovery={setBattleRecovery}
-            inArena={inArena}
-            arenaTracker={arenaTracker}
-            currentUser={currentUser}
-            selectedCharacterId={selectedCharacterId}
-            dbURI={dbURI}
-            regionColor={regionColor}
-            currentEnemy={currentEnemy}
-            enemyHealth={enemyHealth}
-            enemyMaxHealth={enemyMaxHealth}
-            timeoutId={timeoutId}
-            setRegionColor={setRegionColor}
-            setCurrentEnemy={setCurrentEnemy}
-            setEnemyHealth={setEnemyHealth}
-            setEnemyMaxHealth={setEnemyMaxHealth}
-            setTimeoutId={setTimeoutId}
-            playerRecoveryDisplayed={playerRecoveryDisplayed}
-            setPlayerRecoveryDisplayed={setPlayerRecoveryDisplayed}
+          race={race}
+          area={area}
+          level={level}
+          setArea={setArea}
+          setRace={setRace}
+          setLevel={setLevel}
+          character={character}
+          setCurrentIndex={setCurrentIndex}
+          currentIndex={currentIndex}
+          setShowBattle={setShowBattle}
+          setShowStory={setShowStory}
+          earnedXp={earnedXp}
+          setEarnedXp={setEarnedXp}
+          showVictory={showVictory}
+          setShowVictory={setShowVictory}
+          takeHit={takeHit}
+          setTakeHit={setTakeHit}
+          playerHealth={playerHealth}
+          setPlayerHealth={setPlayerHealth}
+          currentEnergy={currentEnergy}
+          setCurrentEnergy={setCurrentEnergy}
+          setPlayerDeath={setPlayerDeath}
+          setCurrentGold={setCurrentGold}
+          playerDeath={playerDeath}
+          setShowMap={setShowMap}
+          currentGold={currentGold}
+          equippedGear={equippedGear}
+          mainHandColor={mainHandColor}
+          offHandColor={offHandColor}
+          setShowDeath={setShowDeath}
+          setCurrentEnemyName={setCurrentEnemyName}
+          setGoldLoss={setGoldLoss}
+          battleRecovery={battleRecovery}
+          setBattleRecovery={setBattleRecovery}
+          inArena={inArena}
+          arenaTracker={arenaTracker}
+          currentUser={currentUser}
+          selectedCharacterId={selectedCharacterId}
+          dbURI={dbURI}
+          setUseItem={setUseItem}
+          useItem={useItem}
+          inventory={inventory}
+          dbURI={dbURI}
+          healthPotionColor={healthPotionColor}
+          healthPotionImage={healthPotionImage}
+          totalHealthPotions={totalHealthPotions}
+          energyPotionColor={energyPotionColor}
+          energyPotionImage={energyPotionImage}
+          totalEnergyPotions={totalEnergyPotions}
+          battlePotionHealAmount={battlePotionHealAmount}
+          battlePotionRecoverAmount={battlePotionRecoverAmount}
           />
         )}
         {showEdit && (

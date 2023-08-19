@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { BsLightningFill, BsLightning } from "react-icons/bs";
 import { GiMineExplosion } from "react-icons/gi";
 import { FaHeart } from "react-icons/fa";
@@ -26,8 +27,23 @@ const CharacterCard = ({
   equippedGear,
   displayedRecovery,
   playerRecoveryDisplayed,
-  isRecovering
+  isRecovering,
+  currentUser,
+  selectedCharacterId,
+  setUseItem,
+  setDisabled,
+  useItem,
+  dbURI,
+  healthPotionColor,
+  healthPotionImage,
+  totalHealthPotions,
+  energyPotionColor,
+  energyPotionImage,
+  totalEnergyPotions,
+  battlePotionHealAmount,
+  battlePotionRecoverAmount,
 }) => {
+  const [isLoading, setIsLoading] = useState(false);
   if (!character) return <div>Loading...</div>;
 
   const { mainHand, offHand } = equippedGear;
@@ -39,12 +55,156 @@ const CharacterCard = ({
 
   const mainColor = itemQualityCheck(mainQuality);
   const offColor = itemQualityCheck(offQuality);
+  const armorColor = itemQualityCheck(armor.quality);
 
   const mainImage = itemImageCheck(mainItem);
   const offImage = itemImageCheck(offItem);
 
-  const { characterName, level, activeAbilities, role } = character;
+  const { characterName, level, activeAbilities, role, inventory } = character;
 
+  const handleUseFirstPotion = async (type) => {
+    setIsLoading(true);
+    if (type === "health") {
+      const potionQualities = [
+        "Common",
+        "Uncommon",
+        "Rare",
+        "Epic",
+        "Legendary",
+        "Mythical",
+      ];
+
+      // Locate the lowest quality health potion
+      let lowestQualityPotion;
+      for (const quality of potionQualities) {
+        const potion = inventory.find(
+          (item) =>
+            item.type === "Potion" &&
+            item.healAmount > 0 &&
+            item.recoverAmount <= 0 &&
+            item.quality === quality
+        );
+        if (potion) {
+          lowestQualityPotion = potion;
+          break;
+        }
+      }
+      if (lowestQualityPotion) {
+        const maxHealthCheck =
+          playerHealth + lowestQualityPotion.healAmount > 100
+            ? 100
+            : lowestQualityPotion.healAmount;
+        const newHealth =
+          maxHealthCheck === 100
+            ? 100
+            : playerHealth + lowestQualityPotion.healAmount;
+        await fetch(`${dbURI}/users/characters/health`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
+          },
+          body: JSON.stringify({
+            selectedCharacterId, // Use selectedCharacterId instead of _id
+            health: newHealth,
+            currentUser,
+          }),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            setPlayerHealth(newHealth);
+            return response.json();
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+
+        try {
+          await axios.delete(
+            `${dbURI}/users/characters/inventory?selectedCharacterId=${selectedCharacterId}&key=${lowestQualityPotion.key}&currentUser=${currentUser}`
+          );
+        } catch (err) {
+          console.error(err);
+        }
+
+        setUseItem(!useItem);
+        // Remove the potion from the character's inventory
+        // Handle the response data if needed
+      }
+    } else if (type === "energy") {
+      const potionQualities = [
+        "Common",
+        "Uncommon",
+        "Rare",
+        "Epic",
+        "Legendary",
+        "Mythical",
+      ];
+
+      // Locate the lowest quality health potion
+      let lowestQualityPotion;
+      for (const quality of potionQualities) {
+        const potion = inventory.find(
+          (item) =>
+            item.type === "Potion" &&
+            item.healAmount <= 0 &&
+            item.recoverAmount > 0 &&
+            item.quality === quality
+        );
+        if (potion) {
+          lowestQualityPotion = potion;
+          break;
+        }
+      }
+      if (lowestQualityPotion) {
+        const maxEnergyCheck =
+          currentEnergy + lowestQualityPotion.recoverAmount > 100
+            ? 100
+            : lowestQualityPotion.recoverAmount;
+        const newEnergy =
+          maxEnergyCheck === 100
+            ? 100
+            : currentEnergy + lowestQualityPotion.recoverAmount;
+        await fetch(`${dbURI}/users/characters/energy`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${currentUser}`, // Assuming currentUser is the loginToken
+          },
+          body: JSON.stringify({
+            selectedCharacterId, // Use selectedCharacterId instead of _id
+            energy: newEnergy,
+            currentUser,
+          }),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            setCurrentEnergy(newEnergy);
+            return response.json();
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+
+        try {
+          await axios.delete(
+            `${dbURI}/users/characters/inventory?selectedCharacterId=${selectedCharacterId}&key=${lowestQualityPotion.key}&currentUser=${currentUser}`
+          );
+        } catch (err) {
+          console.error(err);
+        }
+
+        setUseItem(!useItem);
+        // Remove the potion from the character's inventory
+        // Handle the response data if needed
+      }
+    }
+    setIsLoading(false);
+  };
   const iconUrl = getRoleIcon(role);
 
   const hexToRgb = (hex) => {
@@ -67,11 +227,11 @@ const CharacterCard = ({
       {ability.name ? (
         <div
           className={`character-card-single-ability-container ${
-            (isAttacking || isRecovering) ? "disabled" : ""
+            isAttacking || isRecovering ? "disabled" : ""
           } ${!turn ? "disabled" : ""}`}
           style={{
             transition: "box-shadow .3s ease, background-color .3s ease",
-            cursor: (isAttacking || isRecovering) ? "not-allowed" : "pointer",
+            cursor: isAttacking || isRecovering ? "not-allowed" : "pointer",
           }}
           onMouseEnter={(e) => {
             const rgb = hexToRgb(roleColor);
@@ -133,7 +293,7 @@ const CharacterCard = ({
     <>
       <div
         className={`character-card-container ${
-          (isAttacking || isRecovering) ? "attacking" : ""
+          isAttacking || isRecovering ? "attacking" : ""
         } ${playerIsHit ? "hit" : ""} ${
           playerDamageDisplayed ? "damaged" : ""
         }`}
@@ -181,6 +341,54 @@ const CharacterCard = ({
               className="character-card-item-image"
               style={{ backgroundImage: `url("${offImage}")` }}
             />
+          </div>
+          <div
+            className="character-card-health-potion"
+            style={{
+              backgroundColor: healthPotionColor,
+            }}
+          >
+            <button
+              className="character-card-health-potion-image"
+              style={{
+                backgroundImage: `url("${healthPotionImage}")`,
+                opacity: isLoading ? ".75" : "1",
+              }}
+              onClick={() => handleUseFirstPotion("health")}
+              disabled={isLoading}
+            >
+              {healthPotionImage && (
+                <div
+                  className="character-card-battle-potion-amount"
+                  style={{ color: "#911909" }}
+                >{`+${battlePotionHealAmount}`}</div>
+              )}
+              {!healthPotionImage ? "No Potions" : `${totalHealthPotions}`}
+            </button>
+          </div>
+          <div
+            className="character-card-energy-potion"
+            style={{
+              backgroundColor: energyPotionColor,
+            }}
+          >
+            <button
+              className="character-card-energy-potion-image"
+              style={{
+                backgroundImage: `url("${energyPotionImage}")`,
+                opacity: isLoading ? ".75" : "1",
+              }}
+              onClick={() => handleUseFirstPotion("energy")}
+              disabled={isLoading}
+            >
+              {energyPotionImage && (
+                <div
+                  className="character-card-battle-potion-amount"
+                  style={{ color: "#229b22" }}
+                >{`+${battlePotionRecoverAmount}`}</div>
+              )}
+              {!energyPotionImage ? "No Potions" : `${totalEnergyPotions}`}
+            </button>
           </div>
           <div className="character-card-health-energy-container">
             <div className="character-card-bar">

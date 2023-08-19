@@ -69,6 +69,18 @@ const BattleScreen = ({
   setTimeoutId,
   playerRecoveryDisplayed,
   setPlayerRecoveryDisplayed,
+  setUseItem,
+  useItem,
+  inventory,
+  dbURI,
+  healthPotionColor,
+  healthPotionImage,
+  totalHealthPotions,
+  energyPotionColor,
+  energyPotionImage,
+  totalEnergyPotions,
+  battlePotionHealAmount,
+  battlePotionRecoverAmount
 }) => {
   const [playerDamageTaken, setPlayerDamageTaken] = useState(0);
   const [enemyDamageTaken, setEnemyDamageTaken] = useState(0);
@@ -439,6 +451,20 @@ const BattleScreen = ({
           displayedRecovery={displayedRecovery}
           playerRecoveryDisplayed={playerRecoveryDisplayed}
           isRecovering={isRecovering}
+          currentUser={currentUser}
+          selectedCharacterId={selectedCharacterId}
+          setUseItem={setUseItem}
+          useItem={useItem}
+          inventory={inventory}
+          dbURI={dbURI}
+          healthPotionColor={healthPotionColor}
+          healthPotionImage={healthPotionImage}
+          totalHealthPotions={totalHealthPotions}
+          energyPotionColor={energyPotionColor}
+          energyPotionImage={energyPotionImage}
+          totalEnergyPotions={totalEnergyPotions}
+          battlePotionHealAmount={battlePotionHealAmount}
+          battlePotionRecoverAmount={battlePotionRecoverAmount}
         />
       </div>
       <div
