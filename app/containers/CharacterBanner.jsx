@@ -108,12 +108,6 @@ const CharacterBanner = ({
   };
   const handleGoHome = () => {
     setShowAlert(true);
-    setTravelHome(true);
-    setInArena(false);
-    setShowEdit(false);
-    setShowInventory(false);
-    setIsSkillTreeOpen(false);
-    setShowBattle(false);
   };
 
   return (
