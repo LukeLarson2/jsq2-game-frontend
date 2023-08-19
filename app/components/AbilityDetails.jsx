@@ -111,11 +111,16 @@ const AbilityDetails = ({
     setHasAbility(abilityOwned);
   }, [ownedAbilities, ability]);
 
+
+  const handleCloseModal = () => {
+    setShowDetails(false)
+  }
   return (
-    <div className="skill-tree-ability-details-overlay">
+    <div className="skill-tree-ability-details-overlay" onClick={() => handleCloseModal()}>
       <div
         className="skill-tree-ability-details-modal"
         style={{ backgroundImage: "url(./skill_tree_background_blue.png)" }}
+        onClick={(e) => e.stopPropagation()}
       >
         {notEnoughSkillPoints && (
           <AlertModal
