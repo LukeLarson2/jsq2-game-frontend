@@ -981,6 +981,8 @@ const Game = ({
             setRegionColor={setRegionColor}
             enemyHealth={enemyHealth}
             enemyMaxHealth={enemyMaxHealth}
+            setEnemyHealth={setEnemyHealth}
+            setEnemyMaxHealth={setEnemyMaxHealth}
           />
         )}
         {showEdit && (
