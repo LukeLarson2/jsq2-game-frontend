@@ -595,7 +595,6 @@ const Game = ({
         });
         const randomIndex = Math.floor(Math.random() * possibleEnemies.length);
         const selectedEnemy = possibleEnemies[randomIndex];
-        console.log(selectedEnemy);
         setRegionColor(regionColorCheck(selectedEnemy.area.toLowerCase()));
         setCurrentEnemy(selectedEnemy);
         setCurrentEnemyName(selectedEnemy.name);

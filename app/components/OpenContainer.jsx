@@ -21,23 +21,9 @@ const OpenContainer = ({
   const [choice, setChoice] = useState("");
   const [itemsFound, setItemsFound] = useState([]);
   const [openValue, setOpenValue] = useState("");
-  const [renderedItems, setRenderedItems] = useState([]);
 
-  useEffect(() => {
-    if (openValue === "yes") {
-      let i = 0;
-      const interval = setInterval(() => {
-        if (i < itemsFound.length - 1) {
-          setRenderedItems((prevItems) => [...prevItems, itemsFound[i]]);
-          i++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 300);
-      // Cleanup function
-      return () => clearInterval(interval);
-    }
-  }, [openValue, itemsFound]);
+
+
 
   const formatContainerType = (type) => {
     return type
@@ -85,7 +71,7 @@ const OpenContainer = ({
             </div>
           )}
           {openValue === "yes" &&
-            renderedItems.map((item) => {
+            itemsFound.map((item) => {
               const { itemName, quality, key } = item; // Destructure key from item
               const color = itemQualityCheck(quality);
               return (
