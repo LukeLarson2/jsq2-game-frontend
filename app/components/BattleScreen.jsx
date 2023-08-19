@@ -70,7 +70,9 @@ const BattleScreen = ({
   battlePotionRecoverAmount,
   currentEnemy,
   setCurrentEnemy,
-  playerRecoveryDisplayed
+  playerRecoveryDisplayed,
+  enemyHealth,
+  enemyMaxHealth
 }) => {
   const [playerDamageTaken, setPlayerDamageTaken] = useState(0);
   const [enemyDamageTaken, setEnemyDamageTaken] = useState(0);
