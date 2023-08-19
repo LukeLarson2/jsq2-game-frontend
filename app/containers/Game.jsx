@@ -964,7 +964,6 @@ const Game = ({
           setUseItem={setUseItem}
           useItem={useItem}
           inventory={inventory}
-          dbURI={dbURI}
           healthPotionColor={healthPotionColor}
           healthPotionImage={healthPotionImage}
           totalHealthPotions={totalHealthPotions}
