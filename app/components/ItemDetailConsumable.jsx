@@ -215,7 +215,7 @@ const ItemDetailConsumable = ({
   };
 
   const checkGold = () => {
-    if (currentGold < itemDetails.itemValue * quality) {
+    if (currentGold < itemDetails.itemValue * itemQuantity) {
       setHasEnough(false);
     } else {
       setHasEnough(true);
@@ -224,7 +224,7 @@ const ItemDetailConsumable = ({
 
   useEffect(() => {
     checkGold();
-  }, [checkHasEnough]);
+  }, [checkHasEnough, itemQuantity]);
 
   useEffect(() => {
     setItemQuantity(1);
@@ -253,6 +253,7 @@ const ItemDetailConsumable = ({
     }
   };
 
+
   return (
     <div className="item-detail-overlay">
       {!enoughGold && isSelling && (
@@ -270,8 +271,8 @@ const ItemDetailConsumable = ({
             </div>
             <div className="item-detail-value">
               <div className="item-detail-value-icon-info-container">
-                <GiTwoCoins className="item-detail-value-icon" />
-                {`${itemValue * itemQuantity}`}
+                <GiTwoCoins className="item-detail-value-icon"/>
+                <p style={{color: hasEnough && isShop ? '#000000' : '#ff4335'}}>{`${itemValue * itemQuantity}`}</p>
               </div>
             </div>
           </div>
@@ -301,7 +302,7 @@ const ItemDetailConsumable = ({
             <div className="item-detail-info-container">
               <div className="item-detail-heal-amount">{description}</div>
             </div>
-            <div className="item-detail-btn-placement" style={{flexDirection: isSelling ? 'flex' : 'column'}}>
+            <div className="item-detail-btn-placement" style={{flexDirection: !isShop ? 'flex' : 'column'}}>
               {isShop && !isSelling && (
                 <div className="item-detail-quantity-container">
                   <GoTriangleDown
