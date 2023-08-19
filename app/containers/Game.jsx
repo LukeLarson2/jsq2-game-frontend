@@ -976,6 +976,7 @@ const Game = ({
             battlePotionRecoverAmount={battlePotionRecoverAmount}
             currentEnemy={currentEnemy}
             setCurrentEnemy={setCurrentEnemy}
+            playerRecoveryDisplayed={playerRecoveryDisplayed}
           />
         )}
         {showEdit && (
