@@ -979,6 +979,8 @@ const Game = ({
             playerRecoveryDisplayed={playerRecoveryDisplayed}
             regionColor={regionColor}
             setRegionColor={setRegionColor}
+            enemyHealth={enemyHealth}
+            enemyMaxHealth={enemyMaxHealth}
           />
         )}
         {showEdit && (
