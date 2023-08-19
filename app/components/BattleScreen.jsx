@@ -128,37 +128,6 @@ const BattleScreen = ({
   };
 
   const { armor, mainHand, offHand } = equippedGear;
-  const generateEnemyCard = (race, area, level) => {
-    const fetchEnemy = async () => {
-      const allEnemyInfo = await getEnemyInfo();
-      if (allEnemyInfo) {
-        const possibleEnemies = allEnemyInfo.filter(
-          (enemy) =>
-            enemy.race === race &&
-            enemy.level === level &&
-            enemy.area === area &&
-            enemy.health > 0 // Ensure that the health is positive
-        );
-
-        if (possibleEnemies.length > 0) {
-          const randomIndex = Math.floor(
-            Math.random() * possibleEnemies.length
-          );
-          const selectedEnemy = possibleEnemies[randomIndex];
-
-          // Additional check to ensure health is positive
-          const enemyHealth = Math.max(0, selectedEnemy.health);
-
-          setRegionColor(regionColorCheck(selectedEnemy.area.toLowerCase()));
-          setCurrentEnemy(selectedEnemy);
-          setCurrentEnemyName(selectedEnemy.name);
-          setEnemyHealth(enemyHealth);
-          setEnemyMaxHealth(enemyHealth);
-        }
-      }
-    };
-    fetchEnemy();
-  };
 
   const handleHit = (user, damageAmount) => {
     if (user === "player") {
