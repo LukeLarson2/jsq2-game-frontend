@@ -974,6 +974,8 @@ const Game = ({
             totalEnergyPotions={totalEnergyPotions}
             battlePotionHealAmount={battlePotionHealAmount}
             battlePotionRecoverAmount={battlePotionRecoverAmount}
+            currentEnemy={currentEnemy}
+            setCurrentEnemy={setCurrentEnemy}
           />
         )}
         {showEdit && (
