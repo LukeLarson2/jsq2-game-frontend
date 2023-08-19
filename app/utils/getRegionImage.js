@@ -1,7 +1,7 @@
 const getRegionImage = (area) => {
   switch (area) {
     case "desolateBeach": {
-      return "./grassy_plains.png";
+      return "./desolate_beach.png";
     }
     case "southernGateway": {
       return "./southern_gateway_region.png";

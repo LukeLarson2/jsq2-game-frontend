@@ -558,30 +558,29 @@ const Game = ({
     }
     setIsLoading(false);
   };
-  const generateEnemyCard = (race, area, level) => {
+
+  const generateEnemyCard = () => {
     const fetchEnemy = async () => {
       const allEnemyInfo = await getEnemyInfo();
       if (allEnemyInfo) {
-        const possibleEnemies = allEnemyInfo.filter(
-          (enemy) =>
+        const possibleEnemies = [];
+        allEnemyInfo.map((enemy) => {
+          if (
             enemy.race === race &&
             enemy.level === level &&
             enemy.area === area
-        );
-
-        if (possibleEnemies.length > 0) {
-          const randomIndex = Math.floor(
-            Math.random() * possibleEnemies.length
-          );
-          const selectedEnemy = possibleEnemies[randomIndex];
-console.log(selectedEnemy)
-
-          setRegionColor(regionColorCheck(selectedEnemy.area.toLowerCase()));
-          setCurrentEnemy(selectedEnemy);
-          setCurrentEnemyName(selectedEnemy.name);
-          setEnemyHealth(enemyHealth);
-          setEnemyMaxHealth(enemyHealth);
-        }
+          ) {
+            possibleEnemies.push(enemy);
+          }
+        });
+        const randomIndex = Math.floor(Math.random() * possibleEnemies.length);
+        const selectedEnemy = possibleEnemies[randomIndex];
+        console.log(selectedEnemy)
+        setRegionColor(regionColorCheck(selectedEnemy.area.toLowerCase()));
+        setCurrentEnemy(selectedEnemy);
+        setCurrentEnemyName(selectedEnemy.name);
+        setEnemyHealth(selectedEnemy.health);
+        setEnemyMaxHealth(selectedEnemy.health);
       }
     };
     fetchEnemy();
