@@ -25,6 +25,8 @@ import Credits from "../components/Credits";
 import dbURI from "../lib/dbURI";
 import getPlayerHealth from "../utils/getPlayerHealth";
 import regionColorCheck from "../utils/regionColorCheck";
+import forgottenForestStory from '../utils/forgottenForestStory'
+import northrendAscentStory from '../utils/northrendAscentStory'
 
 const Game = ({
   currentUser,
@@ -408,6 +410,24 @@ const Game = ({
       setRegionBackground("./pan_strane_arena.png");
       setCurrentIndex(0);
       setArenaTracker(1);
+      return;
+    }
+    if (regionId === "forgottenForest") {
+      setInArena(false);
+      setShowMap(false);
+      setShowStory(true);
+      setUserStory(forgottenForestStory);
+      setRegionBackground("./forest_region_2.png");
+      setCurrentIndex(0);
+      return;
+    }
+    if (regionId === "northrendAscent") {
+      setInArena(false);
+      setShowMap(false);
+      setShowStory(true);
+      setUserStory(northrendAscentStory);
+      setRegionBackground("./mountain_region_2.png");
+      setCurrentIndex(0);
       return;
     }
     setIsLoading(true);

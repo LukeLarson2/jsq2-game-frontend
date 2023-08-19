@@ -1,0 +1,35 @@
+const forgottenForestStory = [
+   "You appear in the Forgotten Forest, where the overgrowth is so dense that the light gets blocked by the large trees.",
+   "The magic map that teleported you here glimmers with an ancient glow.",
+   "You begin to explore the forest, curiosity driving your steps.",
+   "As you walk through the underbrush, the sound of a distant river catches your ear.",
+   "You decide to follow the sound, hoping to find something interesting.",
+   "As you make your way through the twisting path, you feel a sudden chill in the air.",
+   "A wolf, black as night, appears before you.",
+   "It's eyes fix on you as it bears it's teeth.",
+   "You prepare to fight",
+   {race: "wolf", level: 20, area: "forest"},
+   "After the encounter with the wolf, you continue on your path, your heart still racing.",
+   "forest-cave",
+   "Soon, you come across a hidden cave, its entrance obscured by thick foliage.",
+   "A chill runs down your spine as you approach.",
+   "You enter the cave...",
+   "The damp air of the cave hits you as you explore deeper inside.",
+   "Suddenly, you come upon an iron door that is locked, standing as a mysterious barrier to whatever lies beyond.",
+   "You try to open the door, but it won't budge.",
+   "iron-key-check",
+   "Frustrated, you look around the area for a key but find nothing.",
+   "You search the nearby crevices and cracks, hoping to find something that might unlock the door.",
+   "Your search proves fruitless, and a feeling of disappointment washes over you.",
+   "With a heavy sigh, you make your way out of the cave, the locked door still weighing on your mind.",
+   "Once back in the Forgotten Forest, you continue to explore, your thoughts drifting back to the cave.",
+   "The rest of the day passes uneventfully, the forest revealing no more secrets.",
+   "As the sun begins to set, you find a suitable spot to rest for the night.",
+   "You make a small campfire and think about the day's adventure.",
+   "You wonder what might have been behind that iron door and make a mental note to return someday.",
+   "You look at the map and pick your next location to travel to.",
+   "end"
+ ]
+
+
+export default forgottenForestStory;

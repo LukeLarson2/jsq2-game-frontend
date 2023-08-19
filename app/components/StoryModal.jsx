@@ -83,11 +83,9 @@ const StoryModal = ({
   const deleteKey = async (key) => {
     try {
       // Removing the item from the inventory
-      await axios.delete(`${dbURI}/users/characters/inventory`, {
-        selectedCharacterId, // Using selectedCharacterId instead of characterId
-        key,
-        currentUser,
-      });
+      await axios.delete(
+        `${dbURI}/users/characters/inventory?selectedCharacterId=${selectedCharacterId}&key=${key}&currentUser=${currentUser}`
+      );
       // If the request is successful, do something here, e.g., close the modal
     } catch (error) {
       console.error("An error occurred while deleting the item: ", error);
@@ -211,38 +209,42 @@ const StoryModal = ({
         setInCave(true);
         setCurrentIndex(currentIndex + 2);
         setRegionBackground("./cave_enterance_forest.png");
+      } else if (
+        nextItem ===
+        "Suddenly, you come upon an iron door that is locked, standing as a mysterious barrier to whatever lies beyond."
+      ) {
+        setRegionBackground("./cave_iron_door.png");
       } else if (nextItem === "iron-key-check") {
-        let foundIronKey = false;
-        inventory.map((item) => {
-          if (item.itemName === "Iron Key") {
-            setUserStory(keyStory("iron-key-check"));
-            setCurrentIndex(0);
-            setRegionBackground("./cave_iron_door.png");
-            deleteKey(item.key);
-            foundIronKey = true;
-          }
-        });
+        const ironKey = inventory.find(
+          (item) => item.itemName === "Mithril Key"
+        );
 
-        if (!foundIronKey) {
+        if (ironKey) {
+          setUserStory(keyStory("iron-key-check"));
+          setCurrentIndex(0);
+          deleteKey(ironKey.key);
+        } else {
           setCurrentIndex(currentIndex + 2);
         }
       } else if (nextItem === "mountain-cave") {
         setInCave(true);
         setCurrentIndex(currentIndex + 2);
-        setRegionBackground("./cave_enterance_mountain.png");
+        setRegionBackground("./mountain_cave_enterance.png");
+      } else if (
+        nextItem ===
+        "Inside the cave, you find an intricate mithril door that is locked, its surface engraved with ancient runes."
+      ) {
+        setRegionBackground("./cave_mithril_door.png");
       } else if (nextItem === "mithril-key-check") {
-        let foundMithrilKey = false;
-        inventory.map((item) => {
-          if (item.itemName === "Mithril Key") {
-            setUserStory(keyStory("mithril-key-check"));
-            setCurrentIndex(0);
-            setRegionBackground("./cave_mithril_door.png");
-            deleteKey(item.key);
-            foundMithrilKey = true;
-          }
-        });
+        const mithrilKey = inventory.find(
+          (item) => item.itemName === "Mithril Key"
+        );
 
-        if (!foundMithrilKey) {
+        if (mithrilKey) {
+          setUserStory(keyStory("mithril-key-check"));
+          setCurrentIndex(0);
+          deleteKey(mithrilKey.key);
+        } else {
           setCurrentIndex(currentIndex + 2);
         }
       } else if (nextItem === "trash-iron-key") {
