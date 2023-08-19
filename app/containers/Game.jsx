@@ -5,7 +5,7 @@ import BattleScreen from "../components/BattleScreen";
 import CharacterBanner from "./CharacterBanner";
 import getCharacterInfo from "../utils/getCharacterInfo";
 import itemQualityCheck from "../utils/itemQualityCheck";
-import itemImageCheck from '../utils/itemImageCheck'
+import itemImageCheck from "../utils/itemImageCheck";
 import "../stylesheets/Game.css";
 import InGameMap from "../components/InGameMap";
 import StoryModal from "../components/StoryModal";
@@ -107,8 +107,8 @@ const Game = ({
   const [energyPotionColor, setEnergyPotionColor] = useState("");
   const [totalEnergyPotions, setTotalEnergyPotions] = useState(0);
   const [totalHealthPotions, setTotalHealthPotions] = useState(0);
-  const [battlePotionHealAmount, setBattlePotionHealAmount] = useState(0)
-  const [battlePotionRecoverAmount, setBattlePotionRecoverAmount] = useState(0)
+  const [battlePotionHealAmount, setBattlePotionHealAmount] = useState(0);
+  const [battlePotionRecoverAmount, setBattlePotionRecoverAmount] = useState(0);
 
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
@@ -176,7 +176,7 @@ const Game = ({
           itemValue: item.itemValue * 2,
         }));
 
-        newShopItems = filterDuplicates(newShopItems);
+      newShopItems = filterDuplicates(newShopItems);
 
       setShopItems((prevItems) => [...prevItems, ...newShopItems]);
     } else if (shopType === "Weapon") {
@@ -192,7 +192,7 @@ const Game = ({
           itemValue: item.itemValue * 2,
         }));
 
-        newShopItems = filterDuplicates(newShopItems);
+      newShopItems = filterDuplicates(newShopItems);
 
       setShopItems((prevItems) => [...prevItems, ...newShopItems]);
     } else if (shopType === "Armor") {
@@ -208,7 +208,7 @@ const Game = ({
           itemValue: item.itemValue * 2,
         }));
 
-        newShopItems = filterDuplicates(newShopItems);
+      newShopItems = filterDuplicates(newShopItems);
 
       setShopItems((prevItems) => [...prevItems, ...newShopItems]);
     }
@@ -513,7 +513,8 @@ const Game = ({
     setIsLoading(false);
   };
 
-  const buyItem = async (item) => { // Accepting quantity as a parameter
+  const buyItem = async (item) => {
+    // Accepting quantity as a parameter
     setIsLoading(true);
     try {
       const newItems = [];
@@ -656,11 +657,11 @@ const Game = ({
         lowestQualityPotion.quality
       );
       setHealthPotionColor(grabbedPotionQuality);
-      setBattlePotionHealAmount(lowestQualityPotion.healAmount)
+      setBattlePotionHealAmount(lowestQualityPotion.healAmount);
     } else {
       setHealthPotionColor("#000000");
       setHealthPotionImage("");
-      setBattlePotionHealAmount(0)
+      setBattlePotionHealAmount(0);
     }
 
     // You can now use the variable `numberOfLowestQualityPotions` wherever needed
@@ -704,11 +705,11 @@ const Game = ({
         lowestQualityPotion.quality
       );
       setEnergyPotionColor(grabbedPotionQuality);
-      setBattlePotionRecoverAmount(lowestQualityPotion.recoverAmount)
+      setBattlePotionRecoverAmount(lowestQualityPotion.recoverAmount);
     } else {
       setEnergyPotionColor("#000000");
       setEnergyPotionImage("");
-      setBattlePotionRecoverAmount(0)
+      setBattlePotionRecoverAmount(0);
     }
     // You can now use the variable `numberOfLowestQualityPotions` wherever needed
   }, [useItem, totalEnergyPotions, inventory]);
@@ -762,7 +763,7 @@ const Game = ({
     } catch (error) {
       console.error("An error occurred while selling the items: ", error);
     }
-    setSellAllQuality('')
+    setSellAllQuality("");
     setIsLoading(false);
   };
 
@@ -770,7 +771,7 @@ const Game = ({
   if (character) {
     return (
       <div className="game-container-place-holder">
-                {/* {componentIsLoading && (
+        {/* {componentIsLoading && (
           <div className="main-spinner-container-position">
             <div className="main-spinner-container">
               <div className="main-spinner a">
@@ -915,63 +916,64 @@ const Game = ({
             currentUser={currentUser}
             selectedCharacterId={selectedCharacterId}
             dbURI={dbURI}
-            sellAllItemsOfQuality={sellAllItemsOfQuality}              itemQuantity={itemQuantity}
+            sellAllItemsOfQuality={sellAllItemsOfQuality}
+            itemQuantity={itemQuantity}
             setItemQuantity={setItemQuantity}
           />
         )}
 
         {showBattle && (
           <BattleScreen
-          race={race}
-          area={area}
-          level={level}
-          setArea={setArea}
-          setRace={setRace}
-          setLevel={setLevel}
-          character={character}
-          setCurrentIndex={setCurrentIndex}
-          currentIndex={currentIndex}
-          setShowBattle={setShowBattle}
-          setShowStory={setShowStory}
-          earnedXp={earnedXp}
-          setEarnedXp={setEarnedXp}
-          showVictory={showVictory}
-          setShowVictory={setShowVictory}
-          takeHit={takeHit}
-          setTakeHit={setTakeHit}
-          playerHealth={playerHealth}
-          setPlayerHealth={setPlayerHealth}
-          currentEnergy={currentEnergy}
-          setCurrentEnergy={setCurrentEnergy}
-          setPlayerDeath={setPlayerDeath}
-          setCurrentGold={setCurrentGold}
-          playerDeath={playerDeath}
-          setShowMap={setShowMap}
-          currentGold={currentGold}
-          equippedGear={equippedGear}
-          mainHandColor={mainHandColor}
-          offHandColor={offHandColor}
-          setShowDeath={setShowDeath}
-          setCurrentEnemyName={setCurrentEnemyName}
-          setGoldLoss={setGoldLoss}
-          battleRecovery={battleRecovery}
-          setBattleRecovery={setBattleRecovery}
-          inArena={inArena}
-          arenaTracker={arenaTracker}
-          currentUser={currentUser}
-          selectedCharacterId={selectedCharacterId}
-          dbURI={dbURI}
-          setUseItem={setUseItem}
-          useItem={useItem}
-          inventory={inventory}
-          healthPotionColor={healthPotionColor}
-          healthPotionImage={healthPotionImage}
-          totalHealthPotions={totalHealthPotions}
-          energyPotionColor={energyPotionColor}
-          energyPotionImage={energyPotionImage}
-          totalEnergyPotions={totalEnergyPotions}
-          battlePotionHealAmount={battlePotionHealAmount}
-          battlePotionRecoverAmount={battlePotionRecoverAmount}
+            race={race}
+            area={area}
+            level={level}
+            setArea={setArea}
+            setRace={setRace}
+            setLevel={setLevel}
+            character={character}
+            setCurrentIndex={setCurrentIndex}
+            currentIndex={currentIndex}
+            setShowBattle={setShowBattle}
+            setShowStory={setShowStory}
+            earnedXp={earnedXp}
+            setEarnedXp={setEarnedXp}
+            showVictory={showVictory}
+            setShowVictory={setShowVictory}
+            takeHit={takeHit}
+            setTakeHit={setTakeHit}
+            playerHealth={playerHealth}
+            setPlayerHealth={setPlayerHealth}
+            currentEnergy={currentEnergy}
+            setCurrentEnergy={setCurrentEnergy}
+            setPlayerDeath={setPlayerDeath}
+            setCurrentGold={setCurrentGold}
+            playerDeath={playerDeath}
+            setShowMap={setShowMap}
+            currentGold={currentGold}
+            equippedGear={equippedGear}
+            mainHandColor={mainHandColor}
+            offHandColor={offHandColor}
+            setShowDeath={setShowDeath}
+            setCurrentEnemyName={setCurrentEnemyName}
+            setGoldLoss={setGoldLoss}
+            battleRecovery={battleRecovery}
+            setBattleRecovery={setBattleRecovery}
+            inArena={inArena}
+            arenaTracker={arenaTracker}
+            currentUser={currentUser}
+            selectedCharacterId={selectedCharacterId}
+            dbURI={dbURI}
+            setUseItem={setUseItem}
+            useItem={useItem}
+            inventory={inventory}
+            healthPotionColor={healthPotionColor}
+            healthPotionImage={healthPotionImage}
+            totalHealthPotions={totalHealthPotions}
+            energyPotionColor={energyPotionColor}
+            energyPotionImage={energyPotionImage}
+            totalEnergyPotions={totalEnergyPotions}
+            battlePotionHealAmount={battlePotionHealAmount}
+            battlePotionRecoverAmount={battlePotionRecoverAmount}
           />
         )}
         {showEdit && (
@@ -998,7 +1000,8 @@ const Game = ({
             equippedGear={equippedGear}
             currentUser={currentUser}
             selectedCharacterId={selectedCharacterId}
-            dbURI={dbURI}              itemQuantity={itemQuantity}
+            dbURI={dbURI}
+            itemQuantity={itemQuantity}
             setItemQuantity={setItemQuantity}
           />
         )}

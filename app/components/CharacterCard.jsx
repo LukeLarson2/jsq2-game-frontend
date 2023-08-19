@@ -353,6 +353,8 @@ const CharacterCard = ({
               style={{
                 backgroundImage: `url("${healthPotionImage}")`,
                 opacity: isLoading ? ".75" : "1",
+                justifyContent: !healthPotionImage ? "center" : "flex-start",
+                alignItems: !healthPotionImage ? "center" : "flex-start",
               }}
               onClick={() => handleUseFirstPotion("health")}
               disabled={isLoading}
@@ -377,6 +379,8 @@ const CharacterCard = ({
               style={{
                 backgroundImage: `url("${energyPotionImage}")`,
                 opacity: isLoading ? ".75" : "1",
+                justifyContent: !energyPotionImage ? "center" : "flex-start",
+                alignItems: !energyPotionImage ? "center" : "flex-start",
               }}
               onClick={() => handleUseFirstPotion("energy")}
               disabled={isLoading}
