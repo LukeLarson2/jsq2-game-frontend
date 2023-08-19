@@ -82,9 +82,9 @@ const EnemyNPCCard = ({
             </div>
             <div className="enemy-card-name-role-container">
               <h1 className="enemy-name">
-                {currentEnemy.name}{" "}
-                <span className="enemy-level">Lvl: {currentEnemy.level}</span>
+                {currentEnemy.name}
               </h1>
+                <h1 className="enemy-level">Lvl: {currentEnemy.level}</h1>
               <div
                 className="enemy-role-icon"
                 style={{ backgroundImage: `url(${currentEnemyIcon})` }}

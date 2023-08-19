@@ -58,12 +58,47 @@
     width: 100%;
   }
   .enemy-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     font-weight: bold;
     font-size: 28px;
     margin-left: 20px;
     margin-top: 10px;
     color: black;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    width: 250px;
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .enemy-level {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    font-size: 18px;
+    padding-right: 20px;
+    margin-top: 15px;
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    width: fit-content;
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+
+  .enemy-card-abilities-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 200px;
+    width: 100%;
+    top: 58%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-50%);
   }
 
   .enemy-role-icon {
@@ -89,23 +124,6 @@
     box-shadow: 3px 3px 20px white;
   }
 
-  .enemy-level {
-    font-size: 18px;
-    font-weight: bold;
-    font-style: italic;
-    margin-left: 10px;
-  }
-
-  .enemy-card-abilities-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 180px;
-    height: 200px;
-    width: 100%;
-    margin-bottom: 10px;
-  }
   .enemy-card-single-ability-container {
     display: flex;
     width: 370px;
@@ -356,14 +374,7 @@
     align-items: flex-start;
     width: 100%;
   }
-  .enemy-name {
-    font-weight: bold;
-    font-size: 28px;
-    margin-left: 20px;
-    margin-top: 10px;
-    color: black;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-  }
+
 
   .enemy-role-icon {
     border-radius: 100px;
@@ -388,22 +399,48 @@
     box-shadow: 3px 3px 20px white;
   }
 
-  .enemy-level {
-    font-size: 18px;
+  .enemy-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     font-weight: bold;
-    font-style: italic;
-    margin-left: 10px;
+    font-size: 28px;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    width: 250px;
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .enemy-level {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    font-size: 18px;
+    padding-right: 20px;
+    margin-top: 15px;
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    width: fit-content;
+    height: fit-content;
+    flex-wrap: wrap;
   }
 
   .enemy-card-abilities-container {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 180px;
+    justify-content: flex-start;
     height: 200px;
     width: 100%;
-    margin-bottom: 10px;
+    top: 58%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-50%);
   }
   .enemy-card-single-ability-container {
     display: flex;
@@ -655,14 +692,6 @@
     align-items: flex-start;
     width: 100%;
   }
-  .enemy-name {
-    font-weight: bold;
-    font-size: 28px;
-    margin-left: 20px;
-    margin-top: 10px;
-    color: black;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-  }
 
   .enemy-role-icon {
     border-radius: 100px;
@@ -687,22 +716,48 @@
     box-shadow: 3px 3px 20px white;
   }
 
-  .enemy-level {
-    font-size: 18px;
+  .enemy-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     font-weight: bold;
-    font-style: italic;
-    margin-left: 10px;
+    font-size: 28px;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    width: 250px;
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .enemy-level {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    font-size: 18px;
+    padding-right: 20px;
+    margin-top: 15px;
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    width: fit-content;
+    height: fit-content;
+    flex-wrap: wrap;
   }
 
   .enemy-card-abilities-container {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 180px;
+    justify-content: flex-start;
     height: 200px;
     width: 100%;
-    margin-bottom: 10px;
+    top: 58%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-50%);
   }
   .enemy-card-single-ability-container {
     display: flex;
