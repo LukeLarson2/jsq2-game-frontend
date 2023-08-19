@@ -41,8 +41,7 @@ const AlertModal = ({
   };
 
   const handleGoHome = () => {
-    setShowAlert(false);
-    setCurrentPage("Home");
+    window.close();
   };
 
   const handleDeleteCharacter = async (character) => {
