@@ -607,6 +607,7 @@ const Game = ({
   };
 
   useEffect(() => {
+    setEnemyHealth(enemyMaxHealth)
     if (showBattle) {
       setShowDeath(false);
       setPlayerDeath(false);

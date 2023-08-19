@@ -1,7 +1,7 @@
 "use client";
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import roleIconCheck from "../utils/roleIconCheck";
-import AlertModal from '../components/AlertModal'
+import AlertModal from "../components/AlertModal";
 
 import {
   GiChest,
@@ -11,7 +11,7 @@ import {
   GiTreasureMap,
 } from "react-icons/gi";
 
-import {FaHome} from 'react-icons/fa'
+import { FaHome } from "react-icons/fa";
 
 import "../stylesheets/CharacterBanner.css";
 
@@ -38,11 +38,11 @@ const CharacterBanner = ({
   setCurrentPage,
   currentUser,
   selectedCharacterId,
-  setSelectedCharacterId
+  setSelectedCharacterId,
 }) => {
-  const [showAlert, setShowAlert] = useState(false)
-  const [travelHome, setTravelHome] = useState(false)
-  const [playerNameColor, setPlayerNameColor] = useState('')
+  const [showAlert, setShowAlert] = useState(false);
+  const [travelHome, setTravelHome] = useState(false);
+  const [playerNameColor, setPlayerNameColor] = useState("");
   const {
     characterName,
     race,
@@ -52,29 +52,29 @@ const CharacterBanner = ({
     health,
     energy,
     wallet,
-    arenaCount
+    arenaCount,
   } = character;
 
   const getNameColor = () => {
-    let color = 'white'
+    let color = "white";
     if (lowRank) {
-      color = "#cd7f32"
+      color = "#cd7f32";
     }
     if (highRank) {
-      color = "#808080"
+      color = "#808080";
     }
     if (masterRank) {
-      color = "#d4af37"
+      color = "#d4af37";
     }
     if (championRank) {
-      color = '#9d52ff'
+      color = "#9d52ff";
     }
-    return color
-  }
+    return color;
+  };
 
   useEffect(() => {
-    setPlayerNameColor(getNameColor())
-  },[lowRank, highRank, masterRank, championRank])
+    setPlayerNameColor(getNameColor());
+  }, [lowRank, highRank, masterRank, championRank]);
 
   const roleIcon = roleIconCheck(role);
 
@@ -97,7 +97,7 @@ const CharacterBanner = ({
     setShowBattle(false);
     setShowMap(true);
     setCurrentIndex(0);
-    setInArena(false)
+    setInArena(false);
   };
   const handleOpenCharacter = () => {
     if (!showBattle) {
@@ -109,24 +109,46 @@ const CharacterBanner = ({
   const handleGoHome = () => {
     setShowAlert(true);
     setTravelHome(true);
+    setInArena(false);
+    setShowEdit(false);
+    setShowInventory(false);
+    setIsSkillTreeOpen(false);
+    setShowBattle(false);
   };
-
 
   return (
     <div className="character-banner-main-container">
       {showAlert && (
-        <AlertModal message={'Are you sure you want to exit?'} setShowAlert={setShowAlert} mapFizzle={false} travelHome={travelHome} setCurrentPage={setCurrentPage} setSelectedCharacterId={setSelectedCharacterId}/>
+        <AlertModal
+          message={"Are you sure you want to exit?"}
+          setShowAlert={setShowAlert}
+          mapFizzle={false}
+          travelHome={travelHome}
+          setCurrentPage={setCurrentPage}
+          setSelectedCharacterId={setSelectedCharacterId}
+        />
       )}
       <div className="character-banner-content">
         <div className="character-details-container">
           <div className="character-banner-role-icon-container">
             <div
               className="character-banner-role-icon"
-              style={{ backgroundImage: `url(${roleIcon})`, boxShadow: playerNameColor !== 'white' ? `0px 0px 5px 5px ${playerNameColor}` : ''}}
+              style={{
+                backgroundImage: `url(${roleIcon})`,
+                boxShadow:
+                  playerNameColor !== "white"
+                    ? `0px 0px 5px 5px ${playerNameColor}`
+                    : "",
+              }}
             />
           </div>
           <div className="character-banner-name-race-role-container">
-            <div className="character-banner-name" style={{color: playerNameColor}}>{characterName}</div>
+            <div
+              className="character-banner-name"
+              style={{ color: playerNameColor }}
+            >
+              {characterName}
+            </div>
             <div className="character-banner-role-race-container">
               {`${race} / ${role}`}
             </div>
