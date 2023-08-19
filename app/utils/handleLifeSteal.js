@@ -34,8 +34,6 @@ const handleLifeSteal = async (
   getPlayerHealth,
   setPlayerRecoveryDisplayed
 ) => {
-  console.log("selectedCharacterId", selectedCharacterId)
-  console.log("currentUser", currentUser)
   const outgoingDamage = damageCalc(
     user,
     damageToNum,

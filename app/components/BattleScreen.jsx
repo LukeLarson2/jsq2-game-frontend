@@ -77,6 +77,7 @@ const BattleScreen = ({
   regionColor,
   setEnemyHealth,
   setEnemyMaxHealth,
+  setTimeoutId
 
 }) => {
   const [playerDamageTaken, setPlayerDamageTaken] = useState(0);

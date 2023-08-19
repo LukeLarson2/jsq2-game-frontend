@@ -983,6 +983,7 @@ const Game = ({
             enemyMaxHealth={enemyMaxHealth}
             setEnemyHealth={setEnemyHealth}
             setEnemyMaxHealth={setEnemyMaxHealth}
+            setTimeoutId={setTimeoutId}
           />
         )}
         {showEdit && (

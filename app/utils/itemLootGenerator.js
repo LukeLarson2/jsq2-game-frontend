@@ -66,13 +66,11 @@ const itemLootGenerator = async (container) => {
 
   // Fetch items from the database.
   const itemsPool = await getBagItems();
-  console.log("Items fetched from the database:", itemsPool);
 
   for (let i = 0; i < 5; i++) {
     let item = null;
     while (item === null) {
       let quality = randomQuality();
-      console.log(`Selected quality: ${quality}`);
       let qualityIndex = qualities.findIndex((q) => q.quality === quality);
 
       if (
@@ -91,14 +89,12 @@ const itemLootGenerator = async (container) => {
 
       if (qualityIndex <= maxQualityIndex) {
         item = getRandomItem(itemsPool, quality);
-        console.log(`Selected item:`, item);
       }
     }
 
     // Randomize the shielding, dodge, damage, and accuracy values within a range of +/- 2% of the original value.
     let totalPercentageChange = 0;
     ["shielding", "dodge", "damage", "accuracy"].forEach((key) => {
-      console.log(key)
       const originalValue = item[key];
       if (originalValue === 0) return; // Skip if the value is zero
 
