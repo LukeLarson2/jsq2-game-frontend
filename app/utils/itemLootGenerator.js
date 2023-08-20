@@ -1,5 +1,5 @@
 import axios from "axios";
-import dbURI from '../lib/dbURI'
+import dbURI from "../lib/dbURI";
 // Define qualities and their associated probabilities.
 
 const qualities = [
@@ -98,12 +98,21 @@ const itemLootGenerator = async (container) => {
       const originalValue = item[key];
       if (originalValue === 0) return; // Skip if the value is zero
 
-      const randomFactor = 1 + (Math.random() * 0.2 - 0.1); // Random factor between 98% to 102%
-      const newValue = Math.ceil(originalValue * randomFactor);
-      totalPercentageChange += originalValue !== 0 ? (newValue - originalValue) / originalValue : 0; // Prevent division by zero
-      item[key] = newValue;
-    });
+      const randomFactor = 1 + (Math.random() * 0.4 - 0.2); // Random factor between 96% to 104%
 
+      let statsColor = "#000000";
+      if (randomFactor >= 1.04) {
+        statsColor = "#9d52ff"; // Best possible value
+      } else if (randomFactor <= 0.96) {
+        statsColor = "#b11717"; // Worst possible value
+      }
+
+      const statColorKey = key + "Color";
+      item[statColorKey] = statsColor;
+
+      const newValue = Math.ceil(originalValue * randomFactor);
+      item[key] = newValue; // Assuming you want to update the item with the new value
+    });
 
     // Adjust the value of the item based on the total percentage change from the base stats.
     item.value = item.value * (1 + totalPercentageChange);
@@ -113,6 +122,5 @@ const itemLootGenerator = async (container) => {
 
   return items;
 };
-
 
 export default itemLootGenerator;

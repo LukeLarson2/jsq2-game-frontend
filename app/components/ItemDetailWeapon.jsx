@@ -38,6 +38,8 @@ const ItemDetailWeapon = ({
     accuracy,
     slot,
     shielding,
+    damageColor,
+    accuracyColor
   } = itemDetails;
   const usedBy = usedByRoles[0];
   const imageUrl = itemImageCheck(itemName);
@@ -110,12 +112,12 @@ const ItemDetailWeapon = ({
           <div className="item-detail-stats-container">
             {damage ? (
               <>
-                <div className="item-detail-stats-armor">
+                <div className="item-detail-stats-armor" style={{color: damageColor}}>
                   {damage}
                   <GiMineExplosion className="item-detail-stats-icon"/>
                 </div>
                 {slot !== "Off Hand" && (
-                  <div className="item-detail-stats-dodge">
+                  <div className="item-detail-stats-dodge" style={{color: accuracyColor}}>
                     {accuracy}
                     <SiTarget className="item-detail-stats-icon"/>
                   </div>
