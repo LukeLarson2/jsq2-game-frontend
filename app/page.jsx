@@ -17,9 +17,6 @@ export default function Page() {
     const pulledUser = getCookie("currentUser");
     const pulledCharacter = getCookie("selectedCharacterId");
 
-    console.log(pulledCharacter)
-    console.log(pulledUser)
-
     setCurrentUser(pulledUser);
     setSelectedCharacterId(pulledCharacter);
     setIsLoading(false);
