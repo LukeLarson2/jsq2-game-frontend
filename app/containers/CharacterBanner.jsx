@@ -108,6 +108,7 @@ const CharacterBanner = ({
   };
   const handleGoHome = () => {
     setShowAlert(true);
+    setTravelHome(true)
   };
 
   return (
