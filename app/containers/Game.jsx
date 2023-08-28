@@ -114,6 +114,27 @@ const Game = ({
 
   const [useSkillPoints, setUseSkillPoints] = useState(false);
 
+  document.addEventListener('keydown', function (e) {
+    if (e.keyCode == 123) { // F12
+        e.preventDefault();
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { // Ctrl + Shift + I
+        e.preventDefault();
+        return false;
+    }
+    if (e.ctrlKey && e.keyCode == 85) { // Ctrl + U
+        e.preventDefault();
+        return false;
+    }
+});
+
+document.oncontextmenu = function () {
+  return false;
+}
+
+
+
   const characterInfoFetch = async () => {
     setComponentIsLoading(true);
     const data = await getCharacterInfo(currentUser, selectedCharacterId);
